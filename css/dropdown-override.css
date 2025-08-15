@@ -1,0 +1,131 @@
+/* Dropdown Menu Override Styles */
+/* Disables hover-based dropdowns and adds click-based functionality */
+
+/* Disable hover-based dropdown behavior */
+.header--menu__list > li:hover > .sub-menu {
+    transform: translateX(-50%) translateY(-101%) !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Remove hover effects that show dropdowns */
+.header--menu__list > li:hover > a {
+    color: inherit !important;
+}
+
+.header--menu__list > li:hover > a span {
+    opacity: inherit !important;
+}
+
+/* Add styles for click-based dropdowns */
+.header--menu__list > li.dropdown-active > .sub-menu {
+    transform: translateX(-50%) translateY(0) !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+/* Ensure sub-menus are hidden by default */
+.header--menu__list > li > .sub-menu {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+/* Add visual feedback for active dropdown */
+.header--menu__list > li.dropdown-active > a {
+    color: #9EE86F !important;
+}
+
+.header--menu__list > li.dropdown-active > a span {
+    opacity: 1 !important;
+}
+
+/* Ensure dropdown links are clickable */
+.header--menu__list > li.menu-item-has-children > a {
+    cursor: pointer !important;
+}
+
+/* Add hover effect for dropdown trigger */
+.header--menu__list > li.menu-item-has-children > a:hover {
+    color: #9EE86F !important;
+}
+
+/* Ensure dropdown content is properly positioned */
+.header--menu__list > li > .sub-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(-101%) !important;
+    z-index: 1000 !important;
+    background-color: #6aa84f !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    min-width: 200px !important;
+}
+
+/* Style dropdown menu items */
+.header--menu__list > li > .sub-menu > li > a {
+    color: #0C081E !important;
+    padding: 12px 20px !important;
+    display: block !important;
+    text-decoration: none !important;
+    transition: all 0.25s ease !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.header--menu__list > li > .sub-menu > li:last-child > a {
+    border-bottom: none !important;
+}
+
+.header--menu__list > li > .sub-menu > li > a:hover {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    color: #0C081E !important;
+}
+
+/* Dark theme support */
+html[data-theme="dark"] .header--menu__list > li > .sub-menu {
+    background-color: #1A2130 !important;
+    border: 1px solid #2B3647 !important;
+}
+
+html[data-theme="dark"] .header--menu__list > li > .sub-menu > li > a {
+    color: #EEF2F7 !important;
+    border-bottom: 1px solid #2B3647 !important;
+}
+
+html[data-theme="dark"] .header--menu__list > li > .sub-menu > li > a:hover {
+    background-color: #20283A !important;
+    color: #EEF2F7 !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .header--menu__list > li > .sub-menu {
+        position: static !important;
+        transform: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        margin-top: 10px !important;
+        padding: 10px !important;
+        background-color: rgba(0, 0, 0, 0.05) !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        transition: all 0.3s ease-in-out !important;
+    }
+    
+    .header--menu__list > li.dropdown-active > .sub-menu {
+        transform: none !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        max-height: 500px !important;
+    }
+    
+    /* Ensure mobile menu items are properly styled */
+    .header--menu__list > li > .sub-menu > li > a {
+        padding: 8px 15px !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    }
+}

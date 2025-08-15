@@ -1,0 +1,39 @@
+/* Minimal RTL helpers loaded only for RTL languages */
+html.rtl body { direction: rtl; }
+
+/* Header list flows rtl visually */
+html.rtl #header .header--menu__list { direction: rtl; }
+
+/* Use logical properties for spacing to be symmetric in LTR/RTL */
+:root {
+  --gap-inline-20: 20px;
+}
+#header .header--menu__list { gap: var(--gap-inline-20); }
+
+/* Align key text blocks to right for better readability in RTL */
+html.rtl .section-header--col--title,
+html.rtl .why-our-clients .why-our-clients-item-text p,
+html.rtl .ap-how-we-do-section--block .txt,
+html.rtl .brand-identity-process--list .txt,
+html.rtl .faq .faq-item-answer p,
+html.rtl .contact-us--form--title,
+html.rtl .contact-us--form--subtitle p { text-align: right; }
+
+/* Mirror directional arrows */
+html.rtl .faq .faq-item-question-arrow svg,
+html.rtl .swiper-button .btn-arrow svg,
+html.rtl .btn-arrow svg { transform: scaleX(-1); }
+
+/* About page contact form tweaks */
+html.rtl .contact-form input,
+html.rtl .contact-form textarea { text-align: right; }
+
+
+html.rtl .contact-form .btn.btn-standart.btn-light.btn-lt .btn-text { direction: rtl; }
+
+/* Make left column email CTA align to right in RTL (about-us) */
+html.rtl .contact-us--connect .btn .btn-text { direction: rtl; }
+
+/* Ensure thank-you card content is centered properly in RTL */
+html.rtl .thank-you-for-another-form--title,
+html.rtl .thank-you-for-another-form--text { text-align: center; } 
