@@ -13,7 +13,7 @@ All 12 HTML pages now have identical header structures:
 3. **ai-powered-consulting.html**
 4. **engineering-services.html**
 5. **data-analytics.html**
-6. **diversity-talent-staffing.html**
+
 7. **corporate-training.html**
 8. **online-learning-solutions.html**
 9. **industry.html**

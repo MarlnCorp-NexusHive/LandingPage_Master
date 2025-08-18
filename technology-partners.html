@@ -1,15 +1,28 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><link data-optimized="2" rel="stylesheet" href="css/f1225b8e5b82e8a69bb95d9a974ef054.css"><link rel="stylesheet" href="css/dropdown-override.css"><style>
-/* Custom Green Scrollbar Styles - High Specificity */
-html::-webkit-scrollbar,
-body::-webkit-scrollbar,
-*::-webkit-scrollbar {
-    width: 12px !important;
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Partners - VALMAX | Strategic Technology Alliances</title>
+    
+    <!-- CSS Files -->
+    <link data-optimized="2" rel="stylesheet" href="css/f1225b8e5b82e8a69bb95d9a974ef054.css">
+    <link rel="stylesheet" href="css/dropdown-override.css">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+
+        /* Custom Green Scrollbar Styles - High Specificity */
+        html::-webkit-scrollbar,
+        body::-webkit-scrollbar,
+        *::-webkit-scrollbar {
+            width: 12px !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
 
 html::-webkit-scrollbar-track,
 body::-webkit-scrollbar-track,
@@ -85,6 +98,376 @@ body::-webkit-scrollbar,
     fill: #FFFFFF !important;
 }
 
+        /* Enhanced Partner Card Styles */
+        .partner-card-enhanced {
+            position: relative;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+.partner-card-enhanced::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+    z-index: 1;
+}
+
+.partner-card-enhanced:hover::before {
+    transform: translateX(100%);
+}
+
+.card-glow {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff9ff3, #54a0ff);
+    background-size: 400% 400%;
+    border-radius: 22px;
+    z-index: -1;
+    animation: glowingBorder 3s ease-in-out infinite alternate;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.partner-card-enhanced:hover .card-glow {
+    opacity: 1;
+}
+
+        .card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+            padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    z-index: 3;
+}
+
+.partner-card-enhanced:hover .card-overlay {
+    transform: translateY(0);
+}
+
+.partner-card-enhanced:hover {
+    transform: translateY(-10px) scale(1.05) rotateX(5deg);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+}
+
+.partner-card-enhanced img {
+    transition: all 0.4s ease;
+}
+
+.partner-card-enhanced:hover img {
+    transform: scale(1.1) rotateY(10deg);
+    filter: brightness(1.2) contrast(1.1);
+}
+
+@keyframes glowingBorder {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Floating animation for cards */
+.partner-card-enhanced {
+    animation: float 6s ease-in-out infinite;
+}
+
+.partner-card-enhanced:nth-child(2) { animation-delay: 0.5s; }
+.partner-card-enhanced:nth-child(3) { animation-delay: 1s; }
+.partner-card-enhanced:nth-child(4) { animation-delay: 1.5s; }
+.partner-card-enhanced:nth-child(5) { animation-delay: 2s; }
+.partner-card-enhanced:nth-child(6) { animation-delay: 2.5s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Enhanced section styling */
+.partners-section {
+    position: relative;
+    overflow: hidden;
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+.partners-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    pointer-events: none;
+}
+
+/* Remove any default margins and padding */
+.technology-partners-content {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    min-height: 100vh !important;
+}
+
+.technology-partners-content .container {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    max-width: none !important;
+}
+
+/* Ensure contact section is visible and properly positioned */
+.contact-us {
+    position: relative !important;
+    z-index: 2 !important;
+    margin-top: 0 !important;
+    clear: both !important;
+}
+
+/* Responsive enhancements */
+@media (max-width: 768px) {
+    .partner-card-enhanced {
+        min-height: 180px;
+        padding: 25px;
+    }
+    
+    .card-overlay h4 {
+        font-size: 1rem !important;
+    }
+    
+    .card-overlay p {
+        font-size: 0.8rem !important;
+    }
+}
+
+/* Dynamic background animations */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes textShine {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.dynamic-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Enhanced card entrance animations */
+.partner-card-enhanced {
+    animation: cardEntrance 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes cardEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(60px) rotateX(20deg) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotateX(0deg) scale(1);
+    }
+}
+
+/* Hover state enhancements */
+.partner-card-enhanced:hover .card-glow {
+    animation: glowingBorder 2s ease-in-out infinite;
+}
+
+.partner-card-enhanced:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.2) 0%, transparent 70%);
+    animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% { opacity: 0; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Full section card enhancements */
+.full-section-card {
+    min-height: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 40px 30px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    background-size: 200% 200% !important;
+    background-position: center !important;
+}
+
+.full-section-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    background-size: 200% 200% !important;
+    background-position: center !important;
+    z-index: -1;
+}
+
+.partners-grid-container {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    grid-template-rows: repeat(2, 1fr) !important;
+    gap: 15px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    flex: 1 !important;
+    display: grid !important;
+}
+
+/* Enhanced card content layout */
+        .full-section-card .card-overlay {
+            position: absolute !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8)) !important;
+            color: white !important;
+            padding: 30px 20px 20px !important;
+            transform: translateY(100%) !important;
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+            z-index: 3 !important;
+        }
+
+/* Ensure background gradients are fully visible */
+.partner-card-enhanced {
+    background-attachment: local !important;
+    background-clip: border-box !important;
+    background-origin: border-box !important;
+}
+
+/* Enhanced logo visibility */
+.partner-card-enhanced img {
+    filter: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+.full-section-card:hover .card-overlay {
+    transform: translateY(0) !important;
+}
+
+/* Responsive full-section adjustments */
+@media (max-width: 1200px) {
+    .partners-grid-container {
+        height: calc(100vh - 150px) !important;
+        min-height: 0 !important;
+    }
+    
+    .partners-section {
+        height: 100vh !important;
+        min-height: 100vh !important;
+    }
+}
+
+/* Ensure full viewport coverage */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+}
+
+/* Force full section coverage */
+        .partners-section {
+            position: relative !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            width: 100vw !important;
+            height: calc(100vh - 80px) !important;
+            z-index: 1 !important;
+            margin-top: 0 !important;
+            background: #ffffff !important;
+            color: #333333 !important;
+        }
+
+
+
+/* Ensure header is above partners section */
+header {
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+@media (max-width: 768px) {
+    .partners-grid-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: repeat(3, 1fr) !important;
+        height: auto !important;
+        min-height: 400px !important;
+        gap: 20px !important;
+    }
+    
+    .full-section-card {
+        min-height: 200px !important;
+        padding: 25px 20px !important;
+    }
+    
+    .full-section-card .card-overlay {
+        padding: 20px 15px 15px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .partners-grid-container {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: repeat(6, 1fr) !important;
+        gap: 15px !important;
+    }
+    
+    .full-section-card {
+        min-height: 180px !important;
+        padding: 20px 15px !important;
+    }
+}
+
 /* Make "Clients We Serve" section have same background as "Our Agile Approach" */
 .why-our-clients.dark {
     background: linear-gradient(135deg, #0f4c75 0%, #3282b8 50%, #1e3a8a 100%) !important;
@@ -154,26 +537,14 @@ document.addEventListener('DOMContentLoaded', function() {
        </script>
 <style>
 /* Header theme demo button spacing and animation */
-.menu-item-theme{margin-left:0;padding:8px 15.5px 6px;display:flex;align-items:center;border-left:none}
-.theme-toggle{display:inline-flex;align-items:center;cursor:pointer}
-.theme-toggle input{position:absolute;opacity:0;pointer-events:none}
-.theme-toggle-button{width:36px;height:36px;border-radius:20px;border:none;background:transparent;display:inline-flex;align-items:center;justify-content:center;position:relative;overflow:hidden;transition:transform .2s ease, background .25s ease, border-color .25s ease}
-html[data-theme="dark"] .theme-toggle-button{background:#0E1116;border-color:transparent}
-html[data-theme="dark"] .theme-toggle-button .icon-sun{display:none}
-html[data-theme="dark"] .theme-toggle-button .icon-moon{fill:#EEF2F7;opacity:1;transform:none}
-.theme-toggle-button .icon{width:20px;height:20px}
-.theme-toggle-button:hover{transform:translateY(-1px)}
-.theme-toggle-button .icon{position:absolute;transition:opacity .25s ease,transform .35s ease}
- .theme-toggle-button .icon-moon{opacity:0;transform:scale(.6) rotate(-30deg)}
- .theme-toggle input:checked + .theme-toggle-button .icon-sun{opacity:0;transform:scale(.6) rotate(90deg)}
- .theme-toggle input:checked + .theme-toggle-button .icon-moon{opacity:1;transform:scale(1) rotate(0)}
- /* Mobile adjustments - hide theme button on mobile for cleaner look */
+
+
  @media (max-width: 768px){
-  .menu-item-theme{display:none}
+  
  }
  /* Better spacing on larger screens */
   @media (min-width: 1200px){
-   .menu-item-theme{margin-left:12px;padding-left:12px}
+   
   }
   /* Ensure single-row header menu on desktop */
   @media (min-width: 1024px){
@@ -282,14 +653,149 @@ html[data-theme="dark"] .faq .faq-item-question:hover .faq-item-question-arrow s
 html[data-theme="dark"] .contact-us .copy-to-clipboard{background:transparent !important;border:none !important}
 html[data-theme="dark"] .contact-us .copy-to-clipboard svg path{fill:#0C081E !important;stroke:#0C081E !important}
 
-/* Technology Partners page dark mode support */
-html[data-theme="dark"] .services-section{background:#1a2130 !important}
-html[data-theme="dark"] .services-section h2{color:#eef2f7 !important}
-html[data-theme="dark"] .services-section h3{color:#eef2f7 !important}
-html[data-theme="dark"] .services-section p{color:#aab6c8 !important}
-html[data-theme="dark"] .services-section:nth-child(even){background:#0e1116 !important}
+        /* Technology Partners page dark mode support */
+        html[data-theme="dark"] .services-section{background:#1a2130 !important}
+        html[data-theme="dark"] .services-section h2{color:#eef2f7 !important}
+        html[data-theme="dark"] .services-section h3{color:#eef2f7 !important}
+        html[data-theme="dark"] .services-section p{color:#eef2f7 !important}
+        html[data-theme="dark"] .services-section:nth-child(even){background:#0e1116 !important}
 
-</style>
+        /* Theme toggle button styling */
+        .menu-item-theme{margin-left:0;padding:8px 15.5px 6px;display:flex;align-items:center;border-left:none}
+        .theme-toggle{display:inline-flex;align-items:center;cursor:pointer}
+        .theme-toggle input{position:absolute;opacity:0;pointer-events:none}
+        .theme-toggle-button{width:36px;height:36px;border-radius:20px;border:none;background:transparent;display:inline-flex;align-items:center;justify-content:center;position:relative;overflow:hidden;transition:transform .2s ease, background .25s ease, border-color .25s ease}
+        html[data-theme="dark"] .theme-toggle-button{background:#0E1116;border-color:transparent}
+        html[data-theme="dark"] .theme-toggle-button .icon-sun{display:none}
+        html[data-theme="dark"] .theme-toggle-button .icon-moon{fill:#EEF2F7;opacity:1;transform:none}
+        .theme-toggle-button .icon{width:20px;height:20px}
+        .theme-toggle-button:hover{transform:translateY(-1px)}
+        .theme-toggle-button .icon{position:absolute;transition:opacity .25s ease,transform .35s ease}
+         .theme-toggle-button .icon-moon{opacity:0;transform:scale(.6) rotate(-30deg)}
+         .theme-toggle input:checked + .theme-toggle-button .icon-sun{opacity:0;transform:scale(.6) rotate(90deg)}
+         .theme-toggle input:checked + .theme-toggle-button .icon-moon{opacity:1;transform:scale(1) rotate(0)}
+         /* Mobile adjustments - hide theme button on mobile for cleaner look */
+        @media (max-width: 768px){
+          .menu-item-theme{display:none}
+        }
+        /* Better spacing on larger screens */
+        @media (min-width: 1200px){
+           .menu-item-theme{margin-left:12px;padding-left:12px}
+        }
+        /* Ensure single-row header menu on desktop */
+        @media (min-width: 1200px){
+          .header--menu__list{flex-wrap:nowrap}
+        }
+
+        /* Theme toggle button green hover */
+        #header .theme-toggle:hover .theme-toggle-button {
+            background: #9EE86F !important;
+            border: none !important;
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(158, 232, 111, 0.3);
+        }
+
+        #header .theme-toggle:hover .icon-sun path,
+        #header .theme-toggle:hover .icon-moon path {
+            stroke: #ffffff !important;
+            fill: #ffffff !important;
+        }
+
+        /* Language toggle styling */
+        .language-toggle {
+            position: relative;
+            display: inline-block;
+        }
+
+        .lang-toggle-input {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .lang-toggle-label {
+            display: flex;
+            align-items: center;
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 25px;
+            padding: 8px 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 80px;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .lang-text {
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            z-index: 2;
+            position: relative;
+        }
+
+        .lang-english {
+            color: #333;
+        }
+
+        .lang-arabic {
+            color: #666;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 20px;
+            height: 20px;
+            background: #9EE86F;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            z-index: 1;
+        }
+
+        .lang-toggle-input:checked + .lang-toggle-label .toggle-slider {
+            transform: translateX(40px);
+        }
+
+        .lang-toggle-input:checked + .lang-toggle-label .lang-english {
+            color: #666;
+        }
+
+        .lang-toggle-input:checked + .lang-toggle-label .lang-arabic {
+            color: #333;
+        }
+
+        /* Language toggle green hover effects */
+        #header .language-toggle:hover .lang-toggle-label {
+            background: #9EE86F !important;
+            border: none !important;
+            box-shadow: 0 2px 8px rgba(158, 232, 111, 0.3) !important;
+        }
+
+        #header .language-toggle:hover .lang-text {
+            color: #ffffff !important;
+        }
+
+        /* Hide thank you message by default to remove gap */
+        .thank-you,
+        .thank-you-for-another-form,
+        .thank-you--wrapper,
+        .thank-you-for-another-form--wrapper {
+            display: none !important;
+        }
+
+        /* Only show thank you message when form is submitted */
+        .thank-you.show,
+        .thank-you-for-another-form.show,
+        .thank-you--wrapper.show,
+        .thank-you-for-another-form--wrapper.show {
+            display: block !important;
+        }
+
+        </style>
   <style>
 /* Header menu link hover contrast fix - minimal, non-intrusive */
 #header .header--menu__list>li>a:hover,
@@ -297,7 +803,7 @@ html[data-theme="dark"] .services-section:nth-child(even){background:#0e1116 !im
 #header .services-dropdown a:hover,
 #header .company-dropdown a:hover{background:transparent !important}
 /* Change dropdown background to green color */
-.header--menu__list > li > .sub-menu { background-color: #6aa84f !important; }
+.header--menu__list > li > .sub-menu { background-color: #9EE86F !important; }
 /* Make dropdown text black for better contrast */
 .header--menu__list > li > .sub-menu > li > a { color: #0C081E !important; }
 
@@ -388,6 +894,83 @@ html[data-theme="dark"] .services-section:nth-child(even){background:#0e1116 !im
     text-decoration: none !important;
 }
 
+/* Global focus outline removal for header elements */
+#header *:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#header button:focus,
+#header a:focus,
+#header input:focus,
+#header label:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Aggressive outline removal for all header elements */
+#header * {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#header button,
+#header a,
+#header input,
+#header label,
+#header div,
+#header span,
+#header li {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Maximum specificity outline removal */
+body #header *,
+html body #header *,
+body #header button,
+body #header a,
+body #header input,
+body #header label,
+body #header div,
+body #header span,
+body #header li {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Remove any focus rings or outlines */
+#header *:focus,
+#header *:focus-visible,
+#header *:focus-within {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Chrome-specific focus outline removal */
+#header *:focus {
+    outline: none !important;
+    outline-offset: 0 !important;
+    outline-width: 0 !important;
+    outline-style: none !important;
+    outline-color: transparent !important;
+}
+
+/* Remove Chrome's default focus ring */
+#header button:focus,
+#header a:focus,
+#header input:focus,
+#header label:focus {
+    outline: none !important;
+    outline-offset: 0 !important;
+    outline-width: 0 !important;
+    outline-style: none !important;
+    outline-color: transparent !important;
+}
+
 /* Header Button Green Hover Effects */
 #header .header--menu__list > li > a:hover {
     color: #ffffff !important;
@@ -407,20 +990,7 @@ html[data-theme="dark"] .services-section:nth-child(even){background:#0e1116 !im
     box-shadow: 0 2px 8px rgba(158, 232, 111, 0.3);
 }
 
-/* Theme toggle button green hover */
-#header .theme-toggle:hover .theme-toggle-button {
-    background: #9EE86F !important;
-    border: none !important;
-    transform: scale(1.05);
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(158, 232, 111, 0.3);
-}
 
-#header .theme-toggle:hover .icon-sun path,
-#header .theme-toggle:hover .icon-moon path {
-    stroke: #ffffff !important;
-    fill: #ffffff !important;
-}
 
 /* Language toggle green hover effects */
 #header .language-toggle:hover .lang-toggle-label {
@@ -470,7 +1040,7 @@ html[data-theme="dark"] .services-section:nth-child(even){background:#0e1116 !im
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4KXH5HN"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div class="site-main" id="page"><header class="header" id="header"><div class="header--content"><div class="container"><div class="header-wrapper"><div class="header--item header--logo">
 <a href="index.html" title="Home">
-<img width="184" height="23" src="images/valmax.svg" class="logo-dark skip-lazy" alt="VALMAX Logo | Black" decoding="async" title="VALMAX Logo | Black"><img width="184" height="23" src="images/valmax2.svg" class="logo-light skip-lazy" alt="VALMAX Logo | White" decoding="async" title="VALMAX Logo | White">						</a></div><div class="header--menu"><ul id="header_menu" class="header--menu__list"><li id="menu-item-680" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-680"><a href="about-us.html">About us</a></li><li id="menu-item-666" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-666"><a>Services</a><ul class="sub-menu services-dropdown"><li class="menu-item"><a href="ai-powered-consulting.html">AI Powered Consulting</a></li><li class="menu-item"><a href="engineering-services.html">Engineering Services</a></li><li class="menu-item"><a href="data-analytics.html">Data Analytics</a></li><li class="menu-item"><a href="diversity-talent-staffing.html">Diversity Talent Staffing</a></li><li class="menu-item"><a href="https://a1siliconvalley.com/" target="_blank" rel="noopener noreferrer">Corporate Training</a></li></ul></li><li id="menu-item-company" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-company"><a>Company</a><ul class="sub-menu company-dropdown"><li class="menu-item"><a href="marln-company-profile.html">Marln Company Profile</a></li><li class="menu-item"><a href="corporate-social-responsibility.html">Corporate Social Responsibility (CSR)</a></li><li class="menu-item"><a href="technology-partners.html">Technology Partners</a></li><li class="menu-item"><a href="industry.html">Industry</a></li></ul></li><li id="menu-item-contact" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-contact"><a href="#contact" class="contact-scroll-btn">Contact us</a></li><li class="menu-item menu-item-theme"><label class="theme-toggle"><input type="checkbox"><span class="theme-toggle-button"><svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="#0C081E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="#0C081E"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/></svg></span></label></li><li class="menu-item menu-item-lang">
+<img width="184" height="23" src="images/valmax.svg" class="logo-dark skip-lazy" alt="VALMAX Logo | Black" decoding="async" title="VALMAX Logo | Black"><img width="184" height="23" src="images/valmax2.svg" class="logo-light skip-lazy" alt="VALMAX Logo | White" decoding="async" title="VALMAX Logo | White">						</a></div><div class="header--menu"><ul id="header_menu" class="header--menu__list"><li id="menu-item-680" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-680"><a href="about-us.html">About us</a></li><li id="menu-item-666" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-666"><a>Services</a><ul class="sub-menu services-dropdown"><li class="menu-item"><a href="ai-powered-consulting.html">AI Powered Consulting</a></li><li class="menu-item"><a href="engineering-services.html">Engineering Services</a></li><li class="menu-item"><a href="data-analytics.html">Data Analytics</a></li><li class="menu-item"><a href="https://a1siliconvalley.com/" target="_blank" rel="noopener noreferrer">Corporate Training</a></li></ul></li><li id="menu-item-company" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-company"><a>Company</a><ul class="sub-menu company-dropdown"><li class="menu-item"><a href="marln-company-profile.html">Marln Company Profile</a></li><li class="menu-item"><a href="corporate-social-responsibility.html">Corporate Social Responsibility (CSR)</a></li><li class="menu-item"><a href="technology-partners.html">Technology Partners</a></li><li class="menu-item"><a href="industry.html">Industry</a></li></ul></li><li id="menu-item-contact" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-contact"><a href="#contact" class="contact-scroll-btn">Contact us</a></li><li class="menu-item menu-item-theme"><label class="theme-toggle"><input type="checkbox"><span class="theme-toggle-button"><svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="#0C081E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="#0C081E"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/></svg></span></label></li><li class="menu-item menu-item-lang">
     <div class="language-toggle">
         <input type="checkbox" id="lang-toggle" class="lang-toggle-input">
         <label for="lang-toggle" class="lang-toggle-label">
@@ -479,7 +1049,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span class="toggle-slider"></span>
         </label>
     </div>
-</li></ul></div><div class="header--item header--item--burger">
+</li></ul></div>
+        <div class="header--item header--item--burger">
 <button class="btn btn-small btn-light btn-light-close btn-close" id="burger">
 <span class="btn-text" data-close-text="Close">Menu</span>
 <span class="btn-drop-left-items">
@@ -498,43 +1069,74 @@ Let's talk!                                                        </span>
 </span>
 </button></div></div></div></div></div></div></div></div></div></header>
     <!-- Main Content -->
-    <main class="technology-partners-content" style="margin-top: 80px;">
+    <main class="technology-partners-content" style="margin: 0; padding: 0; width: 100%; min-height: 100vh;">
         <div class="container">
-            <section class="partners-section" style="padding: 40px 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
-                <div class="container">
-                    <h2 style="text-align: center; font-size: 2.5rem; font-weight: 700; color: #2d3748; margin-bottom: 60px;">Our Technology Partners</h2>
+            <section class="partners-section" style="padding: 80px 0 0 0; margin: 0; min-height: calc(100vh - 80px); height: calc(100vh - 80px); background: #ffffff; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: center;">
+
+                <div class="container" style="padding: 0; margin: 0; height: 100%; display: flex; flex-direction: column; justify-content: center;">
+                    <h2 style="text-align: center; font-size: 3rem; font-weight: 800; color: #333; margin: 0 0 40px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.1); position: relative; z-index: 2; text-transform: uppercase; letter-spacing: 2px;">
+                        <span style="background: linear-gradient(45deg, #667eea, #764ba2, #f093fb); background-size: 200% 200%; animation: textShine 3s ease-in-out infinite; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">OUR TECHNOLOGY PARTNERS</span>
+                    </h2>
                     
-                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 40px;">
-                        <div style="background: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); min-height: 200px; display: flex; align-items: center; justify-content: center;">
-                            <img src="images/automation-anywhere.webp" alt="Automation Anywhere" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    <div class="partners-grid-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; height: calc(100vh - 200px); min-height: 0; flex: 1; width: 100%;">
+                        <div data-aos="zoom-in-up" data-aos-delay="100" class="partner-card-enhanced full-section-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; padding: 60px 50px; box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3); height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+                            <div class="card-glow"></div>
+                            <img src="images/automation-anywhere.webp" alt="Automation Anywhere" style="max-width: 80%; max-height: 120px; object-fit: contain; transition: all 0.3s ease; z-index: 2; position: relative; margin-bottom: 20px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
+                            <div class="card-overlay">
+                                <h4 style="color: white; font-size: 1.3rem; font-weight: 600; margin: 0; text-align: center;">Automation Anywhere</h4>
+                                <p style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 15px 0 0 0; text-align: center;">RPA Solutions</p>
+                            </div>
                         </div>
                         
-                        <div style="background: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); min-height: 200px; display: flex; align-items: center; justify-content: center;">
-                            <img src="images/AWS.webp" alt="AWS" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                        <div data-aos="zoom-in-up" data-aos-delay="200" class="partner-card-enhanced full-section-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 20px; padding: 60px 50px; box-shadow: 0 15px 35px rgba(240, 147, 251, 0.3); height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+                            <div class="card-glow"></div>
+                            <img src="images/AWS.webp" alt="AWS" style="max-width: 80%; max-height: 120px; object-fit: contain; transition: all 0.3s ease; z-index: 2; position: relative; margin-bottom: 20px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
+                            <div class="card-overlay">
+                                <h4 style="color: white; font-size: 1.3rem; font-weight: 600; margin: 0; text-align: center;">AWS</h4>
+                                <p style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 15px 0 0 0; text-align: center;">Cloud Infrastructure</p>
+                            </div>
                         </div>
                         
-                        <div style="background: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); min-height: 200px; display: flex; align-items: center; justify-content: center;">
-                            <img src="images/microsoft.webp" alt="Microsoft" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-                        </div>
-                    </div>
-                    
-                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
-                        <div style="background: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); min-height: 200px; display: flex; align-items: center; justify-content: center;">
-                            <img src="images/google.webp" alt="Google" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-                        </div>
-                        
-                        <div style="background: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); min-height: 200px; display: flex; align-items: center; justify-content: center;">
-                            <img src="images/oracle.webp" alt="Oracle" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                        <div data-aos="zoom-in-up" data-aos-delay="300" class="partner-card-enhanced full-section-card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 20px; padding: 60px 50px; box-shadow: 0 15px 35px rgba(79, 172, 254, 0.3); height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+                            <div class="card-glow"></div>
+                            <img src="images/microsoft.webp" alt="Microsoft" style="max-width: 80%; max-height: 120px; object-fit: contain; transition: all 0.3s ease; z-index: 2; position: relative; margin-bottom: 20px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
+                            <div class="card-overlay">
+                                <h4 style="color: white; font-size: 1.3rem; font-weight: 600; margin: 0; text-align: center;">Microsoft</h4>
+                                <p style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 15px 0 0 0; text-align: center;">Enterprise Solutions</p>
+                            </div>
                         </div>
                         
-                        <div style="background: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); min-height: 200px; display: flex; align-items: center; justify-content: center;">
-                            <img src="images/databricks.webp" alt="Databricks" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                        <div data-aos="zoom-in-up" data-aos-delay="400" class="partner-card-enhanced full-section-card" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); border-radius: 20px; padding: 60px 50px; box-shadow: 0 15px 35px rgba(250, 112, 154, 0.3); height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+                            <div class="card-glow"></div>
+                            <img src="images/google.webp" alt="Google" style="max-width: 80%; max-height: 120px; object-fit: contain; transition: all 0.3s ease; z-index: 2; position: relative; margin-bottom: 20px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
+                            <div class="card-overlay">
+                                <h4 style="color: white; font-size: 1.3rem; font-weight: 600; margin: 0; text-align: center;">Google</h4>
+                                <p style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 15px 0 0 0; text-align: center;">AI & Analytics</p>
+                            </div>
+                        </div>
+                        
+                        <div data-aos="zoom-in-up" data-aos-delay="500" class="partner-card-enhanced full-section-card" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); border-radius: 20px; padding: 60px 50px; box-shadow: 0 15px 35px rgba(168, 237, 234, 0.3); height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+                            <div class="card-glow"></div>
+                            <img src="images/oracle.webp" alt="Oracle" style="max-width: 80%; max-height: 120px; object-fit: contain; transition: all 0.3s ease; z-index: 2; position: relative; margin-bottom: 20px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
+                            <div class="card-overlay">
+                                <h4 style="color: white; font-size: 1.3rem; font-weight: 600; margin: 0; text-align: center;">Oracle</h4>
+                                <p style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 15px 0 0 0; text-align: center;">Database & Cloud</p>
+                            </div>
+                        </div>
+                        
+                        <div data-aos="zoom-in-up" data-aos-delay="600" class="partner-card-enhanced full-section-card" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); border-radius: 20px; padding: 60px 50px; box-shadow: 0 15px 35px rgba(252, 182, 159, 0.3); height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+                            <div class="card-glow"></div>
+                            <img src="images/databricks.webp" alt="Databricks" style="max-width: 80%; max-height: 120px; object-fit: contain; transition: all 0.3s ease; z-index: 2; position: relative; margin-bottom: 20px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
+                            <div class="card-overlay">
+                                <h4 style="color: white; font-size: 1.3rem; font-weight: 600; margin: 0; text-align: center;">Databricks</h4>
+                                <p style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 15px 0 0 0; text-align: center;">Data & AI Platform</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
-    </main><section id="contact" class="contact-us" style="background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=1080&fit=crop&crop=center') no-repeat center center; background-size: cover; position: relative;"><div class="container"><div class="contact-us--wrapper"><div class="contact-us--col"><div class="contact-us--block contact-us--form"><div class="cf7"><div class="thank-you thank-you-for-another-form"><div class="thank-you--wrapper thank-you-for-another-form--wrapper"><div class="thank-you-for-another-form--icon text-center">
+    </main><section id="contact" class="contact-us" style="background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=1080&fit=crop&crop=center') no-repeat center center; background-size: cover; position: relative; margin-top: -80px;"><div class="container"><div class="contact-us--wrapper"><div class="contact-us--col"><div class="contact-us--block contact-us--form"><div class="cf7"><div class="thank-you thank-you-for-another-form"><div class="thank-you--wrapper thank-you-for-another-form--wrapper"><div class="thank-you-for-another-form--icon text-center">
 <svg xmlns="http://www.w3.org/2000/svg" width="126" height="126" viewBox="0 0 126 126" fill="none"> <mask id="path-1-inside-1_2196_13888" fill="white"> <path fill-rule="evenodd" clip-rule="evenodd" d="M42.6019 119.709C43.5802 119.86 44.569 119.978 45.5676 120.061C72.3651 122.3 96.0054 98.8873 98.3696 67.7677C100.734 36.6481 80.9266 9.606 54.1291 7.36742C47.8332 6.84149 41.7116 7.73144 35.9992 9.80458C44.5259 4.52554 54.5969 2.03974 65.4947 3.34022C71.3306 4.03666 77.5492 5.31428 80.7478 6.26097C105.419 13.563 119.618 37.6833 117.394 66.9592C115.437 92.7219 100.273 112.19 79.0234 118.917C72.9949 120.826 65.76 121.422 57.8018 121.839C52.3881 122.123 47.2991 121.352 42.6019 119.709Z"></path> </mask> <path fill-rule="evenodd" clip-rule="evenodd" d="M42.6019 119.709C43.5802 119.86 44.569 119.978 45.5676 120.061C72.3651 122.3 96.0054 98.8873 98.3696 67.7677C100.734 36.6481 80.9266 9.606 54.1291 7.36742C47.8332 6.84149 41.7116 7.73144 35.9992 9.80458C44.5259 4.52554 54.5969 2.03974 65.4947 3.34022C71.3306 4.03666 77.5492 5.31428 80.7478 6.26097C105.419 13.563 119.618 37.6833 117.394 66.9592C115.437 92.7219 100.273 112.19 79.0234 118.917C72.9949 120.826 65.76 121.422 57.8018 121.839C52.3881 122.123 47.2991 121.352 42.6019 119.709Z" fill="#6aa84f"></path> <path d="M45.5676 120.061L45.4985 120.889L45.5676 120.061ZM42.6019 119.709L42.7287 118.889L42.3278 120.492L42.6019 119.709ZM98.3696 67.7677L97.542 67.7049L98.3696 67.7677ZM54.1291 7.36742L54.1982 6.5403L54.1291 7.36742ZM35.9992 9.80458L35.5623 9.09889L36.2824 10.5848L35.9992 9.80458ZM65.4947 3.34022L65.3963 4.16437L65.4947 3.34022ZM80.7478 6.26097L80.9834 5.46509L80.7478 6.26097ZM117.394 66.9592L118.222 67.0221L117.394 66.9592ZM79.0234 118.917L79.274 119.709L79.0234 118.917ZM57.8018 121.839L57.8452 122.668L57.8018 121.839ZM45.6367 119.234C44.6575 119.153 43.6879 119.037 42.7287 118.889L42.4751 120.529C43.4725 120.683 44.4806 120.804 45.4985 120.889L45.6367 119.234ZM97.542 67.7049C95.2035 98.4863 71.8624 121.425 45.6367 119.234L45.4985 120.889C72.8679 123.175 96.8073 99.2884 99.1972 67.8306L97.542 67.7049ZM54.06 8.19454C80.2931 10.386 99.8807 36.9213 97.542 67.7049L99.1972 67.8306C101.587 36.375 81.5602 8.82603 54.1982 6.5403L54.06 8.19454ZM36.2824 10.5848C41.8863 8.551 47.8879 7.67895 54.06 8.19454L54.1982 6.5403C47.7784 6.00402 41.5368 6.91188 35.7161 9.02438L36.2824 10.5848ZM36.4361 10.5103C44.8076 5.32731 54.6907 2.88681 65.3963 4.16437L65.593 2.51607C54.5032 1.19266 44.2442 3.72378 35.5623 9.09889L36.4361 10.5103ZM65.3963 4.16437C71.1977 4.85669 77.3687 6.12645 80.5122 7.05684L80.9834 5.46509C77.7297 4.50212 71.4635 3.21662 65.593 2.51607L65.3963 4.16437ZM80.5122 7.05684C104.725 14.2232 118.768 37.9167 116.567 66.8963L118.222 67.0221C120.469 37.4498 106.113 12.9027 80.9834 5.46509L80.5122 7.05684ZM116.567 66.8963C114.632 92.3576 99.6662 111.511 78.7729 118.126L79.274 119.709C100.88 112.868 116.242 93.0862 118.222 67.0221L116.567 66.8963ZM78.7729 118.126C72.8584 119.999 65.723 120.593 57.7584 121.01L57.8452 122.668C65.797 122.251 73.1315 121.653 79.274 119.709L78.7729 118.126ZM57.7584 121.01C52.4524 121.289 47.4713 120.533 42.8759 118.926L42.3278 120.492C47.127 122.171 52.3238 122.958 57.8452 122.668L57.7584 121.01Z" fill="#0C081E" mask="url(#path-1-inside-1_2196_13888)"></path> <mask id="path-3-inside-2_2196_13888" fill="white"> <path fill-rule="evenodd" clip-rule="evenodd" d="M105.838 54.8908C103.147 33.3768 88.8332 16.4859 70.3086 15.0102C48.3877 13.2639 28.8714 33.7646 26.7176 60.7997C24.5639 87.8349 40.5884 111.167 62.5092 112.913C79.1626 114.24 94.4281 102.727 101.747 85.2631C93.3543 108.171 73.7778 123.581 52.3056 121.871C25.3536 119.723 5.62113 91.4156 8.23191 58.6433C10.8427 25.8709 34.8081 1.04419 61.7601 3.1913C85.4893 5.08166 103.622 27.2504 105.838 54.8908Z"></path> </mask> <path fill-rule="evenodd" clip-rule="evenodd" d="M105.838 54.8908C103.147 33.3768 88.8332 16.4859 70.3086 15.0102C48.3877 13.2639 28.8714 33.7646 26.7176 60.7997C24.5639 87.8349 40.5884 111.167 62.5092 112.913C79.1626 114.24 94.4281 102.727 101.747 85.2631C93.3543 108.171 73.7778 123.581 52.3056 121.871C25.3536 119.723 5.62113 91.4156 8.23191 58.6433C10.8427 25.8709 34.8081 1.04419 61.7601 3.1913C85.4893 5.08166 103.622 27.2504 105.838 54.8908Z" fill="#6aa84f"></path> <path d="M70.3086 15.0102L70.3745 14.1828L70.3086 15.0102ZM105.838 54.8908L105.014 54.9938L106.665 54.8245L105.838 54.8908ZM62.5092 112.913L62.5752 112.086H62.5751L62.5092 112.913ZM101.747 85.2631L102.527 85.5487L100.982 84.9423L101.747 85.2631ZM52.3056 121.871L52.3716 121.043H52.3716L52.3056 121.871ZM8.23191 58.6433L7.40453 58.5773L8.23191 58.6433ZM61.7601 3.1913L61.826 2.36392L61.7601 3.1913ZM70.2427 15.8376C88.2574 17.2727 102.356 33.7402 105.014 54.9938L106.661 54.7878C103.938 33.0134 89.4089 15.6992 70.3745 14.1828L70.2427 15.8376ZM27.545 60.8656C29.6759 34.1169 48.9324 14.1399 70.2427 15.8376L70.3745 14.1828C47.843 12.3879 28.0668 33.4122 25.8903 60.7338L27.545 60.8656ZM62.5751 112.086C41.2649 110.388 25.4141 87.6144 27.545 60.8656L25.8903 60.7338C23.7137 88.0554 39.9118 111.946 62.4433 113.741L62.5751 112.086ZM100.982 84.9423C93.7591 102.176 78.7732 113.376 62.5752 112.086L62.4433 113.741C79.5519 115.103 95.0971 103.278 102.513 85.584L100.982 84.9423ZM100.968 84.9776C92.6651 107.64 73.3726 122.716 52.3716 121.043L52.2397 122.698C74.183 124.446 94.0435 108.703 102.527 85.5487L100.968 84.9776ZM52.3716 121.043C26.0204 118.944 6.47227 91.1833 9.05929 58.7092L7.40453 58.5773C4.76999 91.648 24.6868 120.503 52.2397 122.698L52.3716 121.043ZM9.05929 58.7092C11.6463 26.2351 35.3431 1.91944 61.6942 4.01868L61.826 2.36392C34.2731 0.168941 10.0391 25.5067 7.40453 58.5773L9.05929 58.7092ZM61.6942 4.01868C84.8994 5.86729 102.817 27.5926 105.01 54.9571L106.665 54.8245C104.428 26.9082 86.0793 4.29603 61.826 2.36392L61.6942 4.01868Z" fill="#0C081E" mask="url(#path-3-inside-2_2196_13888)"></path> <mask id="path-5-inside-3_2196_13888" fill="white"> <path fill-rule="evenodd" clip-rule="evenodd" d="M52.3056 121.871C79.2577 124.018 103.223 99.191 105.834 66.4186C108.445 33.6462 88.7121 5.3384 61.7601 3.1913C34.8081 1.04419 10.8427 25.8709 8.23191 58.6433C5.62113 91.4156 25.3536 119.723 52.3056 121.871ZM52.2672 109.938C73.8348 111.656 93.0125 91.7889 95.1017 65.5637C97.1909 39.3385 81.4005 16.6859 59.8329 14.9678C38.2653 13.2496 19.0876 33.1165 16.9984 59.3417C14.9092 85.5669 30.6996 108.219 52.2672 109.938Z"></path> </mask> <path fill-rule="evenodd" clip-rule="evenodd" d="M52.3056 121.871C79.2577 124.018 103.223 99.191 105.834 66.4186C108.445 33.6462 88.7121 5.3384 61.7601 3.1913C34.8081 1.04419 10.8427 25.8709 8.23191 58.6433C5.62113 91.4156 25.3536 119.723 52.3056 121.871ZM52.2672 109.938C73.8348 111.656 93.0125 91.7889 95.1017 65.5637C97.1909 39.3385 81.4005 16.6859 59.8329 14.9678C38.2653 13.2496 19.0876 33.1165 16.9984 59.3417C14.9092 85.5669 30.6996 108.219 52.2672 109.938Z" fill="#6aa84f"></path> <path d="M105.834 66.4186L106.661 66.4845L105.834 66.4186ZM52.3056 121.871L52.3716 121.043H52.3716L52.3056 121.871ZM61.7601 3.1913L61.6942 4.01868L61.7601 3.1913ZM8.23191 58.6433L7.40453 58.5773L8.23191 58.6433ZM52.2672 109.938L52.3331 109.11L52.2672 109.938ZM59.8329 14.9678L59.8988 14.1404L59.8329 14.9678ZM16.9984 59.3417L17.8258 59.4076L16.9984 59.3417ZM105.006 66.3527C102.419 98.8268 78.7227 123.142 52.3716 121.043L52.2397 122.698C79.7927 124.893 104.027 99.5552 106.661 66.4845L105.006 66.3527ZM61.6942 4.01868C88.0453 6.11791 107.593 33.8786 105.006 66.3527L106.661 66.4845C109.296 33.4139 89.379 4.5589 61.826 2.36392L61.6942 4.01868ZM9.05929 58.7092C11.6463 26.2351 35.3431 1.91944 61.6942 4.01868L61.826 2.36392C34.2731 0.168941 10.0391 25.5067 7.40453 58.5773L9.05929 58.7092ZM52.3716 121.043C26.0204 118.944 6.47227 91.1833 9.05929 58.7092L7.40453 58.5773C4.76999 91.648 24.6868 120.503 52.2397 122.698L52.3716 121.043ZM94.2743 65.4978C92.2089 91.4247 73.2998 110.781 52.3331 109.11L52.2013 110.765C74.3698 112.531 93.8161 92.1531 95.9291 65.6296L94.2743 65.4978ZM59.767 15.7951C80.7337 17.4654 96.3398 39.5709 94.2743 65.4978L95.9291 65.6296C98.042 39.1061 82.0673 15.9064 59.8988 14.1404L59.767 15.7951ZM17.8258 59.4076C19.8912 33.4807 38.8003 14.1248 59.767 15.7951L59.8988 14.1404C37.7303 12.3743 18.284 32.7523 16.171 59.2758L17.8258 59.4076ZM52.3331 109.11C31.3664 107.44 15.7603 85.3345 17.8258 59.4076L16.171 59.2758C14.0581 85.7992 30.0328 108.999 52.2013 110.765L52.3331 109.11Z" fill="#0C081E" mask="url(#path-5-inside-3_2196_13888)"></path> <path d="M44.1445 58.0889L54.917 70.5164L44.7848 58.1701L44.1445 58.0889ZM43.5036 58.0076L54.2785 70.4411L44.1445 58.0889L43.5036 58.0076ZM42.8621 57.9262L53.6394 70.3658L43.5036 58.0076L42.8621 57.9262ZM54.917 70.5164L55.5548 70.5915L44.7848 58.1701L54.917 70.5164ZM42.2199 57.8448L52.9995 70.2904L42.8621 57.9262L42.2199 57.8448ZM54.2785 70.4411L54.917 70.5164L44.1445 58.0889L54.2785 70.4411ZM41.577 57.7632L52.3591 70.2149L42.2199 57.8448L41.577 57.7632ZM53.6394 70.3658L54.2785 70.4411L43.5036 58.0076L53.6394 70.3658ZM40.9334 57.6816L51.7179 70.1394L41.577 57.7632L40.9334 57.6816ZM52.9995 70.2904L53.6394 70.3658L42.8621 57.9262L52.9995 70.2904ZM40.2892 57.5999L51.0761 70.0637L40.9334 57.6816L40.2892 57.5999ZM52.3591 70.2149L52.9995 70.2904L42.2199 57.8448L52.3591 70.2149ZM39.6443 57.5181L50.4336 69.988L40.2892 57.5999L39.6443 57.5181ZM51.7179 70.1394L52.3591 70.2149L41.577 57.7632L51.7179 70.1394ZM38.9988 57.4362L49.7904 69.9122L39.6443 57.5181L38.9988 57.4362ZM51.0761 70.0637L51.7179 70.1394L40.9334 57.6816L51.0761 70.0637ZM38.3525 57.3542L49.1466 69.8364L38.9988 57.4362L38.3525 57.3542Z" fill="#6aa84f"></path> <path d="M37.7054 57.2723L32.335 64.1524L48.4982 82.9464L37.7054 57.2723Z" fill="#6aa84f"></path> <path d="M50.434 69.9882L51.0765 70.0639L40.2896 57.6L50.434 69.9882ZM37.7061 57.2723L48.5025 69.7606L38.3529 57.3544L37.7061 57.2723ZM49.7909 69.9124L50.434 69.9882L39.6447 57.5182L49.7909 69.9124ZM49.147 69.8365L49.7909 69.9124L38.9992 57.4363L49.147 69.8365ZM48.5025 69.7606L49.147 69.8365L38.3529 57.3544L48.5025 69.7606Z" fill="#6aa84f"></path> <path d="M37.7061 57.2723L38.3529 57.3544L38.9992 57.4363L39.6447 57.5182L40.2896 57.6L40.9338 57.6817L41.5774 57.7634L42.2203 57.8449L42.8625 57.9263L43.5041 58.0077L44.145 58.089L44.7852 58.1702L55.5552 70.5917L54.9174 70.5165L54.2789 70.4413L53.6398 70.3659L52.9999 70.2905L52.3595 70.2151L51.7183 70.1395L51.0765 70.0639L50.434 69.9882L49.7909 69.9124L49.147 69.8365L48.5025 69.7606" stroke="#0C081E" stroke-width="0.833333" stroke-linecap="round"></path> <path d="M54.917 83.6343L55.5552 83.7027L82.87 49.1637L54.917 83.6343Z" fill="#6aa84f"></path> <path d="M48.5025 69.7606L37.7061 57.2723L48.4989 82.9464L48.5025 69.7606Z" fill="#6aa84f"></path> <path d="M54.2782 83.5658L54.9172 83.6342L82.2404 49.0765L54.2782 83.5658ZM53.6387 83.4972L54.2782 83.5658L81.6099 48.9893L53.6387 83.4972ZM52.9984 83.4286L53.6387 83.4972L80.9788 48.902L52.9984 83.4286ZM52.3575 83.3599L52.9984 83.4286L80.347 48.8146L52.3575 83.3599ZM51.716 83.2911L52.3575 83.3599L79.7145 48.7271L51.716 83.2911ZM51.0737 83.2223L51.716 83.2911L79.0814 48.6395L51.0737 83.2223ZM82.2404 49.0765L54.9172 83.6342L82.8702 49.1637L82.2404 49.0765ZM50.4308 83.1534L51.0737 83.2223L78.4475 48.5518L50.4308 83.1534ZM81.6099 48.9893L54.2782 83.5658L82.2404 49.0765L81.6099 48.9893ZM49.7872 83.0844L50.4308 83.1534L77.8131 48.4641L49.7872 83.0844ZM80.9788 48.902L53.6387 83.4972L81.6099 48.9893L80.9788 48.902ZM76.7173 42.8421L82.2404 49.0765L77.3485 42.9323L76.7173 42.8421ZM49.143 83.0154L49.7872 83.0844L77.178 48.3762L49.143 83.0154ZM80.347 48.8146L52.9984 83.4286L80.9788 48.902L80.347 48.8146ZM76.0855 42.7518L81.6099 48.9893L76.7173 42.8421L76.0855 42.7518ZM48.498 82.9462L49.143 83.0154L76.5421 48.2882L48.498 82.9462ZM82.2404 49.0765L82.8702 49.1637L77.3485 42.9323L82.2404 49.0765ZM79.7145 48.7271L52.3575 83.3599L80.347 48.8146L79.7145 48.7271Z" fill="#6aa84f"></path> <path d="M48.498 82.9462L75.9057 48.2002L48.5016 69.7604L48.498 82.9462Z" fill="#6aa84f"></path> <path d="M75.453 42.6617L80.9787 48.9022L76.0854 42.752L75.453 42.6617ZM81.6098 48.9895L82.2403 49.0767L76.7172 42.8423L81.6098 48.9895ZM79.0812 48.6397L51.7158 83.2913L79.7144 48.7273L79.0812 48.6397ZM74.8199 42.5712L80.3468 48.8148L75.453 42.6617L74.8199 42.5712ZM80.9787 48.9022L81.6098 48.9895L76.0854 42.752L80.9787 48.9022ZM78.4474 48.552L51.0736 83.2225L79.0812 48.6397L78.4474 48.552ZM74.1861 42.4807L79.7144 48.7273L74.8199 42.5712L74.1861 42.4807ZM80.3468 48.8148L80.9787 48.9022L75.453 42.6617L80.3468 48.8148ZM77.813 48.4642L50.4307 83.1536L78.4474 48.552L77.813 48.4642ZM73.5516 42.39L79.0812 48.6397L74.1861 42.4807L73.5516 42.39ZM79.7144 48.7273L80.3468 48.8148L74.8199 42.5712L79.7144 48.7273ZM77.1778 48.3764L49.7871 83.0846L77.813 48.4642L77.1778 48.3764Z" fill="#6aa84f"></path> <path d="M75.906 48.2003L70.3699 41.9353L48.502 69.7605L75.906 48.2003Z" fill="#6aa84f"></path> <path d="M48.4982 82.9463L32.335 64.1523L37.7054 57.2723L48.5018 69.7605L70.3697 41.9353" stroke="#0C081E" stroke-width="0.833333" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M72.9166 42.2992L78.4476 48.5519L73.5518 42.3899L72.9166 42.2992ZM79.0814 48.6396L79.7145 48.7272L74.1862 42.4806L79.0814 48.6396ZM76.5422 48.2883L49.143 83.0155L77.178 48.3763L76.5422 48.2883ZM72.2809 42.2084L77.8131 48.4642L72.9166 42.2992L72.2809 42.2084ZM78.4476 48.5519L79.0814 48.6396L73.5518 42.3899L78.4476 48.5519ZM75.9057 48.2003L48.498 82.9464L76.5422 48.2883L75.9057 48.2003Z" fill="#6aa84f"></path> <path d="M75.9057 48.2002L48.498 82.9462L49.143 83.0154L49.7872 83.0844L50.4308 83.1534L51.0737 83.2223L51.716 83.2911L52.3575 83.3599L52.9984 83.4286L53.6387 83.4972L54.2782 83.5658L54.9172 83.6343L55.5554 83.7027L82.8702 49.1637" stroke="#0C081E" stroke-width="0.833333" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M71.645 42.1174L77.1785 48.3763L72.2814 42.2084L71.645 42.1174ZM77.8137 48.4642L78.4481 48.5519L72.9172 42.2992L77.8137 48.4642ZM71.0079 42.0264L76.5427 48.2883L71.645 42.1174L71.0079 42.0264ZM77.1785 48.3763L77.8137 48.4642L72.2814 42.2084L77.1785 48.3763ZM70.3701 41.9353L75.9063 48.2003L71.0079 42.0264L70.3701 41.9353ZM76.5427 48.2883L77.1785 48.3763L71.645 42.1174L76.5427 48.2883ZM75.9063 48.2003L76.5427 48.2883L71.0079 42.0264L75.9063 48.2003Z" fill="#6aa84f"></path> <path d="M70.3701 41.9353L75.9063 48.2003ZM71.0079 42.0264L70.3701 41.9353ZM76.5427 48.2883L75.9063 48.2003ZM71.645 42.1174L71.0079 42.0264ZM77.1785 48.3763L76.5427 48.2883ZM72.2814 42.2084L71.645 42.1174ZM77.8137 48.4642L77.1785 48.3763ZM72.9172 42.2992L72.2814 42.2084ZM78.4481 48.5519L77.8137 48.4642ZM73.5523 42.3899L72.9172 42.2992ZM79.0819 48.6396L78.4481 48.5519ZM74.1868 42.4806L73.5523 42.3899ZM79.7151 48.7272L79.0819 48.6396ZM74.8205 42.5711L74.1868 42.4806ZM80.3475 48.8147L79.7151 48.7272ZM75.4537 42.6616L74.8205 42.5711ZM80.9793 48.9021L80.3475 48.8147ZM76.0861 42.7519L75.4537 42.6616ZM81.6105 48.9894L80.9793 48.9021ZM76.7179 42.8422L76.0861 42.7519ZM82.241 49.0766L81.6105 48.9894ZM76.7179 42.8422L77.349 42.9324ZM82.8708 49.1638L77.349 42.9324ZM82.241 49.0766L82.8708 49.1638Z" stroke="#0C081E" stroke-width="0.833333" stroke-linecap="round" stroke-linejoin="round"></path> </svg></div><p class="h3 uppercase text-center thank-you-for-another-form--title">
 Well done!</p><p class="txt txt-xl text-center thank-you-for-another-form--text">
 We will contact you in the next few hours or you can schedule an appointment now.</p><div class="text-center thank-you-for-another-form--btn">
@@ -612,6 +1214,109 @@ Offices</p><ul class="offices-list"><li><div class="offices-item"><figure>
 </a></div></div></div></div></div></div></div> <script data-cfasync="false" src="js/email-decode.min.js"></script><script type="speculationrules">{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/valmax\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}</script> <script src="js/hooks.min.js" id="wp-hooks-js"></script> <script src="js/i18n.min.js" id="wp-i18n-js"></script> <script src="js/jquery.min.js" id="jquery-js"></script> <script data-optimized="1" src="js/baee37585e7478cca20a7dfba3c3df77.js"></script>
 
 <script>
+
+// Theme Management System
+(function() {
+    'use strict';
+    
+    // Theme management
+    const themeToggle = document.querySelector('.theme-toggle input');
+    const html = document.documentElement;
+    
+    // Check for saved theme preference or default to system preference
+    function getCurrentTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            return savedTheme;
+        }
+        // Check system preference
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            return 'dark';
+        }
+        return 'light';
+    }
+    
+    // Apply theme
+    function applyTheme(theme) {
+        html.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        
+        // Update theme toggle icon
+        if (themeToggle) {
+            themeToggle.checked = (theme === 'dark');
+        }
+    }
+    
+    // Toggle theme
+    function toggleTheme() {
+        const currentTheme = getCurrentTheme();
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        applyTheme(newTheme);
+    }
+    
+    // Initialize theme
+    document.addEventListener('DOMContentLoaded', function() {
+        applyTheme(getCurrentTheme());
+        
+        // Add event listener to theme toggle
+        if (themeToggle) {
+            themeToggle.addEventListener('change', toggleTheme);
+        }
+        
+        // Listen for system theme changes
+        if (window.matchMedia) {
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+                if (!localStorage.getItem('theme')) {
+                    applyTheme(e.matches ? 'dark' : 'light');
+                }
+            });
+        }
+    });
+})();
+
+// Language Toggle System
+(function() {
+    'use strict';
+    
+    const langToggle = document.getElementById('lang-toggle');
+    
+    // Check for saved language preference
+    function getCurrentLanguage() {
+        return localStorage.getItem('language') || 'en';
+    }
+    
+    // Apply language
+    function applyLanguage(lang) {
+        localStorage.setItem('language', lang);
+        
+        // Update toggle state
+        if (langToggle) {
+            langToggle.checked = (lang === 'ar');
+        }
+        
+        // Here you can add actual language switching logic
+        // For now, we'll just update the toggle state
+        console.log('Language switched to:', lang);
+    }
+    
+    // Toggle language
+    function toggleLanguage() {
+        const currentLang = getCurrentLanguage();
+        const newLang = currentLang === 'en' ? 'ar' : 'en';
+        applyLanguage(newLang);
+    }
+    
+    // Initialize language
+    document.addEventListener('DOMContentLoaded', function() {
+        applyLanguage(getCurrentLanguage());
+        
+        // Add event listener to language toggle
+        if (langToggle) {
+            langToggle.addEventListener('change', toggleLanguage);
+        }
+    });
+})();
+
 // Handle contact link clicks to scroll to contact section
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOMContentLoaded fired');
@@ -916,14 +1621,186 @@ if (statisticsSection) {
   const storageKey = 'theme-preference';
   const getPref = () => localStorage.getItem(storageKey) || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   const setTheme = (t) => { root.classList.add('theme-transition'); root.setAttribute('data-theme', t); document.body.classList.toggle('dark', t==='dark'); setTimeout(()=>root.classList.remove('theme-transition'), 250); localStorage.setItem(storageKey, t); syncToggle(t); };
-  const toggleEl = document.querySelector('.theme-toggle input');
-  function syncToggle(t){ if(!toggleEl) return; toggleEl.checked = (t === 'dark'); }
-  // init
-  syncToggle(getPref()); setTheme(getPref());
-  toggleEl && toggleEl.addEventListener('change', ()=> setTheme(toggleEl.checked ? 'dark' : 'light'));
+
 })();
 </script>
 <script src="js/lang.js"></script>
 <script src="js/dropdown-menu.js"></script>
+
+<!-- AOS JavaScript -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- Initialize AOS -->
+<script>
+// Initialize AOS (Animate On Scroll)
+AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true,
+    offset: 100,
+    delay: 0,
+    anchorPlacement: 'top-bottom'
+});
+
+// Enhanced partner card interactions
+document.addEventListener('DOMContentLoaded', function() {
+    // Add enhanced hover effects to partner cards
+    const partnerCards = document.querySelectorAll('.partner-card-enhanced');
+    
+    partnerCards.forEach((card, index) => {
+        // Add staggered entrance animation
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(50px) rotateX(15deg)';
+        
+        setTimeout(() => {
+            card.style.transition = 'all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0) rotateX(0deg)';
+        }, index * 200);
+        
+        // Enhanced hover effects
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-15px) scale(1.08) rotateX(8deg) rotateY(5deg)';
+            this.style.boxShadow = '0 30px 60px rgba(0,0,0,0.4)';
+            
+            // Add particle burst effect
+            createParticleBurst(this);
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1) rotateX(0deg) rotateY(0deg)';
+            this.style.boxShadow = '0 15px 35px rgba(0,0,0,0.1)';
+        });
+        
+        // Add click effect
+        card.addEventListener('click', function() {
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 150);
+        });
+    });
+    
+    // Create floating particles background
+    createFloatingParticles();
+    
+    // Add parallax effect to section
+    window.addEventListener('scroll', function() {
+        const scrolled = window.pageYOffset;
+        const partnersSection = document.querySelector('.partners-section');
+        if (partnersSection) {
+            const rate = scrolled * -0.5;
+            partnersSection.style.transform = `translateY(${rate}px)`;
+        }
+    });
+});
+
+// Particle burst effect function
+function createParticleBurst(element) {
+    const rect = element.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    
+    for (let i = 0; i < 8; i++) {
+        const particle = document.createElement('div');
+        particle.style.cssText = `
+            position: fixed;
+            left: ${centerX}px;
+            top: ${centerY}px;
+            width: 4px;
+            height: 4px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1000;
+            animation: particleBurst 0.8s ease-out forwards;
+        `;
+        
+        const angle = (i / 8) * Math.PI * 2;
+        const velocity = 100 + Math.random() * 50;
+        const vx = Math.cos(angle) * velocity;
+        const vy = Math.sin(angle) * velocity;
+        
+        particle.style.setProperty('--vx', vx + 'px');
+        particle.style.setProperty('--vy', vy + 'px');
+        
+        document.body.appendChild(particle);
+        
+        setTimeout(() => {
+            document.body.removeChild(particle);
+        }, 800);
+    }
+}
+
+// Floating particles background
+function createFloatingParticles() {
+    const particlesContainer = document.createElement('div');
+    particlesContainer.className = 'floating-particles';
+    particlesContainer.style.cssText = `
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+        overflow: hidden;
+    `;
+    
+    for (let i = 0; i < 20; i++) {
+        const particle = document.createElement('div');
+        particle.style.cssText = `
+            position: absolute;
+            width: ${2 + Math.random() * 4}px;
+            height: ${2 + Math.random() * 4}px;
+            background: rgba(255, 255, 255, ${0.3 + Math.random() * 0.4});
+            border-radius: 50%;
+            left: ${Math.random() * 100}%;
+            top: ${Math.random() * 100}%;
+            animation: floatParticle ${10 + Math.random() * 20}s linear infinite;
+            animation-delay: ${Math.random() * 10}s;
+        `;
+        particlesContainer.appendChild(particle);
+    }
+    
+    const partnersSection = document.querySelector('.partners-section');
+    if (partnersSection) {
+        partnersSection.appendChild(particlesContainer);
+    }
+}
+
+// Add CSS animations to head
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes particleBurst {
+        0% {
+            transform: translate(0, 0) scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: translate(var(--vx), var(--vy)) scale(0);
+            opacity: 0;
+        }
+    }
+    
+    @keyframes floatParticle {
+        0% {
+            transform: translateY(0px) translateX(0px);
+            opacity: 0;
+        }
+        10% {
+            opacity: 1;
+        }
+        90% {
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-100px) translateX(50px);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(style);
+</script>
 
 </body></html>

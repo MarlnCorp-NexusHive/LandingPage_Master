@@ -20,7 +20,7 @@ All HTML files have been updated to include the new CSS and JavaScript files:
 - `ai-powered-consulting.html`
 - `engineering-services.html`
 - `data-analytics.html`
-- `diversity-talent-staffing.html`
+
 - `corporate-training.html`
 - `online-learning-solutions.html`
 - `industry.html`

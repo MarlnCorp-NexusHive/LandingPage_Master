@@ -16,7 +16,7 @@
         namePlaceholder: "الاسم*",
         emailPlaceholder: "البريد الإلكتروني*",
         messagePlaceholder: "أخبرنا عن مشروعك",
-        ourProducts: "منتجاتنا",
+        ourProducts: "منتجاتنا الذكية",
         yourName: "اسمك",
         yourEmail: "بريدك الإلكتروني",
         companyName: "اسم الشركة",
@@ -52,7 +52,7 @@
         }
       },
       services: {
-        title: "خدمات إدارة علاقات العملاء",
+        title: "خبراتنا",
         item1: {
           title: "إعادة هندسة العمليات",
           text: "نحلل ونعيد تصميم ونحسن سير عملك المواجه للعملاء لتحسين الكفاءة وإزالة العوائق ومواءمة العمليات مع استراتيجية CRM الحديثة."
@@ -86,7 +86,7 @@
       product1: { name: "Marln Magicpalm Scanner", desc: "جهاز بصمة أوردة الكف متقدم يوفر مصادقة آمنة دون لمس للتحكم في الوصول والمدفوعات والتحقق من الهوية عبر الصناعات.", tag1: "القياسات الحيوية", tag2: "المدفوعات", tag3: "ماسح", button: "أجهزة" },
       product2: { name: "CRM System", desc: "حل متكامل لإدارة علاقات العملاء يبسّط عمليات المبيعات والتسويق وخدمة العملاء لتعزيز نمو الأعمال.", tag1: "CRM", tag2: "المبيعات", tag3: "العميل", button: "اعرف المزيد" },
       product3: { name: "LMS Platform", desc: "نظام إدارة تعلم متقدم يقدم تجارب تعليمية مشوّقة مع إدارة دورات شاملة وتتبع وتحليلات.", tag1: "LMS", tag2: "التعلم", tag3: "التعليم", button: "اعرف المزيد" },
-      product4: { name: "EGS System", desc: "نظام حوكمة مؤسسية يوفر إشرافاً شاملاً وإدارة للمخاطر ومراقبة للامتثال لعمليات المؤسسات واسعة النطاق.", tag1: "EGS", tag2: "الحوكمة", tag3: "المؤسسات", button: "اعرف المزيد" },
+      product4: { name: "ESG System", desc: "نظام حوكمة مؤسسية يوفر إشرافاً شاملاً وإدارة للمخاطر ومراقبة للامتثال لعمليات المؤسسات واسعة النطاق.", tag1: "ESG", tag2: "الحوكمة", tag3: "المؤسسات", button: "اعرف المزيد" },
       product5: { name: "Marln TalkBright", desc: "منصة مدعومة بالذكاء الاصطناعي تُحدث تحولاً في التحضير لاختبار IELTS من خلال تغذية راجعة ذكية وتحليل فوري ومسارات تعلم مخصصة.", tag1: "IELTS", tag2: "مدعوم بالذكاء الاصطناعي", tag3: "التعليم", button: "اعرف المزيد" },
       why: {
         title: "لماذا تختار Marln؟",
@@ -148,7 +148,7 @@
         namePlaceholder: "Name*",
         emailPlaceholder: "E-mail*",
         messagePlaceholder: "Tell about your project",
-        ourProducts: "Our Products",
+        ourProducts: "Our AI Products",
         yourName: "Your Name",
         yourEmail: "Your Email",
         companyName: "Company Name",
@@ -172,7 +172,7 @@
         government: { title: "GOVERNMENT", text: "From digital transformation to citizen engagement, we partner with public sector institutions to create clear, accessible, and future-forward communication solutions." }
       },
       services: {
-        title: "Our CRM Services",
+        title: "Our Expertise",
         item1: { title: "Business Process Re-engineering", text: "We analyze, redesign, and optimize your customer-facing workflows to improve efficiency, eliminate friction, and align operations with modern CRM strategy." },
         item2: { title: "Product Customization", text: "Every business is unique — your CRM should be too. We tailor CRM platforms to match your exact needs, with custom modules, workflows, and interfaces that adapt to your team and scale with your goals." },
         item3: { title: "Deployment", text: "From pilot to full-scale rollout, we ensure a seamless CRM launch. Our team handles environment setup, testing, user onboarding, and change management to guarantee minimal disruption and maximum adoption." },
@@ -191,7 +191,7 @@
       product1: { name: "Marln Magicpalm Scanner", desc: "A high-end palm vein biometric device offering ultra-secure, touchless authentication for access control, payments, and identity verification across industries.", tag1: "Biometrics", tag2: "Payment", tag3: "Scanner", button: "Hardware" },
       product2: { name: "CRM System", desc: "Comprehensive customer relationship management solution that streamlines sales, marketing, and customer service operations for enhanced business growth.", tag1: "CRM", tag2: "Sales", tag3: "Customer", button: "Learn More" },
       product3: { name: "LMS Platform", desc: "Advanced learning management system that delivers engaging educational experiences with comprehensive course management, tracking, and analytics capabilities.", tag1: "LMS", tag2: "Learning", tag3: "Education", button: "Learn More" },
-      product4: { name: "EGS System", desc: "Enterprise governance system that provides comprehensive oversight, risk management, and compliance monitoring for large-scale organizational operations.", tag1: "EGS", tag2: "Governance", tag3: "Enterprise", button: "Learn More" },
+      product4: { name: "ESG System", desc: "Enterprise governance system that provides comprehensive oversight, risk management, and compliance monitoring for large-scale organizational operations.", tag1: "ESG", tag2: "Governance", tag3: "Enterprise", button: "Learn More" },
       product5: { name: "Marln TalkBright", desc: "Revolutionary AI-powered platform that transforms IELTS exam preparation through intelligent feedback, real-time analysis, and personalized learning pathways for speaking, writing, reading, and listening skills.", tag1: "IELTS", tag2: "AI-Powered", tag3: "Education", button: "Learn More" },
       why: {
         title: "Why Opt For Marln?",

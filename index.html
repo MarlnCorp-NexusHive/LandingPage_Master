@@ -564,12 +564,137 @@ html[data-theme="dark"] .services-hero-section-v_2--img{background:#0e1116}
 }
 /* Make dropdown text black for better contrast */
 .header--menu__list > li > .sub-menu > li > a { color: #0C081E !important; }
+
+/* Make company dropdown display items in a single row */
+.company-dropdown {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    min-width: 500px !important;
+    gap: 15px !important;
+    padding: 10px !important;
+}
+.company-dropdown li {
+    flex: 1 !important;
+    min-width: 120px !important;
+    white-space: nowrap !important;
+}
+.company-dropdown a {
+    padding: 10px 15px !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+    display: block !important;
+    width: 100% !important;
+    text-decoration: none !important;
+}
+
+/* Make services dropdown display items in a single row */
+.services-dropdown {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    min-width: 500px !important;
+    gap: 15px !important;
+    padding: 10px !important;
+}
+.services-dropdown li {
+    flex: 1 !important;
+    min-width: 120px !important;
+    white-space: nowrap !important;
+}
+.services-dropdown a {
+    padding: 10px 15px !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+    display: block !important;
+    width: 100% !important;
+    text-decoration: none !important;
+}
+
+/* Global focus outline removal for header elements */
+#header *:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+#header button:focus,
+#header a:focus,
+#header input:focus,
+#header label:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Aggressive outline removal for all header elements */
+#header * {
+    outline: none !important;
+    box-shadow: none !important;
+}
+#header button,
+#header a,
+#header input,
+#header label,
+#header div,
+#header span,
+#header li {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Maximum specificity outline removal */
+body #header *,
+html body #header *,
+body #header button,
+body #header a,
+body #header input,
+body #header label,
+body #header div,
+body #header span,
+body #header li {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Remove any focus rings or outlines */
+#header *:focus,
+#header *:focus-visible,
+#header *:focus-within {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Chrome-specific focus outline removal */
+#header *:focus {
+    outline: none !important;
+    outline-offset: 0 !important;
+    outline-width: 0 !important;
+    outline-style: none !important;
+    outline-color: transparent !important;
+}
+
+/* Remove Chrome's default focus ring */
+#header button:focus,
+#header a:focus,
+#header input:focus,
+#header label:focus {
+    outline: none !important;
+    outline-offset: 0 !important;
+    outline-width: 0 !important;
+    outline-style: none !important;
+    outline-color: transparent !important;
+}
 </style>
 </head><body class="wp-singular services-template-default single single-services postid-294 wp-theme-valmax scrollbar" data-is-audit-bot="0">
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4KXH5HN"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div class="site-main" id="page"><header class="header" id="header"><div class="header--content"><div class="container"><div class="header-wrapper"><div class="header--item header--logo">
 <a href="index.html" title="Home">
-<img width="184" height="23" src="images/valmax.svg" class="logo-dark skip-lazy" alt="VALMAX Logo | Black" decoding="async" title="VALMAX Logo | Black"><img width="184" height="23" src="images/valmax2.svg" class="logo-light skip-lazy" alt="VALMAX Logo | White" decoding="async" title="VALMAX Logo | White">						</a></div><div class="header--menu"><ul id="header_menu" class="header--menu__list"><li id="menu-item-680" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-680"><a href="about-us.html">About us</a></li><li id="menu-item-666" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-666"><a>Services</a><ul class="sub-menu services-dropdown"><li class="menu-item"><a href="ai-powered-consulting.html">AI Powered Consulting</a></li><li class="menu-item"><a href="engineering-services.html">Engineering Services</a></li><li class="menu-item"><a href="data-analytics.html">Data Analytics</a></li><li class="menu-item"><a href="diversity-talent-staffing.html">Diversity Talent Staffing</a></li><li class="menu-item"><a href="https://a1siliconvalley.com/" target="_blank" rel="noopener noreferrer">Corporate Training</a></li></ul></li><li id="menu-item-company" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-company"><a>Company</a><ul class="sub-menu company-dropdown"><li class="menu-item"><a href="marln-company-profile.html">Marln Company Profile</a></li><li class="menu-item"><a href="corporate-social-responsibility.html">Corporate Social Responsibility (CSR)</a></li><li class="menu-item"><a href="technology-partners.html">Technology Partners</a></li><li class="menu-item"><a href="industry.html">Industry</a></li></ul></li><li id="menu-item-contact" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-contact"><a href="index.html#contact" class="contact-scroll-btn">Contact us</a></li><li class="menu-item menu-item-theme"><label class="theme-toggle"><input type="checkbox"><span class="theme-toggle-button"><svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="#0C081E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="#0C081E"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/></svg></span></label></li><li class="menu-item menu-item-lang">
+<img width="184" height="23" src="images/valmax.svg" class="logo-dark skip-lazy" alt="VALMAX Logo | Black" decoding="async" title="VALMAX Logo | Black"><img width="184" height="23" src="images/valmax2.svg" class="logo-light skip-lazy" alt="VALMAX Logo | White" decoding="async" title="VALMAX Logo | White">						</a></div><div class="header--menu"><ul id="header_menu" class="header--menu__list"><li id="menu-item-680" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-680"><a href="about-us.html">About us</a></li><li id="menu-item-666" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-666"><a>Services</a><ul class="sub-menu services-dropdown"><li class="menu-item"><a href="ai-powered-consulting.html">AI Powered Consulting</a></li><li class="menu-item"><a href="engineering-services.html">Engineering Services</a></li><li class="menu-item"><a href="data-analytics.html">Data Analytics</a></li><li class="menu-item"><a href="https://a1siliconvalley.com/" target="_blank" rel="noopener noreferrer">Corporate Training</a></li></ul></li><li id="menu-item-company" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-company"><a>Company</a><ul class="sub-menu company-dropdown"><li class="menu-item"><a href="marln-company-profile.html">Marln Company Profile</a></li><li class="menu-item"><a href="corporate-social-responsibility.html">Corporate Social Responsibility (CSR)</a></li><li class="menu-item"><a href="technology-partners.html">Technology Partners</a></li><li class="menu-item"><a href="industry.html">Industry</a></li></ul></li><li id="menu-item-contact" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-contact"><a href="index.html#contact" class="contact-scroll-btn">Contact us</a></li><li class="menu-item menu-item-theme"><label class="theme-toggle"><input type="checkbox"><span class="theme-toggle-button"><svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="#0C081E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="#0C081E"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/></svg></span></label></li><li class="menu-item menu-item-lang">
     <div class="language-toggle">
         <input type="checkbox" id="lang-toggle" class="lang-toggle-input">
         <label for="lang-toggle" class="lang-toggle-label">
@@ -688,7 +813,11 @@ Production</h3><div class="txt txt-lg"><p>We transform polished prototypes into 
 </span>
 </a></div></div></div></div><div class="swiper featured-projects-section--slider featured-projects-section--slider--js"><div class="swiper-wrapper"><div class="swiper-slide"><div class="featured-projects-section--slider--item">
 <a href="#product1" title="Marln Magicpalm Scanner"><figure class="preview">
-<img decoding="async" width="1779" height="1554" src="images/marlnpalmscanner.jpg" class="attachment-full size-full" alt="Marln Margicpalm Scanner | Advanced Document Scanning Solution" title="Marln Margicpalm Scanner | Advanced Document Scanning Solution"></figure><div class="featured-projects-section--slider--item--info same-height"><p class="name sh-1 font-medium">
+<video width="1779" height="1554" class="attachment-full size-full" alt="Marln Magicpalm Scanner | Advanced Biometric Authentication Solution" title="Marln Magicpalm Scanner | Advanced Biometric Authentication Solution" autoplay muted loop playsinline style="display: block; width: 100%; height: 100%; object-fit: cover;">
+<source src="images/marlnpalmscanner.mp4" type="video/mp4">
+<img src="images/marlnpalmscanner.jpg" alt="Marln Magicpalm Scanner | Advanced Biometric Authentication Solution" style="display: block; width: 100%; height: 100%; object-fit: cover;">
+Your browser does not support the video tag.
+</video></figure><div class="featured-projects-section--slider--item--info same-height"><p class="name sh-1 font-medium">
 Marln Magicpalm Scanner</p><div class="txt txt-lg"><p>
     A high-end palm vein biometric device offering ultra-secure, touchless authentication for access control, payments, and identity verification across industries.</p></div><div class="featured-projects-section--slider--item--tags"><div class="featured-projects-section--slider--item--tags--wrapper"><ul class="featured-projects-section--slider--item--tags--col-tags"><li><div class="btn btn-tag">
 <span class="btn-text">
@@ -1237,5 +1366,79 @@ if (statisticsSection) {
 </script>
 <script src="js/lang.js"></script>
 <script src="js/dropdown-menu.js"></script>
+
+<script>
+// Video Loading and Playback Enhancement - Continuous Animation
+(function() {
+    const video = document.querySelector('.featured-projects-section--slider--item .preview video');
+    
+    if (video) {
+        // Ensure video is visible
+        video.style.display = 'block';
+        video.style.opacity = '1';
+        video.style.visibility = 'visible';
+        
+        // Function to ensure video plays continuously
+        function ensureVideoPlays() {
+            if (video.paused) {
+                video.play().catch(function(error) {
+                    console.log('Video play failed:', error);
+                    // Retry after a short delay
+                    setTimeout(ensureVideoPlays, 1000);
+                });
+            }
+        }
+        
+        // Add event listeners for better video handling
+        video.addEventListener('loadeddata', function() {
+            console.log('Video loaded successfully');
+            this.style.display = 'block';
+            this.style.opacity = '1';
+            // Start playing immediately when loaded
+            ensureVideoPlays();
+        });
+        
+        video.addEventListener('error', function(e) {
+            console.error('Video loading error:', e);
+            // Show fallback image if video fails
+            const fallbackImg = this.querySelector('img');
+            if (fallbackImg) {
+                fallbackImg.style.display = 'block';
+                this.style.display = 'none';
+            }
+        });
+        
+        // Ensure video plays when it ends (for continuous looping)
+        video.addEventListener('ended', function() {
+            console.log('Video ended, restarting...');
+            ensureVideoPlays();
+        });
+        
+        // Ensure video plays when it comes into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    console.log('Video in view, ensuring it plays...');
+                    ensureVideoPlays();
+                }
+            });
+        });
+        
+        observer.observe(video);
+        
+        // Force play on any user interaction (for browsers that block autoplay)
+        document.addEventListener('click', function() {
+            ensureVideoPlays();
+        });
+        
+        document.addEventListener('touchstart', function() {
+            ensureVideoPlays();
+        });
+        
+        // Also try to play immediately
+        setTimeout(ensureVideoPlays, 100);
+    }
+})();
+</script>
 
 </body></html>

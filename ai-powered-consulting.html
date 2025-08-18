@@ -373,7 +373,7 @@ body::-webkit-scrollbar,
 #header .services-dropdown a:hover,
 #header .company-dropdown a:hover{background:transparent !important}
 /* Change dropdown background to green color */
-.header--menu__list > li > .sub-menu { background-color: #6aa84f !important; }
+.header--menu__list > li > .sub-menu { background-color: #9EE86F !important; }
 
 /* Make company dropdown display items in a single row */
 .company-dropdown {
@@ -399,6 +399,7 @@ body::-webkit-scrollbar,
     text-overflow: unset !important;
     display: block !important;
     width: 100% !important;
+    text-decoration: none !important;
 }
 
 /* Make services dropdown display items in a single row */
@@ -461,8 +462,99 @@ body::-webkit-scrollbar,
 #header .company-dropdown a {
     text-decoration: none !important;
 }
+.services-dropdown a,
+.company-dropdown a,
+.header--menu__list .sub-menu a,
+.header--menu__list .sub-menu li a {
+    text-decoration: none !important;
+}
+
+/* Force remove underlines from all dropdown items */
+#header .sub-menu a,
+#header .sub-menu li a,
+#header .services-dropdown a,
+#header .company-dropdown a {
+    text-decoration: none !important;
+}
 /* Make dropdown text black for better contrast */
 .header--menu__list > li > .sub-menu > li > a { color: #0C081E !important; }
+
+/* Global focus outline removal for header elements */
+#header *:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#header button:focus,
+#header a:focus,
+#header input:focus,
+#header label:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Aggressive outline removal for all header elements */
+#header * {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#header button,
+#header a,
+#header input,
+#header label,
+#header div,
+#header span,
+#header li {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Maximum specificity outline removal */
+body #header *,
+html body #header *,
+body #header button,
+body #header a,
+body #header input,
+body #header label,
+body #header div,
+body #header span,
+body #header li {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Remove any focus rings or outlines */
+#header *:focus,
+#header *:focus-visible,
+#header *:focus-within {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Chrome-specific focus outline removal */
+#header *:focus {
+    outline: none !important;
+    outline-offset: 0 !important;
+    outline-width: 0 !important;
+    outline-style: none !important;
+    outline-color: transparent !important;
+}
+
+/* Remove Chrome's default focus ring */
+#header button:focus,
+#header a:focus,
+#header input:focus,
+#header label:focus {
+    outline: none !important;
+    outline-offset: 0 !important;
+    outline-width: 0 !important;
+    outline-style: none !important;
+    outline-color: transparent !important;
+}
 
 /* Header Button Green Hover Effects */
 #header .header--menu__list > li > a:hover {
@@ -734,7 +826,8 @@ html[data-theme="dark"] .services-section:nth-child(even){background:#0e1116 !im
 #header .services-dropdown a:hover,
 #header .company-dropdown a:hover{background:transparent !important}
 /* Change dropdown background to green color */
-.header--menu__list > li > .sub-menu { background-color: #6aa84f !important; }
+.header--menu__list > li > .sub-menu { background-color: #9EE86F !important; }
+
 /* Make dropdown text black for better contrast */
 .header--menu__list > li > .sub-menu > li > a { color: #0C081E !important; }
 </style>
@@ -743,7 +836,7 @@ html[data-theme="dark"] .services-section:nth-child(even){background:#0e1116 !im
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4KXH5HN"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div class="site-main" id="page"><header class="header" id="header"><div class="header--content"><div class="container"><div class="header-wrapper"><div class="header--item header--logo">
 <a href="index.html" title="Home">
-<img width="184" height="23" src="images/valmax.svg" class="logo-dark skip-lazy" alt="VALMAX Logo | Black" decoding="async" title="VALMAX Logo | Black"><img width="184" height="23" src="images/valmax2.svg" class="logo-light skip-lazy" alt="VALMAX Logo | White" decoding="async" title="VALMAX Logo | White">						</a></div><div class="header--menu"><ul id="header_menu" class="header--menu__list"><li id="menu-item-680" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-680"><a href="about-us.html">About us</a></li><li id="menu-item-666" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-666"><a>Services</a><ul class="sub-menu services-dropdown"><li class="menu-item"><a href="ai-powered-consulting.html">AI Powered Consulting</a></li><li class="menu-item"><a href="engineering-services.html">Engineering Services</a></li><li class="menu-item"><a href="data-analytics.html">Data Analytics</a></li><li class="menu-item"><a href="diversity-talent-staffing.html">Diversity Talent Staffing</a></li><li class="menu-item"><a href="https://a1siliconvalley.com/" target="_blank" rel="noopener noreferrer">Corporate Training</a></li></ul></li><li id="menu-item-company" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-company"><a>Company</a><ul class="sub-menu company-dropdown"><li class="menu-item"><a href="marln-company-profile.html">Marln Company Profile</a></li><li class="menu-item"><a href="corporate-social-responsibility.html">Corporate Social Responsibility (CSR)</a></li><li class="menu-item"><a href="technology-partners.html">Technology Partners</a></li><li class="menu-item"><a href="industry.html">Industry</a></li></ul></li><li id="menu-item-contact" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-contact"><a href="#contact" class="contact-scroll-btn">Contact us</a></li><li class="menu-item menu-item-theme"><label class="theme-toggle"><input type="checkbox"><span class="theme-toggle-button"><svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="#0C081E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="#0C081E"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/></svg></span></label></li><li class="menu-item menu-item-lang">
+<img width="184" height="23" src="images/valmax.svg" class="logo-dark skip-lazy" alt="VALMAX Logo | Black" decoding="async" title="VALMAX Logo | Black"><img width="184" height="23" src="images/valmax2.svg" class="logo-light skip-lazy" alt="VALMAX Logo | White" decoding="async" title="VALMAX Logo | White">						</a></div><div class="header--menu"><ul id="header_menu" class="header--menu__list"><li id="menu-item-680" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-680"><a href="about-us.html">About us</a></li><li id="menu-item-666" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-666"><a>Services</a><ul class="sub-menu services-dropdown"><li class="menu-item"><a href="ai-powered-consulting.html">AI Powered Consulting</a></li><li class="menu-item"><a href="engineering-services.html">Engineering Services</a></li><li class="menu-item"><a href="data-analytics.html">Data Analytics</a></li><li class="menu-item"><a href="https://a1siliconvalley.com/" target="_blank" rel="noopener noreferrer">Corporate Training</a></li></ul></li><li id="menu-item-company" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-company"><a>Company</a><ul class="sub-menu company-dropdown"><li class="menu-item"><a href="marln-company-profile.html">Marln Company Profile</a></li><li class="menu-item"><a href="corporate-social-responsibility.html">Corporate Social Responsibility (CSR)</a></li><li class="menu-item"><a href="technology-partners.html">Technology Partners</a></li><li class="menu-item"><a href="industry.html">Industry</a></li></ul></li><li id="menu-item-contact" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-contact"><a href="index.html#contact" class="contact-scroll-btn">Contact us</a></li><li class="menu-item menu-item-theme"><label class="theme-toggle"><input type="checkbox"><span class="theme-toggle-button"><svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="#0C081E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="#0C081E"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/></svg></span></label></li><li class="menu-item menu-item-lang">
     <div class="language-toggle">
         <input type="checkbox" id="lang-toggle" class="lang-toggle-input">
         <label for="lang-toggle" class="lang-toggle-label">
@@ -761,7 +854,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </span>
 <span></span><span></span>
 </span>
-</button></div><div class="burger-menu-bg" id="burger-menu-bg"></div><div class="burger-menu" id="burger-menu"><div class="burger-menu__top-panel"><div class="burger-menu__top-panel__wrapper"><div class="burger-menu__top-panel__list"></div></div></div><div class="burger-menu__wrapper"><div class="burger-menu__left-bar"><div class="burger-menu__left-bar__wrapper"><div class="burger-menu__left-bar__menu burger-menu__left-bar__menu--desktop"><ul id="header_menu_burger_left" class="burger-menu__left-bar__list"><li id="menu-item-46" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-46"><a>Home</a></li><li id="menu-item-681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-681"><a href="about-us.html">About us</a></li><li id="menu-item-668" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-668"><a>Services</a></li><li id="menu-item-1680" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1680"><a>Insights</a></li><li id="menu-item-1681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1681"><a>Contact us</a></li></ul></div><div class="burger-menu__left-bar__menu burger-menu__left-bar__menu--tablet-and-mobile"><ul id="mobile_burger_menu" class="burger-menu__left-bar__list"><li id="menu-item-3701" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3701"><a>Home</a></li><li id="menu-item-3710" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3710"><a>Works</a></li><li id="menu-item-3705" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3705"><a>Services</a></li><li id="menu-item-3711" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3711"><a>Industries</a></li><li id="menu-item-3702" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3702"><a href="about-us.html">About</a></li><li id="menu-item-3703" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3703"><a>Insights</a></li><li id="menu-item-3704" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3704"><a>Contact us</a></li></ul></div></div></div><div class="burger-menu__right-bar"><div class="burger-menu__right-bar__wrapper"><div class="burger-menu__right-bar__menu"><ul id="header_menu_burger_right" class="burger-menu__right-bar__list"><li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current-menu-ancestor current-menu-parent menu-item-has-children menu-item-51"><a>Branding</a><ul class="sub-menu"><li id="menu-item-2062" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2062"><a>Strategy</a></li><li id="menu-item-2063" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2063"><a>Logo Design</a></li><li id="menu-item-2064" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2064"><a>Brand Identity</a></li></ul></li><li id="menu-item-52" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-52"><a>Design</a><ul class="sub-menu"><li id="menu-item-853" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-853"><a>Web Design</a></li><li id="menu-item-852" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-852"><a>UI/UX Design</a></li><li id="menu-item-851" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-851"><a>Mobile Design</a></li><li id="menu-item-849" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-849"><a>Motion & 3D Design</a></li><li id="menu-item-850" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-850"><a>Graphic Design</a></li></ul></li><li id="menu-item-53" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-53"><a href="#">Development</a><ul class="sub-menu"><li id="menu-item-626" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-626"><a href="https://valmax.agency/services/development/corporate-websites/">Corporate Websites</a></li><li id="menu-item-625" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-625"><a href="https://valmax.agency/services/development/wow-websites/">WOW Website</a></li><li id="menu-item-2100" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-2100"><a href="https://valmax.agency/services/development/no-code-websites/">No-code websites</a></li><li id="menu-item-624" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-624"><a href="https://valmax.agency/services/development/ecommerce/">Ecommerce Development</a></li><li id="menu-item-623" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-623"><a href="https://valmax.agency/services/development/mvp-for-startups/">MVP for Startups</a></li><li id="menu-item-622" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-622"><a href="https://valmax.agency/services/development/development-of-web-applications/">Web Applications</a></li></ul></li><li id="menu-item-755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-755"><a href="https://valmax.agency/industries/">Industries</a><ul class="sub-menu"><li id="menu-item-2055" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2055"><a href="https://valmax.agency/industries/">AI & ML</a></li><li id="menu-item-2056" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2056"><a href="https://valmax.agency/industries/">Web 3.0</a></li><li id="menu-item-2057" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2057"><a href="https://valmax.agency/industries/">Real Estate</a></li><li id="menu-item-2058" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2058"><a href="https://valmax.agency/industries/">eCommerce</a></li><li id="menu-item-2059" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2059"><a href="https://valmax.agency/industries/">IT, Digital</a></li><li id="menu-item-2060" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2060"><a href="https://valmax.agency/industries/">Startups</a></li><li id="menu-item-2061" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2061"><a href="https://valmax.agency/industries/">All Industries</a></li></ul></li><li id="menu-item-1688" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1688"><a href="https://valmax.agency/case-studies/">Case Studies</a><ul class="sub-menu"><li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a href="/case-studies/?category=branding">Branding</a></li><li id="menu-item-143" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-143"><a href="/case-studies/?category=ui-ux-design">Design</a></li><li id="menu-item-144" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144"><a href="/case-studies/">Websites</a></li><li id="menu-item-145" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145"><a href="/case-studies/?category=e-commerce">eCommerce</a></li></ul></li><li id="menu-item-56" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-56"><a href="#">Partnership</a><ul class="sub-menu"><li id="menu-item-2089" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2089"><a href="https://valmax.agency/white-label-agency/">White Label</a></li><li id="menu-item-2088" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2088"><a href="https://valmax.agency/affiliate-program/">Affiliate Program</a></li></ul></li></ul></div></div></div></div><div class="burger-menu__cta-form"><div class="container"><div class="burger-menu__cta-form--wrapper"><div class="burger-menu__cta-form--item"><p class="burger-menu__cta-form--title">
+</button></div><div class="burger-menu-bg" id="burger-menu-bg"></div><div class="burger-menu" id="burger-menu"><div class="burger-menu__top-panel"><div class="burger-menu__top-panel__wrapper"><div class="burger-menu__top-panel__list"></div></div></div><div class="burger-menu__wrapper"><div class="burger-menu__left-bar"><div class="burger-menu__left-bar__wrapper"><div class="burger-menu__left-bar__menu burger-menu__left-bar__menu--desktop"><ul id="header_menu_burger_left" class="burger-menu__left-bar__list"><li id="menu-item-46" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-46"><a>Home</a></li><li id="menu-item-681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-681"><a href="about-us.html">About us</a></li><li id="menu-item-668" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-668"><a>Services</a></li><li id="menu-item-1680" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1680"><a>Insights</a></li><li id="menu-item-1681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1681"><a href="index.html#contact">Contact us</a></li></ul></div><div class="burger-menu__left-bar__menu burger-menu__left-bar__menu--tablet-and-mobile"><ul id="mobile_burger_menu" class="burger-menu__left-bar__list"><li id="menu-item-3701" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3701"><a>Home</a></li><li id="menu-item-3710" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3710"><a>Works</a></li><li id="menu-item-3705" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3705"><a>Services</a></li><li id="menu-item-3711" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3711"><a>Industries</a></li><li id="menu-item-3702" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3702"><a href="about-us.html">About</a></li><li id="menu-item-3703" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3703"><a>Insights</a></li><li id="menu-item-3704" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3704"><a href="index.html#contact">Contact us</a></li></ul></div></div></div><div class="burger-menu__right-bar"><div class="burger-menu__right-bar__wrapper"><div class="burger-menu__right-bar__menu"><ul id="header_menu_burger_right" class="burger-menu__right-bar__list"><li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current-menu-ancestor current-menu-parent menu-item-has-children menu-item-51"><a>Branding</a><ul class="sub-menu"><li id="menu-item-2062" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2062"><a>Strategy</a></li><li id="menu-item-2063" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2063"><a>Logo Design</a></li><li id="menu-item-2064" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2064"><a>Brand Identity</a></li></ul></li><li id="menu-item-52" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-52"><a>Design</a><ul class="sub-menu"><li id="menu-item-853" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-853"><a>Web Design</a></li><li id="menu-item-852" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-852"><a>UI/UX Design</a></li><li id="menu-item-851" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-851"><a>Mobile Design</a></li><li id="menu-item-849" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-849"><a>Motion & 3D Design</a></li><li id="menu-item-850" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-850"><a>Graphic Design</a></li></ul></li><li id="menu-item-53" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-53"><a href="#">Development</a><ul class="sub-menu"><li id="menu-item-626" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-626"><a href="https://valmax.agency/services/development/corporate-websites/">Corporate Websites</a></li><li id="menu-item-625" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-625"><a href="https://valmax.agency/services/development/wow-websites/">WOW Website</a></li><li id="menu-item-2100" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-2100"><a href="https://valmax.agency/services/development/no-code-websites/">No-code websites</a></li><li id="menu-item-624" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-624"><a href="https://valmax.agency/services/development/ecommerce/">Ecommerce Development</a></li><li id="menu-item-623" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-623"><a href="https://valmax.agency/services/development/mvp-for-startups/">MVP for Startups</a></li><li id="menu-item-622" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-622"><a href="https://valmax.agency/services/development/development-of-web-applications/">Web Applications</a></li></ul></li><li id="menu-item-755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-755"><a href="https://valmax.agency/industries/">Industries</a><ul class="sub-menu"><li id="menu-item-2055" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2055"><a href="https://valmax.agency/industries/">AI & ML</a></li><li id="menu-item-2056" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2056"><a href="https://valmax.agency/industries/">Web 3.0</a></li><li id="menu-item-2057" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2057"><a href="https://valmax.agency/industries/">Real Estate</a></li><li id="menu-item-2058" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2058"><a href="https://valmax.agency/industries/">eCommerce</a></li><li id="menu-item-2059" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2059"><a href="https://valmax.agency/industries/">IT, Digital</a></li><li id="menu-item-2060" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2060"><a href="https://valmax.agency/industries/">Startups</a></li><li id="menu-item-2061" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2061"><a href="https://valmax.agency/industries/">All Industries</a></li></ul></li><li id="menu-item-1688" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1688"><a href="https://valmax.agency/case-studies/">Case Studies</a><ul class="sub-menu"><li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a href="/case-studies/?category=branding">Branding</a></li><li id="menu-item-143" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-143"><a href="/case-studies/?category=ui-ux-design">Design</a></li><li id="menu-item-144" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144"><a href="/case-studies/">Websites</a></li><li id="menu-item-145" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145"><a href="/case-studies/?category=e-commerce">eCommerce</a></li></ul></li><li id="menu-item-56" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-56"><a href="#">Partnership</a><ul class="sub-menu"><li id="menu-item-2089" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2089"><a href="https://valmax.agency/white-label-agency/">White Label</a></li><li id="menu-item-2088" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2088"><a href="https://valmax.agency/affiliate-program/">Affiliate Program</a></li></ul></li></ul></div></div></div></div><div class="burger-menu__cta-form"><div class="container"><div class="burger-menu__cta-form--wrapper"><div class="burger-menu__cta-form--item"><p class="burger-menu__cta-form--title">
 Got a project?</p><div class="burger-menu__cta-form--btn">
 <button class="btn btn-large btn-coloured btn-hover-discoloured btn-lt">
 <span class="btn-text">
