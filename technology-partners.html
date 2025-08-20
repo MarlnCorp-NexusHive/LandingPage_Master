@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technology Partners - VALMAX | Strategic Technology Alliances</title>
+    <title>Technology Partners - Marln Corporation | Strategic Technology Alliances</title>
     
     <!-- CSS Files -->
     <link data-optimized="2" rel="stylesheet" href="css/f1225b8e5b82e8a69bb95d9a974ef054.css">
@@ -13,6 +13,41 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
+        /* RTL Support for Arabic */
+        html[dir="rtl"] {
+            direction: rtl;
+            text-align: right;
+        }
+        
+        html[dir="rtl"] .tech-partners-title,
+        html[dir="rtl"] .tech-partners-subtitle {
+            text-align: center;
+        }
+        
+        html[dir="rtl"] .partner-card-enhanced h4,
+        html[dir="rtl"] .partner-card-enhanced p {
+            text-align: center;
+        }
+        
+        html[dir="rtl"] .contact-us--form--title,
+        html[dir="rtl"] .thank-you-for-another-form--title,
+        html[dir="rtl"] .thank-you-for-another-form--text {
+            text-align: center;
+        }
+        
+        html[dir="rtl"] .contact-us--info h3 {
+            text-align: right;
+        }
+        
+        html[dir="rtl"] .footer-social-networks h4,
+        html[dir="rtl"] .footer-certifications h4,
+        html[dir="rtl"] .footer-offices h4 {
+            text-align: right;
+        }
+        
+        html[dir="rtl"] .offices-item p {
+            text-align: right;
+        }
 
         /* Custom Green Scrollbar Styles - High Specificity */
         html::-webkit-scrollbar,
@@ -96,6 +131,587 @@ body::-webkit-scrollbar,
 }
 .contact-us--manager--avatar--icon svg path:nth-last-of-type(1) {
     fill: #FFFFFF !important;
+}
+
+/* ===== DARK MODE STYLES ===== */
+html[data-theme="dark"] {
+    --bg-primary: #0E1116;
+    --bg-secondary: #1A1D24;
+    --bg-tertiary: #2A2D34;
+    --text-primary: #FFFFFF;
+    --text-secondary: #E0E0E0;
+    --text-muted: #B0B0B0;
+    --border-color: #3A3D44;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --card-bg: #1A1D24;
+    --card-border: #2A2D34;
+    --accent-color: #4CAF50;
+    --accent-hover: #45a049;
+}
+
+html[data-theme="light"] {
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F8F9FA;
+    --bg-tertiary: #E9ECEF;
+    --text-primary: #0C081E;
+    --text-secondary: #2A2D34;
+    --text-muted: #6C757D;
+    --border-color: #DEE2E6;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --card-bg: #FFFFFF;
+    --card-border: #E9ECEF;
+    --accent-color: #4CAF50;
+    --accent-hover: #45a049;
+}
+
+/* Dark Mode Scrollbar */
+html[data-theme="dark"]::-webkit-scrollbar-track {
+    background: #1A1D24 !important;
+}
+
+html[data-theme="dark"]::-webkit-scrollbar-thumb {
+    background: #4CAF50 !important;
+}
+
+html[data-theme="dark"]::-webkit-scrollbar-thumb:hover {
+    background: #45a049 !important;
+}
+
+html[data-theme="dark"] {
+    scrollbar-color: #4CAF50 #1A1D24 !important;
+}
+
+/* Dark Mode Body and Main Content */
+html[data-theme="dark"] body {
+    background-color: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+html[data-theme="dark"] main {
+    background-color: var(--bg-primary) !important;
+}
+
+/* Dark Mode Header and Navigation */
+html[data-theme="dark"] .header {
+    background-color: var(--bg-secondary) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+html[data-theme="dark"] .header-nav {
+    background-color: var(--bg-secondary) !important;
+}
+
+html[data-theme="dark"] .header-nav--item {
+    color: var(--text-primary) !important;
+}
+
+html[data-theme="dark"] .header-nav--item:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Dark Mode Dropdown Menus */
+html[data-theme="dark"] .dropdown-menu {
+    background-color: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 8px 32px var(--shadow-color) !important;
+}
+
+html[data-theme="dark"] .dropdown-menu a {
+    color: var(--text-primary) !important;
+}
+
+html[data-theme="dark"] .dropdown-menu a:hover {
+    background-color: var(--bg-tertiary) !important;
+    color: var(--accent-color) !important;
+}
+
+/* Dark Mode Hero Section */
+html[data-theme="dark"] .hero-section {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%) !important;
+}
+
+html[data-theme="dark"] .hero-section h1 {
+    color: var(--text-primary) !important;
+}
+
+html[data-theme="dark"] .hero-section p {
+    color: var(--text-secondary) !important;
+}
+
+/* Dark Mode Partner Cards */
+html[data-theme="dark"] .partner-card-enhanced {
+    background: var(--card-bg) !important;
+    border: 1px solid var(--card-border) !important;
+    box-shadow: 0 8px 32px var(--shadow-color) !important;
+}
+
+html[data-theme="dark"] .partner-card-enhanced:hover {
+    box-shadow: 0 12px 48px var(--shadow-color) !important;
+    transform: translateY(-8px) !important;
+}
+
+html[data-theme="dark"] .partner-card-enhanced h4 {
+    color: var(--text-primary) !important;
+}
+
+html[data-theme="dark"] .partner-card-enhanced p {
+    color: var(--text-secondary) !important;
+}
+
+/* Dark Mode Section Headers */
+html[data-theme="dark"] .section-header .heading {
+    color: var(--text-primary) !important;
+}
+
+html[data-theme="dark"] .section-header .subheading {
+    color: var(--text-secondary) !important;
+}
+
+/* Dark Mode Contact Section */
+html[data-theme="dark"] .contact-us {
+    background: linear-gradient(rgba(14, 17, 22, 0.95), rgba(14, 17, 22, 0.95)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=1080&fit=crop&crop=center') no-repeat center center !important;
+    background-size: cover !important;
+}
+
+html[data-theme="dark"] .contact-us--form--title {
+    color: var(--text-primary) !important;
+}
+
+html[data-theme="dark"] .contact-us--info {
+    background-color: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+/* Dark Mode Form Elements */
+html[data-theme="dark"] .wpcf7-form-control {
+    background-color: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+html[data-theme="dark"] .wpcf7-form-control::placeholder {
+    color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .wpcf7-form-control:focus {
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2) !important;
+}
+
+html[data-theme="dark"] .wpcf7-submit {
+    background-color: var(--accent-color) !important;
+    color: white !important;
+}
+
+html[data-theme="dark"] .wpcf7-submit:hover {
+    background-color: var(--accent-hover) !important;
+}
+
+/* Dark Mode Buttons */
+html[data-theme="dark"] .btn-light {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+html[data-theme="dark"] .btn-light:hover {
+    background-color: var(--bg-tertiary) !important;
+    color: var(--accent-color) !important;
+}
+
+html[data-theme="dark"] .btn-dark {
+    background-color: var(--accent-color) !important;
+    color: white !important;
+}
+
+html[data-theme="dark"] .btn-dark:hover {
+    background-color: var(--accent-hover) !important;
+}
+
+/* Dark Mode Footer */
+html[data-theme="dark"] .footer {
+    background-color: var(--bg-secondary) !important;
+    border-top: 1px solid var(--border-color) !important;
+}
+
+html[data-theme="dark"] .footer-menu--items a {
+    color: var(--text-secondary) !important;
+}
+
+html[data-theme="dark"] .footer-menu--items a:hover {
+    color: var(--accent-color) !important;
+}
+
+html[data-theme="dark"] .offices-title {
+    color: var(--text-primary) !important;
+}
+
+html[data-theme="dark"] .offices-item p {
+    color: var(--text-secondary) !important;
+}
+
+/* Dark Mode Contact Manager */
+html[data-theme="dark"] .contact-us--manager p {
+    color: var(--text-primary) !important;
+}
+
+html[data-theme="dark"] .contact-us--connect--item .heading {
+    color: var(--text-primary) !important;
+}
+
+/* Dark Mode Thank You Section */
+html[data-theme="dark"] .thank-you-for-another-form--title {
+    color: var(--text-primary) !important;
+}
+
+html[data-theme="dark"] .thank-you-for-another-form--text {
+    color: var(--text-secondary) !important;
+}
+
+/* Dark Mode AOS Animations */
+html[data-theme="dark"] [data-aos] {
+    color: var(--text-primary) !important;
+}
+
+/* Dark Mode Responsive Adjustments */
+@media (max-width: 768px) {
+    html[data-theme="dark"] .partner-card-enhanced {
+        background: var(--card-bg) !important;
+        border: 1px solid var(--card-border) !important;
+    }
+    
+    html[data-theme="dark"] .contact-us {
+        background: linear-gradient(rgba(14, 17, 22, 0.98), rgba(14, 17, 22, 0.98)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=1080&fit=crop&crop=center') no-repeat center center !important;
+    }
+}
+
+/* Dark Mode Smooth Transitions */
+html[data-theme="dark"] *,
+html[data-theme="light"] * {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* Dark Mode Override for Specific Elements */
+html[data-theme="dark"] .logo-light {
+    display: block !important;
+}
+
+html[data-theme="dark"] .logo-dark {
+    display: none !important;
+}
+
+html[data-theme="light"] .logo-light {
+    display: none !important;
+}
+
+html[data-theme="light"] .logo-dark {
+    display: block !important;
+}
+
+/* Default Logo Display (Light Mode) */
+.logo-light {
+    display: block !important;
+}
+
+.logo-dark {
+    display: none !important;
+}
+
+/* Force Logo Switching in Dark Mode */
+html[data-theme="dark"] .header--logo .logo-light {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+html[data-theme="dark"] .header--logo .logo-dark {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Force Logo Switching in Light Mode */
+html[data-theme="light"] .header--logo .logo-light {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+html[data-theme="light"] .header--logo .logo-dark {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Dark Mode Theme Toggle Styling */
+html[data-theme="dark"] .theme-toggle {
+    background-color: var(--bg-tertiary) !important;
+}
+
+html[data-theme="dark"] .theme-toggle input:checked + .slider {
+    background-color: var(--accent-color) !important;
+}
+
+/* Dark Mode Language Toggle */
+html[data-theme="dark"] .lang-toggle {
+    background-color: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+}
+
+html[data-theme="dark"] .lang-toggle:hover {
+    background-color: var(--bg-secondary) !important;
+}
+
+/* Partner Card Individual Styles with Dark Mode Support */
+.partner-card-1 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3) !important;
+}
+
+.partner-card-2 {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%) !important;
+    box-shadow: 0 15px 35px rgba(240, 147, 251, 0.3) !important;
+}
+
+.partner-card-3 {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
+    box-shadow: 0 15px 35px rgba(79, 172, 254, 0.3) !important;
+}
+
+.partner-card-4 {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%) !important;
+    box-shadow: 0 15px 35px rgba(250, 112, 154, 0.3) !important;
+}
+
+.partner-card-5 {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%) !important;
+    box-shadow: 0 15px 35px rgba(168, 237, 234, 0.3) !important;
+}
+
+.partner-card-6 {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%) !important;
+    box-shadow: 0 15px 35px rgba(252, 182, 159, 0.3) !important;
+}
+
+/* Dark Mode Partner Card Overrides */
+html[data-theme="dark"] .partner-card-1,
+html[data-theme="dark"] .partner-card-2,
+html[data-theme="dark"] .partner-card-3,
+html[data-theme="dark"] .partner-card-4,
+html[data-theme="dark"] .partner-card-5,
+html[data-theme="dark"] .partner-card-6 {
+    background: var(--card-bg) !important;
+    border: 1px solid var(--card-border) !important;
+    box-shadow: 0 8px 32px var(--shadow-color) !important;
+}
+
+html[data-theme="dark"] .partner-card-1:hover,
+html[data-theme="dark"] .partner-card-2:hover,
+html[data-theme="dark"] .partner-card-3:hover,
+html[data-theme="dark"] .partner-card-4:hover,
+html[data-theme="dark"] .partner-card-5:hover,
+html[data-theme="dark"] .partner-card-6:hover {
+    box-shadow: 0 12px 48px var(--shadow-color) !important;
+    transform: translateY(-8px) !important;
+}
+
+/* Dark Mode Partner Card Text */
+html[data-theme="dark"] .partner-card-1 h4,
+html[data-theme="dark"] .partner-card-2 h4,
+html[data-theme="dark"] .partner-card-3 h4,
+html[data-theme="dark"] .partner-card-4 h4,
+html[data-theme="dark"] .partner-card-5 h4,
+html[data-theme="dark"] .partner-card-6 h4 {
+    color: var(--text-primary) !important;
+}
+
+html[data-theme="dark"] .partner-card-1 p,
+html[data-theme="dark"] .partner-card-2 p,
+html[data-theme="dark"] .partner-card-3 p,
+html[data-theme="dark"] .partner-card-4 p,
+html[data-theme="dark"] .partner-card-5 p,
+html[data-theme="dark"] .partner-card-6 p {
+    color: var(--text-secondary) !important;
+}
+
+/* Dark Mode Contact Section Background Override */
+html[data-theme="dark"] .contact-us {
+    background: linear-gradient(rgba(14, 17, 22, 0.95), rgba(14, 17, 22, 0.95)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=1080&fit=crop&crop=center') no-repeat center center !important;
+    background-size: cover !important;
+}
+
+/* Dark Mode Hero Section Background */
+html[data-theme="dark"] .hero-section {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%) !important;
+}
+
+/* Dark Mode Section Backgrounds */
+html[data-theme="dark"] .full-section {
+    background-color: var(--bg-primary) !important;
+}
+
+html[data-theme="dark"] .full-section-card {
+    background-color: var(--card-bg) !important;
+    border: 1px solid var(--card-border) !important;
+}
+
+/* Dark Mode Text Colors for All Sections */
+html[data-theme="dark"] .full-section h1,
+html[data-theme="dark"] .full-section h2,
+html[data-theme="dark"] .full-section h3,
+html[data-theme="dark"] .full-section h4,
+html[data-theme="dark"] .full-section h5,
+html[data-theme="dark"] .full-section h6 {
+    color: var(--text-primary) !important;
+}
+
+html[data-theme="dark"] .full-section p,
+html[data-theme="dark"] .full-section span,
+html[data-theme="dark"] .full-section div {
+    color: var(--text-secondary) !important;
+}
+
+/* Dark Mode Container Backgrounds */
+html[data-theme="dark"] .container {
+    background-color: transparent !important;
+}
+
+/* Dark Mode Grid Container */
+html[data-theme="dark"] .partners-grid-container {
+    background-color: transparent !important;
+}
+
+/* Dark Mode Card Overlay Text */
+html[data-theme="dark"] .card-overlay h4 {
+    color: var(--text-primary) !important;
+}
+
+html[data-theme="dark"] .card-overlay p {
+    color: var(--text-secondary) !important;
+}
+
+/* Dark Mode Contact Form Title - More Specific */
+html[data-theme="dark"] .contact-us--form--title,
+html[data-theme="dark"] .cf-title,
+html[data-theme="dark"] h2.contact-us--form--title,
+html[data-theme="dark"] h2.cf-title {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Dark Mode Contact Form Labels and Text */
+html[data-theme="dark"] .contact-us--form label,
+html[data-theme="dark"] .contact-us--form p,
+html[data-theme="dark"] .contact-us--form span {
+    color: var(--text-primary) !important;
+}
+
+/* Dark Mode Contact Form Description */
+html[data-theme="dark"] .contact-us--form .description,
+html[data-theme="dark"] .contact-us--form .subtitle {
+    color: var(--text-secondary) !important;
+}
+
+/* Dark Mode All H2 Elements in Contact Section */
+html[data-theme="dark"] .contact-us h2 {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+}
+
+/* Dark Mode Contact Form Block */
+html[data-theme="dark"] .contact-us--form {
+    background-color: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+/* Dark Mode Contact Form Block Title */
+html[data-theme="dark"] .contact-us--block h2 {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+}
+
+/* Dark Mode Contact Manager Section */
+html[data-theme="dark"] .contact-us--manager p {
+    color: #FFFFFF !important;
+}
+
+html[data-theme="dark"] .contact-us--manager .sh-1 {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+}
+
+html[data-theme="dark"] .contact-us--manager .caption {
+    color: var(--text-secondary) !important;
+}
+
+/* Dark Mode Contact Connect Section */
+html[data-theme="dark"] .contact-us--connect--item .heading {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+}
+
+html[data-theme="dark"] .contact-us--connect--item p.heading {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+}
+
+/* Dark Mode Contact Info Block */
+html[data-theme="dark"] .contact-us--info {
+    background-color: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+/* Dark Mode All Text in Contact Manager Section */
+html[data-theme="dark"] .contact-us--managers p,
+html[data-theme="dark"] .contact-us--connect p {
+    color: #FFFFFF !important;
+}
+
+/* Dark Mode Contact Manager Name */
+html[data-theme="dark"] .contact-us--manager .sh-1.font-medium {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+}
+
+/* Dark Mode Contact Manager Title */
+html[data-theme="dark"] .contact-us--manager .caption.uppercase {
+    color: var(--text-secondary) !important;
+}
+
+/* Dark Mode Email Section Title */
+html[data-theme="dark"] .contact-us--connect--item .heading.h5.uppercase {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+}
+
+/* Dark Mode Footer Button - Remove Outline Only */
+html[data-theme="dark"] .footer .btn-light {
+    border: none !important;
+    outline: none !important;
+}
+
+/* Dark Mode Technology Partners Section Background */
+html[data-theme="dark"] .technology-partners-section {
+    background-color: var(--bg-primary) !important;
+}
+
+html[data-theme="dark"] .partners-section {
+    background-color: var(--bg-primary) !important;
+}
+
+html[data-theme="dark"] .full-section {
+    background-color: var(--bg-primary) !important;
+}
+
+/* Dark Mode Main Content Background */
+html[data-theme="dark"] main {
+    background-color: var(--bg-primary) !important;
+}
+
+/* Dark Mode Body Background */
+html[data-theme="dark"] body {
+    background-color: var(--bg-primary) !important;
 }
 
         /* Enhanced Partner Card Styles */
@@ -507,7 +1123,7 @@ header {
 
 
 
-<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="profile"><link rel="preload" as="font" type="font/woff2" crossorigin=""><link rel="preload" as="font" type="font/woff2" crossorigin=""><link rel="preload" as="font" type="font/woff2" crossorigin=""><link rel="preload" as="font" type="font/woff2" crossorigin=""><link rel="preload" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="fonts/Presicav-UltraLight.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="fonts/MariupolSymbols.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="fonts/Mariupol-Bold.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="fonts/Mariupol-Medium.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" as="font" type="font/woff2" crossorigin=""><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><title>Technology Partners - Marln Corporation</title><meta name="description" content="Strategic partnerships with leading technology providers to deliver comprehensive solutions and cutting-edge innovations."><link rel="canonical" href="https://marlncorp.com/"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="og:title" content="Creative Brand Identity Services 🔥 Elevate Your Brand"><meta property="og:description" content="®️ Discover innovative professional branding identity services designed to elevate your brand's presence. Stand out with unique, creative solutions tailored to connect authentically with your audience and enhance market impact."><meta property="og:url" content="https://marlncorp.com/"><meta property="og:site_name" content="VALMAX"><meta property="article:publisher" content="https://www.facebook.com/valmaxdigital/"><meta property="article:modified_time" content="2024-11-15T23:58:06+00:00"><meta property="og:image" content="images/Brand-Identity.jpg"><meta property="og:image:width" content="1186"><meta property="og:image:height" content="756"><meta property="og:image:type" content="image/jpeg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@valmaxd"><meta name="twitter:label1" content="Est. reading time"><meta name="twitter:data1" content="1 minute"> <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://valmax.agency/services/branding/","url":"https://valmax.agency/services/branding/","name":"Creative Brand Identity Services 🔥 Elevate Your Brand","isPartOf":{"@id":"https://valmax.agency/#website"},"primaryImageOfPage":{"@id":"https://valmax.agency/services/branding/#primaryimage"},"image":{"@id":"https://valmax.agency/services/branding/#primaryimage"},"thumbnailUrl":"https://valmax.agency/wp-content/uploads/2024/09/Brand-Identity.jpg","datePublished":"2024-01-12T04:17:00+00:00","dateModified":"2024-11-15T23:58:06+00:00","description":"®️ Discover innovative professional branding identity services designed to elevate your brand's presence. Stand out with unique, creative solutions tailored to connect authentically with your audience and enhance market impact.","breadcrumb":{"@id":"https://valmax.agency/services/branding/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://valmax.agency/services/branding/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://valmax.agency/services/branding/#primaryimage","url":"https://valmax.agency/wp-content/uploads/2024/09/Brand-Identity.jpg","contentUrl":"https://valmax.agency/wp-content/uploads/2024/09/Brand-Identity.jpg","width":1186,"height":756,"caption":"Branding, logo design, branding guide and book, motion logo, rebranding"},{"@type":"BreadcrumbList","@id":"https://valmax.agency/services/branding/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Головна","item":"https://valmax.agency/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://valmax.agency/services/"},{"@type":"ListItem","position":3,"name":"Branding"}]},{"@type":"WebSite","@id":"https://valmax.agency/#website","url":"https://valmax.agency/","name":"VALMAX","description":"","publisher":{"@id":"https://valmax.agency/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://valmax.agency/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://valmax.agency/#organization","name":"VALMAXTECH INC","alternateName":"VALMAX","url":"https://valmax.agency/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://valmax.agency/#/schema/logo/image/","url":"https://valmax.agency/wp-content/uploads/2024/11/cropped-Favicon-1.png","contentUrl":"https://valmax.agency/wp-content/uploads/2024/11/cropped-Favicon-1.png","width":512,"height":512,"caption":"VALMAXTECH INC"},"image":{"@id":"https://valmax.agency/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/valmaxdigital/","https://x.com/valmaxd","https://dribbble.com/valmax","https://www.behance.net/valmaxdigitalagency","https://www.linkedin.com/company/valmaxdigital","https://www.instagram.com/valmax.digital/"]}]}</script> <link rel="alternate" type="application/rss+xml" title="VALMAX � Feed"><link rel="alternate" type="application/rss+xml" title="VALMAX � Comments Feed"><link rel="https://api.w.org/"><link rel="alternate" title="JSON" type="application/json"><link rel="EditURI" type="application/rsd+xml" title="RSD"><meta name="generator" content="WordPress 6.8.1"><link rel="shortlink"><link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"><link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"><meta name="cdp-version" content="1.5.0"><link rel="icon" href="images/cropped-Favicon-1-32x32.png" sizes="32x32"><link rel="icon" href="images/cropped-Favicon-1-192x192.png" sizes="192x192"><link rel="apple-touch-icon" href="images/cropped-Favicon-1-180x180.png"><meta name="msapplication-TileImage" content="https://valmax.agency/wp-content/uploads/2024/11/cropped-Favicon-1-270x270.png">
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="profile"><link rel="preload" as="font" type="font/woff2" crossorigin=""><link rel="preload" as="font" type="font/woff2" crossorigin=""><link rel="preload" as="font" type="font/woff2" crossorigin=""><link rel="preload" as="font" type="font/woff2" crossorigin=""><link rel="preload" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="fonts/Presicav-UltraLight.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="fonts/MariupolSymbols.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="fonts/Mariupol-Bold.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="fonts/Mariupol-Medium.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" as="font" type="font/woff2" crossorigin=""><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><title>Technology Partners - Marln Corporation</title><meta name="description" content="Strategic partnerships with leading technology providers to deliver comprehensive solutions and cutting-edge innovations."><link rel="canonical" href="https://marlncorp.com/"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="og:title" content="Creative Brand Identity Services 🔥 Elevate Your Brand"><meta property="og:description" content="®️ Discover innovative professional branding identity services designed to elevate your brand's presence. Stand out with unique, creative solutions tailored to connect authentically with your audience and enhance market impact."><meta property="og:url" content="https://marlncorp.com/"><meta property="og:site_name" content="Marln Corporation"><meta property="article:publisher" content="https://www.facebook.com/marlncorp/"><meta property="article:modified_time" content="2024-11-15T23:58:06+00:00"><meta property="og:image" content="images/Brand-Identity.jpg"><meta property="og:image:width" content="1186"><meta property="og:image:height" content="756"><meta property="og:image:type" content="image/jpeg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@marlncorp"><meta name="twitter:label1" content="Est. reading time"><meta name="twitter:data1" content="1 minute"> <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://marlncorp.com/technology-partners/","url":"https://marlncorp.com/technology-partners/","name":"Technology Partners - Marln Corporation","isPartOf":{"@id":"https://marlncorp.com/#website"},"primaryImageOfPage":{"@id":"https://marlncorp.com/technology-partners/#primaryimage"},"image":{"@id":"https://marlncorp.com/technology-partners/#primaryimage"},"thumbnailUrl":"https://marlncorp.com/wp-content/uploads/2024/11/technology-partners.jpg","datePublished":"2024-01-12T04:17:00+00:00","dateModified":"2024-11-15T23:58:06+00:00","description":"Strategic partnerships with leading technology providers to deliver comprehensive solutions and cutting-edge innovations.","breadcrumb":{"@id":"https://marlncorp.com/technology-partners/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://marlncorp.com/technology-partners/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://marlncorp.com/technology-partners/#primaryimage","url":"https://marlncorp.com/wp-content/uploads/2024/11/technology-partners.jpg","contentUrl":"https://marlncorp.com/wp-content/uploads/2024/11/technology-partners.jpg","width":1186,"height":756,"caption":"Technology Partners - Marln Corporation"},{"@type":"BreadcrumbList","@id":"https://marlncorp.com/technology-partners/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://marlncorp.com/"},{"@type":"ListItem","position":2,"name":"Company","item":"https://marlncorp.com/company/"},{"@type":"ListItem","position":3,"name":"Technology Partners"}]},{"@type":"WebSite","@id":"https://marlncorp.com/#website","url":"https://marlncorp.com/","name":"Marln Corporation","description":"","publisher":{"@id":"https://marlncorp.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://marlncorp.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://marlncorp.com/#organization","name":"Marln Corporation","alternateName":"Marln","url":"https://marlncorp.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://marlncorp.com/#/schema/logo/image/","url":"https://marlncorp.com/wp-content/uploads/2024/11/cropped-Favicon-1.png","contentUrl":"https://marlncorp.com/wp-content/uploads/2024/11/cropped-Favicon-1.png","width":512,"height":512,"caption":"Marln Corporation"},"image":{"@id":"https://marlncorp.com/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/marlncorp/","https://x.com/marlncorp","https://dribbble.com/marlncorp","https://www.behance.net/marlncorp","https://www.linkedin.com/company/marlncorp","https://www.instagram.com/marlncorp/"]}]}</script> <link rel="alternate" type="application/rss+xml" title="VALMAX � Feed"><link rel="alternate" type="application/rss+xml" title="VALMAX � Comments Feed"><link rel="https://api.w.org/"><link rel="alternate" title="JSON" type="application/json"><link rel="EditURI" type="application/rsd+xml" title="RSD"><meta name="generator" content="WordPress 6.8.1"><link rel="shortlink"><link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"><link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"><meta name="cdp-version" content="1.5.0"><link rel="icon" href="images/cropped-Favicon-1-32x32.png" sizes="32x32"><link rel="icon" href="images/cropped-Favicon-1-192x192.png" sizes="192x192"><link rel="apple-touch-icon" href="images/cropped-Favicon-1-180x180.png"><meta name="msapplication-TileImage" content="https://valmax.agency/wp-content/uploads/2024/11/cropped-Favicon-1-270x270.png">
  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -591,8 +1207,8 @@ html[data-theme="dark"] .contact-us{background:#1a2130;color:#eef2f7}
 html[data-theme="dark"] .contact-us input,html[data-theme="dark"] .contact-us textarea{background:#141923;border:1px solid #0E1116;color:#eef2f7}
 html[data-theme="dark"] .contact-us input::placeholder,html[data-theme="dark"] .contact-us textarea::placeholder{color:#aab6c8}
 /* Stats strip text only */
-html[data-theme="dark"] .rr-why-hire-valmax-section--statistic__block--title,
-html[data-theme="dark"] .rr-why-hire-valmax-section--statistic__block--num{color:#0E1116 !important}
+html[data-theme="dark"] .rr-why-hire-marln-section--statistic__block--title,
+html[data-theme="dark"] .rr-why-hire-marln-section--statistic__block--num{color:#0E1116 !important}
 /* Why-our-clients items (Startups, SMVs, Large Corporates, Government) */
 html[data-theme="dark"] .why-our-clients-item .cf-title,
 html[data-theme="dark"] .why-our-clients-item .why-our-clients-item-text p{color:#0E1116 !important}
@@ -613,7 +1229,7 @@ html[data-theme="dark"] .contact-us--connect .heading{color:#0E1116 !important}
 html[data-theme="dark"] .featured-projects-section .section-header .heading{color:#0E1116 !important}
 /* Section headers: Our CRM Services, Why Opt For Marln? */
 html[data-theme="dark"] .ap-how-we-do-section .section-header .heading,
-html[data-theme="dark"] .rr-why-hire-valmax-section .section-header .heading{color:#0E1116 !important}
+html[data-theme="dark"] .rr-why-hire-marln-section .section-header .heading{color:#0E1116 !important}
 /* Grid lines for Why-our-clients */
 html[data-theme="dark"] .why-our-clients-list>li{border-color:#0E1116 !important}
 html[data-theme="dark"] .why-our-clients-list{border-top:1px solid #0E1116}
@@ -1036,11 +1652,11 @@ body #header li {
 }
 </style>
 </head>
-<body class="wp-singular services-template-default single single-services postid-294 wp-theme-valmax scrollbar" data-is-audit-bot="0">
+<body class="wp-singular services-template-default single single-services postid-294 wp-theme-marln scrollbar" data-is-audit-bot="0">
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4KXH5HN"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div class="site-main" id="page"><header class="header" id="header"><div class="header--content"><div class="container"><div class="header-wrapper"><div class="header--item header--logo">
 <a href="index.html" title="Home">
-<img width="184" height="23" src="images/valmax.svg" class="logo-dark skip-lazy" alt="VALMAX Logo | Black" decoding="async" title="VALMAX Logo | Black"><img width="184" height="23" src="images/valmax2.svg" class="logo-light skip-lazy" alt="VALMAX Logo | White" decoding="async" title="VALMAX Logo | White">						</a></div><div class="header--menu"><ul id="header_menu" class="header--menu__list"><li id="menu-item-680" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-680"><a href="about-us.html">About us</a></li><li id="menu-item-666" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-666"><a>Services</a><ul class="sub-menu services-dropdown"><li class="menu-item"><a href="ai-powered-consulting.html">AI Powered Consulting</a></li><li class="menu-item"><a href="engineering-services.html">Engineering Services</a></li><li class="menu-item"><a href="data-analytics.html">Data Analytics</a></li><li class="menu-item"><a href="https://a1siliconvalley.com/" target="_blank" rel="noopener noreferrer">Corporate Training</a></li></ul></li><li id="menu-item-company" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-company"><a>Company</a><ul class="sub-menu company-dropdown"><li class="menu-item"><a href="marln-company-profile.html">Marln Company Profile</a></li><li class="menu-item"><a href="corporate-social-responsibility.html">Corporate Social Responsibility (CSR)</a></li><li class="menu-item"><a href="technology-partners.html">Technology Partners</a></li><li class="menu-item"><a href="industry.html">Industry</a></li></ul></li><li id="menu-item-contact" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-contact"><a href="#contact" class="contact-scroll-btn">Contact us</a></li><li class="menu-item menu-item-theme"><label class="theme-toggle"><input type="checkbox"><span class="theme-toggle-button"><svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="#0C081E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="#0C081E"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/></svg></span></label></li><li class="menu-item menu-item-lang">
+<img width="184" height="23" src="images/marlncorpdark.svg" class="logo-dark skip-lazy" alt="Marln Corporation Logo | Black" decoding="async" title="Marln Corporation Logo | Black"><img width="184" height="23" src="images/marlncorplight.svg" class="logo-light skip-lazy" alt="Marln Corporation Logo | White" decoding="async" title="Marln Corporation Logo | White">						</a></div><div class="header--menu"><ul id="header_menu" class="header--menu__list"><li id="menu-item-680" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-680"><a href="about-us.html">About us</a></li><li id="menu-item-666" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-666"><a>Services</a><ul class="sub-menu services-dropdown"><li class="menu-item"><a href="ai-powered-consulting.html">AI Powered Consulting</a></li><li class="menu-item"><a href="engineering-services.html">Engineering Services</a></li><li class="menu-item"><a href="data-analytics.html">Data Analytics</a></li><li class="menu-item"><a href="https://a1siliconvalley.com/" target="_blank" rel="noopener noreferrer">Corporate Training</a></li></ul></li><li id="menu-item-company" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-company"><a>Company</a><ul class="sub-menu company-dropdown"><li class="menu-item"><a href="marln-company-profile.html">Marln Company Profile</a></li><li class="menu-item"><a href="corporate-social-responsibility.html">Corporate Social Responsibility (CSR)</a></li><li class="menu-item"><a href="technology-partners.html">Technology Partners</a></li><li class="menu-item"><a href="industry.html">Industry</a></li></ul></li><li id="menu-item-contact" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-contact"><a href="#contact" class="contact-scroll-btn">Contact us</a></li><li class="menu-item menu-item-theme"><label class="theme-toggle"><input type="checkbox"><span class="theme-toggle-button"><svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="#0C081E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="#0C081E"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/></svg></span></label></li><li class="menu-item menu-item-lang">
     <div class="language-toggle">
         <input type="checkbox" id="lang-toggle" class="lang-toggle-input">
         <label for="lang-toggle" class="lang-toggle-label">
@@ -1059,7 +1675,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </span>
 <span></span><span></span>
 </span>
-</button></div><div class="burger-menu-bg" id="burger-menu-bg"></div><div class="burger-menu" id="burger-menu"><div class="burger-menu__top-panel"><div class="burger-menu__top-panel__wrapper"><div class="burger-menu__top-panel__list"></div></div></div><div class="burger-menu__wrapper"><div class="burger-menu__left-bar"><div class="burger-menu__left-bar__wrapper"><div class="burger-menu__left-bar__menu burger-menu__left-bar__menu--desktop"><ul id="header_menu_burger_left" class="burger-menu__left-bar__list"><li id="menu-item-46" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-46"><a>Home</a></li><li id="menu-item-681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-681"><a href="about-us.html">About us</a></li><li id="menu-item-668" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-668"><a>Services</a></li><li id="menu-item-1680" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1680"><a>Insights</a></li><li id="menu-item-1681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1681"><a href="#contact">Contact us</a></li></ul></div><div class="burger-menu__left-bar__menu burger-menu__left-bar__menu--tablet-and-mobile"><ul id="mobile_burger_menu" class="burger-menu__left-bar__list"><li id="menu-item-3701" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3701"><a>Home</a></li><li id="menu-item-3710" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3710"><a>Works</a></li><li id="menu-item-3705" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3705"><a>Services</a></li><li id="menu-item-3711" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3711"><a>Industries</a></li><li id="menu-item-3702" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3702"><a href="about-us.html">About</a></li><li id="menu-item-3703" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3703"><a>Insights</a></li><li id="menu-item-3704" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3704"><a href="#contact">Contact us</a></li></ul></div></div></div><div class="burger-menu__right-bar"><div class="burger-menu__right-bar__wrapper"><div class="burger-menu__right-bar__menu"><ul id="header_menu_burger_right" class="burger-menu__right-bar__list"><li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current-menu-ancestor current-menu-parent menu-item-has-children menu-item-51"><a>Branding</a><ul class="sub-menu"><li id="menu-item-2062" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2062"><a>Strategy</a></li><li id="menu-item-2063" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2063"><a>Logo Design</a></li><li id="menu-item-2064" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2064"><a>Brand Identity</a></li></ul></li><li id="menu-item-52" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-52"><a>Design</a><ul class="sub-menu"><li id="menu-item-853" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-853"><a>Web Design</a></li><li id="menu-item-852" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-852"><a>UI/UX Design</a></li><li id="menu-item-851" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-851"><a>Mobile Design</a></li><li id="menu-item-849" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-849"><a>Motion & 3D Design</a></li><li id="menu-item-850" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-850"><a>Graphic Design</a></li></ul></li><li id="menu-item-53" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-53"><a href="#">Development</a><ul class="sub-menu"><li id="menu-item-626" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-626"><a href="https://valmax.agency/services/development/corporate-websites/">Corporate Websites</a></li><li id="menu-item-625" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-625"><a href="https://valmax.agency/services/development/wow-websites/">WOW Website</a></li><li id="menu-item-2100" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-2100"><a href="https://valmax.agency/services/development/no-code-websites/">No-code websites</a></li><li id="menu-item-624" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-624"><a href="https://valmax.agency/services/development/ecommerce/">Ecommerce Development</a></li><li id="menu-item-623" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-623"><a href="https://valmax.agency/services/development/mvp-for-startups/">MVP for Startups</a></li><li id="menu-item-622" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-622"><a href="https://valmax.agency/services/development/development-of-web-applications/">Web Applications</a></li></ul></li><li id="menu-item-755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-755"><a href="https://valmax.agency/industries/">Industries</a><ul class="sub-menu"><li id="menu-item-2055" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2055"><a href="https://valmax.agency/industries/">AI & ML</a></li><li id="menu-item-2056" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2056"><a href="https://valmax.agency/industries/">Web 3.0</a></li><li id="menu-item-2057" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2057"><a href="https://valmax.agency/industries/">Real Estate</a></li><li id="menu-item-2058" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2058"><a href="https://valmax.agency/industries/">eCommerce</a></li><li id="menu-item-2059" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2059"><a href="https://valmax.agency/industries/">IT, Digital</a></li><li id="menu-item-2060" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2060"><a href="https://valmax.agency/industries/">Startups</a></li><li id="menu-item-2061" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2061"><a href="https://valmax.agency/industries/">All Industries</a></li></ul></li><li id="menu-item-1688" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1688"><a href="https://valmax.agency/case-studies/">Case Studies</a><ul class="sub-menu"><li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a href="/case-studies/?category=branding">Branding</a></li><li id="menu-item-143" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-143"><a href="/case-studies/?category=ui-ux-design">Design</a></li><li id="menu-item-144" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144"><a href="/case-studies/">Websites</a></li><li id="menu-item-145" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145"><a href="/case-studies/?category=e-commerce">eCommerce</a></li></ul></li><li id="menu-item-56" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-56"><a href="#">Partnership</a><ul class="sub-menu"><li id="menu-item-2089" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2089"><a href="https://valmax.agency/white-label-agency/">White Label</a></li><li id="menu-item-2088" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2088"><a href="https://valmax.agency/affiliate-program/">Affiliate Program</a></li></ul></li></ul></div></div></div></div><div class="burger-menu__cta-form"><div class="container"><div class="burger-menu__cta-form--wrapper"><div class="burger-menu__cta-form--item"><p class="burger-menu__cta-form--title">
+</button></div><div class="burger-menu-bg" id="burger-menu-bg"></div><div class="burger-menu" id="burger-menu"><div class="burger-menu__top-panel"><div class="burger-menu__top-panel__wrapper"><div class="burger-menu__top-panel__list"></div></div></div><div class="burger-menu__wrapper"><div class="burger-menu__left-bar"><div class="burger-menu__left-bar__wrapper"><div class="burger-menu__left-bar__menu burger-menu__left-bar__menu--desktop"><ul id="header_menu_burger_left" class="burger-menu__left-bar__list"><li id="menu-item-46" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-46"><a>Home</a></li><li id="menu-item-681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-681"><a href="about-us.html">About us</a></li><li id="menu-item-668" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-668"><a>Services</a></li><li id="menu-item-1680" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1680"><a>Insights</a></li><li id="menu-item-1681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1681"><a href="#contact">Contact us</a></li></ul></div><div class="burger-menu__left-bar__menu burger-menu__left-bar__menu--tablet-and-mobile"><ul id="mobile_burger_menu" class="burger-menu__left-bar__list"><li id="menu-item-3701" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3701"><a>Home</a></li><li id="menu-item-3710" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3710"><a>Works</a></li><li id="menu-item-3705" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3705"><a>Services</a></li><li id="menu-item-3711" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3711"><a>Industries</a></li><li id="menu-item-3702" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3702"><a href="about-us.html">About</a></li><li id="menu-item-3703" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3703"><a>Insights</a></li><li id="menu-item-3704" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3704"><a href="#contact">Contact us</a></li></ul></div></div></div><div class="burger-menu__right-bar"><div class="burger-menu__right-bar__wrapper"><div class="burger-menu__right-bar__menu"><ul id="header_menu_burger_right" class="burger-menu__right-bar__list"><li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current-menu-ancestor current-menu-parent menu-item-has-children menu-item-51"><a>Branding</a><ul class="sub-menu"><li id="menu-item-2062" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2062"><a>Strategy</a></li><li id="menu-item-2063" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2063"><a>Logo Design</a></li><li id="menu-item-2064" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2064"><a>Brand Identity</a></li></ul></li><li id="menu-item-52" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-52"><a>Design</a><ul class="sub-menu"><li id="menu-item-853" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-853"><a>Web Design</a></li><li id="menu-item-852" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-852"><a>UI/UX Design</a></li><li id="menu-item-851" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-851"><a>Mobile Design</a></li><li id="menu-item-849" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-849"><a>Motion & 3D Design</a></li><li id="menu-item-850" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-850"><a>Graphic Design</a></li></ul></li><li id="menu-item-53" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-53"><a href="#">Development</a><ul class="sub-menu"><li id="menu-item-626" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-626"><a href="https://marlncorp.com/services/development/corporate-websites/">Corporate Websites</a></li><li id="menu-item-625" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-625"><a href="https://marlncorp.com/services/development/wow-websites/">WOW Website</a></li><li id="menu-item-2100" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-2100"><a href="https://marlncorp.com/services/development/no-code-websites/">No-code websites</a></li><li id="menu-item-624" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-624"><a href="https://marlncorp.com/services/development/ecommerce/">Ecommerce Development</a></li><li id="menu-item-623" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-623"><a href="https://marlncorp.com/services/development/mvp-for-startups/">MVP for Startups</a></li><li id="menu-item-622" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-622"><a href="https://marlncorp.com/services/development/development-of-web-applications/">Web Applications</a></li></ul></li><li id="menu-item-755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-755"><a href="https://valmax.agency/industries/">Industries</a><ul class="sub-menu"><li id="menu-item-2055" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2055"><a href="https://valmax.agency/industries/">AI & ML</a></li><li id="menu-item-2056" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2056"><a href="https://valmax.agency/industries/">Web 3.0</a></li><li id="menu-item-2057" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2057"><a href="https://valmax.agency/industries/">Real Estate</a></li><li id="menu-item-2058" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2058"><a href="https://valmax.agency/industries/">eCommerce</a></li><li id="menu-item-2059" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2059"><a href="https://valmax.agency/industries/">IT, Digital</a></li><li id="menu-item-2060" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2060"><a href="https://valmax.agency/industries/">Startups</a></li><li id="menu-item-2061" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2061"><a href="https://valmax.agency/industries/">All Industries</a></li></ul></li><li id="menu-item-1688" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1688"><a href="https://valmax.agency/case-studies/">Case Studies</a><ul class="sub-menu"><li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a href="/case-studies/?category=branding">Branding</a></li><li id="menu-item-143" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-143"><a href="/case-studies/?category=ui-ux-design">Design</a></li><li id="menu-item-144" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144"><a href="/case-studies/">Websites</a></li><li id="menu-item-145" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145"><a href="/case-studies/?category=e-commerce">eCommerce</a></li></ul></li><li id="menu-item-56" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-56"><a href="#">Partnership</a><ul class="sub-menu"><li id="menu-item-2089" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2089"><a href="https://valmax.agency/white-label-agency/">White Label</a></li><li id="menu-item-2088" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2088"><a href="https://valmax.agency/affiliate-program/">Affiliate Program</a></li></ul></li></ul></div></div></div></div><div class="burger-menu__cta-form"><div class="container"><div class="burger-menu__cta-form--wrapper"><div class="burger-menu__cta-form--item"><p class="burger-menu__cta-form--title">
 Got a project?</p><div class="burger-menu__cta-form--btn">
 <button class="btn btn-large btn-coloured btn-hover-discoloured btn-lt">
 <span class="btn-text">
@@ -1074,62 +1690,62 @@ Let's talk!                                                        </span>
             <section class="partners-section" style="padding: 80px 0 0 0; margin: 0; min-height: calc(100vh - 80px); height: calc(100vh - 80px); background: #ffffff; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: center;">
 
                 <div class="container" style="padding: 0; margin: 0; height: 100%; display: flex; flex-direction: column; justify-content: center;">
-                    <h2 style="text-align: center; font-size: 3rem; font-weight: 800; color: #333; margin: 0 0 40px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.1); position: relative; z-index: 2; text-transform: uppercase; letter-spacing: 2px;">
+                    <h2 class="tech-partners-title" style="text-align: center; font-size: 3rem; font-weight: 800; color: #333; margin: 0 0 40px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.1); position: relative; z-index: 2; text-transform: uppercase; letter-spacing: 2px;">
                         <span style="background: linear-gradient(45deg, #667eea, #764ba2, #f093fb); background-size: 200% 200%; animation: textShine 3s ease-in-out infinite; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">OUR TECHNOLOGY PARTNERS</span>
                     </h2>
                     
                     <div class="partners-grid-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; height: calc(100vh - 200px); min-height: 0; flex: 1; width: 100%;">
-                        <div data-aos="zoom-in-up" data-aos-delay="100" class="partner-card-enhanced full-section-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; padding: 60px 50px; box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3); height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+                        <div data-aos="zoom-in-up" data-aos-delay="100" class="partner-card-enhanced full-section-card partner-card-1" style="border-radius: 20px; padding: 60px 50px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
                             <div class="card-glow"></div>
-                            <img src="images/automation-anywhere.webp" alt="Automation Anywhere" style="max-width: 80%; max-height: 120px; object-fit: contain; transition: all 0.3s ease; z-index: 2; position: relative; margin-bottom: 20px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
+                            <img src="images/automation-anywhere.svg" alt="Automation Anywhere" style="max-width: 80%; max-height: 120px; object-fit: contain; transition: all 0.3s ease; z-index: 2; position: relative; margin-bottom: 20px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
                             <div class="card-overlay">
-                                <h4 style="color: white; font-size: 1.3rem; font-weight: 600; margin: 0; text-align: center;">Automation Anywhere</h4>
-                                <p style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 15px 0 0 0; text-align: center;">RPA Solutions</p>
+                                <h4 class="partner-title" style="color: white; font-size: 1.3rem; font-weight: 600; margin: 0; text-align: center;">Automation Anywhere</h4>
+                                <p class="partner-desc" style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 15px 0 0 0; text-align: center;">RPA Solutions</p>
                             </div>
                         </div>
                         
-                        <div data-aos="zoom-in-up" data-aos-delay="200" class="partner-card-enhanced full-section-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 20px; padding: 60px 50px; box-shadow: 0 15px 35px rgba(240, 147, 251, 0.3); height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+                        <div data-aos="zoom-in-up" data-aos-delay="200" class="partner-card-enhanced full-section-card partner-card-2" style="border-radius: 20px; padding: 60px 50px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
                             <div class="card-glow"></div>
-                            <img src="images/AWS.webp" alt="AWS" style="max-width: 80%; max-height: 120px; object-fit: contain; transition: all 0.3s ease; z-index: 2; position: relative; margin-bottom: 20px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
+                            <img src="images/amazon.svg" alt="AWS" style="max-width: 80%; max-height: 120px; object-fit: contain; transition: all 0.3s ease; z-index: 2; position: relative; margin-bottom: 20px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
                             <div class="card-overlay">
-                                <h4 style="color: white; font-size: 1.3rem; font-weight: 600; margin: 0; text-align: center;">AWS</h4>
-                                <p style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 15px 0 0 0; text-align: center;">Cloud Infrastructure</p>
+                                <h4 class="partner-title" style="color: white; font-size: 1.3rem; font-weight: 600; margin: 0; text-align: center;">AWS</h4>
+                                <p class="partner-desc" style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 15px 0 0 0; text-align: center;">Cloud Infrastructure</p>
                             </div>
                         </div>
                         
-                        <div data-aos="zoom-in-up" data-aos-delay="300" class="partner-card-enhanced full-section-card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 20px; padding: 60px 50px; box-shadow: 0 15px 35px rgba(79, 172, 254, 0.3); height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+                        <div data-aos="zoom-in-up" data-aos-delay="300" class="partner-card-enhanced full-section-card partner-card-3" style="border-radius: 20px; padding: 60px 50px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
                             <div class="card-glow"></div>
-                            <img src="images/microsoft.webp" alt="Microsoft" style="max-width: 80%; max-height: 120px; object-fit: contain; transition: all 0.3s ease; z-index: 2; position: relative; margin-bottom: 20px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
+                            <img src="images/microsoft.svg" alt="Microsoft" style="max-width: 80%; max-height: 120px; object-fit: contain; transition: all 0.3s ease; z-index: 2; position: relative; margin-bottom: 20px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
                             <div class="card-overlay">
-                                <h4 style="color: white; font-size: 1.3rem; font-weight: 600; margin: 0; text-align: center;">Microsoft</h4>
-                                <p style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 15px 0 0 0; text-align: center;">Enterprise Solutions</p>
+                                <h4 class="partner-title" style="color: white; font-size: 1.3rem; font-weight: 600; margin: 0; text-align: center;">Microsoft</h4>
+                                <p class="partner-desc" style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 15px 0 0 0; text-align: center;">Enterprise Solutions</p>
                             </div>
                         </div>
                         
-                        <div data-aos="zoom-in-up" data-aos-delay="400" class="partner-card-enhanced full-section-card" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); border-radius: 20px; padding: 60px 50px; box-shadow: 0 15px 35px rgba(250, 112, 154, 0.3); height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+                        <div data-aos="zoom-in-up" data-aos-delay="400" class="partner-card-enhanced full-section-card partner-card-4" style="border-radius: 20px; padding: 60px 50px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
                             <div class="card-glow"></div>
-                            <img src="images/google.webp" alt="Google" style="max-width: 80%; max-height: 120px; object-fit: contain; transition: all 0.3s ease; z-index: 2; position: relative; margin-bottom: 20px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
+                            <img src="images/google.svg" alt="Google" style="max-width: 80%; max-height: 120px; object-fit: contain; transition: all 0.3s ease; z-index: 2; position: relative; margin-bottom: 20px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
                             <div class="card-overlay">
-                                <h4 style="color: white; font-size: 1.3rem; font-weight: 600; margin: 0; text-align: center;">Google</h4>
-                                <p style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 15px 0 0 0; text-align: center;">AI & Analytics</p>
+                                <h4 class="partner-title" style="color: white; font-size: 1.3rem; font-weight: 600; margin: 0; text-align: center;">Google</h4>
+                                <p class="partner-desc" style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 15px 0 0 0; text-align: center;">AI & Analytics</p>
                             </div>
                         </div>
                         
-                        <div data-aos="zoom-in-up" data-aos-delay="500" class="partner-card-enhanced full-section-card" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); border-radius: 20px; padding: 60px 50px; box-shadow: 0 15px 35px rgba(168, 237, 234, 0.3); height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+                        <div data-aos="zoom-in-up" data-aos-delay="500" class="partner-card-enhanced full-section-card partner-card-5" style="border-radius: 20px; padding: 60px 50px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
                             <div class="card-glow"></div>
-                            <img src="images/oracle.webp" alt="Oracle" style="max-width: 80%; max-height: 120px; object-fit: contain; transition: all 0.3s ease; z-index: 2; position: relative; margin-bottom: 20px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
+                            <img src="images/oracle.svg" alt="Oracle" style="max-width: 80%; max-height: 120px; object-fit: contain; transition: all 0.3s ease; z-index: 2; position: relative; margin-bottom: 20px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
                             <div class="card-overlay">
-                                <h4 style="color: white; font-size: 1.3rem; font-weight: 600; margin: 0; text-align: center;">Oracle</h4>
-                                <p style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 15px 0 0 0; text-align: center;">Database & Cloud</p>
+                                <h4 class="partner-title" style="color: white; font-size: 1.3rem; font-weight: 600; margin: 0; text-align: center;">Oracle</h4>
+                                <p class="partner-desc" style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 15px 0 0 0; text-align: center;">Database & Cloud</p>
                             </div>
                         </div>
                         
-                        <div data-aos="zoom-in-up" data-aos-delay="600" class="partner-card-enhanced full-section-card" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); border-radius: 20px; padding: 60px 50px; box-shadow: 0 15px 35px rgba(252, 182, 159, 0.3); height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+                        <div data-aos="zoom-in-up" data-aos-delay="600" class="partner-card-enhanced full-section-card partner-card-6" style="border-radius: 20px; padding: 60px 50px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
                             <div class="card-glow"></div>
-                            <img src="images/databricks.webp" alt="Databricks" style="max-width: 80%; max-height: 120px; object-fit: contain; transition: all 0.3s ease; z-index: 2; position: relative; margin-bottom: 20px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
+                            <img src="images/databricks.svg" alt="Databricks" style="max-width: 80%; max-height: 120px; object-fit: contain; transition: all 0.3s ease; z-index: 2; position: relative; margin-bottom: 20px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
                             <div class="card-overlay">
-                                <h4 style="color: white; font-size: 1.3rem; font-weight: 600; margin: 0; text-align: center;">Databricks</h4>
-                                <p style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 15px 0 0 0; text-align: center;">Data & AI Platform</p>
+                                <h4 class="partner-title" style="color: white; font-size: 1.3rem; font-weight: 600; margin: 0; text-align: center;">Databricks</h4>
+                                <p class="partner-desc" style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 15px 0 0 0; text-align: center;">Data & AI Platform</p>
                             </div>
                         </div>
                     </div>
@@ -1140,17 +1756,17 @@ Let's talk!                                                        </span>
 <svg xmlns="http://www.w3.org/2000/svg" width="126" height="126" viewBox="0 0 126 126" fill="none"> <mask id="path-1-inside-1_2196_13888" fill="white"> <path fill-rule="evenodd" clip-rule="evenodd" d="M42.6019 119.709C43.5802 119.86 44.569 119.978 45.5676 120.061C72.3651 122.3 96.0054 98.8873 98.3696 67.7677C100.734 36.6481 80.9266 9.606 54.1291 7.36742C47.8332 6.84149 41.7116 7.73144 35.9992 9.80458C44.5259 4.52554 54.5969 2.03974 65.4947 3.34022C71.3306 4.03666 77.5492 5.31428 80.7478 6.26097C105.419 13.563 119.618 37.6833 117.394 66.9592C115.437 92.7219 100.273 112.19 79.0234 118.917C72.9949 120.826 65.76 121.422 57.8018 121.839C52.3881 122.123 47.2991 121.352 42.6019 119.709Z"></path> </mask> <path fill-rule="evenodd" clip-rule="evenodd" d="M42.6019 119.709C43.5802 119.86 44.569 119.978 45.5676 120.061C72.3651 122.3 96.0054 98.8873 98.3696 67.7677C100.734 36.6481 80.9266 9.606 54.1291 7.36742C47.8332 6.84149 41.7116 7.73144 35.9992 9.80458C44.5259 4.52554 54.5969 2.03974 65.4947 3.34022C71.3306 4.03666 77.5492 5.31428 80.7478 6.26097C105.419 13.563 119.618 37.6833 117.394 66.9592C115.437 92.7219 100.273 112.19 79.0234 118.917C72.9949 120.826 65.76 121.422 57.8018 121.839C52.3881 122.123 47.2991 121.352 42.6019 119.709Z" fill="#6aa84f"></path> <path d="M45.5676 120.061L45.4985 120.889L45.5676 120.061ZM42.6019 119.709L42.7287 118.889L42.3278 120.492L42.6019 119.709ZM98.3696 67.7677L97.542 67.7049L98.3696 67.7677ZM54.1291 7.36742L54.1982 6.5403L54.1291 7.36742ZM35.9992 9.80458L35.5623 9.09889L36.2824 10.5848L35.9992 9.80458ZM65.4947 3.34022L65.3963 4.16437L65.4947 3.34022ZM80.7478 6.26097L80.9834 5.46509L80.7478 6.26097ZM117.394 66.9592L118.222 67.0221L117.394 66.9592ZM79.0234 118.917L79.274 119.709L79.0234 118.917ZM57.8018 121.839L57.8452 122.668L57.8018 121.839ZM45.6367 119.234C44.6575 119.153 43.6879 119.037 42.7287 118.889L42.4751 120.529C43.4725 120.683 44.4806 120.804 45.4985 120.889L45.6367 119.234ZM97.542 67.7049C95.2035 98.4863 71.8624 121.425 45.6367 119.234L45.4985 120.889C72.8679 123.175 96.8073 99.2884 99.1972 67.8306L97.542 67.7049ZM54.06 8.19454C80.2931 10.386 99.8807 36.9213 97.542 67.7049L99.1972 67.8306C101.587 36.375 81.5602 8.82603 54.1982 6.5403L54.06 8.19454ZM36.2824 10.5848C41.8863 8.551 47.8879 7.67895 54.06 8.19454L54.1982 6.5403C47.7784 6.00402 41.5368 6.91188 35.7161 9.02438L36.2824 10.5848ZM36.4361 10.5103C44.8076 5.32731 54.6907 2.88681 65.3963 4.16437L65.593 2.51607C54.5032 1.19266 44.2442 3.72378 35.5623 9.09889L36.4361 10.5103ZM65.3963 4.16437C71.1977 4.85669 77.3687 6.12645 80.5122 7.05684L80.9834 5.46509C77.7297 4.50212 71.4635 3.21662 65.593 2.51607L65.3963 4.16437ZM80.5122 7.05684C104.725 14.2232 118.768 37.9167 116.567 66.8963L118.222 67.0221C120.469 37.4498 106.113 12.9027 80.9834 5.46509L80.5122 7.05684ZM116.567 66.8963C114.632 92.3576 99.6662 111.511 78.7729 118.126L79.274 119.709C100.88 112.868 116.242 93.0862 118.222 67.0221L116.567 66.8963ZM78.7729 118.126C72.8584 119.999 65.723 120.593 57.7584 121.01L57.8452 122.668C65.797 122.251 73.1315 121.653 79.274 119.709L78.7729 118.126ZM57.7584 121.01C52.4524 121.289 47.4713 120.533 42.8759 118.926L42.3278 120.492C47.127 122.171 52.3238 122.958 57.8452 122.668L57.7584 121.01Z" fill="#0C081E" mask="url(#path-1-inside-1_2196_13888)"></path> <mask id="path-3-inside-2_2196_13888" fill="white"> <path fill-rule="evenodd" clip-rule="evenodd" d="M105.838 54.8908C103.147 33.3768 88.8332 16.4859 70.3086 15.0102C48.3877 13.2639 28.8714 33.7646 26.7176 60.7997C24.5639 87.8349 40.5884 111.167 62.5092 112.913C79.1626 114.24 94.4281 102.727 101.747 85.2631C93.3543 108.171 73.7778 123.581 52.3056 121.871C25.3536 119.723 5.62113 91.4156 8.23191 58.6433C10.8427 25.8709 34.8081 1.04419 61.7601 3.1913C85.4893 5.08166 103.622 27.2504 105.838 54.8908Z"></path> </mask> <path fill-rule="evenodd" clip-rule="evenodd" d="M105.838 54.8908C103.147 33.3768 88.8332 16.4859 70.3086 15.0102C48.3877 13.2639 28.8714 33.7646 26.7176 60.7997C24.5639 87.8349 40.5884 111.167 62.5092 112.913C79.1626 114.24 94.4281 102.727 101.747 85.2631C93.3543 108.171 73.7778 123.581 52.3056 121.871C25.3536 119.723 5.62113 91.4156 8.23191 58.6433C10.8427 25.8709 34.8081 1.04419 61.7601 3.1913C85.4893 5.08166 103.622 27.2504 105.838 54.8908Z" fill="#6aa84f"></path> <path d="M70.3086 15.0102L70.3745 14.1828L70.3086 15.0102ZM105.838 54.8908L105.014 54.9938L106.665 54.8245L105.838 54.8908ZM62.5092 112.913L62.5752 112.086H62.5751L62.5092 112.913ZM101.747 85.2631L102.527 85.5487L100.982 84.9423L101.747 85.2631ZM52.3056 121.871L52.3716 121.043H52.3716L52.3056 121.871ZM8.23191 58.6433L7.40453 58.5773L8.23191 58.6433ZM61.7601 3.1913L61.826 2.36392L61.7601 3.1913ZM70.2427 15.8376C88.2574 17.2727 102.356 33.7402 105.014 54.9938L106.661 54.7878C103.938 33.0134 89.4089 15.6992 70.3745 14.1828L70.2427 15.8376ZM27.545 60.8656C29.6759 34.1169 48.9324 14.1399 70.2427 15.8376L70.3745 14.1828C47.843 12.3879 28.0668 33.4122 25.8903 60.7338L27.545 60.8656ZM62.5751 112.086C41.2649 110.388 25.4141 87.6144 27.545 60.8656L25.8903 60.7338C23.7137 88.0554 39.9118 111.946 62.4433 113.741L62.5751 112.086ZM100.982 84.9423C93.7591 102.176 78.7732 113.376 62.5752 112.086L62.4433 113.741C79.5519 115.103 95.0971 103.278 102.513 85.584L100.982 84.9423ZM100.968 84.9776C92.6651 107.64 73.3726 122.716 52.3716 121.043L52.2397 122.698C74.183 124.446 94.0435 108.703 102.527 85.5487L100.968 84.9776ZM52.3716 121.043C26.0204 118.944 6.47227 91.1833 9.05929 58.7092L7.40453 58.5773C4.76999 91.648 24.6868 120.503 52.2397 122.698L52.3716 121.043ZM9.05929 58.7092C11.6463 26.2351 35.3431 1.91944 61.6942 4.01868L61.826 2.36392C34.2731 0.168941 10.0391 25.5067 7.40453 58.5773L9.05929 58.7092ZM61.6942 4.01868C84.8994 5.86729 102.817 27.5926 105.01 54.9571L106.665 54.8245C104.428 26.9082 86.0793 4.29603 61.826 2.36392L61.6942 4.01868Z" fill="#0C081E" mask="url(#path-3-inside-2_2196_13888)"></path> <mask id="path-5-inside-3_2196_13888" fill="white"> <path fill-rule="evenodd" clip-rule="evenodd" d="M52.3056 121.871C79.2577 124.018 103.223 99.191 105.834 66.4186C108.445 33.6462 88.7121 5.3384 61.7601 3.1913C34.8081 1.04419 10.8427 25.8709 8.23191 58.6433C5.62113 91.4156 25.3536 119.723 52.3056 121.871ZM52.2672 109.938C73.8348 111.656 93.0125 91.7889 95.1017 65.5637C97.1909 39.3385 81.4005 16.6859 59.8329 14.9678C38.2653 13.2496 19.0876 33.1165 16.9984 59.3417C14.9092 85.5669 30.6996 108.219 52.2672 109.938Z"></path> </mask> <path fill-rule="evenodd" clip-rule="evenodd" d="M52.3056 121.871C79.2577 124.018 103.223 99.191 105.834 66.4186C108.445 33.6462 88.7121 5.3384 61.7601 3.1913C34.8081 1.04419 10.8427 25.8709 8.23191 58.6433C5.62113 91.4156 25.3536 119.723 52.3056 121.871ZM52.2672 109.938C73.8348 111.656 93.0125 91.7889 95.1017 65.5637C97.1909 39.3385 81.4005 16.6859 59.8329 14.9678C38.2653 13.2496 19.0876 33.1165 16.9984 59.3417C14.9092 85.5669 30.6996 108.219 52.2672 109.938Z" fill="#6aa84f"></path> <path d="M105.834 66.4186L106.661 66.4845L105.834 66.4186ZM52.3056 121.871L52.3716 121.043H52.3716L52.3056 121.871ZM61.7601 3.1913L61.6942 4.01868L61.7601 3.1913ZM8.23191 58.6433L7.40453 58.5773L8.23191 58.6433ZM52.2672 109.938L52.3331 109.11L52.2672 109.938ZM59.8329 14.9678L59.8988 14.1404L59.8329 14.9678ZM16.9984 59.3417L17.8258 59.4076L16.9984 59.3417ZM105.006 66.3527C102.419 98.8268 78.7227 123.142 52.3716 121.043L52.2397 122.698C79.7927 124.893 104.027 99.5552 106.661 66.4845L105.006 66.3527ZM61.6942 4.01868C88.0453 6.11791 107.593 33.8786 105.006 66.3527L106.661 66.4845C109.296 33.4139 89.379 4.5589 61.826 2.36392L61.6942 4.01868ZM9.05929 58.7092C11.6463 26.2351 35.3431 1.91944 61.6942 4.01868L61.826 2.36392C34.2731 0.168941 10.0391 25.5067 7.40453 58.5773L9.05929 58.7092ZM52.3716 121.043C26.0204 118.944 6.47227 91.1833 9.05929 58.7092L7.40453 58.5773C4.76999 91.648 24.6868 120.503 52.2397 122.698L52.3716 121.043ZM94.2743 65.4978C92.2089 91.4247 73.2998 110.781 52.3331 109.11L52.2013 110.765C74.3698 112.531 93.8161 92.1531 95.9291 65.6296L94.2743 65.4978ZM59.767 15.7951C80.7337 17.4654 96.3398 39.5709 94.2743 65.4978L95.9291 65.6296C98.042 39.1061 82.0673 15.9064 59.8988 14.1404L59.767 15.7951ZM17.8258 59.4076C19.8912 33.4807 38.8003 14.1248 59.767 15.7951L59.8988 14.1404C37.7303 12.3743 18.284 32.7523 16.171 59.2758L17.8258 59.4076ZM52.3331 109.11C31.3664 107.44 15.7603 85.3345 17.8258 59.4076L16.171 59.2758C14.0581 85.7992 30.0328 108.999 52.2013 110.765L52.3331 109.11Z" fill="#0C081E" mask="url(#path-5-inside-3_2196_13888)"></path> <path d="M44.1445 58.0889L54.917 70.5164L44.7848 58.1701L44.1445 58.0889ZM43.5036 58.0076L54.2785 70.4411L44.1445 58.0889L43.5036 58.0076ZM42.8621 57.9262L53.6394 70.3658L43.5036 58.0076L42.8621 57.9262ZM54.917 70.5164L55.5548 70.5915L44.7848 58.1701L54.917 70.5164ZM42.2199 57.8448L52.9995 70.2904L42.8621 57.9262L42.2199 57.8448ZM54.2785 70.4411L54.917 70.5164L44.1445 58.0889L54.2785 70.4411ZM41.577 57.7632L52.3591 70.2149L42.2199 57.8448L41.577 57.7632ZM53.6394 70.3658L54.2785 70.4411L43.5036 58.0076L53.6394 70.3658ZM40.9334 57.6816L51.7179 70.1394L41.577 57.7632L40.9334 57.6816ZM52.9995 70.2904L53.6394 70.3658L42.8621 57.9262L52.9995 70.2904ZM40.2892 57.5999L51.0761 70.0637L40.9334 57.6816L40.2892 57.5999ZM52.3591 70.2149L52.9995 70.2904L42.2199 57.8448L52.3591 70.2149ZM39.6443 57.5181L50.4336 69.988L40.2892 57.5999L39.6443 57.5181ZM51.7179 70.1394L52.3591 70.2149L41.577 57.7632L51.7179 70.1394ZM38.9988 57.4362L49.7904 69.9122L39.6443 57.5181L38.9988 57.4362ZM51.0761 70.0637L51.7179 70.1394L40.9334 57.6816L51.0761 70.0637ZM38.3525 57.3542L49.1466 69.8364L38.9988 57.4362L38.3525 57.3542Z" fill="#6aa84f"></path> <path d="M37.7054 57.2723L32.335 64.1524L48.4982 82.9464L37.7054 57.2723Z" fill="#6aa84f"></path> <path d="M50.434 69.9882L51.0765 70.0639L40.2896 57.6L50.434 69.9882ZM37.7061 57.2723L48.5025 69.7606L38.3529 57.3544L37.7061 57.2723ZM49.7909 69.9124L50.434 69.9882L39.6447 57.5182L49.7909 69.9124ZM49.147 69.8365L49.7909 69.9124L38.9992 57.4363L49.147 69.8365ZM48.5025 69.7606L49.147 69.8365L38.3529 57.3544L48.5025 69.7606Z" fill="#6aa84f"></path> <path d="M37.7061 57.2723L38.3529 57.3544L38.9992 57.4363L39.6447 57.5182L40.2896 57.6L40.9338 57.6817L41.5774 57.7634L42.2203 57.8449L42.8625 57.9263L43.5041 58.0077L44.145 58.089L44.7852 58.1702L55.5552 70.5917L54.9174 70.5165L54.2789 70.4413L53.6398 70.3659L52.9999 70.2905L52.3595 70.2151L51.7183 70.1395L51.0765 70.0639L50.434 69.9882L49.7909 69.9124L49.147 69.8365L48.5025 69.7606" stroke="#0C081E" stroke-width="0.833333" stroke-linecap="round"></path> <path d="M54.917 83.6343L55.5552 83.7027L82.87 49.1637L54.917 83.6343Z" fill="#6aa84f"></path> <path d="M48.5025 69.7606L37.7061 57.2723L48.4989 82.9464L48.5025 69.7606Z" fill="#6aa84f"></path> <path d="M54.2782 83.5658L54.9172 83.6342L82.2404 49.0765L54.2782 83.5658ZM53.6387 83.4972L54.2782 83.5658L81.6099 48.9893L53.6387 83.4972ZM52.9984 83.4286L53.6387 83.4972L80.9788 48.902L52.9984 83.4286ZM52.3575 83.3599L52.9984 83.4286L80.347 48.8146L52.3575 83.3599ZM51.716 83.2911L52.3575 83.3599L79.7145 48.7271L51.716 83.2911ZM51.0737 83.2223L51.716 83.2911L79.0814 48.6395L51.0737 83.2223ZM82.2404 49.0765L54.9172 83.6342L82.8702 49.1637L82.2404 49.0765ZM50.4308 83.1534L51.0737 83.2223L78.4475 48.5518L50.4308 83.1534ZM81.6099 48.9893L54.2782 83.5658L82.2404 49.0765L81.6099 48.9893ZM49.7872 83.0844L50.4308 83.1534L77.8131 48.4641L49.7872 83.0844ZM80.9788 48.902L53.6387 83.4972L81.6099 48.9893L80.9788 48.902ZM76.7173 42.8421L82.2404 49.0765L77.3485 42.9323L76.7173 42.8421ZM49.143 83.0154L49.7872 83.0844L77.178 48.3762L49.143 83.0154ZM80.347 48.8146L52.9984 83.4286L80.9788 48.902L80.347 48.8146ZM76.0855 42.7518L81.6099 48.9893L76.7173 42.8421L76.0855 42.7518ZM48.498 82.9462L49.143 83.0154L76.5421 48.2882L48.498 82.9462ZM82.2404 49.0765L82.8702 49.1637L77.3485 42.9323L82.2404 49.0765ZM79.7145 48.7271L52.3575 83.3599L80.347 48.8146L79.7145 48.7271Z" fill="#6aa84f"></path> <path d="M48.498 82.9462L75.9057 48.2002L48.5016 69.7604L48.498 82.9462Z" fill="#6aa84f"></path> <path d="M75.453 42.6617L80.9787 48.9022L76.0854 42.752L75.453 42.6617ZM81.6098 48.9895L82.2403 49.0767L76.7172 42.8423L81.6098 48.9895ZM79.0812 48.6397L51.7158 83.2913L79.7144 48.7273L79.0812 48.6397ZM74.8199 42.5712L80.3468 48.8148L75.453 42.6617L74.8199 42.5712ZM80.9787 48.9022L81.6098 48.9895L76.0854 42.752L80.9787 48.9022ZM78.4474 48.552L51.0736 83.2225L79.0812 48.6397L78.4474 48.552ZM74.1861 42.4807L79.7144 48.7273L74.8199 42.5712L74.1861 42.4807ZM80.3468 48.8148L80.9787 48.9022L75.453 42.6617L80.3468 48.8148ZM77.813 48.4642L50.4307 83.1536L78.4474 48.552L77.813 48.4642ZM73.5516 42.39L79.0812 48.6397L74.1861 42.4807L73.5516 42.39ZM79.7144 48.7273L80.3468 48.8148L74.8199 42.5712L79.7144 48.7273ZM77.1778 48.3764L49.7871 83.0846L77.813 48.4642L77.1778 48.3764Z" fill="#6aa84f"></path> <path d="M75.906 48.2003L70.3699 41.9353L48.502 69.7605L75.906 48.2003Z" fill="#6aa84f"></path> <path d="M48.4982 82.9463L32.335 64.1523L37.7054 57.2723L48.5018 69.7605L70.3697 41.9353" stroke="#0C081E" stroke-width="0.833333" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M72.9166 42.2992L78.4476 48.5519L73.5518 42.3899L72.9166 42.2992ZM79.0814 48.6396L79.7145 48.7272L74.1862 42.4806L79.0814 48.6396ZM76.5422 48.2883L49.143 83.0155L77.178 48.3763L76.5422 48.2883ZM72.2809 42.2084L77.8131 48.4642L72.9166 42.2992L72.2809 42.2084ZM78.4476 48.5519L79.0814 48.6396L73.5518 42.3899L78.4476 48.5519ZM75.9057 48.2003L48.498 82.9464L76.5422 48.2883L75.9057 48.2003Z" fill="#6aa84f"></path> <path d="M75.9057 48.2002L48.498 82.9462L49.143 83.0154L49.7872 83.0844L50.4308 83.1534L51.0737 83.2223L51.716 83.2911L52.3575 83.3599L52.9984 83.4286L53.6387 83.4972L54.2782 83.5658L54.9172 83.6343L55.5554 83.7027L82.8702 49.1637" stroke="#0C081E" stroke-width="0.833333" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M71.645 42.1174L77.1785 48.3763L72.2814 42.2084L71.645 42.1174ZM77.8137 48.4642L78.4481 48.5519L72.9172 42.2992L77.8137 48.4642ZM71.0079 42.0264L76.5427 48.2883L71.645 42.1174L71.0079 42.0264ZM77.1785 48.3763L77.8137 48.4642L72.2814 42.2084L77.1785 48.3763ZM70.3701 41.9353L75.9063 48.2003L71.0079 42.0264L70.3701 41.9353ZM76.5427 48.2883L77.1785 48.3763L71.645 42.1174L76.5427 48.2883ZM75.9063 48.2003L76.5427 48.2883L71.0079 42.0264L75.9063 48.2003Z" fill="#6aa84f"></path> <path d="M70.3701 41.9353L75.9063 48.2003ZM71.0079 42.0264L70.3701 41.9353ZM76.5427 48.2883L75.9063 48.2003ZM71.645 42.1174L71.0079 42.0264ZM77.1785 48.3763L76.5427 48.2883ZM72.2814 42.2084L71.645 42.1174ZM77.8137 48.4642L77.1785 48.3763ZM72.9172 42.2992L72.2814 42.2084ZM78.4481 48.5519L77.8137 48.4642ZM73.5523 42.3899L72.9172 42.2992ZM79.0819 48.6396L78.4481 48.5519ZM74.1868 42.4806L73.5523 42.3899ZM79.7151 48.7272L79.0819 48.6396ZM74.8205 42.5711L74.1868 42.4806ZM80.3475 48.8147L79.7151 48.7272ZM75.4537 42.6616L74.8205 42.5711ZM80.9793 48.9021L80.3475 48.8147ZM76.0861 42.7519L75.4537 42.6616ZM81.6105 48.9894L80.9793 48.9021ZM76.7179 42.8422L76.0861 42.7519ZM82.241 49.0766L81.6105 48.9894ZM76.7179 42.8422L77.349 42.9324ZM82.8708 49.1638L77.349 42.9324ZM82.241 49.0766L82.8708 49.1638Z" stroke="#0C081E" stroke-width="0.833333" stroke-linecap="round" stroke-linejoin="round"></path> </svg></div><p class="h3 uppercase text-center thank-you-for-another-form--title">
 Well done!</p><p class="txt txt-xl text-center thank-you-for-another-form--text">
 We will contact you in the next few hours or you can schedule an appointment now.</p><div class="text-center thank-you-for-another-form--btn">
-<a href="https://valmax.pipedrive.com/scheduler/Wr7eRMT1/meeting-with-the-team" class="btn btn-standart btn-light" title="Schedule a meeting" target="_blank" rel="nofollow">
+<a href="https://marlncorp.pipedrive.com/scheduler/Wr7eRMT1/meeting-with-the-team" class="btn btn-standart btn-light" title="Schedule a meeting" target="_blank" rel="nofollow">
 <span class="btn-text">Schedule a meeting</span>
 <span class="btn-drop-down-items">
 <span></span>
 <span></span>
 </span>
 </a></div></div></div><h2 class="contact-us--form--title cf-title">
-Kick Start Your Project Right Now</h2><div class="wpcf7 no-js" id="wpcf7-f206-o1" lang="uk" dir="ltr" data-wpcf7-id="206"><div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p><ul></ul></div><form action="/services/branding/#wpcf7-f206-o1" method="post" class="wpcf7-form init" aria-label="Контактна форма" novalidate="novalidate" data-status="init"><div style="display: none;">
+Kick Start Your Project Right Now</h2><div class="wpcf7 no-js" id="wpcf7-f206-o1" lang="en" dir="ltr" data-wpcf7-id="206"><div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p><ul></ul></div><form action="/services/branding/#wpcf7-f206-o1" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init"><div style="display: none;">
 <input type="hidden" name="_wpcf7" value="206">
 <input type="hidden" name="_wpcf7_version" value="6.0.6">
-<input type="hidden" name="_wpcf7_locale" value="uk">
+<input type="hidden" name="_wpcf7_locale" value="en">
 <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f206-o1">
 <input type="hidden" name="_wpcf7_container_post" value="0">
 <input type="hidden" name="_wpcf7_posted_data_hash" value="">
@@ -1519,7 +2135,7 @@ html[data-theme="dark"] .faq .faq-item-answer::after{background:#0E1116 !importa
 
 // Animate statistics numbers
 function animateNumbers() {
-    const numberElements = document.querySelectorAll('.rr-why-hire-valmax-section--statistic__block--num');
+    const numberElements = document.querySelectorAll('.rr-why-hire-marln-section--statistic__block--num');
     
     numberElements.forEach(element => {
         const finalText = element.textContent.trim();
@@ -1543,7 +2159,7 @@ function animateNumbers() {
 
 // Store original values for periodic animation
 const originalValues = [];
-const numberElements = document.querySelectorAll('.rr-why-hire-valmax-section--statistic__block--num');
+const numberElements = document.querySelectorAll('.rr-why-hire-marln-section--statistic__block--num');
 numberElements.forEach(element => {
     originalValues.push(element.textContent.trim());
 });
@@ -1801,6 +2417,239 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Language Toggle System
+(function() {
+    'use strict';
+    
+    const langToggle = document.getElementById('lang-toggle');
+    let currentLanguage = 'en';
+    
+    // Translation data
+    const translations = {
+        en: {
+            title: 'Technology Partners - Marln Corporation | Strategic Technology Alliances',
+            mainTitle: 'OUR TECHNOLOGY PARTNERS',
+            automationTitle: 'Automation Anywhere',
+            automationDesc: 'RPA Solutions',
+            awsTitle: 'AWS',
+            awsDesc: 'Cloud Infrastructure',
+            microsoftTitle: 'Microsoft',
+            microsoftDesc: 'Enterprise Solutions',
+            googleTitle: 'Google',
+            googleDesc: 'AI & Analytics',
+            oracleTitle: 'Oracle',
+            oracleDesc: 'Database & Cloud',
+            databricksTitle: 'Databricks',
+            databricksDesc: 'Data & AI Platform',
+            formTitle: 'Kick Start Your Project Right Now',
+            namePlaceholder: 'Name*',
+            emailPlaceholder: 'E-mail*',
+            messagePlaceholder: 'Tell about your project',
+            sendButton: 'send message',
+            thankYouTitle: 'Well done!',
+            thankYouText: 'We will contact you in the next few hours or you can schedule an appointment now.',
+            scheduleButton: 'Schedule a meeting',
+            contactTitle: 'Send us an email',
+            // Footer translations
+            socialLinks: 'Social Links',
+            certifications: 'Certifications',
+            offices: 'Offices',
+            contactUs: 'Contact us'
+        },
+        ar: {
+            title: 'شركاؤنا التقنيون - مارلن كورب | تحالفات تقنية استراتيجية',
+            mainTitle: 'شركاؤنا التقنيون',
+            automationTitle: 'أتميشن أني وير',
+            automationDesc: 'حلول أتمتة العمليات الروبوتية',
+            awsTitle: 'أمازون ويب سيرفيسز',
+            awsDesc: 'البنية التحتية السحابية',
+            microsoftTitle: 'مايكروسوفت',
+            microsoftDesc: 'الحلول المؤسسية',
+            googleTitle: 'جوجل',
+            googleDesc: 'الذكاء الاصطناعي والتحليلات',
+            oracleTitle: 'أوراكل',
+            oracleDesc: 'قواعد البيانات والسحابة',
+            databricksTitle: 'داتابريكس',
+            databricksDesc: 'منصة البيانات والذكاء الاصطناعي',
+            formTitle: 'ابدأ مشروعك الآن',
+            namePlaceholder: 'الاسم*',
+            emailPlaceholder: 'البريد الإلكتروني*',
+            messagePlaceholder: 'أخبرنا عن مشروعك',
+            sendButton: 'أرسل الرسالة',
+            thankYouTitle: 'أحسنت!',
+            thankYouText: 'سنتواصل معك خلال الساعات القادمة أو يمكنك حجز موعد الآن.',
+            scheduleButton: 'احجز اجتماعاً',
+            contactTitle: 'أرسل لنا بريداً إلكترونياً',
+            // Footer translations
+            socialLinks: 'روابط التواصل الاجتماعي',
+            certifications: 'الشهادات',
+            offices: 'المكاتب',
+            contactUs: 'اتصل بنا'
+        }
+    };
+    
+    function updateLanguage(lang) {
+        currentLanguage = lang;
+        
+        // Update HTML attributes
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        
+        // Update page title
+        document.title = translations[lang].title;
+        
+        // Update main title
+        const mainTitle = document.querySelector('.tech-partners-title span');
+        if (mainTitle) {
+            mainTitle.textContent = translations[lang].mainTitle;
+        }
+        
+        // Update partner cards
+        const partnerTitles = document.querySelectorAll('.partner-title');
+        const partnerDescs = document.querySelectorAll('.partner-desc');
+        
+        if (partnerTitles.length >= 6 && partnerDescs.length >= 6) {
+            // Automation Anywhere
+            partnerTitles[0].textContent = translations[lang].automationTitle;
+            partnerDescs[0].textContent = translations[lang].automationDesc;
+            
+            // AWS
+            partnerTitles[1].textContent = translations[lang].awsTitle;
+            partnerDescs[1].textContent = translations[lang].awsDesc;
+            
+            // Microsoft
+            partnerTitles[2].textContent = translations[lang].microsoftTitle;
+            partnerDescs[2].textContent = translations[lang].microsoftDesc;
+            
+            // Google
+            partnerTitles[3].textContent = translations[lang].googleTitle;
+            partnerDescs[3].textContent = translations[lang].googleDesc;
+            
+            // Oracle
+            partnerTitles[4].textContent = translations[lang].oracleTitle;
+            partnerDescs[4].textContent = translations[lang].oracleDesc;
+            
+            // Databricks
+            partnerTitles[5].textContent = translations[lang].databricksTitle;
+            partnerDescs[5].textContent = translations[lang].databricksDesc;
+        }
+        
+        // Update contact form
+        const formTitle = document.querySelector('.contact-us--form--title');
+        if (formTitle) {
+            formTitle.textContent = translations[lang].formTitle;
+        }
+        
+        const nameInput = document.querySelector('input[name="your-name"]');
+        if (nameInput) {
+            nameInput.placeholder = translations[lang].namePlaceholder;
+        }
+        
+        const emailInput = document.querySelector('input[name="your-email"]');
+        if (emailInput) {
+            emailInput.placeholder = translations[lang].emailPlaceholder;
+        }
+        
+        const messageTextarea = document.querySelector('textarea[name="your-message"]');
+        if (messageTextarea) {
+            messageTextarea.placeholder = translations[lang].messagePlaceholder;
+        }
+        
+        const sendButton = document.querySelector('.wpcf7-submit');
+        if (sendButton) {
+            sendButton.value = translations[lang].sendButton;
+        }
+        
+        // Update thank you messages
+        const thankYouTitle = document.querySelector('.thank-you-for-another-form--title');
+        if (thankYouTitle) {
+            thankYouTitle.textContent = translations[lang].thankYouTitle;
+        }
+        
+        const thankYouText = document.querySelector('.thank-you-for-another-form--text');
+        if (thankYouText) {
+            thankYouText.textContent = translations[lang].thankYouText;
+        }
+        
+        const scheduleButton = document.querySelector('.thank-you-for-another-form--btn .btn-text');
+        if (scheduleButton) {
+            scheduleButton.textContent = translations[lang].scheduleButton;
+        }
+        
+        // Update contact section
+        const contactTitle = document.querySelector('.contact-us--connect--item .heading');
+        if (contactTitle) {
+            contactTitle.textContent = translations[lang].contactTitle;
+        }
+        
+        // Update form attributes
+        const form = document.querySelector('.wpcf7-form');
+        if (form) {
+            form.setAttribute('lang', lang);
+            form.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+            form.setAttribute('aria-label', lang === 'ar' ? 'نموذج الاتصال' : 'Contact form');
+        }
+        
+        const formContainer = document.querySelector('.wpcf7');
+        if (formContainer) {
+            formContainer.setAttribute('lang', lang);
+            formContainer.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+        }
+        
+        const localeInput = document.querySelector('input[name="_wpcf7_locale"]');
+        if (localeInput) {
+            localeInput.value = lang;
+        }
+        
+        // Update footer content
+        const socialLinksTitle = document.querySelector('#menu-item-161 a');
+        if (socialLinksTitle) {
+            socialLinksTitle.textContent = translations[lang].socialLinks;
+        }
+        
+        const certificationsTitle = document.querySelector('#menu-item-758 a');
+        if (certificationsTitle) {
+            certificationsTitle.textContent = translations[lang].certifications;
+        }
+        
+        const officesTitle = document.querySelector('.offices-title');
+        if (officesTitle) {
+            officesTitle.textContent = translations[lang].offices;
+        }
+        
+        const contactUsButton = document.querySelector('.footer-contact-btn .btn-text');
+        if (contactUsButton) {
+            contactUsButton.textContent = translations[lang].contactUs;
+        }
+        
+        console.log('Language switched to:', lang);
+    }
+    
+    function toggleLanguage() {
+        const newLang = currentLanguage === 'en' ? 'ar' : 'en';
+        updateLanguage(newLang);
+    }
+    
+    // Initialize language system
+    document.addEventListener('DOMContentLoaded', function() {
+        // Set initial language to English
+        updateLanguage('en');
+        
+        // Listen for language toggle in header
+        if (langToggle) {
+            langToggle.addEventListener('change', function() {
+                const newLang = this.checked ? 'ar' : 'en';
+                updateLanguage(newLang);
+            });
+        }
+        
+        // Also listen for any existing language toggle system
+        document.addEventListener('languageChanged', function(e) {
+            updateLanguage(e.detail.language);
+        });
+    });
+})();
 </script>
 
 </body></html>

@@ -1,6 +1,26 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head><meta charset="UTF-8"><link data-optimized="2" rel="stylesheet" href="css/f1225b8e5b82e8a69bb95d9a974ef054.css"><link rel="stylesheet" href="css/dropdown-override.css"><style>
+/* ===== LOGO SWITCHING LOGIC ===== */
+/* Default Logo Display (Light Mode) */
+.logo-light { display: block !important; }  /* Shows marlncorplight.svg */
+.logo-dark { display: none !important; }    /* Hides marlncorpdark.svg */
+
+/* Force Logo Switching in Dark Mode */
+html[data-theme="dark"] .header--logo .logo-light {
+    display: none !important; visibility: hidden !important; opacity: 0 !important;
+}
+html[data-theme="dark"] .header--logo .logo-dark {
+    display: block !important; visibility: visible !important; opacity: 1 !important;
+}
+/* Force Logo Switching in Light Mode (redundant but ensures override) */
+html[data-theme="light"] .header--logo .logo-light {
+    display: block !important; visibility: visible !important; opacity: 1 !important;
+}
+html[data-theme="light"] .header--logo .logo-dark {
+    display: none !important; visibility: hidden !important; opacity: 0 !important;
+}
+
 /* Custom Green Scrollbar Styles - High Specificity */
 html::-webkit-scrollbar,
 body::-webkit-scrollbar,
@@ -547,7 +567,7 @@ body #header li {
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4KXH5HN"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div class="site-main" id="page"><header class="header" id="header"><div class="header--content"><div class="container"><div class="header-wrapper"><div class="header--item header--logo">
                             <a href="index.html" title="Home">
-<img width="184" height="23" src="images/valmax.svg" class="logo-dark skip-lazy" alt="VALMAX Logo | Black" decoding="async" title="VALMAX Logo | Black"><img width="184" height="23" src="images/valmax2.svg" class="logo-light skip-lazy" alt="VALMAX Logo | White" decoding="async" title="VALMAX Logo | White">						</a></div><div class="header--menu"><ul id="header_menu" class="header--menu__list"><li id="menu-item-680" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-680"><a href="about-us.html">About us</a></li><li id="menu-item-666" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-666"><a>Services</a><ul class="sub-menu services-dropdown"><li class="menu-item"><a href="ai-powered-consulting.html">AI Powered Consulting</a></li><li class="menu-item"><a href="engineering-services.html">Engineering Services</a></li><li class="menu-item"><a href="data-analytics.html">Data Analytics</a></li><li class="menu-item"><a href="https://a1siliconvalley.com/" target="_blank" rel="noopener noreferrer">Corporate Training</a></li></ul></li><li id="menu-item-company" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-company"><a>Company</a><ul class="sub-menu company-dropdown"><li class="menu-item"><a href="marln-company-profile.html">Marln Company Profile</a></li><li class="menu-item"><a href="corporate-social-responsibility.html">Corporate Social Responsibility (CSR)</a></li><li class="menu-item"><a href="technology-partners.html">Technology Partners</a></li><li class="menu-item"><a href="industry.html">Industry</a></li></ul></li><li id="menu-item-contact" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-contact"><a href="#contact" class="contact-scroll-btn">Contact us</a></li><li class="menu-item menu-item-theme"><label class="theme-toggle"><input type="checkbox"><span class="theme-toggle-button"><svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="#0C081E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="#0C081E"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/></svg></span></label></li><li class="menu-item menu-item-lang">
+<img width="184" height="23" src="images/marlncorpdark.svg" class="logo-dark skip-lazy" alt="Marln Corporation Logo | Black" decoding="async" title="Marln Corporation Logo | Black"><img width="184" height="23" src="images/marlncorplight.svg" class="logo-light skip-lazy" alt="Marln Corporation Logo | White" decoding="async" title="Marln Corporation Logo | White">						</a></div><div class="header--menu"><ul id="header_menu" class="header--menu__list"><li id="menu-item-680" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-680"><a href="about-us.html">About us</a></li><li id="menu-item-666" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-666"><a>Services</a><ul class="sub-menu services-dropdown"><li class="menu-item"><a href="ai-powered-consulting.html">AI Powered Consulting</a></li><li class="menu-item"><a href="engineering-services.html">Engineering Services</a></li><li class="menu-item"><a href="data-analytics.html">Data Analytics</a></li><li class="menu-item"><a href="https://a1siliconvalley.com/" target="_blank" rel="noopener noreferrer">Corporate Training</a></li></ul></li><li id="menu-item-company" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-company"><a>Company</a><ul class="sub-menu company-dropdown"><li class="menu-item"><a href="marln-company-profile.html">Marln Company Profile</a></li><li class="menu-item"><a href="corporate-social-responsibility.html">Corporate Social Responsibility (CSR)</a></li><li class="menu-item"><a href="technology-partners.html">Technology Partners</a></li><li class="menu-item"><a href="industry.html">Industry</a></li></ul></li><li id="menu-item-contact" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-contact"><a href="#contact" class="contact-scroll-btn">Contact us</a></li><li class="menu-item menu-item-theme"><label class="theme-toggle"><input type="checkbox"><span class="theme-toggle-button"><svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="#0C081E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="#0C081E"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/></svg></span></label></li><li class="menu-item menu-item-lang">
     <div class="language-toggle">
         <input type="checkbox" id="lang-toggle" class="lang-toggle-input">
         <label for="lang-toggle" class="lang-toggle-label">
