@@ -2,6 +2,15 @@
   "header.about": "من نحن",
   "header.services": "الخدمات",
   "header.company": "الشركة",
+  
+  "dropdown.services.aiConsulting": "الاستشارات المدعومة بالذكاء الاصطناعي",
+  "dropdown.services.engineering": "خدمات الهندسة",
+  "dropdown.services.dataAnalytics": "تحليل البيانات",
+  "dropdown.services.corporateTraining": "التدريب المؤسسي",
+  "dropdown.company.profile": "الملف التعريفي لشركة Marln",
+  "dropdown.company.csr": "المسؤولية الاجتماعية للشركات (CSR)",
+  "dropdown.company.partners": "الشركاء التقنيون",
+  "dropdown.company.industry": "الصناعة",
 
   "common.contactUs": "تواصل معنا",
   "common.scheduleMeeting": "احجز اجتماعاً",

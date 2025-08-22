@@ -2,6 +2,15 @@
   "header.about": "About us",
   "header.services": "Services",
   "header.company": "Company",
+  
+  "dropdown.services.aiConsulting": "AI Powered Consulting",
+  "dropdown.services.engineering": "Engineering Services",
+  "dropdown.services.dataAnalytics": "Data Analytics",
+  "dropdown.services.corporateTraining": "Corporate Training",
+  "dropdown.company.profile": "Marln Company Profile",
+  "dropdown.company.csr": "Corporate Social Responsibility (CSR)",
+  "dropdown.company.partners": "Technology Partners",
+  "dropdown.company.industry": "Industry",
 
   "common.contactUs": "Contact us",
   "common.scheduleMeeting": "Schedule a meeting",
@@ -136,7 +145,7 @@
   "offices.cupertino": "Cupertino, USA",
   "offices.jeddah": "Jeddah, Saudi Arabia",
   "offices.riyadh": "Riyadh, Saudi Arabia",
-  "offices.bangaluru": "Bangaluru, India",
+      "offices.bangaluru": "Bengaluru, India",
   "offices.capetown": "Capetown, South Africa",
 
   "about.story.title": "Our Story",

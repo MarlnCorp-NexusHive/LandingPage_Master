@@ -3,11 +3,30 @@
   const SUPPORTED_RTL = new Set(['ar']);
   const CACHE = {};
 
+  // Enhanced error handling for online hosting
+  function logError(message, error) {
+    console.warn('Language System:', message, error);
+  }
+
   // Embedded fallback translations for file:// usage (no server)
   // Arabic and English both provided so file:// switching works without refresh
   const EMBEDDED = {
     ar: {
       header: { about: "من نحن", services: "الخدمات", company: "الشركة" },
+      dropdown: {
+        services: {
+          aiConsulting: "الاستشارات المدعومة بالذكاء الاصطناعي",
+          engineering: "خدمات الهندسة",
+          dataAnalytics: "تحليل البيانات",
+          corporateTraining: "التدريب المؤسسي"
+        },
+        company: {
+          profile: "الملف التعريفي لشركة Marln",
+          csr: "المسؤولية الاجتماعية للشركات (CSR)",
+          partners: "الشركاء التقنيون",
+          industry: "الصناعة"
+        }
+      },
       common: {
         contactUs: "تواصل معنا",
         scheduleMeeting: "احجز اجتماعاً",
@@ -119,197 +138,24 @@
         riyadh: "الرياض، المملكة العربية السعودية",
         bangaluru: "بنغالورو، الهند",
         capetown: "كيب تاون، جنوب أفريقيا"
-      },
-      about: {
-        story: {
-          title: "قصتنا",
-          intro: "اسم \"Marln\" يجسد رواية قوية تتمحور حول الصفات التي تعكس التزام الشركة بتمكين النساء في مجال التقنية وتعزيز بيئة متنوعة وشاملة.",
-          outro1: "معاً تجسد هذه القيم روح Marln Corporation وتوجه رسالتها لتمكين النساء عبر حلول استشارية مبتكرة في تقنية المعلومات.",
-          outro2: "نخدم اليوم عملاء في أكثر من 10 دول مع أكثر من 50 عملية نشر مؤسسية وفريق يتجاوز 200 خبير."
-        },
-        mission: {
-          title: "مهمتنا",
-          text: "مهمتنا تمكين الأعمال بحلول تقنية مبتكرة متمحورة حول الإنسان، تقود التحول الرقمي وتطلق النمو."
-        },
-        benefits: {
-          title: "فوائد الشراكة معنا:",
-          card1: { title: "حوافز ضريبية", text: "التعاون مع شركة مملوكة لامرأة من أقلية يمكن أن يوفر حوافز ضريبية لشركتك وفق برامج حكومية." },
-          card2: { title: "سمعة الأعمال المتنوعة", text: "تبني التنوع ضروري لنمو صحي. الشراكة معنا تعكس التزام شركتك بالتنوع، ونلتزم نحن بتقديم نتائج ملموسة." }
-        },
-        certBanner: { title: "مارلن كورب شركة معتمدة 100% مملوكة للنساء والأقليات" },
-        manager: { title: "المدير التنفيذي" }
-      },
-      industry: {
-        title: "حلول الصناعات",
-        exploreSolutions: "استكشف الحلول",
-        automotive: { title: "السيارات", text: "صناعة السيارات تتطور باستمرار مع ظهور تقنيات جديدة مثل المركبات الذاتية والمركبات الكهربائية وأنظمة المساعدة المتقدمة للسائق (ADAS)." },
-        banking: { title: "الخدمات المصرفية", text: "حلول التوظيف التقني المصرفي مكون حاسم في صناعة الخدمات المصرفية. تحتاج البنوك إلى الأشخاص المناسبين لتطوير وتنفيذ وصيانة أنظمتها التقنية." },
-        consumer: { title: "السلع والخدمات الاستهلاكية", text: "يمكن لشركة مارلن مساعدة شركات السلع والخدمات الاستهلاكية في العثور على وتوظيف متخصصين مؤهلين بهذه المهارات المطلوبة. يمكن لوكالات التوظيف أيضاً توفير خيارات توظيف مؤقتة وعقود." },
-        communications: { title: "الاتصالات والإعلام", text: "إنتاج وتحرير الفيديو: مع تزايد الطلب على محتوى الفيديو عبر منصات مختلفة، أصبحت مهارات إنتاج وتحرير الفيديو ذات قيمة متزايدة." },
-        healthcare: { title: "الرعاية الصحية", text: "السجلات الصحية الإلكترونية (EHR) وتقنية المعلومات الصحية (HIT): الكفاءة في أنظمة EHR وأدوات HIT ضرورية لإدارة سجلات المرضى وضمان الامتثال." },
-        hitech: { title: "التقنية العالية", text: "تعتمد شركات التقنية العالية بشكل كبير على المتخصصين المهرة ذوي الخبرة في مجالات تقنية مختلفة لتطوير وتنفيذ وصيانة المنتجات والخدمات المبتكرة." },
-        lifesciences: { title: "علوم الحياة", text: "تعتمد شركات علوم الحياة على مجموعة متنوعة من المتخصصين المهرة ذوي الخبرة في مجالات تقنية مختلفة لإحراز تقدم في الطب والتكنولوجيا الحيوية." },
-        publicservice: { title: "الخدمة العامة", text: "القطاع العام يعتمد بشكل متزايد على التقنية لتحقيق أهدافه، وهذا الطلب على المهارات التقنية سينمو فقط في السنوات القادمة." },
-        retail: { title: "التجزئة", text: "شركات التجزئة من جميع الأحجام تعتمد على مجموعة متنوعة من المهارات التقنية: أنظمة نقاط البيع (POS)، وإدارة المخزون، وإدارة سلسلة التوريد." },
-        travel: { title: "السفر والسياحة", text: "صناعة السفر تتطور باستمرار مع ظهور تقنيات جديدة مثل الذكاء الاصطناعي (AI)، والتعلم الآلي (ML)، وتحليل البيانات." },
-        government: { title: "الحكومة", text: "نساعد الوكالات الحكومية على الانتقال إلى السحابة لتمكين مرونة وقابلية توسع أكبر. يمكن لفريقنا مساعدتك في اختيار أفضل حل سحابي لاحتياجاتك." },
-        utilities: { title: "المرافق العامة", text: "نساعد شركات المرافق العامة على الانتقال إلى السحابة لتمكين مرونة وقابلية توسع أكبر. يمكن لفريقنا مساعدتك في اختيار أفضل حل سحابي لعملك." }
-      },
-      ai: {
-        title: "تمكين عملك بخدمات استشارية مدعومة بالذكاء الاصطناعي",
-        strategic: { title: "التخطيط الاستراتيجي للأعمال" },
-        operational: { title: "تحسين الكفاءة التشغيلية" },
-        financial: { title: "استشارات الإدارة المالية" },
-        marketing: { title: "تطوير استراتيجية التسويق" },
-        hr: { title: "حلول الموارد البشرية" },
-        technology: { title: "خدمات تكامل التقنية" },
-        legal: { title: "القانونية والامتثال" },
-        regulatory: { title: "تقييم الامتثال التنظيمي" },
-        policy: { title: "تطوير وتنفيذ السياسات" },
-        training: { title: "برامج التدريب والتوعية" },
-        risk: { title: "إدارة وتخفيف المخاطر" },
-        contract: { title: "إدارة العقود" },
-        data: { title: "حماية البيانات والامتثال للخصوصية" },
-        monitoring: { title: "المراقبة والتقارير" },
-        research: { title: "البحوث القانونية والخدمات الاستشارية" },
-        thirdparty: { title: "إدارة مخاطر الأطراف الثالثة" }
-      },
-      data: {
-        title: "خبرة هندسة البيانات لكل متطلبات الأعمال",
-        modeling: { title: "نمذجة وتصور البيانات" },
-        management: { title: "إدارة البيانات" },
-        strategy: { title: "تطوير استراتيجية البيانات" },
-        business: { title: "الذكاء التجاري" },
-        advanced: { title: "التحليلات المتقدمة" },
-        performance: { title: "قياس الأداء" },
-        compliance: { title: "الامتثال التنظيمي" },
-        change: { title: "إدارة التغيير" },
-        support: { title: "الدعم والصيانة المستمرة" }
-      },
-      engineering: {
-        title: "حلول وخدمات الهندسة",
-        solutions: { title: "حلولنا" },
-        appdev: { title: "تطوير التطبيقات المخصصة" },
-        mobile: { title: "تطوير تطبيقات الهاتف المحمول عبر المنصات" },
-        ai: { title: "حلول البيانات الذكية التوليدية" },
-        data: { title: "إعداد البيانات" },
-        aistrategy: { title: "تطوير استراتيجية الذكاء الاصطناعي وخطة الطريق" },
-        aimodel: { title: "تطوير نماذج الذكاء الاصطناعي/التعلم الآلي مع حلول البيانات للذكاء الاصطناعي التوليدي" },
-        prompt: { title: "هندسة النصوص التوجيهية" },
-        finetuning: { title: "ضبط النماذج اللغوية الكبيرة" },
-        assistants: { title: "المساعدون الأذكياء" },
-        quality: { title: "هندسة الجودة" },
-        testauto: { title: "أتمتة الاختبارات" },
-        performance: { title: "اختبار الأداء" },
-        security: { title: "اختبار الأمان" },
-        globalization: { title: "اختبار العولمة" },
-        compliance: { title: "اختبار الامتثال والتنظيم" },
-        continuous: { title: "تكامل الاختبار المستمر" },
-        functionality: { title: "اختبار الوظائف" },
-        usability: { title: "اختبار سهولة الاستخدام وإمكانية الوصول" },
-        api: { title: "اختبار واجهات برمجة التطبيقات" },
-        cloud: { title: "تقنيات السحابة" },
-        migration: { title: "الانتقال إلى السحابة" },
-        cloudsecurity: { title: "أمان وحوكمة السحابة" },
-        multicloud: { title: "شبكات متعددة السحابة" },
-        devops: { title: "عمليات التطوير والعمليات" },
-        digital: { title: "الهندسة الرقمية" },
-        rpa: { title: "حلول أتمتة العمليات الروبوتية (RPA)" },
-        uiux: { title: "واجهة المستخدم وتجربة المستخدم" },
-        fullstack: { title: "التطوير الكامل وعمليات التطوير" },
-        cms: { title: "برامج إدارة المحتوى" },
-        software: { title: "تطوير البرمجيات" },
-        mobility: { title: "الحركية" },
-        cybersecurity: { title: "الأمن السيبراني" },
-        identity: { title: "إدارة الهوية والوصول" },
-        network: { title: "أمان الشبكة" },
-        advanced: { title: "الأمن السيبراني المتقدم" },
-        audit: { title: "مراجعة واستشارات الأمان" },
-        solutions2: { title: "الحلول" },
-        strategic: { title: "التخطيط الاستراتيجي للأعمال" },
-        operational: { title: "تحسين الكفاءة التشغيلية" },
-        techintegration: { title: "خدمات تكامل التقنية" }
-      },
-              profile: {
-          title: "شركة مارلن",
-          company: { title: "الملف التعريفي للشركة", subtitle: "مارلن كورب للاستشارات: شريكك في نمو الأعمال" },
-          welcome: "مرحباً بكم في شركة مارلن، وهي شركة استشارات تقنية ديناميكية مملوكة للنساء ومقرها منطقة خليج سان فرانسيسكو النابضة بالحياة. مع التزام بتمكين الشركات من خلال حلول تقنية مبتكرة، تجمع شركة مارلن بين الخبرة الصناعية والمنظور المتنوع.",
-          founded: "تأسست من قبل فريق من المحترفين ذوي الخبرة، نتخصص في تقديم خدمات تقنية مخصصة تدفع الكفاءة وتعزز النمو وتحسن التميز التشغيلي. مهمتنا هي سد الفجوة بين التقنية والأعمال، وتقديم رؤى وحلول استراتيجية للعملاء تلبي تحدياتهم الفريدة.",
-          believe: "في شركة مارلن، نؤمن بقوة التعاون والشمولية، ونحن مكرسون لمساعدة المنظمات على الازدهار في المشهد الرقمي سريع الخطى اليوم. انضموا إلينا ونحن نعيد تعريف مستقبل الاستشارات التقنية، حل واحد في كل مرة.",
-          based: "مارلن كورب مقرها في كوبرتينو (منطقة خليج سان فرانسيسكو)، كاليفورنيا. لدينا مكاتب شريكة في الهند وسنغافورة وكندا وألمانيا.",
-          marln: {
-            title: "مارلن كورب",
-            intro: "اسم \"مارلن\" يجسد سرداً قوياً يركز على الصفات التي تعكس التزام الشركة بتمكين النساء في التقنية وتعزيز بيئة متنوعة وشاملة.",
-            mentorship: "M تعني الإرشاد، مما يسلط الضوء على تفاني مارلن في دعم وتوجيه النساء في رحلاتهن المهنية. تعطي الشركة الأولوية لبرامج الإرشاد التي تمكّن المواهب النسائية، مما يضمن حصولهن على الموارد والتشجيع اللازمين للازدهار في صناعة التقنية.",
-            advocacy: "A تمثل الدعوة، حيث تدعم مارلن بنشاط تقدم النساء في التقنية. من خلال الدعوة لفرص وتمثيل متساويين، تسعى مارلن إلى كسر الحواجز وإنشاء قوة عاملة أكثر شمولية.",
-            resilience: "R تعني المرونة، مما يعكس قوة وتصميم النساء اللواتي يتنقلن في تحديات المشهد التقني. مارلن ملتزمة بتعزيز بيئة يتم فيها الاحتفال بالمرونة، مما يلهم النساء للتغلب على العقبات وتحقيق أهدافهن.",
-            leadership: "L تعني القيادة، مما يؤكد على أهمية القيادة النسائية داخل المنظمة وفي القطاع التقني ككل. تزرع مارلن ثقافة لا تعزز النساء في الأدوار القيادية فحسب، بل تمكّنهن أيضاً من القيادة بثقة ورؤية.",
-            nurturing: "N تجسد الرعاية، مما يمثل التزام مارلن بإنشاء مجتمع داعم للنساء في التقنية. من خلال رعاية المواهب وتشجيع التعاون، تعزز مارلن بيئة يمكن للنساء فيها الازدهار ودفع الابتكار.",
-            together: "معاً، هذه الصفات تجسد روح شركة مارلن، وتوجه مهمتها لتمكين النساء من خلال حلول استشارات تقنية مبتكرة مع الدعوة لمستقبل أكثر إنصافاً وشمولية في التقنية."
-          }
-        },
-        csr: {
-          title: "المسؤولية الاجتماعية للشركات",
-          subtitle: "تعرف على التزام مارلن بالمسؤولية الاجتماعية للشركات، بما في ذلك مبادراتنا لتعزيز التنوع ودعم المجتمعات.",
-          initiatives: {
-            title: "مبادرات المسؤولية الاجتماعية للشركات",
-            subtitle: "برامج شاملة مصممة لخلق تأثير إيجابي عبر المجتمعات والبيئات.",
-            diversity: {
-              title: "برامج التنوع",
-              text: "برامج شاملة مصممة لتعزيز التنوع والشمولية في قطاع التقنية."
-            },
-            community: {
-              title: "دعم المجتمع",
-              text: "مشاركة نشطة في المبادرات المجتمعية والبرامج الخيرية التي تحدث تأثيراً إيجابياً."
-            },
-            environmental: {
-              title: "المسؤولية البيئية",
-              text: "التزام بالممارسات المستدامة والمسؤولية البيئية في جميع عملياتنا."
-            }
-          },
-          commitment: {
-            title: "التزامنا بغد أفضل",
-            subtitle: "نؤمن أن الشركات لديها مسؤولية لخلق تغيير إيجابي للأشخاص والمجتمعات والكوكب.",
-            focusAreas: {
-              title: "مجالات التركيز",
-              environment: {
-                title: "البيئة",
-                text: "ملتزمون بتقليل البصمة الكربونية وتعزيز الممارسات المستدامة في جميع العمليات."
-              },
-              community: {
-                title: "المجتمع",
-                text: "دعم المجتمعات المحلية من خلال برامج التطوع والتبرعات الخيرية والشراكات المجتمعية."
-              },
-              education: {
-                title: "التعليم",
-                text: "الاستثمار في المبادرات التعليمية وتوفير فرص تطوير المهارات والتعلم."
-              },
-              ethics: {
-                title: "الأخلاق والحوكمة",
-                text: "الحفاظ على أعلى معايير الممارسات التجارية الأخلاقية والحوكمة الشفافة."
-              }
-            }
-          },
-          flagship: {
-            title: "المبادرات الرائدة",
-            subtitle: "برامجنا الرئيسية التي تقود التغيير الهادف وتخلق تأثيراً مستداماً.",
-            greenFuture: {
-              title: "مشروع المستقبل الأخضر",
-              text: "مبادرتنا البيئية الشاملة التي تركز على تقليل انبعاثات الكربون وتنفيذ حلول الطاقة المتجددة وتعزيز الممارسات التجارية المستدامة في جميع العمليات."
-            },
-            techForAll: {
-              title: "التقنية للجميع",
-              text: "سد الفجوة الرقمية من خلال توفير الوصول للتقنية والتدريب على محو الأمية الرقمية وفرص التعليم في العلوم والتكنولوجيا والهندسة والرياضيات للمجتمعات المحرومة."
-            },
-            communityCare: {
-              title: "مبادرة رعاية المجتمع",
-              text: "دعم المجتمعات المحلية من خلال حملات الطعام والمبادرات الصحية وبرامج الإغاثة الطارئة بالشراكة مع المنظمات المحلية."
-            }
-          }
-        }
+      }
     },
     en: {
       header: { about: "About us", services: "Services", company: "Company" },
+      dropdown: {
+        services: {
+          aiConsulting: "AI Powered Consulting",
+          engineering: "Engineering Services",
+          dataAnalytics: "Data Analytics",
+          corporateTraining: "Corporate Training"
+        },
+        company: {
+          profile: "Marln Company Profile",
+          csr: "Corporate Social Responsibility (CSR)",
+          partners: "Technology Partners",
+          industry: "Industry"
+        }
+      },
       common: {
         contactUs: "Contact us",
         scheduleMeeting: "Schedule a meeting",
@@ -384,214 +230,66 @@
       },
       contact: { thank: { title: "Well done!", text: "We will contact you in the next few hours or you can schedule an appointment now." }, form: { title: "Kick Start Your Project Right Now" }, right: { title: "Send us an email" } },
       footer: { social: "Social Links", certifications: "Certifications", officesTitle: "Offices" },
-      offices: { cupertino: "Cupertino, USA", jeddah: "Jeddah, Saudi Arabia", riyadh: "Riyadh, Saudi Arabia", bangaluru: "Bangaluru, India", capetown: "Capetown, South Africa" },
-      about: {
-        story: { title: "Our Story", intro: "The name \"Marln\" embodies a powerful narrative centered around the qualities that reflect the company's commitment to empowering women in technology and fostering a diverse, inclusive environment.", outro1: "Together, these qualities encapsulate the spirit of Marln Corporation, guiding its mission to empower women through innovative IT consulting solutions while advocating for a more equitable and inclusive future in technology.", outro2: "Today, we serve clients across 10+ countries, with over 50 enterprise deployments and a team of 200+ experts." },
-        mission: { title: "Our Mission", text: "At Marln, our mission is to empower businesses with innovative, human-centered technology solutions that drive digital transformation and unlock growth." },
-        benefits: {
-          title: "Benefits to organizations by partnering with us:",
-          card1: { title: "Tax Incentive", text: "Collaborating with a woman-minority owned business can offer your company tax incentives. The federal government provides tax benefits to organizations that partner with minority- and women-owned businesses for products and services." },
-          card2: { title: "Reputation of Diverse Businesses", text: "Embracing diversity is essential for the healthy growth of any organization. Partnering with a woman-owned business demonstrates your company's commitment to collaborating with diverse partners. In return, we are dedicated to being a diverse talent community that delivers the results you need." }
-        },
-        certBanner: { title: "Marln Corporation is a certified 100% women and minority owned" },
-        manager: { title: "Executive Director" }
-      },
-      industry: {
-        title: "INDUSTRY SOLUTIONS",
-        exploreSolutions: "Explore Solutions",
-        automotive: { title: "Automotive", text: "The automotive industry is constantly evolving, with the emergence of new technologies such as autonomous vehicles, electric vehicles, and advanced driver-assistance systems (ADAS)." },
-        banking: { title: "Banking", text: "Banking technology staffing solutions are a critical component of the banking industry. Banks need to have the right people in place to develop, implement, and maintain their technology systems." },
-        consumer: { title: "Consumer Goods & Services", text: "Marln Corp can help CGS companies find and recruit qualified professionals with these in-demand skillsets. Staffing agencies can also provide temporary and contract staffing options." },
-        communications: { title: "Communications & Media", text: "Video Production and Editing: With the growing demand for video content across various platforms, video production and editing skills are becoming increasingly valuable." },
-        healthcare: { title: "Healthcare", text: "Electronic Health Records (EHR) and Health Information Technology (HIT): Proficiency in EHR systems and HIT tools is essential for managing patient records and ensuring compliance." },
-        hitech: { title: "Hi-Tech", text: "High-tech companies rely heavily on skilled professionals with expertise in various technical domains to develop, implement, and maintain innovative products and services." },
-        lifesciences: { title: "Life Sciences", text: "Life sciences companies rely on a diverse range of skilled professionals with expertise in various technical domains to make advancements in medicine and biotechnology." },
-        publicservice: { title: "Public Service", text: "The public sector is increasingly reliant on technology to meet its objectives, and this demand for technical skills is only going to grow in the years to come." },
-        retail: { title: "Retail", text: "Retail businesses of all sizes rely on a diverse range of technical skills: Point-of-Sale (POS) Systems, Inventory Management, and Supply Chain Management." },
-        travel: { title: "Travel & Tourism", text: "The travel industry is constantly evolving, with the emergence of new technologies such as artificial intelligence (AI), machine learning (ML), and data analytics." },
-        government: { title: "Government", text: "We help government agencies migrate to the cloud to enable greater flexibility and scalability. Our team can help you choose the best cloud solution for your needs." },
-        utilities: { title: "Utilities", text: "We help utility companies migrate to the cloud to enable greater flexibility and scalability. Our team can help you choose the best cloud solution for your business." }
-      },
-      ai: {
-        title: "Empowering Your Business with AI Powered Consulting Services",
-        strategic: { title: "Strategic Business Planning" },
-        operational: { title: "Operational Efficiency Improvement" },
-        financial: { title: "Financial Management Consulting" },
-        marketing: { title: "Marketing Strategy Development" },
-        hr: { title: "Human Resources Solutions" },
-        technology: { title: "Technology Integration Services" },
-        legal: { title: "Legal and Compliance" },
-        regulatory: { title: "Regulatory Compliance Assessment" },
-        policy: { title: "Policy Development and Implementation" },
-        training: { title: "Training and Awareness Programs" },
-        risk: { title: "Risk Management and Mitigation" },
-        contract: { title: "Contract Management" },
-        data: { title: "Data Protection and Privacy Compliance" },
-        monitoring: { title: "Monitoring and Reporting" },
-        research: { title: "Legal Research and Advisory Services" },
-        thirdparty: { title: "Third-Party Risk Management" }
-      },
-      data: {
-        title: "Data Engineering Expertise for Every Business Requirement",
-        modeling: { title: "Data Modeling and Visualization" },
-        management: { title: "Data Management" },
-        strategy: { title: "Data Strategy Development" },
-        business: { title: "Business Intelligence" },
-        advanced: { title: "Advanced Analytics" },
-        performance: { title: "Performance Measurement" },
-        compliance: { title: "Regulatory Compliance" },
-        change: { title: "Change Management" },
-        support: { title: "Ongoing Support and Maintenance" }
-      },
-      engineering: {
-        title: "Engineering Solutions and Services",
-        solutions: { title: "Our Solutions" },
-        appdev: { title: "Tailored Application Development" },
-        mobile: { title: "Cross-Platform Mobile App Development" },
-        ai: { title: "Generative AI Data Solutions" },
-        data: { title: "Data Preparation" },
-        aistrategy: { title: "AI Strategy and Roadmap Development" },
-        aimodel: { title: "AI/ML Model Development With Data Solutions for Generative AI" },
-        prompt: { title: "Prompt Engineering" },
-        finetuning: { title: "Fine tuning LLMs" },
-        assistants: { title: "Intelligent Assistants" },
-        quality: { title: "Quality Engineering" },
-        testauto: { title: "Test Automation" },
-        performance: { title: "Performance Testing" },
-        security: { title: "Security Testing" },
-        globalization: { title: "Globalization Testing" },
-        compliance: { title: "Compliance and Regulatory Testing" },
-        continuous: { title: "Continuous Testing Integration" },
-        functionality: { title: "Functionality Testing" },
-        usability: { title: "Usability and Accessibility Testing" },
-        api: { title: "API Testing" },
-        cloud: { title: "Cloud Technologies" },
-        migration: { title: "Cloud Migration" },
-        cloudsecurity: { title: "Cloud Security and Governance" },
-        multicloud: { title: "Multicloud Networking" },
-        devops: { title: "Dev Ops and Operations" },
-        digital: { title: "Digital Engineering" },
-        rpa: { title: "Robotic Process Automation (RPA) Solutions" },
-        uiux: { title: "UI/UX" },
-        fullstack: { title: "Full Stack & Dev Ops" },
-        cms: { title: "Content Management Software" },
-        software: { title: "Software Development" },
-        mobility: { title: "Mobility" },
-        cybersecurity: { title: "Cybersecurity" },
-        identity: { title: "Identity And Access Management" },
-        network: { title: "Network Security" },
-        advanced: { title: "Advanced Cybersec" },
-        audit: { title: "Security Audit and Consulting" },
-        solutions2: { title: "Solutions" },
-        strategic: { title: "Strategic Business Planning" },
-        operational: { title: "Operational Efficiency Improvement" },
-        techintegration: { title: "Technology Integration Services" }
-      },
-      profile: {
-        title: "Marln Corporation",
-        company: { title: "Company Profile", subtitle: "Marln Corp Consulting: Your Partner in Business Growth" },
-        welcome: "Welcome to Marln Corporation, a dynamic women-owned IT consulting company based in the vibrant San Francisco Bay Area. With a commitment to empowering businesses through innovative technology solutions, Marln Corporation blends industry expertise with a diverse perspective.",
-        founded: "Founded by a team of experienced professionals, we specialize in delivering tailored IT services that drive efficiency, foster growth, and enhance operational excellence. Our mission is to bridge the gap between technology and business, providing clients with strategic insights and solutions that meet their unique challenges.",
-        believe: "At Marln Corporation, we believe in the power of collaboration and inclusivity, and we are dedicated to helping organizations thrive in today's fast-paced digital landscape. Join us as we redefine the future of IT consulting, one solution at a time.",
-        based: "Marln Corp is based in Cupertino (San Francisco Bay Area), California. We have partner offices in India, Singapore, Canada and Germany.",
-        marln: {
-          title: "Marln Corp",
-          intro: "The name \"Marln\" embodies a powerful narrative centered around the qualities that reflect the company's commitment to empowering women in technology and fostering a diverse, inclusive environment.",
-          mentorship: "M stands for Mentorship, highlighting Marln's dedication to supporting and guiding women in their professional journeys. The company prioritizes mentorship programs that empower female talent, ensuring they have the resources and encouragement needed to thrive in the tech industry.",
-          advocacy: "A represents Advocacy, as Marln actively champions the advancement of women in technology. By advocating for equitable opportunities and representation, Marln seeks to break down barriers and create a more inclusive workforce.",
-          resilience: "R signifies Resilience, reflecting the strength and determination of women navigating the challenges of the tech landscape. Marln is committed to fostering an environment where resilience is celebrated, inspiring women to overcome obstacles and achieve their goals.",
-          leadership: "L stands for Leadership, emphasizing the importance of female leadership within the organization and the tech sector as a whole. Marln cultivates a culture that not only promotes women into leadership roles but also empowers them to lead with confidence and vision.",
-          nurturing: "N embodies Nurturing, representing Marln's commitment to creating a supportive community for women in tech. By nurturing talent and encouraging collaboration, Marln fosters an environment where women can flourish and drive innovation.",
-          together: "Together, these qualities encapsulate the spirit of Marln Corporation, guiding its mission to empower women through innovative IT consulting solutions while advocating for a more equitable and inclusive future in technology."
-        }
-      },
-      csr: {
-        title: "Corporate Social Responsibility",
-        subtitle: "Learn about Marln's commitment to corporate social responsibility, including our initiatives to promote diversity and support communities.",
-        initiatives: {
-          title: "Our CSR Initiatives",
-          subtitle: "Comprehensive programs designed to create positive impact across communities and environments.",
-          diversity: {
-            title: "Diversity Programs",
-            text: "Comprehensive programs designed to promote diversity and inclusion in the technology sector."
-          },
-          community: {
-            title: "Community Support",
-            text: "Active involvement in community initiatives and charitable programs that make a positive impact."
-          },
-          environmental: {
-            title: "Environmental Responsibility",
-            text: "Commitment to sustainable practices and environmental responsibility in all our operations."
-          }
-        },
-        commitment: {
-          title: "Our Commitment to a Better Tomorrow",
-          subtitle: "We believe businesses have a responsibility to create positive change for people, communities, and the planet.",
-          focusAreas: {
-            title: "Focus Areas",
-            environment: {
-              title: "Environment",
-              text: "Committed to reducing our carbon footprint and promoting sustainable practices across all operations."
-            },
-            community: {
-              title: "Community",
-              text: "Supporting local communities through volunteer programs, charitable donations, and community partnerships."
-            },
-            education: {
-              title: "Education",
-              text: "Investing in educational initiatives and providing opportunities for skill development and learning."
-            },
-            ethics: {
-              title: "Ethics & Governance",
-              text: "Maintaining the highest standards of ethical business practices and transparent governance."
-            }
-          }
-        },
-        flagship: {
-          title: "Flagship Initiatives",
-          subtitle: "Our key programs that drive meaningful change and create lasting impact.",
-          greenFuture: {
-            title: "Green Future Project",
-            text: "Our comprehensive environmental initiative focused on reducing carbon emissions, implementing renewable energy solutions, and promoting sustainable business practices across all operations."
-          },
-          techForAll: {
-            title: "Tech for All",
-            text: "Bridging the digital divide by providing technology access, digital literacy training, and STEM education opportunities to underserved communities."
-          },
-          communityCare: {
-            title: "Community Care Drive",
-            text: "Supporting local communities through food drives, healthcare initiatives, and emergency relief programs in partnership with local organizations."
-          }
-        }
-      }
+              offices: { cupertino: "Cupertino, USA", jeddah: "Jeddah, Saudi Arabia", riyadh: "Riyadh, Saudi Arabia", bangaluru: "Bengaluru, India", capetown: "Capetown, South Africa" }
     }
   };
 
-
   function getSavedLang(){
-    try { return localStorage.getItem('site-lang') || DEFAULT_LANG; } catch(_) { return DEFAULT_LANG; }
+    try { 
+      return localStorage.getItem('site-lang') || DEFAULT_LANG; 
+    } catch(error) { 
+      logError('localStorage access failed, using default language', error);
+      return DEFAULT_LANG; 
+    }
   }
+  
   function saveLang(lang){
-    try { localStorage.setItem('site-lang', lang); } catch(_) {}
+    try { 
+      localStorage.setItem('site-lang', lang); 
+    } catch(error) { 
+      logError('Failed to save language preference', error);
+    }
   }
+  
   async function loadTranslations(lang){
-    // If running from file:// and we have an embedded pack, use it to avoid fetch restrictions
+    // Enhanced error handling for online hosting
     if (location.protocol === 'file:' && EMBEDDED[lang]) {
       return EMBEDDED[lang];
     }
+    
     if(CACHE[lang]) return CACHE[lang];
+    
     try {
-      const res = await fetch(`i18n/${lang}.json`, { cache: 'no-cache' });
-      if(!res.ok) throw new Error('fetch failed');
+      // Try to load from JSON file first
+      const res = await fetch(`i18n/${lang}.json`, { 
+        cache: 'no-cache',
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if(!res.ok) {
+        throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+      }
+      
       const json = await res.json();
       CACHE[lang] = json;
       return json;
     } catch(err){
+      logError(`Failed to load translations for ${lang}`, err);
+      
+      // Fallback to embedded translations
+      if (EMBEDDED[lang]) {
+        logError(`Using embedded translations for ${lang}`);
+        return EMBEDDED[lang];
+      }
+      
+      // Final fallback to default language
       if(lang !== DEFAULT_LANG) {
-        // Try fallback to embedded or English
-        if (EMBEDDED[lang]) return EMBEDDED[lang];
+        logError(`Falling back to default language: ${DEFAULT_LANG}`);
         return loadTranslations(DEFAULT_LANG);
       }
+      
       return {};
     }
   }
@@ -613,6 +311,8 @@
         link.id = 'rtl-css';
         link.rel = 'stylesheet';
         link.href = 'css/rtl.css';
+        // Add error handling for CSS loading
+        link.onerror = () => logError('Failed to load RTL CSS');
         document.head.appendChild(link);
       }
     } else if(link){
@@ -637,17 +337,20 @@
     const val = tGet(translations, key);
     if(el && typeof val === 'string'){ el.textContent = val; }
   }
+  
   function applyHtml(selector, translations, key){
     const el = document.querySelector(selector);
     const val = tGet(translations, key);
     if(el && typeof val === 'string'){ el.innerHTML = val; }
   }
+  
   function applyAttr(selector, attr, translations, key){
     document.querySelectorAll(selector).forEach(el => {
       const val = tGet(translations, key);
       if(typeof val === 'string'){ el.setAttribute(attr, val); }
     });
   }
+  
   function applyAll(selector, translations, key){
     document.querySelectorAll(selector).forEach(el => {
       const val = tGet(translations, key);
@@ -802,6 +505,9 @@
     applyText('.offices-list li:nth-child(3) .offices-item p', tr, 'offices.riyadh');
     applyText('.offices-list li:nth-child(4) .offices-item p', tr, 'offices.bangaluru');
     applyText('.offices-list li:nth-child(5) .offices-item p', tr, 'offices.capetown');
+
+    // Update dropdown menu items for index page
+    updateDropdownMenus(tr);
   }
 
   function applyAboutTranslations(tr){
@@ -1306,6 +1012,86 @@
     applyText('.offices-list li:nth-child(5) .offices-item p', tr, 'offices.capetown');
   }
 
+  // Function to update dropdown menu items
+  function updateDropdownMenus(tr) {
+    console.log('updateDropdownMenus called with translations:', tr);
+    
+    // Helper function to apply text to DOM elements directly
+    function applyTextToElement(element, translations, key) {
+      const val = tGet(translations, key);
+      if (element && typeof val === 'string') {
+        element.textContent = val;
+        console.log('Applied translation to element:', key, '=', val);
+      } else {
+        console.log('Failed to apply translation:', key, 'element:', element, 'value:', val);
+      }
+    }
+    
+    // Function to update dropdown items
+    function updateDropdownItems() {
+      // Update Services dropdown items
+      const servicesDropdown = document.querySelector('.services-dropdown');
+      console.log('Services dropdown found:', servicesDropdown);
+      if (servicesDropdown) {
+        const servicesItems = servicesDropdown.querySelectorAll('li a');
+        console.log('Services items found:', servicesItems.length);
+        if (servicesItems.length >= 4) {
+          console.log('Applying translations to services items...');
+          applyTextToElement(servicesItems[0], tr, 'dropdown.services.aiConsulting');
+          applyTextToElement(servicesItems[1], tr, 'dropdown.services.engineering');
+          applyTextToElement(servicesItems[2], tr, 'dropdown.services.dataAnalytics');
+          applyTextToElement(servicesItems[3], tr, 'dropdown.services.corporateTraining');
+          console.log('Services translations applied');
+        } else {
+          console.log('Not enough services items found:', servicesItems.length);
+        }
+      } else {
+        console.log('Services dropdown not found');
+      }
+
+      // Update Company dropdown items
+      const companyDropdown = document.querySelector('.company-dropdown');
+      console.log('Company dropdown found:', companyDropdown);
+      if (companyDropdown) {
+        const companyItems = companyDropdown.querySelectorAll('li a');
+        console.log('Company items found:', companyItems.length);
+        if (companyItems.length >= 4) {
+          console.log('Applying translations to company items...');
+          applyTextToElement(companyItems[0], tr, 'dropdown.company.profile');
+          applyTextToElement(companyItems[1], tr, 'dropdown.company.csr');
+          applyTextToElement(companyItems[2], tr, 'dropdown.company.partners');
+          applyTextToElement(companyItems[3], tr, 'dropdown.company.industry');
+          console.log('Company translations applied');
+        } else {
+          console.log('Not enough company items found:', companyItems.length);
+        }
+      } else {
+        console.log('Company dropdown not found');
+      }
+    }
+
+    // Try to update immediately
+    updateDropdownItems();
+
+    // Also add event listeners for when dropdowns become visible
+    const servicesMenu = document.querySelector('#menu-item-666');
+    const companyMenu = document.querySelector('#menu-item-company');
+
+    if (servicesMenu) {
+      servicesMenu.addEventListener('mouseenter', updateDropdownItems);
+      servicesMenu.addEventListener('focus', updateDropdownItems);
+    }
+
+    if (companyMenu) {
+      companyMenu.addEventListener('mouseenter', updateDropdownItems);
+      companyMenu.addEventListener('focus', updateDropdownItems);
+    }
+
+    // Also try with a longer delay to ensure DOM is ready
+    setTimeout(updateDropdownItems, 500);
+    setTimeout(updateDropdownItems, 1000);
+  }
+
   async function setLanguage(lang){
     const tr = await loadTranslations(lang);
     setDirAndLang(lang);
@@ -1336,6 +1122,15 @@
     if(document.querySelector('main.csr-content')){
       applyCsrTranslations(tr);
     }
+    
+    // Update dropdown menu items
+    updateDropdownMenus(tr);
+    
+    // Also try to update dropdowns after a delay in case they're not immediately available
+    setTimeout(() => {
+      updateDropdownMenus(tr);
+    }, 100);
+    
     saveLang(lang);
   }
 
@@ -1361,6 +1156,7 @@
   // Expose for manual switching if needed
   window.setLanguage = setLanguage;
   window.getSavedLang = getSavedLang;
+  window.updateDropdownMenus = updateDropdownMenus;
 
   // Helper: set header link text without altering structure
   function setHeaderLink(selector, tr, key){
