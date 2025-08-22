@@ -246,20 +246,28 @@
   function saveLang(lang){
     try { 
       localStorage.setItem('site-lang', lang); 
+      console.log('Language saved to localStorage:', lang);
     } catch(error) { 
       logError('Failed to save language preference', error);
     }
   }
   
   async function loadTranslations(lang){
+    console.log('Loading translations for language:', lang);
+    
     // Enhanced error handling for online hosting
     if (location.protocol === 'file:' && EMBEDDED[lang]) {
+      console.log('Using embedded translations for file:// protocol');
       return EMBEDDED[lang];
     }
     
-    if(CACHE[lang]) return CACHE[lang];
+    if(CACHE[lang]) {
+      console.log('Using cached translations for:', lang);
+      return CACHE[lang];
+    }
     
     try {
+      console.log('Attempting to load translations from JSON file for:', lang);
       // Try to load from JSON file first
       const res = await fetch(`i18n/${lang}.json`, { 
         cache: 'no-cache',
@@ -274,22 +282,31 @@
       
       const json = await res.json();
       CACHE[lang] = json;
+      console.log('Successfully loaded translations from JSON file for:', lang);
+      console.log('JSON translations keys:', Object.keys(json));
+      console.log('Sample dropdown keys:', {
+        aiConsulting: json['dropdown.services.aiConsulting'],
+        engineering: json['dropdown.services.engineering']
+      });
       return json;
     } catch(err){
       logError(`Failed to load translations for ${lang}`, err);
       
       // Fallback to embedded translations
       if (EMBEDDED[lang]) {
-        logError(`Using embedded translations for ${lang}`);
+        console.log(`Using embedded translations for ${lang} as fallback`);
+        console.log('Embedded translations keys:', Object.keys(EMBEDDED[lang]));
+        console.log('Embedded dropdown structure:', EMBEDDED[lang].dropdown);
         return EMBEDDED[lang];
       }
       
       // Final fallback to default language
       if(lang !== DEFAULT_LANG) {
-        logError(`Falling back to default language: ${DEFAULT_LANG}`);
+        console.log(`Falling back to default language: ${DEFAULT_LANG}`);
         return loadTranslations(DEFAULT_LANG);
       }
       
+      console.log('No translations available, returning empty object');
       return {};
     }
   }
@@ -1015,10 +1032,28 @@
   // Function to update dropdown menu items
   function updateDropdownMenus(tr) {
     console.log('updateDropdownMenus called with translations:', tr);
+    console.log('Available translation keys:', Object.keys(tr));
+    console.log('Dropdown translations available:', {
+      aiConsulting: tGet(tr, 'dropdown.services.aiConsulting'),
+      engineering: tGet(tr, 'dropdown.services.engineering'),
+      dataAnalytics: tGet(tr, 'dropdown.services.dataAnalytics'),
+      corporateTraining: tGet(tr, 'dropdown.services.corporateTraining'),
+      profile: tGet(tr, 'dropdown.company.profile'),
+      csr: tGet(tr, 'dropdown.company.csr'),
+      partners: tGet(tr, 'dropdown.company.partners'),
+      industry: tGet(tr, 'dropdown.company.industry')
+    });
     
     // Helper function to apply text to DOM elements directly
     function applyTextToElement(element, translations, key) {
-      const val = tGet(translations, key);
+      let val = tGet(translations, key);
+      
+      // If tGet failed, try direct access for flat JSON structure
+      if (val === undefined && translations[key]) {
+        val = translations[key];
+        console.log('Using direct key access for:', key, '=', val);
+      }
+      
       if (element && typeof val === 'string') {
         element.textContent = val;
         console.log('Applied translation to element:', key, '=', val);
@@ -1090,48 +1125,83 @@
     // Also try with a longer delay to ensure DOM is ready
     setTimeout(updateDropdownItems, 500);
     setTimeout(updateDropdownItems, 1000);
+    setTimeout(updateDropdownItems, 2000);
+    
+    // Also try when window loads completely
+    if (document.readyState === 'loading') {
+        window.addEventListener('load', updateDropdownItems);
+    }
   }
 
   async function setLanguage(lang){
-    const tr = await loadTranslations(lang);
-    setDirAndLang(lang);
-    setButtonLabelFromLang(lang);
+    console.log('setLanguage called with:', lang);
+    
+    try {
+      const tr = await loadTranslations(lang);
+      console.log('Translations loaded successfully for:', lang);
+      
+      setDirAndLang(lang);
+      setButtonLabelFromLang(lang);
 
-    // Decide which page we're on using unique anchors
-    if(document.querySelector('.services-hero-section-v_2')){
-      applyIndexTranslations(tr);
-    }
-    if(document.querySelector('main.about-content')){
-      applyAboutTranslations(tr);
-    }
-    if(document.querySelector('main.industry-content')){
-      applyIndustryTranslations(tr);
-    }
-    if(document.querySelector('h1.fade-in') && document.querySelector('h1.fade-in').textContent.includes('AI Powered Consulting')){
-      applyAiConsultingTranslations(tr);
-    }
-    if(document.querySelector('h1.fade-in') && document.querySelector('h1.fade-in').textContent.includes('Data Engineering Expertise')){
-      applyDataAnalyticsTranslations(tr);
-    }
-    if(document.querySelector('h1.fade-in') && document.querySelector('h1.fade-in').textContent.includes('Engineering Solutions')){
-      applyEngineeringServicesTranslations(tr);
-    }
-    if(document.querySelector('h1[style*="font-size: 4rem"]') && document.querySelector('h1[style*="font-size: 4rem"]').textContent.includes('Marln')){
-      applyProfileTranslations(tr);
-    }
-    if(document.querySelector('main.csr-content')){
-      applyCsrTranslations(tr);
-    }
-    
-    // Update dropdown menu items
-    updateDropdownMenus(tr);
-    
-    // Also try to update dropdowns after a delay in case they're not immediately available
-    setTimeout(() => {
+      // Decide which page we're on using unique anchors
+      if(document.querySelector('.services-hero-section-v_2')){
+        console.log('Applying index page translations');
+        applyIndexTranslations(tr);
+      }
+      if(document.querySelector('main.about-content')){
+        console.log('Applying about page translations');
+        applyAboutTranslations(tr);
+      }
+      if(document.querySelector('main.industry-content')){
+        console.log('Applying industry page translations');
+        applyIndustryTranslations(tr);
+      }
+      if(document.querySelector('h1.fade-in') && document.querySelector('h1.fade-in').textContent.includes('AI Powered Consulting')){
+        console.log('Applying AI consulting page translations');
+        applyAiConsultingTranslations(tr);
+      }
+      if(document.querySelector('h1.fade-in') && document.querySelector('h1.fade-in').textContent.includes('Data Engineering Expertise')){
+        console.log('Applying data analytics page translations');
+        applyDataAnalyticsTranslations(tr);
+      }
+      if(document.querySelector('h1.fade-in') && document.querySelector('h1.fade-in').textContent.includes('Engineering Solutions')){
+        console.log('Applying engineering services page translations');
+        applyEngineeringServicesTranslations(tr);
+      }
+      if(document.querySelector('h1[style*="font-size: 4rem"]') && document.querySelector('h1[style*="font-size: 4rem"]').textContent.includes('Marln')){
+        console.log('Applying profile page translations');
+        applyProfileTranslations(tr);
+      }
+      if(document.querySelector('main.csr-content')){
+        console.log('Applying CSR page translations');
+        applyCsrTranslations(tr);
+      }
+      
+      // Update dropdown menu items
+      console.log('Updating dropdown menus');
       updateDropdownMenus(tr);
-    }, 100);
-    
-    saveLang(lang);
+      
+      // Also try to update dropdowns after a delay in case they're not immediately available
+      setTimeout(() => {
+        console.log('Updating dropdown menus with delay');
+        updateDropdownMenus(tr);
+      }, 100);
+      
+      saveLang(lang);
+      console.log('Language switch completed successfully for:', lang);
+      
+    } catch (error) {
+      logError('setLanguage failed', error);
+      // Try fallback approach
+      try {
+        console.log('Attempting fallback language switch');
+        setDirAndLang(lang);
+        setButtonLabelFromLang(lang);
+        saveLang(lang);
+      } catch (fallbackError) {
+        logError('Fallback language switch also failed', fallbackError);
+      }
+    }
   }
 
   function initToggleButton(){

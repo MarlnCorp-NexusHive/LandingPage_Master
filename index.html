@@ -1529,4 +1529,125 @@ if (statisticsSection) {
 })();
 </script>
 
+<script src="js/lang.js"></script>
+<script>
+// Enhanced Language Toggle System - Robust for Online Hosting
+(function() {
+    'use strict';
+    
+    const langToggle = document.getElementById('lang-toggle');
+    
+    // Enhanced error handling and logging
+    function logError(message, error) {
+        console.warn('Language Toggle System:', message, error);
+    }
+    
+    // Fallback language switching function
+    function fallbackLanguageSwitch(newLang) {
+        try {
+            console.log('Using fallback language switch for:', newLang);
+            
+            // Basic RTL/LTR switching
+            document.documentElement.lang = newLang;
+            document.documentElement.dir = newLang === 'ar' ? 'rtl' : 'ltr';
+            document.documentElement.classList.toggle('rtl', newLang === 'ar');
+            
+            // Update toggle state
+            if (langToggle) {
+                langToggle.checked = (newLang === 'ar');
+            }
+            
+            // Save to localStorage
+            localStorage.setItem('site-lang', newLang);
+            
+            // Force page reload for complete translation
+            setTimeout(() => {
+                window.location.reload();
+            }, 100);
+            
+        } catch (error) {
+            logError('Fallback language switch failed', error);
+        }
+    }
+    
+    // Initialize language toggle with enhanced error handling
+    function initializeLanguageToggle() {
+        try {
+            if (!langToggle) {
+                logError('Language toggle element not found');
+                return;
+            }
+            
+            // Get current language
+            const currentLang = localStorage.getItem('site-lang') || 'en';
+            langToggle.checked = (currentLang === 'ar');
+            
+            // Add event listener to language toggle
+            langToggle.addEventListener('change', function() {
+                const newLang = this.checked ? 'ar' : 'en';
+                console.log('Language toggle clicked, switching to:', newLang);
+                
+                // Add pulse animation
+                const label = this.nextElementSibling;
+                if (label) {
+                    label.classList.add('pulse');
+                    setTimeout(() => {
+                        label.classList.remove('pulse');
+                    }, 400);
+                }
+                
+                // Try to use lang.js system first
+                if (window.setLanguage && typeof window.setLanguage === 'function') {
+                    try {
+                        console.log('Using lang.js system for language switch');
+                        window.setLanguage(newLang);
+                        
+                        // Update dropdowns after language change
+                        setTimeout(() => {
+                            if (window.updateDropdownMenus && typeof window.updateDropdownMenus === 'function') {
+                                try {
+                                    // Force update dropdowns with embedded translations
+                                    const tr = newLang === 'ar' ? 
+                                        {dropdown: {services: {aiConsulting: "الاستشارات المدعومة بالذكاء الاصطناعي", engineering: "خدمات الهندسة", dataAnalytics: "تحليل البيانات", corporateTraining: "التدريب المؤسسي"}, company: {profile: "الملف التعريفي لشركة Marln", csr: "المسؤولية الاجتماعية للشركات (CSR)", partners: "الشركاء التقنيون", industry: "الصناعة"}}} :
+                                        {dropdown: {services: {aiConsulting: "AI Powered Consulting", engineering: "Engineering Services", dataAnalytics: "Data Analytics", corporateTraining: "Corporate Training"}, company: {profile: "Marln Company Profile", csr: "Corporate Social Responsibility (CSR)", partners: "Technology Partners", industry: "Industry"}}};
+                                    console.log('Forcing dropdown update with embedded translations for:', newLang);
+                                    window.updateDropdownMenus(tr);
+                                } catch (dropdownError) {
+                                    logError('Dropdown update failed', dropdownError);
+                                }
+                            }
+                        }, 200);
+                        
+                    } catch (langError) {
+                        logError('lang.js system failed, using fallback', langError);
+                        fallbackLanguageSwitch(newLang);
+                    }
+                } else {
+                    console.log('lang.js system not available, using fallback');
+                    fallbackLanguageSwitch(newLang);
+                }
+            });
+            
+            console.log('Language toggle initialized successfully');
+            
+        } catch (error) {
+            logError('Language toggle initialization failed', error);
+        }
+    }
+    
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initializeLanguageToggle);
+    } else {
+        // DOM is already ready
+        initializeLanguageToggle();
+    }
+    
+    // Also try initialization after a delay to ensure all scripts are loaded
+    setTimeout(initializeLanguageToggle, 500);
+    setTimeout(initializeLanguageToggle, 1000);
+    
+})();
+</script>
+
 </body></html>
