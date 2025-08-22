@@ -422,6 +422,63 @@ body #header li {
     fill: #ffffff !important;
 }
 
+/* Language toggle styling */
+.language-toggle {
+    position: relative;
+    display: inline-block;
+}
+.lang-toggle-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.lang-toggle-label {
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 25px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 80px;
+    justify-content: space-between;
+    position: relative;
+}
+.lang-text {
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    z-index: 2;
+    position: relative;
+}
+.lang-english {
+    color: #333;
+}
+.lang-arabic {
+    color: #666;
+}
+.toggle-slider {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 20px;
+    background: #9EE86F;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+.lang-toggle-input:checked + .lang-toggle-label .toggle-slider {
+    transform: translateX(40px);
+}
+.lang-toggle-input:checked + .lang-toggle-label .lang-english {
+    color: #666;
+}
+.lang-toggle-input:checked + .lang-toggle-label .lang-arabic {
+    color: #333;
+}
+
 /* Language toggle green hover effects */
 #header .language-toggle:hover .lang-toggle-label {
     background: #9EE86F !important;
@@ -657,6 +714,135 @@ html[data-theme="dark"] .services-section h3{color:#eef2f7 !important}
 html[data-theme="dark"] .services-section p{color:#aab6c8 !important}
 html[data-theme="dark"] .services-section:nth-child(even){background:#0e1116 !important}
 
+/* Engineering Services page dark mode support */
+html[data-theme="dark"] .engineering-content {
+    background: #0e1116 !important;
+    color: #eef2f7 !important;
+}
+
+/* Hero section dark mode */
+html[data-theme="dark"] .hero-section {
+    background: linear-gradient(135deg, #1a2130 0%, #141923 100%) !important;
+}
+
+html[data-theme="dark"] .hero-section h1 {
+    color: #eef2f7 !important;
+}
+
+html[data-theme="dark"] .hero-section p {
+    color: #aab6c8 !important;
+}
+
+/* Solutions section dark mode */
+html[data-theme="dark"] .solutions-section {
+    background: #0e1116 !important;
+}
+
+html[data-theme="dark"] .solutions-section h2 {
+    color: #eef2f7 !important;
+}
+
+/* Service boxes dark mode */
+html[data-theme="dark"] .service-box {
+    background: #1a2130 !important;
+    border: 1px solid #2b3647 !important;
+    box-shadow: 0 10px 30px rgba(26, 33, 48, 0.5) !important;
+}
+
+html[data-theme="dark"] .service-box h3 {
+    color: #eef2f7 !important;
+}
+
+html[data-theme="dark"] .service-box p {
+    color: #aab6c8 !important;
+}
+
+/* AI Solutions section dark mode */
+html[data-theme="dark"] .ai-solutions-section {
+    background: linear-gradient(135deg, #1a2130 0%, #141923 100%) !important;
+}
+
+html[data-theme="dark"] .ai-solutions-section h2 {
+    color: #eef2f7 !important;
+}
+
+/* Quality Engineering section dark mode */
+html[data-theme="dark"] .quality-engineering-section {
+    background: #0e1116 !important;
+}
+
+html[data-theme="dark"] .quality-engineering-section h2 {
+    color: #eef2f7 !important;
+}
+
+/* Cloud Technologies section dark mode */
+html[data-theme="dark"] .cloud-technologies-section {
+    background: linear-gradient(135deg, #1a2130 0%, #141923 100%) !important;
+}
+
+html[data-theme="dark"] .cloud-technologies-section h2 {
+    color: #eef2f7 !important;
+}
+
+/* Digital Engineering section dark mode */
+html[data-theme="dark"] .digital-engineering-section {
+    background: #0e1116 !important;
+}
+
+html[data-theme="dark"] .digital-engineering-section h2 {
+    color: #eef2f7 !important;
+}
+
+/* Contact section dark mode */
+html[data-theme="dark"] .contact-us {
+    background: linear-gradient(rgba(26, 33, 48, 0.9), rgba(26, 33, 48, 0.9)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=1080&fit=crop&crop=center') no-repeat center center !important;
+    background-size: cover !important;
+}
+
+/* Footer dark mode */
+html[data-theme="dark"] .footer {
+    background: #0e1116 !important;
+    color: #eef2f7 !important;
+}
+
+html[data-theme="dark"] .footer a {
+    color: #aab6c8 !important;
+}
+
+html[data-theme="dark"] .footer a:hover {
+    color: #eef2f7 !important;
+}
+
+html[data-theme="dark"] .footer-menu--items {
+    border-color: #2b3647 !important;
+}
+
+html[data-theme="dark"] .footer-menu--items li {
+    border-color: #2b3647 !important;
+}
+
+html[data-theme="dark"] .footer-menu--items li + li {
+    border-top: 1px solid #2b3647 !important;
+}
+
+/* Language toggle dark mode */
+html[data-theme="dark"] .lang-toggle-label {
+    background: #2B3647 !important;
+    border-color: #3A4A5C !important;
+}
+
+html[data-theme="dark"] .lang-toggle-label:hover {
+    background: #3A4A5C !important;
+}
+
+html[data-theme="dark"] .lang-text {
+    color: #EEF2F7 !important;
+}
+
+html[data-theme="dark"] .toggle-slider {
+    background: #6aa84f !important;
+}
+
 </style>
   <style>
 /* Header menu link hover contrast fix - minimal, non-intrusive */
@@ -702,7 +888,7 @@ Let's talk!                                                        </span>
 </span>
 </button></div></div></div></div></div></div></div></div></div></header>
     <!-- Main Content -->
-    <main class="engineering-content">
+    <main class="engineering-content" style="margin-top: 150px;">
         <!-- Hero Section -->
         <section class="hero-section" style="text-align: center; padding: 80px 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
             <div class="container">
@@ -1300,35 +1486,39 @@ if (statisticsSection) {
 }
 </script>
 <script>
-// Language dropdown toggle (design-only)
-(function(){
-  const langItem = document.querySelector('.menu-item-lang');
-  if(!langItem) return;
-  const btn = langItem.querySelector('.lang-toggle-button');
-  const drop = langItem.querySelector('.lang-dropdown');
-  btn.addEventListener('click', function(e){
-    e.stopPropagation();
-    const open = drop.classList.toggle('active');
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-  document.addEventListener('click', function(){
-    drop.classList.remove('active');
-    btn.setAttribute('aria-expanded','false');
-  });
-  // Animate selection and update label
-  drop.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', function(e){
-      e.preventDefault();
-      const label = this.textContent.trim();
-      btn.textContent = label.slice(0,2).toUpperCase();
-      // burst animation
-      btn.classList.remove('pulse');
-      void btn.offsetWidth; // reflow
-      btn.classList.add('pulse');
-      drop.classList.remove('active');
-      btn.setAttribute('aria-expanded','false');
+// Language Toggle System - Integrated with lang.js
+(function() {
+    'use strict';
+    
+    const langToggle = document.getElementById('lang-toggle');
+    
+    // Initialize language toggle to work with lang.js
+    document.addEventListener('DOMContentLoaded', function() {
+        // Wait for lang.js to initialize
+        setTimeout(() => {
+            if (langToggle && window.setLanguage) {
+                const currentLang = localStorage.getItem('site-lang') || 'en';
+                langToggle.checked = (currentLang === 'ar');
+                
+                // Add event listener to language toggle
+                langToggle.addEventListener('change', function() {
+                    const newLang = this.checked ? 'ar' : 'en';
+                    
+                    // Add pulse animation
+                    const label = this.nextElementSibling;
+                    label.classList.add('pulse');
+                    
+                    // Remove pulse class after animation
+                    setTimeout(() => {
+                        label.classList.remove('pulse');
+                    }, 400);
+                    
+                    // Use lang.js system
+                    window.setLanguage(newLang);
+                });
+            }
+        }, 100);
     });
-  });
 })();
 </script>
 <script>

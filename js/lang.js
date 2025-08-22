@@ -135,8 +135,178 @@
           title: "فوائد الشراكة معنا:",
           card1: { title: "حوافز ضريبية", text: "التعاون مع شركة مملوكة لامرأة من أقلية يمكن أن يوفر حوافز ضريبية لشركتك وفق برامج حكومية." },
           card2: { title: "سمعة الأعمال المتنوعة", text: "تبني التنوع ضروري لنمو صحي. الشراكة معنا تعكس التزام شركتك بالتنوع، ونلتزم نحن بتقديم نتائج ملموسة." }
+        },
+        certBanner: { title: "مارلن كورب شركة معتمدة 100% مملوكة للنساء والأقليات" },
+        manager: { title: "المدير التنفيذي" }
+      },
+      industry: {
+        title: "حلول الصناعات",
+        exploreSolutions: "استكشف الحلول",
+        automotive: { title: "السيارات", text: "صناعة السيارات تتطور باستمرار مع ظهور تقنيات جديدة مثل المركبات الذاتية والمركبات الكهربائية وأنظمة المساعدة المتقدمة للسائق (ADAS)." },
+        banking: { title: "الخدمات المصرفية", text: "حلول التوظيف التقني المصرفي مكون حاسم في صناعة الخدمات المصرفية. تحتاج البنوك إلى الأشخاص المناسبين لتطوير وتنفيذ وصيانة أنظمتها التقنية." },
+        consumer: { title: "السلع والخدمات الاستهلاكية", text: "يمكن لشركة مارلن مساعدة شركات السلع والخدمات الاستهلاكية في العثور على وتوظيف متخصصين مؤهلين بهذه المهارات المطلوبة. يمكن لوكالات التوظيف أيضاً توفير خيارات توظيف مؤقتة وعقود." },
+        communications: { title: "الاتصالات والإعلام", text: "إنتاج وتحرير الفيديو: مع تزايد الطلب على محتوى الفيديو عبر منصات مختلفة، أصبحت مهارات إنتاج وتحرير الفيديو ذات قيمة متزايدة." },
+        healthcare: { title: "الرعاية الصحية", text: "السجلات الصحية الإلكترونية (EHR) وتقنية المعلومات الصحية (HIT): الكفاءة في أنظمة EHR وأدوات HIT ضرورية لإدارة سجلات المرضى وضمان الامتثال." },
+        hitech: { title: "التقنية العالية", text: "تعتمد شركات التقنية العالية بشكل كبير على المتخصصين المهرة ذوي الخبرة في مجالات تقنية مختلفة لتطوير وتنفيذ وصيانة المنتجات والخدمات المبتكرة." },
+        lifesciences: { title: "علوم الحياة", text: "تعتمد شركات علوم الحياة على مجموعة متنوعة من المتخصصين المهرة ذوي الخبرة في مجالات تقنية مختلفة لإحراز تقدم في الطب والتكنولوجيا الحيوية." },
+        publicservice: { title: "الخدمة العامة", text: "القطاع العام يعتمد بشكل متزايد على التقنية لتحقيق أهدافه، وهذا الطلب على المهارات التقنية سينمو فقط في السنوات القادمة." },
+        retail: { title: "التجزئة", text: "شركات التجزئة من جميع الأحجام تعتمد على مجموعة متنوعة من المهارات التقنية: أنظمة نقاط البيع (POS)، وإدارة المخزون، وإدارة سلسلة التوريد." },
+        travel: { title: "السفر والسياحة", text: "صناعة السفر تتطور باستمرار مع ظهور تقنيات جديدة مثل الذكاء الاصطناعي (AI)، والتعلم الآلي (ML)، وتحليل البيانات." },
+        government: { title: "الحكومة", text: "نساعد الوكالات الحكومية على الانتقال إلى السحابة لتمكين مرونة وقابلية توسع أكبر. يمكن لفريقنا مساعدتك في اختيار أفضل حل سحابي لاحتياجاتك." },
+        utilities: { title: "المرافق العامة", text: "نساعد شركات المرافق العامة على الانتقال إلى السحابة لتمكين مرونة وقابلية توسع أكبر. يمكن لفريقنا مساعدتك في اختيار أفضل حل سحابي لعملك." }
+      },
+      ai: {
+        title: "تمكين عملك بخدمات استشارية مدعومة بالذكاء الاصطناعي",
+        strategic: { title: "التخطيط الاستراتيجي للأعمال" },
+        operational: { title: "تحسين الكفاءة التشغيلية" },
+        financial: { title: "استشارات الإدارة المالية" },
+        marketing: { title: "تطوير استراتيجية التسويق" },
+        hr: { title: "حلول الموارد البشرية" },
+        technology: { title: "خدمات تكامل التقنية" },
+        legal: { title: "القانونية والامتثال" },
+        regulatory: { title: "تقييم الامتثال التنظيمي" },
+        policy: { title: "تطوير وتنفيذ السياسات" },
+        training: { title: "برامج التدريب والتوعية" },
+        risk: { title: "إدارة وتخفيف المخاطر" },
+        contract: { title: "إدارة العقود" },
+        data: { title: "حماية البيانات والامتثال للخصوصية" },
+        monitoring: { title: "المراقبة والتقارير" },
+        research: { title: "البحوث القانونية والخدمات الاستشارية" },
+        thirdparty: { title: "إدارة مخاطر الأطراف الثالثة" }
+      },
+      data: {
+        title: "خبرة هندسة البيانات لكل متطلبات الأعمال",
+        modeling: { title: "نمذجة وتصور البيانات" },
+        management: { title: "إدارة البيانات" },
+        strategy: { title: "تطوير استراتيجية البيانات" },
+        business: { title: "الذكاء التجاري" },
+        advanced: { title: "التحليلات المتقدمة" },
+        performance: { title: "قياس الأداء" },
+        compliance: { title: "الامتثال التنظيمي" },
+        change: { title: "إدارة التغيير" },
+        support: { title: "الدعم والصيانة المستمرة" }
+      },
+      engineering: {
+        title: "حلول وخدمات الهندسة",
+        solutions: { title: "حلولنا" },
+        appdev: { title: "تطوير التطبيقات المخصصة" },
+        mobile: { title: "تطوير تطبيقات الهاتف المحمول عبر المنصات" },
+        ai: { title: "حلول البيانات الذكية التوليدية" },
+        data: { title: "إعداد البيانات" },
+        aistrategy: { title: "تطوير استراتيجية الذكاء الاصطناعي وخطة الطريق" },
+        aimodel: { title: "تطوير نماذج الذكاء الاصطناعي/التعلم الآلي مع حلول البيانات للذكاء الاصطناعي التوليدي" },
+        prompt: { title: "هندسة النصوص التوجيهية" },
+        finetuning: { title: "ضبط النماذج اللغوية الكبيرة" },
+        assistants: { title: "المساعدون الأذكياء" },
+        quality: { title: "هندسة الجودة" },
+        testauto: { title: "أتمتة الاختبارات" },
+        performance: { title: "اختبار الأداء" },
+        security: { title: "اختبار الأمان" },
+        globalization: { title: "اختبار العولمة" },
+        compliance: { title: "اختبار الامتثال والتنظيم" },
+        continuous: { title: "تكامل الاختبار المستمر" },
+        functionality: { title: "اختبار الوظائف" },
+        usability: { title: "اختبار سهولة الاستخدام وإمكانية الوصول" },
+        api: { title: "اختبار واجهات برمجة التطبيقات" },
+        cloud: { title: "تقنيات السحابة" },
+        migration: { title: "الانتقال إلى السحابة" },
+        cloudsecurity: { title: "أمان وحوكمة السحابة" },
+        multicloud: { title: "شبكات متعددة السحابة" },
+        devops: { title: "عمليات التطوير والعمليات" },
+        digital: { title: "الهندسة الرقمية" },
+        rpa: { title: "حلول أتمتة العمليات الروبوتية (RPA)" },
+        uiux: { title: "واجهة المستخدم وتجربة المستخدم" },
+        fullstack: { title: "التطوير الكامل وعمليات التطوير" },
+        cms: { title: "برامج إدارة المحتوى" },
+        software: { title: "تطوير البرمجيات" },
+        mobility: { title: "الحركية" },
+        cybersecurity: { title: "الأمن السيبراني" },
+        identity: { title: "إدارة الهوية والوصول" },
+        network: { title: "أمان الشبكة" },
+        advanced: { title: "الأمن السيبراني المتقدم" },
+        audit: { title: "مراجعة واستشارات الأمان" },
+        solutions2: { title: "الحلول" },
+        strategic: { title: "التخطيط الاستراتيجي للأعمال" },
+        operational: { title: "تحسين الكفاءة التشغيلية" },
+        techintegration: { title: "خدمات تكامل التقنية" }
+      },
+              profile: {
+          title: "شركة مارلن",
+          company: { title: "الملف التعريفي للشركة", subtitle: "مارلن كورب للاستشارات: شريكك في نمو الأعمال" },
+          welcome: "مرحباً بكم في شركة مارلن، وهي شركة استشارات تقنية ديناميكية مملوكة للنساء ومقرها منطقة خليج سان فرانسيسكو النابضة بالحياة. مع التزام بتمكين الشركات من خلال حلول تقنية مبتكرة، تجمع شركة مارلن بين الخبرة الصناعية والمنظور المتنوع.",
+          founded: "تأسست من قبل فريق من المحترفين ذوي الخبرة، نتخصص في تقديم خدمات تقنية مخصصة تدفع الكفاءة وتعزز النمو وتحسن التميز التشغيلي. مهمتنا هي سد الفجوة بين التقنية والأعمال، وتقديم رؤى وحلول استراتيجية للعملاء تلبي تحدياتهم الفريدة.",
+          believe: "في شركة مارلن، نؤمن بقوة التعاون والشمولية، ونحن مكرسون لمساعدة المنظمات على الازدهار في المشهد الرقمي سريع الخطى اليوم. انضموا إلينا ونحن نعيد تعريف مستقبل الاستشارات التقنية، حل واحد في كل مرة.",
+          based: "مارلن كورب مقرها في كوبرتينو (منطقة خليج سان فرانسيسكو)، كاليفورنيا. لدينا مكاتب شريكة في الهند وسنغافورة وكندا وألمانيا.",
+          marln: {
+            title: "مارلن كورب",
+            intro: "اسم \"مارلن\" يجسد سرداً قوياً يركز على الصفات التي تعكس التزام الشركة بتمكين النساء في التقنية وتعزيز بيئة متنوعة وشاملة.",
+            mentorship: "M تعني الإرشاد، مما يسلط الضوء على تفاني مارلن في دعم وتوجيه النساء في رحلاتهن المهنية. تعطي الشركة الأولوية لبرامج الإرشاد التي تمكّن المواهب النسائية، مما يضمن حصولهن على الموارد والتشجيع اللازمين للازدهار في صناعة التقنية.",
+            advocacy: "A تمثل الدعوة، حيث تدعم مارلن بنشاط تقدم النساء في التقنية. من خلال الدعوة لفرص وتمثيل متساويين، تسعى مارلن إلى كسر الحواجز وإنشاء قوة عاملة أكثر شمولية.",
+            resilience: "R تعني المرونة، مما يعكس قوة وتصميم النساء اللواتي يتنقلن في تحديات المشهد التقني. مارلن ملتزمة بتعزيز بيئة يتم فيها الاحتفال بالمرونة، مما يلهم النساء للتغلب على العقبات وتحقيق أهدافهن.",
+            leadership: "L تعني القيادة، مما يؤكد على أهمية القيادة النسائية داخل المنظمة وفي القطاع التقني ككل. تزرع مارلن ثقافة لا تعزز النساء في الأدوار القيادية فحسب، بل تمكّنهن أيضاً من القيادة بثقة ورؤية.",
+            nurturing: "N تجسد الرعاية، مما يمثل التزام مارلن بإنشاء مجتمع داعم للنساء في التقنية. من خلال رعاية المواهب وتشجيع التعاون، تعزز مارلن بيئة يمكن للنساء فيها الازدهار ودفع الابتكار.",
+            together: "معاً، هذه الصفات تجسد روح شركة مارلن، وتوجه مهمتها لتمكين النساء من خلال حلول استشارات تقنية مبتكرة مع الدعوة لمستقبل أكثر إنصافاً وشمولية في التقنية."
+          }
+        },
+        csr: {
+          title: "المسؤولية الاجتماعية للشركات",
+          subtitle: "تعرف على التزام مارلن بالمسؤولية الاجتماعية للشركات، بما في ذلك مبادراتنا لتعزيز التنوع ودعم المجتمعات.",
+          initiatives: {
+            title: "مبادرات المسؤولية الاجتماعية للشركات",
+            subtitle: "برامج شاملة مصممة لخلق تأثير إيجابي عبر المجتمعات والبيئات.",
+            diversity: {
+              title: "برامج التنوع",
+              text: "برامج شاملة مصممة لتعزيز التنوع والشمولية في قطاع التقنية."
+            },
+            community: {
+              title: "دعم المجتمع",
+              text: "مشاركة نشطة في المبادرات المجتمعية والبرامج الخيرية التي تحدث تأثيراً إيجابياً."
+            },
+            environmental: {
+              title: "المسؤولية البيئية",
+              text: "التزام بالممارسات المستدامة والمسؤولية البيئية في جميع عملياتنا."
+            }
+          },
+          commitment: {
+            title: "التزامنا بغد أفضل",
+            subtitle: "نؤمن أن الشركات لديها مسؤولية لخلق تغيير إيجابي للأشخاص والمجتمعات والكوكب.",
+            focusAreas: {
+              title: "مجالات التركيز",
+              environment: {
+                title: "البيئة",
+                text: "ملتزمون بتقليل البصمة الكربونية وتعزيز الممارسات المستدامة في جميع العمليات."
+              },
+              community: {
+                title: "المجتمع",
+                text: "دعم المجتمعات المحلية من خلال برامج التطوع والتبرعات الخيرية والشراكات المجتمعية."
+              },
+              education: {
+                title: "التعليم",
+                text: "الاستثمار في المبادرات التعليمية وتوفير فرص تطوير المهارات والتعلم."
+              },
+              ethics: {
+                title: "الأخلاق والحوكمة",
+                text: "الحفاظ على أعلى معايير الممارسات التجارية الأخلاقية والحوكمة الشفافة."
+              }
+            }
+          },
+          flagship: {
+            title: "المبادرات الرائدة",
+            subtitle: "برامجنا الرئيسية التي تقود التغيير الهادف وتخلق تأثيراً مستداماً.",
+            greenFuture: {
+              title: "مشروع المستقبل الأخضر",
+              text: "مبادرتنا البيئية الشاملة التي تركز على تقليل انبعاثات الكربون وتنفيذ حلول الطاقة المتجددة وتعزيز الممارسات التجارية المستدامة في جميع العمليات."
+            },
+            techForAll: {
+              title: "التقنية للجميع",
+              text: "سد الفجوة الرقمية من خلال توفير الوصول للتقنية والتدريب على محو الأمية الرقمية وفرص التعليم في العلوم والتكنولوجيا والهندسة والرياضيات للمجتمعات المحرومة."
+            },
+            communityCare: {
+              title: "مبادرة رعاية المجتمع",
+              text: "دعم المجتمعات المحلية من خلال حملات الطعام والمبادرات الصحية وبرامج الإغاثة الطارئة بالشراكة مع المنظمات المحلية."
+            }
+          }
         }
-      }
     },
     en: {
       header: { about: "About us", services: "Services", company: "Company" },
@@ -225,6 +395,174 @@
         },
         certBanner: { title: "Marln Corporation is a certified 100% women and minority owned" },
         manager: { title: "Executive Director" }
+      },
+      industry: {
+        title: "INDUSTRY SOLUTIONS",
+        exploreSolutions: "Explore Solutions",
+        automotive: { title: "Automotive", text: "The automotive industry is constantly evolving, with the emergence of new technologies such as autonomous vehicles, electric vehicles, and advanced driver-assistance systems (ADAS)." },
+        banking: { title: "Banking", text: "Banking technology staffing solutions are a critical component of the banking industry. Banks need to have the right people in place to develop, implement, and maintain their technology systems." },
+        consumer: { title: "Consumer Goods & Services", text: "Marln Corp can help CGS companies find and recruit qualified professionals with these in-demand skillsets. Staffing agencies can also provide temporary and contract staffing options." },
+        communications: { title: "Communications & Media", text: "Video Production and Editing: With the growing demand for video content across various platforms, video production and editing skills are becoming increasingly valuable." },
+        healthcare: { title: "Healthcare", text: "Electronic Health Records (EHR) and Health Information Technology (HIT): Proficiency in EHR systems and HIT tools is essential for managing patient records and ensuring compliance." },
+        hitech: { title: "Hi-Tech", text: "High-tech companies rely heavily on skilled professionals with expertise in various technical domains to develop, implement, and maintain innovative products and services." },
+        lifesciences: { title: "Life Sciences", text: "Life sciences companies rely on a diverse range of skilled professionals with expertise in various technical domains to make advancements in medicine and biotechnology." },
+        publicservice: { title: "Public Service", text: "The public sector is increasingly reliant on technology to meet its objectives, and this demand for technical skills is only going to grow in the years to come." },
+        retail: { title: "Retail", text: "Retail businesses of all sizes rely on a diverse range of technical skills: Point-of-Sale (POS) Systems, Inventory Management, and Supply Chain Management." },
+        travel: { title: "Travel & Tourism", text: "The travel industry is constantly evolving, with the emergence of new technologies such as artificial intelligence (AI), machine learning (ML), and data analytics." },
+        government: { title: "Government", text: "We help government agencies migrate to the cloud to enable greater flexibility and scalability. Our team can help you choose the best cloud solution for your needs." },
+        utilities: { title: "Utilities", text: "We help utility companies migrate to the cloud to enable greater flexibility and scalability. Our team can help you choose the best cloud solution for your business." }
+      },
+      ai: {
+        title: "Empowering Your Business with AI Powered Consulting Services",
+        strategic: { title: "Strategic Business Planning" },
+        operational: { title: "Operational Efficiency Improvement" },
+        financial: { title: "Financial Management Consulting" },
+        marketing: { title: "Marketing Strategy Development" },
+        hr: { title: "Human Resources Solutions" },
+        technology: { title: "Technology Integration Services" },
+        legal: { title: "Legal and Compliance" },
+        regulatory: { title: "Regulatory Compliance Assessment" },
+        policy: { title: "Policy Development and Implementation" },
+        training: { title: "Training and Awareness Programs" },
+        risk: { title: "Risk Management and Mitigation" },
+        contract: { title: "Contract Management" },
+        data: { title: "Data Protection and Privacy Compliance" },
+        monitoring: { title: "Monitoring and Reporting" },
+        research: { title: "Legal Research and Advisory Services" },
+        thirdparty: { title: "Third-Party Risk Management" }
+      },
+      data: {
+        title: "Data Engineering Expertise for Every Business Requirement",
+        modeling: { title: "Data Modeling and Visualization" },
+        management: { title: "Data Management" },
+        strategy: { title: "Data Strategy Development" },
+        business: { title: "Business Intelligence" },
+        advanced: { title: "Advanced Analytics" },
+        performance: { title: "Performance Measurement" },
+        compliance: { title: "Regulatory Compliance" },
+        change: { title: "Change Management" },
+        support: { title: "Ongoing Support and Maintenance" }
+      },
+      engineering: {
+        title: "Engineering Solutions and Services",
+        solutions: { title: "Our Solutions" },
+        appdev: { title: "Tailored Application Development" },
+        mobile: { title: "Cross-Platform Mobile App Development" },
+        ai: { title: "Generative AI Data Solutions" },
+        data: { title: "Data Preparation" },
+        aistrategy: { title: "AI Strategy and Roadmap Development" },
+        aimodel: { title: "AI/ML Model Development With Data Solutions for Generative AI" },
+        prompt: { title: "Prompt Engineering" },
+        finetuning: { title: "Fine tuning LLMs" },
+        assistants: { title: "Intelligent Assistants" },
+        quality: { title: "Quality Engineering" },
+        testauto: { title: "Test Automation" },
+        performance: { title: "Performance Testing" },
+        security: { title: "Security Testing" },
+        globalization: { title: "Globalization Testing" },
+        compliance: { title: "Compliance and Regulatory Testing" },
+        continuous: { title: "Continuous Testing Integration" },
+        functionality: { title: "Functionality Testing" },
+        usability: { title: "Usability and Accessibility Testing" },
+        api: { title: "API Testing" },
+        cloud: { title: "Cloud Technologies" },
+        migration: { title: "Cloud Migration" },
+        cloudsecurity: { title: "Cloud Security and Governance" },
+        multicloud: { title: "Multicloud Networking" },
+        devops: { title: "Dev Ops and Operations" },
+        digital: { title: "Digital Engineering" },
+        rpa: { title: "Robotic Process Automation (RPA) Solutions" },
+        uiux: { title: "UI/UX" },
+        fullstack: { title: "Full Stack & Dev Ops" },
+        cms: { title: "Content Management Software" },
+        software: { title: "Software Development" },
+        mobility: { title: "Mobility" },
+        cybersecurity: { title: "Cybersecurity" },
+        identity: { title: "Identity And Access Management" },
+        network: { title: "Network Security" },
+        advanced: { title: "Advanced Cybersec" },
+        audit: { title: "Security Audit and Consulting" },
+        solutions2: { title: "Solutions" },
+        strategic: { title: "Strategic Business Planning" },
+        operational: { title: "Operational Efficiency Improvement" },
+        techintegration: { title: "Technology Integration Services" }
+      },
+      profile: {
+        title: "Marln Corporation",
+        company: { title: "Company Profile", subtitle: "Marln Corp Consulting: Your Partner in Business Growth" },
+        welcome: "Welcome to Marln Corporation, a dynamic women-owned IT consulting company based in the vibrant San Francisco Bay Area. With a commitment to empowering businesses through innovative technology solutions, Marln Corporation blends industry expertise with a diverse perspective.",
+        founded: "Founded by a team of experienced professionals, we specialize in delivering tailored IT services that drive efficiency, foster growth, and enhance operational excellence. Our mission is to bridge the gap between technology and business, providing clients with strategic insights and solutions that meet their unique challenges.",
+        believe: "At Marln Corporation, we believe in the power of collaboration and inclusivity, and we are dedicated to helping organizations thrive in today's fast-paced digital landscape. Join us as we redefine the future of IT consulting, one solution at a time.",
+        based: "Marln Corp is based in Cupertino (San Francisco Bay Area), California. We have partner offices in India, Singapore, Canada and Germany.",
+        marln: {
+          title: "Marln Corp",
+          intro: "The name \"Marln\" embodies a powerful narrative centered around the qualities that reflect the company's commitment to empowering women in technology and fostering a diverse, inclusive environment.",
+          mentorship: "M stands for Mentorship, highlighting Marln's dedication to supporting and guiding women in their professional journeys. The company prioritizes mentorship programs that empower female talent, ensuring they have the resources and encouragement needed to thrive in the tech industry.",
+          advocacy: "A represents Advocacy, as Marln actively champions the advancement of women in technology. By advocating for equitable opportunities and representation, Marln seeks to break down barriers and create a more inclusive workforce.",
+          resilience: "R signifies Resilience, reflecting the strength and determination of women navigating the challenges of the tech landscape. Marln is committed to fostering an environment where resilience is celebrated, inspiring women to overcome obstacles and achieve their goals.",
+          leadership: "L stands for Leadership, emphasizing the importance of female leadership within the organization and the tech sector as a whole. Marln cultivates a culture that not only promotes women into leadership roles but also empowers them to lead with confidence and vision.",
+          nurturing: "N embodies Nurturing, representing Marln's commitment to creating a supportive community for women in tech. By nurturing talent and encouraging collaboration, Marln fosters an environment where women can flourish and drive innovation.",
+          together: "Together, these qualities encapsulate the spirit of Marln Corporation, guiding its mission to empower women through innovative IT consulting solutions while advocating for a more equitable and inclusive future in technology."
+        }
+      },
+      csr: {
+        title: "Corporate Social Responsibility",
+        subtitle: "Learn about Marln's commitment to corporate social responsibility, including our initiatives to promote diversity and support communities.",
+        initiatives: {
+          title: "Our CSR Initiatives",
+          subtitle: "Comprehensive programs designed to create positive impact across communities and environments.",
+          diversity: {
+            title: "Diversity Programs",
+            text: "Comprehensive programs designed to promote diversity and inclusion in the technology sector."
+          },
+          community: {
+            title: "Community Support",
+            text: "Active involvement in community initiatives and charitable programs that make a positive impact."
+          },
+          environmental: {
+            title: "Environmental Responsibility",
+            text: "Commitment to sustainable practices and environmental responsibility in all our operations."
+          }
+        },
+        commitment: {
+          title: "Our Commitment to a Better Tomorrow",
+          subtitle: "We believe businesses have a responsibility to create positive change for people, communities, and the planet.",
+          focusAreas: {
+            title: "Focus Areas",
+            environment: {
+              title: "Environment",
+              text: "Committed to reducing our carbon footprint and promoting sustainable practices across all operations."
+            },
+            community: {
+              title: "Community",
+              text: "Supporting local communities through volunteer programs, charitable donations, and community partnerships."
+            },
+            education: {
+              title: "Education",
+              text: "Investing in educational initiatives and providing opportunities for skill development and learning."
+            },
+            ethics: {
+              title: "Ethics & Governance",
+              text: "Maintaining the highest standards of ethical business practices and transparent governance."
+            }
+          }
+        },
+        flagship: {
+          title: "Flagship Initiatives",
+          subtitle: "Our key programs that drive meaningful change and create lasting impact.",
+          greenFuture: {
+            title: "Green Future Project",
+            text: "Our comprehensive environmental initiative focused on reducing carbon emissions, implementing renewable energy solutions, and promoting sustainable business practices across all operations."
+          },
+          techForAll: {
+            title: "Tech for All",
+            text: "Bridging the digital divide by providing technology access, digital literacy training, and STEM education opportunities to underserved communities."
+          },
+          communityCare: {
+            title: "Community Care Drive",
+            text: "Supporting local communities through food drives, healthcare initiatives, and emergency relief programs in partnership with local organizations."
+          }
+        }
       }
     }
   };
@@ -476,70 +814,485 @@
     // About page main headings
     applyText('.about-section h2', tr, 'about.story.title');
     applyText('.mission-section h2', tr, 'about.mission.title');
-    applyText('.benefits-section h2', tr, 'about.benefits.title');
 
-    // About story paragraphs (skip the first empty <p>)
-    applyText('.about-section > p:nth-of-type(2)', tr, 'about.story.intro');
-    applyText('.about-section > p:nth-of-type(3)', tr, 'about.story.outro1');
-    applyText('.about-section > p:nth-of-type(4)', tr, 'about.story.outro2');
+    // About story paragraphs
+    applyText('.about-section > p:nth-of-type(1)', tr, 'about.story.intro');
+    applyText('.about-section > p:nth-of-type(2)', tr, 'about.story.outro1');
+    applyText('.about-section > p:nth-of-type(3)', tr, 'about.story.outro2');
 
-    // Values grid (M A R L N)
-    applyText('.values-grid .value-card:nth-child(1) h3', tr, 'about.values.m.title');
-    applyText('.values-grid .value-card:nth-child(1) p', tr, 'about.values.m.text');
-    applyText('.values-grid .value-card:nth-child(2) h3', tr, 'about.values.a.title');
-    applyText('.values-grid .value-card:nth-child(2) p', tr, 'about.values.a.text');
-    applyText('.values-grid .value-card:nth-child(3) h3', tr, 'about.values.r.title');
-    applyText('.values-grid .value-card:nth-child(3) p', tr, 'about.values.r.text');
-    applyText('.values-grid .value-card:nth-child(4) h3', tr, 'about.values.l.title');
-    applyText('.values-grid .value-card:nth-child(4) p', tr, 'about.values.l.text');
-    applyText('.values-grid .value-card:nth-child(5) h3', tr, 'about.values.n.title');
-    applyText('.values-grid .value-card:nth-child(5) p', tr, 'about.values.n.text');
-
-    // Mission paragraph
-    applyText('.mission-section p', tr, 'about.mission.text');
-
-    // Benefits cards (positional)
-    const benefitTitles = document.querySelectorAll('.benefits-section h3');
-    const benefitParas = document.querySelectorAll('.benefits-section [style*="box-shadow"], .benefits-section [style*="padding: 40px"]').length
-      ? document.querySelectorAll('.benefits-section [style*="padding: 40px"] p')
-      : document.querySelectorAll('.benefits-section p');
-    if(benefitTitles.length >= 2){
-      const mapT = [ 'about.benefits.card1.title', 'about.benefits.card2.title' ];
-      const mapP = [ 'about.benefits.card1.text', 'about.benefits.card2.text' ];
-      benefitTitles.forEach((el,i)=>{
-        const key = mapT[i]; if(key) { const v = tGet(tr, key); if(typeof v==='string') el.textContent = v; }
-      });
-      benefitParas.forEach((el,i)=>{
-        if(i<2){ const key = mapP[i]; const v = tGet(tr,key); if(typeof v==='string') el.textContent=v; }
-      });
+    // Values grid (M A R L N) - using the colored boxes structure
+    const valueCards = document.querySelectorAll('.about-section > div > div');
+    if (valueCards.length >= 5) {
+      applyText(valueCards[0].querySelector('h3'), tr, 'about.values.m.title');
+      applyText(valueCards[0].querySelector('p'), tr, 'about.values.m.text');
+      applyText(valueCards[1].querySelector('h3'), tr, 'about.values.a.title');
+      applyText(valueCards[1].querySelector('p'), tr, 'about.values.a.text');
+      applyText(valueCards[2].querySelector('h3'), tr, 'about.values.r.title');
+      applyText(valueCards[2].querySelector('p'), tr, 'about.values.r.text');
+      applyText(valueCards[3].querySelector('h3'), tr, 'about.values.l.title');
+      applyText(valueCards[3].querySelector('p'), tr, 'about.values.l.text');
+      applyText(valueCards[4].querySelector('h3'), tr, 'about.values.n.title');
+      applyText(valueCards[4].querySelector('p'), tr, 'about.values.n.text');
     }
-    // Fallback by text content (handles unexpected order)
-    document.querySelectorAll('.benefits-section h3').forEach(el=>{
-      const t = el.textContent.trim();
-      if(t.includes('Tax Incentive')) el.textContent = tGet(tr,'about.benefits.card1.title') || 'Tax Incentive';
-      if(t.includes('Reputation of Diverse Businesses')) el.textContent = tGet(tr,'about.benefits.card2.title') || 'Reputation of Diverse Businesses';
-    });
 
-    // Certification banner heading
-    applyText('.certification-banner h2.heading.h4', tr, 'about.certBanner.title');
+    // Mission paragraphs
+    const missionParagraphs = document.querySelectorAll('.mission-section p');
+    if (missionParagraphs.length >= 2) {
+      applyText(missionParagraphs[0], tr, 'about.mission.text');
+      applyText(missionParagraphs[1], tr, 'about.mission.subtitle');
+    }
 
-    // Contact section on about page
+    // Contact form
     applyText('.contact-us--form--title', tr, 'contact.form.title');
-    applyText('.contact-us--form--subtitle p', tr, 'contact.thank.text');
+    applyAttr('input[name="your-name"]', 'placeholder', tr, 'common.namePlaceholder');
+    applyAttr('input[name="your-email"]', 'placeholder', tr, 'common.emailPlaceholder');
+    applyAttr('textarea[name="your-message"]', 'placeholder', tr, 'common.messagePlaceholder');
+    applyAttr('input[type="submit"][value]', 'value', tr, 'common.sendMessage');
 
-    applyAttr('.contact-form input[name="name"]', 'placeholder', tr, 'common.yourName');
-    applyAttr('.contact-form input[name="email"]', 'placeholder', tr, 'common.yourEmail');
-    applyAttr('.contact-form input[name="company"]', 'placeholder', tr, 'common.companyName');
-    applyAttr('.contact-form textarea[name="message"]', 'placeholder', tr, 'common.tellUsAboutProject');
-    applyAll('.contact-form .btn .btn-text', tr, 'common.speakToTeam');
-
-    // Thank-you card (top of contact block)
-    applyText('.thank-you-for-another-form--title', tr, 'contact.thank.title');
+    // Contact info
+    applyText('.contact-us--connect .heading', tr, 'contact.right.title');
     applyText('.thank-you-for-another-form--text', tr, 'contact.thank.text');
     applyText('.thank-you-for-another-form--btn .btn-text', tr, 'common.scheduleMeeting');
 
-    // Manager position
-    applyText('.contact-us--manager--position', tr, 'about.manager.title');
+    // Footer
+    applyAll('#footer .footer-contact-btn .btn .btn-text', tr, 'common.contactUs');
+    applyText('#footer_menu_4 > li > a', tr, 'footer.social');
+    applyText('#footer_menu_5 > li > a', tr, 'footer.certifications');
+    applyText('.offices .offices-title', tr, 'footer.officesTitle');
+    applyText('.offices-list li:nth-child(1) .offices-item p', tr, 'offices.cupertino');
+    applyText('.offices-list li:nth-child(2) .offices-item p', tr, 'offices.jeddah');
+    applyText('.offices-list li:nth-child(3) .offices-item p', tr, 'offices.riyadh');
+    applyText('.offices-list li:nth-child(4) .offices-item p', tr, 'offices.bangaluru');
+    applyText('.offices-list li:nth-child(5) .offices-item p', tr, 'offices.capetown');
+  }
+
+  function applyIndustryTranslations(tr){
+    // Header (same selectors as other pages)
+    setHeaderLink('#menu-item-680 > a', tr, 'header.about');
+    setHeaderLink('#menu-item-666 > a', tr, 'header.services');
+    setHeaderLink('#menu-item-company > a', tr, 'header.company');
+    setHeaderLink('#menu-item-contact > a', tr, 'common.contactUs');
+
+    // Industry page main title
+    applyText('.industry-title span', tr, 'industry.title');
+
+    // Industry cards - apply translations to each card
+    const industryCards = document.querySelectorAll('.industry-card');
+    
+    // Map industry types to translation keys
+    const industryMap = [
+      { key: 'automotive', emoji: '🚗' },
+      { key: 'banking', emoji: '🏦' },
+      { key: 'consumer', emoji: '🛍️' },
+      { key: 'communications', emoji: '📺' },
+      { key: 'healthcare', emoji: '🏥' },
+      { key: 'hitech', emoji: '💻' },
+      { key: 'lifesciences', emoji: '🧬' },
+      { key: 'publicservice', emoji: '🏛️' },
+      { key: 'retail', emoji: '🛒' },
+      { key: 'travel', emoji: '✈️' },
+      { key: 'government', emoji: '🏛️' },
+      { key: 'utilities', emoji: '⚡' }
+    ];
+
+    industryCards.forEach((card, index) => {
+      if (index < industryMap.length) {
+        const industry = industryMap[index];
+        
+        // Update title
+        const titleElement = card.querySelector('h3');
+        if (titleElement) {
+          titleElement.textContent = tGet(tr, `industry.${industry.key}.title`);
+        }
+        
+        // Update description
+        const descElement = card.querySelector('p');
+        if (descElement) {
+          descElement.textContent = tGet(tr, `industry.${industry.key}.text`);
+        }
+        
+        // Update explore solutions button
+        const buttonElement = card.querySelector('.contact-scroll-btn');
+        if (buttonElement) {
+          buttonElement.textContent = tGet(tr, 'industry.exploreSolutions');
+        }
+      }
+    });
+
+    // Contact form
+    applyText('.contact-us--form--title', tr, 'contact.form.title');
+    applyAttr('input[name="your-name"]', 'placeholder', tr, 'common.namePlaceholder');
+    applyAttr('input[name="your-email"]', 'placeholder', tr, 'common.emailPlaceholder');
+    applyAttr('textarea[name="your-message"]', 'placeholder', tr, 'common.messagePlaceholder');
+    applyAttr('input[type="submit"][value]', 'value', tr, 'common.sendMessage');
+
+    // Contact info
+    applyText('.contact-us--connect .heading', tr, 'contact.right.title');
+    applyText('.thank-you-for-another-form--text', tr, 'contact.thank.text');
+    applyText('.thank-you-for-another-form--btn .btn-text', tr, 'common.scheduleMeeting');
+
+    // Footer
+    applyAll('#footer .footer-contact-btn .btn .btn-text', tr, 'common.contactUs');
+    applyText('#footer_menu_4 > li > a', tr, 'footer.social');
+    applyText('#footer_menu_5 > li > a', tr, 'footer.certifications');
+    applyText('.offices .offices-title', tr, 'footer.officesTitle');
+    applyText('.offices-list li:nth-child(1) .offices-item p', tr, 'offices.cupertino');
+    applyText('.offices-list li:nth-child(2) .offices-item p', tr, 'offices.jeddah');
+    applyText('.offices-list li:nth-child(3) .offices-item p', tr, 'offices.riyadh');
+    applyText('.offices-list li:nth-child(4) .offices-item p', tr, 'offices.bangaluru');
+    applyText('.offices-list li:nth-child(5) .offices-item p', tr, 'offices.capetown');
+  }
+
+  function applyAiConsultingTranslations(tr){
+    // Header (same selectors as other pages)
+    setHeaderLink('#menu-item-680 > a', tr, 'header.about');
+    setHeaderLink('#menu-item-666 > a', tr, 'header.services');
+    setHeaderLink('#menu-item-company > a', tr, 'header.company');
+    setHeaderLink('#menu-item-contact > a', tr, 'common.contactUs');
+
+    // AI Consulting page main title
+    applyText('h1.fade-in', tr, 'ai.title');
+
+    // Business consulting services - titles and content
+    const serviceBoxes = document.querySelectorAll('.six-boxes-section .service-box');
+    if (serviceBoxes.length >= 6) {
+      // First row (3 boxes)
+      applyText(serviceBoxes[0].querySelector('h3'), tr, 'ai.strategic.title');
+      applyText(serviceBoxes[0].querySelector('p'), tr, 'ai.strategic.text');
+      applyText(serviceBoxes[1].querySelector('h3'), tr, 'ai.operational.title');
+      applyText(serviceBoxes[1].querySelector('p'), tr, 'ai.operational.text');
+      applyText(serviceBoxes[2].querySelector('h3'), tr, 'ai.financial.title');
+      applyText(serviceBoxes[2].querySelector('p'), tr, 'ai.financial.text');
+      
+      // Second row (3 boxes)
+      applyText(serviceBoxes[3].querySelector('h3'), tr, 'ai.marketing.title');
+      applyText(serviceBoxes[3].querySelector('p'), tr, 'ai.marketing.text');
+      applyText(serviceBoxes[4].querySelector('h3'), tr, 'ai.hr.title');
+      applyText(serviceBoxes[4].querySelector('p'), tr, 'ai.hr.text');
+      applyText(serviceBoxes[5].querySelector('h3'), tr, 'ai.technology.title');
+      applyText(serviceBoxes[5].querySelector('p'), tr, 'ai.technology.text');
+    }
+
+    // Legal and compliance section - titles and content
+    applyText('h2.fade-in:nth-of-type(2)', tr, 'ai.legal.title');
+    
+    const complianceBoxes = document.querySelectorAll('.legal-compliance-section .compliance-box');
+    if (complianceBoxes.length >= 9) {
+      // First row (3 boxes)
+      applyText(complianceBoxes[0].querySelector('h3'), tr, 'ai.regulatory.title');
+      applyText(complianceBoxes[0].querySelector('p'), tr, 'ai.regulatory.text');
+      applyText(complianceBoxes[1].querySelector('h3'), tr, 'ai.policy.title');
+      applyText(complianceBoxes[1].querySelector('p'), tr, 'ai.policy.text');
+      applyText(complianceBoxes[2].querySelector('h3'), tr, 'ai.training.title');
+      applyText(complianceBoxes[2].querySelector('p'), tr, 'ai.training.text');
+      
+      // Second row (3 boxes)
+      applyText(complianceBoxes[3].querySelector('h3'), tr, 'ai.risk.title');
+      applyText(complianceBoxes[3].querySelector('p'), tr, 'ai.risk.text');
+      applyText(complianceBoxes[4].querySelector('h3'), tr, 'ai.contract.title');
+      applyText(complianceBoxes[4].querySelector('p'), tr, 'ai.contract.text');
+      applyText(complianceBoxes[5].querySelector('h3'), tr, 'ai.data.title');
+      applyText(complianceBoxes[5].querySelector('p'), tr, 'ai.data.text');
+      
+      // Third row (3 boxes)
+      applyText(complianceBoxes[6].querySelector('h3'), tr, 'ai.monitoring.title');
+      applyText(complianceBoxes[6].querySelector('p'), tr, 'ai.monitoring.text');
+      applyText(complianceBoxes[7].querySelector('h3'), tr, 'ai.research.title');
+      applyText(complianceBoxes[7].querySelector('p'), tr, 'ai.research.text');
+      applyText(complianceBoxes[8].querySelector('h3'), tr, 'ai.thirdparty.title');
+      applyText(complianceBoxes[8].querySelector('p'), tr, 'ai.thirdparty.text');
+    }
+
+    // Contact form
+    applyText('.contact-us--form--title', tr, 'contact.form.title');
+    applyAttr('input[name="your-name"]', 'placeholder', tr, 'common.namePlaceholder');
+    applyAttr('input[name="your-email"]', 'placeholder', tr, 'common.emailPlaceholder');
+    applyAttr('textarea[name="your-message"]', 'placeholder', tr, 'common.messagePlaceholder');
+    applyAttr('input[type="submit"][value]', 'value', tr, 'common.sendMessage');
+
+    // Contact info
+    applyText('.contact-us--connect .heading', tr, 'contact.right.title');
+    applyText('.thank-you-for-another-form--text', tr, 'contact.thank.text');
+    applyText('.thank-you-for-another-form--btn .btn-text', tr, 'common.scheduleMeeting');
+
+    // Footer
+    applyAll('#footer .footer-contact-btn .btn .btn-text', tr, 'common.contactUs');
+    applyText('#footer_menu_4 > li > a', tr, 'footer.social');
+    applyText('#footer_menu_5 > li > a', tr, 'footer.certifications');
+    applyText('.offices .offices-title', tr, 'footer.officesTitle');
+    applyText('.offices-list li:nth-child(1) .offices-item p', tr, 'offices.cupertino');
+    applyText('.offices-list li:nth-child(2) .offices-item p', tr, 'offices.jeddah');
+    applyText('.offices-list li:nth-child(3) .offices-item p', tr, 'offices.riyadh');
+    applyText('.offices-list li:nth-child(4) .offices-item p', tr, 'offices.bangaluru');
+    applyText('.offices-list li:nth-child(5) .offices-item p', tr, 'offices.capetown');
+  }
+
+  function applyDataAnalyticsTranslations(tr){
+    // Header (same selectors as other pages)
+    setHeaderLink('#menu-item-680 > a', tr, 'header.about');
+    setHeaderLink('#menu-item-666 > a', tr, 'header.services');
+    setHeaderLink('#menu-item-company > a', tr, 'header.company');
+    setHeaderLink('#menu-item-contact > a', tr, 'common.contactUs');
+
+    // Data Analytics page main title
+    applyText('h1.fade-in', tr, 'data.title');
+
+    // Data analytics services
+    applyText('h3:nth-of-type(1)', tr, 'data.modeling.title');
+    applyText('h3:nth-of-type(2)', tr, 'data.management.title');
+    applyText('h3:nth-of-type(3)', tr, 'data.strategy.title');
+    applyText('h3:nth-of-type(4)', tr, 'data.business.title');
+    applyText('h3:nth-of-type(5)', tr, 'data.advanced.title');
+    applyText('h3:nth-of-type(6)', tr, 'data.performance.title');
+    applyText('h3:nth-of-type(7)', tr, 'data.compliance.title');
+    applyText('h3:nth-of-type(8)', tr, 'data.change.title');
+    applyText('h3:nth-of-type(9)', tr, 'data.support.title');
+
+    // Contact form
+    applyText('.contact-us--form--title', tr, 'contact.form.title');
+    applyAttr('input[name="your-name"]', 'placeholder', tr, 'common.namePlaceholder');
+    applyAttr('input[name="your-email"]', 'placeholder', tr, 'common.emailPlaceholder');
+    applyAttr('textarea[name="your-message"]', 'placeholder', tr, 'common.messagePlaceholder');
+    applyAttr('input[type="submit"][value]', 'value', tr, 'common.sendMessage');
+
+    // Contact info
+    applyText('.contact-us--connect .heading', tr, 'contact.right.title');
+    applyText('.thank-you-for-another-form--text', tr, 'contact.thank.text');
+    applyText('.thank-you-for-another-form--btn .btn-text', tr, 'common.scheduleMeeting');
+
+    // Footer
+    applyAll('#footer .footer-contact-btn .btn .btn-text', tr, 'common.contactUs');
+    applyText('#footer_menu_4 > li > a', tr, 'footer.social');
+    applyText('#footer_menu_5 > li > a', tr, 'footer.certifications');
+    applyText('.offices .offices-title', tr, 'footer.officesTitle');
+    applyText('.offices-list li:nth-child(1) .offices-item p', tr, 'offices.cupertino');
+    applyText('.offices-list li:nth-child(2) .offices-item p', tr, 'offices.jeddah');
+    applyText('.offices-list li:nth-child(3) .offices-item p', tr, 'offices.riyadh');
+    applyText('.offices-list li:nth-child(4) .offices-item p', tr, 'offices.bangaluru');
+    applyText('.offices-list li:nth-child(5) .offices-item p', tr, 'offices.capetown');
+  }
+
+  function applyEngineeringServicesTranslations(tr){
+    // Header (same selectors as other pages)
+    setHeaderLink('#menu-item-680 > a', tr, 'header.about');
+    setHeaderLink('#menu-item-666 > a', tr, 'header.services');
+    setHeaderLink('#menu-item-company > a', tr, 'header.company');
+    setHeaderLink('#menu-item-contact > a', tr, 'common.contactUs');
+
+    // Engineering Services page main title
+    applyText('h1.fade-in', tr, 'engineering.title');
+
+    // Solutions section
+    applyText('h2.fade-in:nth-of-type(1)', tr, 'engineering.solutions.title');
+    applyText('h3:nth-of-type(1)', tr, 'engineering.appdev.title');
+    applyText('h3:nth-of-type(2)', tr, 'engineering.mobile.title');
+
+    // Generative AI section
+    applyText('h2.fade-in:nth-of-type(2)', tr, 'engineering.ai.title');
+    applyText('h3:nth-of-type(3)', tr, 'engineering.data.title');
+    applyText('h3:nth-of-type(4)', tr, 'engineering.aistrategy.title');
+    applyText('h3:nth-of-type(5)', tr, 'engineering.aimodel.title');
+    applyText('h3:nth-of-type(6)', tr, 'engineering.prompt.title');
+    applyText('h3:nth-of-type(7)', tr, 'engineering.finetuning.title');
+    applyText('h3:nth-of-type(8)', tr, 'engineering.assistants.title');
+
+    // Quality Engineering section
+    applyText('h2.fade-in:nth-of-type(3)', tr, 'engineering.quality.title');
+    applyText('h3:nth-of-type(9)', tr, 'engineering.testauto.title');
+    applyText('h3:nth-of-type(10)', tr, 'engineering.performance.title');
+    applyText('h3:nth-of-type(11)', tr, 'engineering.security.title');
+    applyText('h3:nth-of-type(12)', tr, 'engineering.globalization.title');
+    applyText('h3:nth-of-type(13)', tr, 'engineering.compliance.title');
+    applyText('h3:nth-of-type(14)', tr, 'engineering.continuous.title');
+    applyText('h3:nth-of-type(15)', tr, 'engineering.functionality.title');
+    applyText('h3:nth-of-type(16)', tr, 'engineering.usability.title');
+    applyText('h3:nth-of-type(17)', tr, 'engineering.api.title');
+
+    // Cloud Technologies section
+    applyText('h2.fade-in:nth-of-type(4)', tr, 'engineering.cloud.title');
+    applyText('h3:nth-of-type(18)', tr, 'engineering.migration.title');
+    applyText('h3:nth-of-type(19)', tr, 'engineering.cloudsecurity.title');
+    applyText('h3:nth-of-type(20)', tr, 'engineering.multicloud.title');
+    applyText('h3:nth-of-type(21)', tr, 'engineering.devops.title');
+
+    // Digital Engineering section
+    applyText('h2.fade-in:nth-of-type(5)', tr, 'engineering.digital.title');
+    applyText('h3:nth-of-type(22)', tr, 'engineering.rpa.title');
+    applyText('h3:nth-of-type(23)', tr, 'engineering.uiux.title');
+    applyText('h3:nth-of-type(24)', tr, 'engineering.fullstack.title');
+    applyText('h3:nth-of-type(25)', tr, 'engineering.cms.title');
+    applyText('h3:nth-of-type(26)', tr, 'engineering.software.title');
+    applyText('h3:nth-of-type(27)', tr, 'engineering.mobility.title');
+
+    // Cybersecurity section
+    applyText('h2.fade-in:nth-of-type(6)', tr, 'engineering.cybersecurity.title');
+    applyText('h3:nth-of-type(28)', tr, 'engineering.identity.title');
+    applyText('h3:nth-of-type(29)', tr, 'engineering.network.title');
+    applyText('h3:nth-of-type(30)', tr, 'engineering.advanced.title');
+    applyText('h3:nth-of-type(31)', tr, 'engineering.audit.title');
+
+    // Solutions section (second one)
+    applyText('h2.fade-in:nth-of-type(7)', tr, 'engineering.solutions2.title');
+    applyText('h3:nth-of-type(32)', tr, 'engineering.strategic.title');
+    applyText('h3:nth-of-type(33)', tr, 'engineering.operational.title');
+    applyText('h3:nth-of-type(34)', tr, 'engineering.techintegration.title');
+
+    // Contact form
+    applyText('.contact-us--form--title', tr, 'contact.form.title');
+    applyAttr('input[name="your-name"]', 'placeholder', tr, 'common.namePlaceholder');
+    applyAttr('input[name="your-email"]', 'placeholder', tr, 'common.emailPlaceholder');
+    applyAttr('textarea[name="your-message"]', 'placeholder', tr, 'common.messagePlaceholder');
+    applyAttr('input[type="submit"][value]', 'value', tr, 'common.sendMessage');
+
+    // Contact info
+    applyText('.contact-us--connect .heading', tr, 'contact.right.title');
+    applyText('.thank-you-for-another-form--text', tr, 'contact.thank.text');
+    applyText('.thank-you-for-another-form--btn .btn-text', tr, 'common.scheduleMeeting');
+
+    // Footer
+    applyAll('#footer .footer-contact-btn .btn .btn-text', tr, 'common.contactUs');
+    applyText('#footer_menu_4 > li > a', tr, 'footer.social');
+    applyText('#footer_menu_5 > li > a', tr, 'footer.certifications');
+    applyText('.offices .offices-title', tr, 'footer.officesTitle');
+    applyText('.offices-list li:nth-child(1) .offices-item p', tr, 'offices.cupertino');
+    applyText('.offices-list li:nth-child(2) .offices-item p', tr, 'offices.jeddah');
+    applyText('.offices-list li:nth-child(3) .offices-item p', tr, 'offices.riyadh');
+    applyText('.offices-list li:nth-child(4) .offices-item p', tr, 'offices.bangaluru');
+    applyText('.offices-list li:nth-child(5) .offices-item p', tr, 'offices.capetown');
+  }
+
+  function applyProfileTranslations(tr){
+    // Header (same selectors as other pages)
+    setHeaderLink('#menu-item-680 > a', tr, 'header.about');
+    setHeaderLink('#menu-item-666 > a', tr, 'header.services');
+    setHeaderLink('#menu-item-company > a', tr, 'header.company');
+    setHeaderLink('#menu-item-contact > a', tr, 'common.contactUs');
+
+    // Main title
+    applyText('h1[style*="font-size: 4rem"]', tr, 'profile.title');
+
+    // Company profile section
+    applyText('h2[style*="font-size: 2.5rem"]:nth-of-type(1)', tr, 'profile.company.title');
+    applyText('h3[style*="font-size: 1.8rem"]', tr, 'profile.company.subtitle');
+
+    // Company profile paragraphs
+    const paragraphs = document.querySelectorAll('.company-profile-section p');
+    if (paragraphs.length >= 4) {
+      applyText(paragraphs[0], tr, 'profile.welcome');
+      applyText(paragraphs[1], tr, 'profile.founded');
+      applyText(paragraphs[2], tr, 'profile.believe');
+      applyText(paragraphs[3], tr, 'profile.based');
+    }
+
+    // Marln explanation section
+    applyText('h2[style*="font-size: 2.5rem"]:nth-of-type(2)', tr, 'profile.marln.title');
+
+    // Marln explanation paragraphs
+    const marlnParagraphs = document.querySelectorAll('.marln-explanation-section p');
+    if (marlnParagraphs.length >= 7) {
+      applyText(marlnParagraphs[0], tr, 'profile.marln.intro');
+      applyText(marlnParagraphs[1], tr, 'profile.marln.mentorship');
+      applyText(marlnParagraphs[2], tr, 'profile.marln.advocacy');
+      applyText(marlnParagraphs[3], tr, 'profile.marln.resilience');
+      applyText(marlnParagraphs[4], tr, 'profile.marln.leadership');
+      applyText(marlnParagraphs[5], tr, 'profile.marln.nurturing');
+      applyText(marlnParagraphs[6], tr, 'profile.marln.together');
+    }
+
+    // Contact form
+    applyText('.contact-us--form--title', tr, 'contact.form.title');
+    applyAttr('input[name="your-name"]', 'placeholder', tr, 'common.namePlaceholder');
+    applyAttr('input[name="your-email"]', 'placeholder', tr, 'common.emailPlaceholder');
+    applyAttr('textarea[name="your-message"]', 'placeholder', tr, 'common.messagePlaceholder');
+    applyAttr('input[type="submit"][value]', 'value', tr, 'common.sendMessage');
+
+    // Contact info
+    applyText('.contact-us--connect .heading', tr, 'contact.right.title');
+    applyText('.thank-you-for-another-form--text', tr, 'contact.thank.text');
+    applyText('.thank-you-for-another-form--btn .btn-text', tr, 'common.scheduleMeeting');
+
+    // Footer
+    applyAll('#footer .footer-contact-btn .btn .btn-text', tr, 'common.contactUs');
+    applyText('#footer_menu_4 > li > a', tr, 'footer.social');
+    applyText('#footer_menu_5 > li > a', tr, 'footer.certifications');
+    applyText('.offices .offices-title', tr, 'footer.officesTitle');
+    applyText('.offices-list li:nth-child(1) .offices-item p', tr, 'offices.cupertino');
+    applyText('.offices-list li:nth-child(2) .offices-item p', tr, 'offices.jeddah');
+    applyText('.offices-list li:nth-child(3) .offices-item p', tr, 'offices.riyadh');
+    applyText('.offices-list li:nth-child(4) .offices-item p', tr, 'offices.bangaluru');
+    applyText('.offices-list li:nth-child(5) .offices-item p', tr, 'offices.capetown');
+  }
+
+  function applyCsrTranslations(tr){
+    // Header (same selectors as other pages)
+    setHeaderLink('#menu-item-680 > a', tr, 'header.about');
+    setHeaderLink('#menu-item-666 > a', tr, 'header.services');
+    setHeaderLink('#menu-item-company > a', tr, 'header.company');
+    setHeaderLink('#menu-item-contact > a', tr, 'common.contactUs');
+
+    // Hero section
+    applyText('.hero-section h1', tr, 'csr.title');
+    applyText('.hero-section p', tr, 'csr.subtitle');
+
+    // CSR Initiatives section
+    applyText('.csr-section .section-header h2', tr, 'csr.initiatives.title');
+    applyText('.csr-section .section-header p', tr, 'csr.initiatives.subtitle');
+
+    // Initiative cards
+    const initiativeCards = document.querySelectorAll('.csr-section .service-box');
+    if (initiativeCards.length >= 3) {
+      applyText(initiativeCards[0].querySelector('h3'), tr, 'csr.initiatives.diversity.title');
+      applyText(initiativeCards[0].querySelector('p'), tr, 'csr.initiatives.diversity.text');
+      applyText(initiativeCards[1].querySelector('h3'), tr, 'csr.initiatives.community.title');
+      applyText(initiativeCards[1].querySelector('p'), tr, 'csr.initiatives.community.text');
+      applyText(initiativeCards[2].querySelector('h3'), tr, 'csr.initiatives.environmental.title');
+      applyText(initiativeCards[2].querySelector('p'), tr, 'csr.initiatives.environmental.text');
+    }
+
+    // Commitment section
+    applyText('.csr-commitment-section h2', tr, 'csr.commitment.title');
+    applyText('.csr-commitment-section p', tr, 'csr.commitment.subtitle');
+    applyText('.csr-commitment-section h3', tr, 'csr.commitment.focusAreas.title');
+
+    // Focus areas cards
+    const focusCards = document.querySelectorAll('.csr-commitment-section .csr-card');
+    if (focusCards.length >= 4) {
+      applyText(focusCards[0].querySelector('h4'), tr, 'csr.commitment.focusAreas.environment.title');
+      applyText(focusCards[0].querySelector('p'), tr, 'csr.commitment.focusAreas.environment.text');
+      applyText(focusCards[1].querySelector('h4'), tr, 'csr.commitment.focusAreas.community.title');
+      applyText(focusCards[1].querySelector('p'), tr, 'csr.commitment.focusAreas.community.text');
+      applyText(focusCards[2].querySelector('h4'), tr, 'csr.commitment.focusAreas.education.title');
+      applyText(focusCards[2].querySelector('p'), tr, 'csr.commitment.focusAreas.education.text');
+      applyText(focusCards[3].querySelector('h4'), tr, 'csr.commitment.focusAreas.ethics.title');
+      applyText(focusCards[3].querySelector('p'), tr, 'csr.commitment.focusAreas.ethics.text');
+    }
+
+    // Flagship initiatives section
+    applyText('.flagship-initiatives-section .section-header h2', tr, 'csr.flagship.title');
+    applyText('.flagship-initiatives-section .section-header p', tr, 'csr.flagship.subtitle');
+
+    // Flagship initiative cards
+    const flagshipCards = document.querySelectorAll('.flagship-initiatives-section .csr-card');
+    if (flagshipCards.length >= 3) {
+      applyText(flagshipCards[0].querySelector('h4'), tr, 'csr.flagship.greenFuture.title');
+      applyText(flagshipCards[0].querySelector('p'), tr, 'csr.flagship.greenFuture.text');
+      applyText(flagshipCards[1].querySelector('h4'), tr, 'csr.flagship.techForAll.title');
+      applyText(flagshipCards[1].querySelector('p'), tr, 'csr.flagship.techForAll.text');
+      applyText(flagshipCards[2].querySelector('h4'), tr, 'csr.flagship.communityCare.title');
+      applyText(flagshipCards[2].querySelector('p'), tr, 'csr.flagship.communityCare.text');
+    }
+
+    // Contact form
+    applyText('.contact-us--form--title', tr, 'contact.form.title');
+    applyAttr('input[name="your-name"]', 'placeholder', tr, 'common.namePlaceholder');
+    applyAttr('input[name="your-email"]', 'placeholder', tr, 'common.emailPlaceholder');
+    applyAttr('textarea[name="your-message"]', 'placeholder', tr, 'common.messagePlaceholder');
+    applyAttr('input[type="submit"][value]', 'value', tr, 'common.sendMessage');
+
+    // Contact info
+    applyText('.contact-us--connect .heading', tr, 'contact.right.title');
+    applyText('.thank-you-for-another-form--text', tr, 'contact.thank.text');
+    applyText('.thank-you-for-another-form--btn .btn-text', tr, 'common.scheduleMeeting');
 
     // Footer
     applyAll('#footer .footer-contact-btn .btn .btn-text', tr, 'common.contactUs');
@@ -565,6 +1318,24 @@
     if(document.querySelector('main.about-content')){
       applyAboutTranslations(tr);
     }
+    if(document.querySelector('main.industry-content')){
+      applyIndustryTranslations(tr);
+    }
+    if(document.querySelector('h1.fade-in') && document.querySelector('h1.fade-in').textContent.includes('AI Powered Consulting')){
+      applyAiConsultingTranslations(tr);
+    }
+    if(document.querySelector('h1.fade-in') && document.querySelector('h1.fade-in').textContent.includes('Data Engineering Expertise')){
+      applyDataAnalyticsTranslations(tr);
+    }
+    if(document.querySelector('h1.fade-in') && document.querySelector('h1.fade-in').textContent.includes('Engineering Solutions')){
+      applyEngineeringServicesTranslations(tr);
+    }
+    if(document.querySelector('h1[style*="font-size: 4rem"]') && document.querySelector('h1[style*="font-size: 4rem"]').textContent.includes('Marln')){
+      applyProfileTranslations(tr);
+    }
+    if(document.querySelector('main.csr-content')){
+      applyCsrTranslations(tr);
+    }
     saveLang(lang);
   }
 
@@ -589,6 +1360,7 @@
 
   // Expose for manual switching if needed
   window.setLanguage = setLanguage;
+  window.getSavedLang = getSavedLang;
 
   // Helper: set header link text without altering structure
   function setHeaderLink(selector, tr, key){

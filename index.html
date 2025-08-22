@@ -1337,37 +1337,39 @@ if (statisticsSection) {
 }
 </script>
 <script>
-// Animated Language Toggle Functionality
-(function(){
-  const langToggle = document.getElementById('lang-toggle');
-  
-  if (langToggle) {
-    langToggle.addEventListener('change', function() {
-      const isArabic = this.checked;
-      
-      // Add pulse animation
-      const label = this.nextElementSibling;
-      label.classList.add('pulse');
-      
-      // Remove pulse class after animation
-      setTimeout(() => {
-        label.classList.remove('pulse');
-      }, 400);
-      
-      // Here you can add actual language switching logic
-      if (isArabic) {
-        console.log('Switching to Arabic');
-        // Add Arabic language switching logic here
-        // Example: document.documentElement.setAttribute('lang', 'ar');
-        // Example: loadArabicContent();
-      } else {
-        console.log('Switching to English');
-        // Add English language switching logic here
-        // Example: document.documentElement.setAttribute('lang', 'en');
-        // Example: loadEnglishContent();
-      }
+// Language Toggle System - Integrated with lang.js
+(function() {
+    'use strict';
+    
+    const langToggle = document.getElementById('lang-toggle');
+    
+    // Initialize language toggle to work with lang.js
+    document.addEventListener('DOMContentLoaded', function() {
+        // Wait for lang.js to initialize
+        setTimeout(() => {
+            if (langToggle && window.setLanguage) {
+                const currentLang = localStorage.getItem('site-lang') || 'en';
+                langToggle.checked = (currentLang === 'ar');
+                
+                // Add event listener to language toggle
+                langToggle.addEventListener('change', function() {
+                    const newLang = this.checked ? 'ar' : 'en';
+                    
+                    // Add pulse animation
+                    const label = this.nextElementSibling;
+                    label.classList.add('pulse');
+                    
+                    // Remove pulse class after animation
+                    setTimeout(() => {
+                        label.classList.remove('pulse');
+                    }, 400);
+                    
+                    // Use lang.js system
+                    window.setLanguage(newLang);
+                });
+            }
+        }, 100);
     });
-  }
 })();
 </script>
 <script>

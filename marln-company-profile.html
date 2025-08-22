@@ -995,35 +995,39 @@ if (statisticsSection) {
 }
 </script>
 <script>
-// Language dropdown toggle (design-only)
-(function(){
-  const langItem = document.querySelector('.menu-item-lang');
-  if(!langItem) return;
-  const btn = langItem.querySelector('.lang-toggle-button');
-  const drop = langItem.querySelector('.lang-dropdown');
-  btn.addEventListener('click', function(e){
-    e.stopPropagation();
-    const open = drop.classList.toggle('active');
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-  document.addEventListener('click', function(){
-    drop.classList.remove('active');
-    btn.setAttribute('aria-expanded','false');
-  });
-  // Animate selection and update label
-  drop.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', function(e){
-      e.preventDefault();
-      const label = this.textContent.trim();
-      btn.textContent = label.slice(0,2).toUpperCase();
-      // burst animation
-      btn.classList.remove('pulse');
-      void btn.offsetWidth; // reflow
-      btn.classList.add('pulse');
-      drop.classList.remove('active');
-      btn.setAttribute('aria-expanded','false');
+// Language Toggle System - Integrated with lang.js
+(function() {
+    'use strict';
+    
+    const langToggle = document.getElementById('lang-toggle');
+    
+    // Initialize language toggle to work with lang.js
+    document.addEventListener('DOMContentLoaded', function() {
+        // Wait for lang.js to initialize
+        setTimeout(() => {
+            if (langToggle && window.setLanguage) {
+                const currentLang = localStorage.getItem('site-lang') || 'en';
+                langToggle.checked = (currentLang === 'ar');
+                
+                // Add event listener to language toggle
+                langToggle.addEventListener('change', function() {
+                    const newLang = this.checked ? 'ar' : 'en';
+                    
+                    // Add pulse animation
+                    const label = this.nextElementSibling;
+                    label.classList.add('pulse');
+                    
+                    // Remove pulse class after animation
+                    setTimeout(() => {
+                        label.classList.remove('pulse');
+                    }, 400);
+                    
+                    // Use lang.js system
+                    window.setLanguage(newLang);
+                });
+            }
+        }, 100);
     });
-  });
 })();
 </script>
 <script>
