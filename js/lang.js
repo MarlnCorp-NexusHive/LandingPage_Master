@@ -1030,107 +1030,106 @@
   }
 
   // Function to update dropdown menu items
-  function updateDropdownMenus(tr) {
-    console.log('updateDropdownMenus called with translations:', tr);
-    console.log('Available translation keys:', Object.keys(tr));
-    console.log('Dropdown translations available:', {
-      aiConsulting: tGet(tr, 'dropdown.services.aiConsulting'),
-      engineering: tGet(tr, 'dropdown.services.engineering'),
-      dataAnalytics: tGet(tr, 'dropdown.services.dataAnalytics'),
-      corporateTraining: tGet(tr, 'dropdown.services.corporateTraining'),
-      profile: tGet(tr, 'dropdown.company.profile'),
-      csr: tGet(tr, 'dropdown.company.csr'),
-      partners: tGet(tr, 'dropdown.company.partners'),
-      industry: tGet(tr, 'dropdown.company.industry')
-    });
+  // Helper function to apply text to DOM elements directly
+function applyTextToElement(element, translations, key) {
+  let val = tGet(translations, key);
+  // If tGet failed, try direct access for flat JSON structure
+  if (val === undefined && translations[key]) {
+    val = translations[key];
+  }
+  if (element && typeof val === 'string') {
+    element.textContent = val;
+  }
+}
+
+function updateDropdownMenus(translations) {
+    console.log('updateDropdownMenus called with translations:', Object.keys(translations));
     
-    // Helper function to apply text to DOM elements directly
-    function applyTextToElement(element, translations, key) {
-      let val = tGet(translations, key);
-      
-      // If tGet failed, try direct access for flat JSON structure
-      if (val === undefined && translations[key]) {
-        val = translations[key];
-        console.log('Using direct key access for:', key, '=', val);
-      }
-      
-      if (element && typeof val === 'string') {
-        element.textContent = val;
-        console.log('Applied translation to element:', key, '=', val);
-      } else {
-        console.log('Failed to apply translation:', key, 'element:', element, 'value:', val);
-      }
-    }
-    
-    // Function to update dropdown items
-    function updateDropdownItems() {
-      // Update Services dropdown items
-      const servicesDropdown = document.querySelector('.services-dropdown');
-      console.log('Services dropdown found:', servicesDropdown);
-      if (servicesDropdown) {
-        const servicesItems = servicesDropdown.querySelectorAll('li a');
+    // Services dropdown
+    const servicesDropdown = document.querySelector('.services-dropdown');
+    if (servicesDropdown) {
+        const servicesItems = servicesDropdown.querySelectorAll('a');
         console.log('Services items found:', servicesItems.length);
-        if (servicesItems.length >= 4) {
-          console.log('Applying translations to services items...');
-          applyTextToElement(servicesItems[0], tr, 'dropdown.services.aiConsulting');
-          applyTextToElement(servicesItems[1], tr, 'dropdown.services.engineering');
-          applyTextToElement(servicesItems[2], tr, 'dropdown.services.dataAnalytics');
-          applyTextToElement(servicesItems[3], tr, 'dropdown.services.corporateTraining');
-          console.log('Services translations applied');
-        } else {
-          console.log('Not enough services items found:', servicesItems.length);
-        }
-      } else {
-        console.log('Services dropdown not found');
-      }
-
-      // Update Company dropdown items
-      const companyDropdown = document.querySelector('.company-dropdown');
-      console.log('Company dropdown found:', companyDropdown);
-      if (companyDropdown) {
-        const companyItems = companyDropdown.querySelectorAll('li a');
-        console.log('Company items found:', companyItems.length);
-        if (companyItems.length >= 4) {
-          console.log('Applying translations to company items...');
-          applyTextToElement(companyItems[0], tr, 'dropdown.company.profile');
-          applyTextToElement(companyItems[1], tr, 'dropdown.company.csr');
-          applyTextToElement(companyItems[2], tr, 'dropdown.company.partners');
-          applyTextToElement(companyItems[3], tr, 'dropdown.company.industry');
-          console.log('Company translations applied');
-        } else {
-          console.log('Not enough company items found:', companyItems.length);
-        }
-      } else {
-        console.log('Company dropdown not found');
-      }
+        
+        servicesItems.forEach((item, index) => {
+            const key = `dropdown.services.${['aiConsulting', 'engineering', 'dataAnalytics', 'corporateTraining'][index]}`;
+            applyTextToElement(item, translations, key);
+        });
     }
-
-    // Try to update immediately
-    updateDropdownItems();
-
-    // Also add event listeners for when dropdowns become visible
-    const servicesMenu = document.querySelector('#menu-item-666');
-    const companyMenu = document.querySelector('#menu-item-company');
-
-    if (servicesMenu) {
-      servicesMenu.addEventListener('mouseenter', updateDropdownItems);
-      servicesMenu.addEventListener('focus', updateDropdownItems);
-    }
-
-    if (companyMenu) {
-      companyMenu.addEventListener('mouseenter', updateDropdownItems);
-      companyMenu.addEventListener('focus', updateDropdownItems);
-    }
-
-    // Also try with a longer delay to ensure DOM is ready
-    setTimeout(updateDropdownItems, 500);
-    setTimeout(updateDropdownItems, 1000);
-    setTimeout(updateDropdownItems, 2000);
     
-    // Also try when window loads completely
-    if (document.readyState === 'loading') {
-        window.addEventListener('load', updateDropdownItems);
+    // Company dropdown
+    const companyDropdown = document.querySelector('.company-dropdown');
+    if (companyDropdown) {
+        const companyItems = companyDropdown.querySelectorAll('a');
+        console.log('Company items found:', companyItems.length);
+        
+        companyItems.forEach((item, index) => {
+            const key = `dropdown.company.${['profile', 'csr', 'partners', 'industry'][index]}`;
+            applyTextToElement(item, translations, key);
+        });
     }
+    
+    // Additional attempts with delays
+    setTimeout(() => {
+        const servicesDropdown2 = document.querySelector('.services-dropdown');
+        if (servicesDropdown2) {
+            const servicesItems2 = servicesDropdown2.querySelectorAll('a');
+            servicesItems2.forEach((item, index) => {
+                const key = `dropdown.services.${['aiConsulting', 'engineering', 'dataAnalytics', 'corporateTraining'][index]}`;
+                applyTextToElement(item, translations, key);
+            });
+        }
+        
+        const companyDropdown2 = document.querySelector('.company-dropdown');
+        if (companyDropdown2) {
+            const companyItems2 = companyDropdown2.querySelectorAll('a');
+            companyItems2.forEach((item, index) => {
+                const key = `dropdown.company.${['profile', 'csr', 'partners', 'industry'][index]}`;
+                applyTextToElement(item, translations, key);
+            });
+        }
+    }, 1000);
+    
+    setTimeout(() => {
+        const servicesDropdown3 = document.querySelector('.services-dropdown');
+        if (servicesDropdown3) {
+            const servicesItems3 = servicesDropdown3.querySelectorAll('a');
+            servicesItems3.forEach((item, index) => {
+                const key = `dropdown.services.${['aiConsulting', 'engineering', 'dataAnalytics', 'corporateTraining'][index]}`;
+                applyTextToElement(item, translations, key);
+            });
+        }
+        
+        const companyDropdown3 = document.querySelector('.company-dropdown');
+        if (companyDropdown3) {
+            const companyItems3 = companyDropdown3.querySelectorAll('a');
+            companyItems3.forEach((item, index) => {
+                const key = `dropdown.company.${['profile', 'csr', 'partners', 'industry'][index]}`;
+                applyTextToElement(item, translations, key);
+            });
+        }
+    }, 2000);
+    
+    // Listen for window load event
+    window.addEventListener('load', () => {
+        const servicesDropdown4 = document.querySelector('.services-dropdown');
+        if (servicesDropdown4) {
+            const servicesItems4 = servicesDropdown4.querySelectorAll('a');
+            servicesItems4.forEach((item, index) => {
+                const key = `dropdown.services.${['aiConsulting', 'engineering', 'dataAnalytics', 'corporateTraining'][index]}`;
+                applyTextToElement(item, translations, key);
+            });
+        }
+        
+        const companyDropdown4 = document.querySelector('.company-dropdown');
+        if (companyDropdown4) {
+            const companyItems4 = companyDropdown4.querySelectorAll('a');
+            companyItems4.forEach((item, index) => {
+                const key = `dropdown.company.${['profile', 'csr', 'partners', 'industry'][index]}`;
+                applyTextToElement(item, translations, key);
+            });
+        }
+    });
   }
 
   async function setLanguage(lang){
