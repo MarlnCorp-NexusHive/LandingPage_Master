@@ -490,7 +490,7 @@
       updateDropdownMenus(tr);
 
       saveLang(lang);
-      console.log('Language switched to:', lang);
+
     } catch(error) {
       logError('Failed to set language', error);
     }

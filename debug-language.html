@@ -159,8 +159,7 @@
             entry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
             logDiv.appendChild(entry);
             logDiv.scrollTop = logDiv.scrollHeight;
-            console.log(`[DEBUG] ${message}`);
-        }
+            }
         
         function clearLog() {
             document.getElementById('log').innerHTML = '';

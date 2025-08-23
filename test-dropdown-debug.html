@@ -138,16 +138,11 @@
         const originalUpdateDropdownMenus = window.updateDropdownMenus;
         if (typeof originalUpdateDropdownMenus === 'function') {
             window.updateDropdownMenus = function(tr) {
-                console.log('updateDropdownMenus called with translations:', tr);
-                
                 // Update Services dropdown items
                 const servicesDropdown = document.querySelector('.services-dropdown');
-                console.log('Services dropdown found:', servicesDropdown);
                 if (servicesDropdown) {
                     const servicesItems = servicesDropdown.querySelectorAll('li a');
-                    console.log('Services items found:', servicesItems.length);
                     if (servicesItems.length >= 4) {
-                        console.log('Applying translations to services items...');
                         // Call the original function
                         originalUpdateDropdownMenus(tr);
                     }
@@ -155,12 +150,9 @@
 
                 // Update Company dropdown items
                 const companyDropdown = document.querySelector('.company-dropdown');
-                console.log('Company dropdown found:', companyDropdown);
                 if (companyDropdown) {
                     const companyItems = companyDropdown.querySelectorAll('li a');
-                    console.log('Company items found:', companyItems.length);
                     if (companyItems.length >= 4) {
-                        console.log('Applying translations to company items...');
                         // Call the original function
                         originalUpdateDropdownMenus(tr);
                     }

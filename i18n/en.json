@@ -327,5 +327,19 @@
   "csr.flagship.techForAll.title": "Tech for All",
   "csr.flagship.techForAll.text": "Bridging the digital divide by providing technology access, digital literacy training, and STEM education opportunities to underserved communities.",
   "csr.flagship.communityCare.title": "Community Care Drive",
-  "csr.flagship.communityCare.text": "Supporting local communities through food drives, healthcare initiatives, and emergency relief programs in partnership with local organizations."
+  "csr.flagship.communityCare.text": "Supporting local communities through food drives, healthcare initiatives, and emergency relief programs in partnership with local organizations.",
+
+  "techPartners.title": "OUR TECHNOLOGY PARTNERS",
+  "techPartners.automationAnywhere.title": "Automation Anywhere",
+  "techPartners.automationAnywhere.desc": "RPA Solutions",
+  "techPartners.aws.title": "AWS",
+  "techPartners.aws.desc": "Cloud Infrastructure",
+  "techPartners.microsoft.title": "Microsoft",
+  "techPartners.microsoft.desc": "Enterprise Solutions",
+  "techPartners.google.title": "Google",
+  "techPartners.google.desc": "AI & Analytics",
+  "techPartners.oracle.title": "Oracle",
+  "techPartners.oracle.desc": "Database & Cloud",
+  "techPartners.databricks.title": "Databricks",
+  "techPartners.databricks.desc": "Data & AI Platform"
 } 

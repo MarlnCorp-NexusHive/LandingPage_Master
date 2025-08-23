@@ -8,6 +8,8 @@
     console.warn('Language System:', message, error);
   }
 
+
+
   // Embedded fallback translations for file:// usage (no server)
   // Arabic and English both provided so file:// switching works without refresh
   const EMBEDDED = {
@@ -138,6 +140,15 @@
         riyadh: "الرياض، المملكة العربية السعودية",
         bangaluru: "بنغالورو، الهند",
         capetown: "كيب تاون، جنوب أفريقيا"
+      },
+      techPartners: {
+        title: "شركاؤنا التقنيون",
+        automationAnywhere: { title: "أوتوميشن أنيوير", desc: "حلول الأتمتة الروبوتية" },
+        aws: { title: "أمازون ويب سيرفيسز", desc: "البنية التحتية السحابية" },
+        microsoft: { title: "مايكروسوفت", desc: "الحلول المؤسسية" },
+        google: { title: "جوجل", desc: "الذكاء الاصطناعي والتحليلات" },
+        oracle: { title: "أوراكل", desc: "قواعد البيانات والحوسبة السحابية" },
+        databricks: { title: "داتابريكس", desc: "منصة البيانات والذكاء الاصطناعي" }
       }
     },
     en: {
@@ -230,7 +241,16 @@
       },
       contact: { thank: { title: "Well done!", text: "We will contact you in the next few hours or you can schedule an appointment now." }, form: { title: "Kick Start Your Project Right Now" }, right: { title: "Send us an email" } },
       footer: { social: "Social Links", certifications: "Certifications", officesTitle: "Offices" },
-              offices: { cupertino: "Cupertino, USA", jeddah: "Jeddah, Saudi Arabia", riyadh: "Riyadh, Saudi Arabia", bangaluru: "Bengaluru, India", capetown: "Capetown, South Africa" }
+      offices: { cupertino: "Cupertino, USA", jeddah: "Jeddah, Saudi Arabia", riyadh: "Riyadh, Saudi Arabia", bangaluru: "Bengaluru, India", capetown: "Capetown, South Africa" },
+      techPartners: {
+        title: "OUR TECHNOLOGY PARTNERS",
+        automationAnywhere: { title: "Automation Anywhere", desc: "RPA Solutions" },
+        aws: { title: "AWS", desc: "Cloud Infrastructure" },
+        microsoft: { title: "Microsoft", desc: "Enterprise Solutions" },
+        google: { title: "Google", desc: "AI & Analytics" },
+        oracle: { title: "Oracle", desc: "Database & Cloud" },
+        databricks: { title: "Databricks", desc: "Data & AI Platform" }
+      }
     }
   };
 
@@ -246,28 +266,23 @@
   function saveLang(lang){
     try { 
       localStorage.setItem('site-lang', lang); 
-      console.log('Language saved to localStorage:', lang);
     } catch(error) { 
       logError('Failed to save language preference', error);
     }
   }
   
   async function loadTranslations(lang){
-    console.log('Loading translations for language:', lang);
     
     // Enhanced error handling for online hosting
     if (location.protocol === 'file:' && EMBEDDED[lang]) {
-      console.log('Using embedded translations for file:// protocol');
       return EMBEDDED[lang];
     }
     
     if(CACHE[lang]) {
-      console.log('Using cached translations for:', lang);
       return CACHE[lang];
     }
     
     try {
-      console.log('Attempting to load translations from JSON file for:', lang);
       // Try to load from JSON file first
       const res = await fetch(`i18n/${lang}.json`, { 
         cache: 'no-cache',
@@ -282,31 +297,20 @@
       
       const json = await res.json();
       CACHE[lang] = json;
-      console.log('Successfully loaded translations from JSON file for:', lang);
-      console.log('JSON translations keys:', Object.keys(json));
-      console.log('Sample dropdown keys:', {
-        aiConsulting: json['dropdown.services.aiConsulting'],
-        engineering: json['dropdown.services.engineering']
-      });
       return json;
     } catch(err){
       logError(`Failed to load translations for ${lang}`, err);
       
       // Fallback to embedded translations
       if (EMBEDDED[lang]) {
-        console.log(`Using embedded translations for ${lang} as fallback`);
-        console.log('Embedded translations keys:', Object.keys(EMBEDDED[lang]));
-        console.log('Embedded dropdown structure:', EMBEDDED[lang].dropdown);
         return EMBEDDED[lang];
       }
       
       // Final fallback to default language
       if(lang !== DEFAULT_LANG) {
-        console.log(`Falling back to default language: ${DEFAULT_LANG}`);
         return loadTranslations(DEFAULT_LANG);
       }
       
-      console.log('No translations available, returning empty object');
       return {};
     }
   }
@@ -338,14 +342,34 @@
   }
 
   function setButtonLabelFromLang(lang){
-    const btn = document.querySelector('.menu-item-lang .lang-toggle-button');
-    if(btn){ 
-      btn.textContent = lang === 'en' ? 'EN' : 'AR';
-      btn.setAttribute('data-lang', lang);
+    // Update the label text in the toggle
+    const enText = document.querySelector('.lang-english');
+    const arText = document.querySelector('.lang-arabic');
+    
+    if(enText && arText) {
+      if(lang === 'ar') {
+        enText.style.opacity = '0.6';
+        arText.style.opacity = '1';
+      } else {
+        enText.style.opacity = '1';
+        arText.style.opacity = '0.6';
+      }
+    }
+    
+    // Also update the toggle state
+    const toggleInput = document.getElementById('lang-toggle');
+    if(toggleInput) {
+      toggleInput.checked = (lang === 'ar');
     }
   }
 
   function tGet(translations, key){
+    // First try direct key access for flat JSON structure
+    if (translations[key] != null) {
+      return translations[key];
+    }
+    
+    // Fallback to nested structure traversal
     return key.split('.').reduce((acc, part)=> (acc && acc[part] != null ? acc[part] : undefined), translations);
   }
 
@@ -1029,6 +1053,54 @@
     applyText('.offices-list li:nth-child(5) .offices-item p', tr, 'offices.capetown');
   }
 
+  function applyTechnologyPartnersTranslations(tr){
+    // Header (same selectors as other pages)
+    setHeaderLink('#menu-item-680 > a', tr, 'header.about');
+    setHeaderLink('#menu-item-666 > a', tr, 'header.services');
+    setHeaderLink('#menu-item-company > a', tr, 'header.company');
+    setHeaderLink('#menu-item-contact > a', tr, 'common.contactUs');
+
+    // Main title
+    applyText('.tech-partners-title span', tr, 'techPartners.title');
+
+    // Partner cards - using nth-child selectors for precise targeting
+    // Card 1: Automation Anywhere
+    applyText('.partner-card-1 .partner-title', tr, 'techPartners.automationAnywhere.title');
+    applyText('.partner-card-1 .partner-desc', tr, 'techPartners.automationAnywhere.desc');
+
+    // Card 2: AWS
+    applyText('.partner-card-2 .partner-title', tr, 'techPartners.aws.title');
+    applyText('.partner-card-2 .partner-desc', tr, 'techPartners.aws.desc');
+
+    // Card 3: Microsoft
+    applyText('.partner-card-3 .partner-title', tr, 'techPartners.microsoft.title');
+    applyText('.partner-card-3 .partner-desc', tr, 'techPartners.microsoft.desc');
+
+    // Card 4: Google
+    applyText('.partner-card-4 .partner-title', tr, 'techPartners.google.title');
+    applyText('.partner-card-4 .partner-desc', tr, 'techPartners.google.desc');
+
+    // Card 5: Oracle
+    applyText('.partner-card-5 .partner-title', tr, 'techPartners.oracle.title');
+    applyText('.partner-card-5 .partner-desc', tr, 'techPartners.oracle.desc');
+
+    // Card 6: Databricks
+    applyText('.partner-card-6 .partner-title', tr, 'techPartners.databricks.title');
+    applyText('.partner-card-6 .partner-desc', tr, 'techPartners.databricks.desc');
+
+    // Contact button and common elements
+    applyText('#contact .contact-title', tr, 'common.contactUs');
+    applyText('.contact-form .form-title', tr, 'contact.form.title');
+
+    // Footer offices
+    applyText('.offices .offices-title', tr, 'footer.officesTitle');
+    applyText('.offices-list li:nth-child(1) .offices-item p', tr, 'offices.cupertino');
+    applyText('.offices-list li:nth-child(2) .offices-item p', tr, 'offices.jeddah');
+    applyText('.offices-list li:nth-child(3) .offices-item p', tr, 'offices.riyadh');
+    applyText('.offices-list li:nth-child(4) .offices-item p', tr, 'offices.bangaluru');
+    applyText('.offices-list li:nth-child(5) .offices-item p', tr, 'offices.capetown');
+  }
+
   // Function to update dropdown menu items
   // Helper function to apply text to DOM elements directly
 function applyTextToElement(element, translations, key) {
@@ -1042,14 +1114,12 @@ function applyTextToElement(element, translations, key) {
   }
 }
 
-function updateDropdownMenus(translations) {
-    console.log('updateDropdownMenus called with translations:', Object.keys(translations));
+  function updateDropdownMenus(translations) {
     
     // Services dropdown
     const servicesDropdown = document.querySelector('.services-dropdown');
     if (servicesDropdown) {
         const servicesItems = servicesDropdown.querySelectorAll('a');
-        console.log('Services items found:', servicesItems.length);
         
         servicesItems.forEach((item, index) => {
             const key = `dropdown.services.${['aiConsulting', 'engineering', 'dataAnalytics', 'corporateTraining'][index]}`;
@@ -1061,7 +1131,6 @@ function updateDropdownMenus(translations) {
     const companyDropdown = document.querySelector('.company-dropdown');
     if (companyDropdown) {
         const companyItems = companyDropdown.querySelectorAll('a');
-        console.log('Company items found:', companyItems.length);
         
         companyItems.forEach((item, index) => {
             const key = `dropdown.company.${['profile', 'csr', 'partners', 'industry'][index]}`;
@@ -1133,67 +1202,56 @@ function updateDropdownMenus(translations) {
   }
 
   async function setLanguage(lang){
-    console.log('setLanguage called with:', lang);
     
     try {
       const tr = await loadTranslations(lang);
-      console.log('Translations loaded successfully for:', lang);
       
       setDirAndLang(lang);
       setButtonLabelFromLang(lang);
 
       // Decide which page we're on using unique anchors
       if(document.querySelector('.services-hero-section-v_2')){
-        console.log('Applying index page translations');
         applyIndexTranslations(tr);
       }
       if(document.querySelector('main.about-content')){
-        console.log('Applying about page translations');
         applyAboutTranslations(tr);
       }
       if(document.querySelector('main.industry-content')){
-        console.log('Applying industry page translations');
         applyIndustryTranslations(tr);
       }
       if(document.querySelector('h1.fade-in') && document.querySelector('h1.fade-in').textContent.includes('AI Powered Consulting')){
-        console.log('Applying AI consulting page translations');
         applyAiConsultingTranslations(tr);
       }
       if(document.querySelector('h1.fade-in') && document.querySelector('h1.fade-in').textContent.includes('Data Engineering Expertise')){
-        console.log('Applying data analytics page translations');
         applyDataAnalyticsTranslations(tr);
       }
       if(document.querySelector('h1.fade-in') && document.querySelector('h1.fade-in').textContent.includes('Engineering Solutions')){
-        console.log('Applying engineering services page translations');
         applyEngineeringServicesTranslations(tr);
       }
       if(document.querySelector('h1[style*="font-size: 4rem"]') && document.querySelector('h1[style*="font-size: 4rem"]').textContent.includes('Marln')){
-        console.log('Applying profile page translations');
         applyProfileTranslations(tr);
       }
       if(document.querySelector('main.csr-content')){
-        console.log('Applying CSR page translations');
         applyCsrTranslations(tr);
+      }
+      if(document.querySelector('main.technology-partners-content')){
+        applyTechnologyPartnersTranslations(tr);
       }
       
       // Update dropdown menu items
-      console.log('Updating dropdown menus');
       updateDropdownMenus(tr);
       
       // Also try to update dropdowns after a delay in case they're not immediately available
       setTimeout(() => {
-        console.log('Updating dropdown menus with delay');
         updateDropdownMenus(tr);
       }, 100);
       
       saveLang(lang);
-      console.log('Language switch completed successfully for:', lang);
       
     } catch (error) {
       logError('setLanguage failed', error);
       // Try fallback approach
       try {
-        console.log('Attempting fallback language switch');
         setDirAndLang(lang);
         setButtonLabelFromLang(lang);
         saveLang(lang);
@@ -1204,13 +1262,14 @@ function updateDropdownMenus(translations) {
   }
 
   function initToggleButton(){
-    const toggleBtn = document.querySelector('.menu-item-lang .lang-toggle-button');
-    if(toggleBtn) {
-      toggleBtn.addEventListener('click', function(e){
-        e.preventDefault();
-        const currentLang = this.getAttribute('data-lang');
-        const newLang = currentLang === 'en' ? 'ar' : 'en';
-        this.setAttribute('data-lang', newLang);
+    const toggleInput = document.getElementById('lang-toggle');
+    if(toggleInput) {
+      // Set initial state based on saved language
+      const currentLang = getSavedLang();
+      toggleInput.checked = (currentLang === 'ar');
+      
+      toggleInput.addEventListener('change', function(e){
+        const newLang = this.checked ? 'ar' : 'en';
         setLanguage(newLang);
       });
     }
@@ -1245,4 +1304,43 @@ function updateDropdownMenus(translations) {
       el.textContent = title;
     }
   }
+
+  // Initialize language system when DOM is ready
+  function initializeLanguageSystem() {
+    try {
+      const lang = getSavedLang();
+      setLanguage(lang);
+      initToggleButton();
+    } catch(error) {
+      logError('Failed to initialize language system', error);
+      setLanguage(DEFAULT_LANG);
+    }
+  }
+
+  // Auto-initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeLanguageSystem);
+  } else {
+    initializeLanguageSystem();
+  }
+
+  // Sync language changes across all pages/tabs
+  window.addEventListener('storage', function(e) {
+    if (e.key === 'site-lang' && e.newValue !== e.oldValue) {
+      // Another tab/page changed the language, sync this page
+      const newLang = e.newValue || DEFAULT_LANG;
+      const toggleInput = document.getElementById('lang-toggle');
+      if (toggleInput) {
+        toggleInput.checked = (newLang === 'ar');
+      }
+      setLanguage(newLang);
+    }
+  });
+
+  // CRITICAL: Expose functions to global scope so HTML pages can access them
+  window.setLanguage = setLanguage;
+  window.getSavedLang = getSavedLang;
+  window.updateDropdownMenus = updateDropdownMenus;
+  window.loadTranslations = loadTranslations;
+  
 })(); 

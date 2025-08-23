@@ -259,3 +259,114 @@ html[data-theme="dark"] .header--menu__list > li > .sub-menu > li > a:hover {
         border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
     }
 }
+
+/* Mobile header layout improvements */
+@media (max-width: 768px) {
+    /* Header container alignment */
+    #header .header--content,
+    #header .header-wrapper {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 12px !important;
+        flex-wrap: wrap !important;
+    }
+
+    /* Logo sizing */
+    #header .header--logo img {
+        height: 24px !important;
+        width: auto !important;
+        max-width: 140px !important;
+    }
+
+    /* Menu takes full width below logo */
+    #header .header--menu {
+        width: 100% !important;
+    }
+
+    /* Make menu items wrap nicely */
+    #header .header--menu__list {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 8px 12px !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        margin: 8px 0 0 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Compact menu link sizing */
+    #header .header--menu__list > li > a {
+        padding: 6px 10px !important;
+        font-size: 13px !important;
+        line-height: 1.2 !important;
+        border-radius: 8px !important;
+        white-space: nowrap !important;
+    }
+
+    /* Avoid excessive width on list items */
+    #header .header--menu__list > li {
+        margin: 0 !important;
+    }
+
+    /* Keep theme and language toggles visible on mobile */
+    #header .menu-item-theme,
+    #header .menu-item-lang {
+        display: inline-flex !important;
+        align-items: center !important;
+    }
+
+    /* Mobile dropdowns fill the available width and grid layout for readability */
+    #header .services-dropdown,
+    #header .company-dropdown {
+        position: static !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px !important;
+        padding: 10px !important;
+        background: rgba(0, 0, 0, 0.05) !important;
+        border-radius: 8px !important;
+        box-shadow: none !important;
+    }
+
+    #header .services-dropdown a,
+    #header .company-dropdown a {
+        padding: 10px 12px !important;
+        text-align: left !important;
+        border-radius: 6px !important;
+    }
+}
+
+/* Performance optimizations to prevent forced reflows */
+.theme-toggle-button,
+.lang-toggle-label,
+.header--menu__list > li > a,
+.sub-menu,
+.dropdown-active {
+    will-change: transform, opacity !important;
+    backface-visibility: hidden !important;
+    transform-style: preserve-3d !important;
+}
+
+/* Use transform instead of changing layout properties */
+.header--menu__list > li > .sub-menu {
+    transform: translateX(-50%) translateY(-101%) translateZ(0) !important;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out !important;
+}
+
+.header--menu__list > li.dropdown-active > .sub-menu {
+    transform: translateX(-50%) translateY(0) translateZ(0) !important;
+}
+
+/* Optimize animations with GPU acceleration */
+@media (min-width: 769px) {
+    .header--menu__list > li > .sub-menu {
+        transform: translateX(-50%) translateY(-101%) translateZ(0) !important;
+    }
+    
+    .header--menu__list > li.dropdown-active > .sub-menu {
+        transform: translateX(-50%) translateY(0) translateZ(0) !important;
+    }
+}

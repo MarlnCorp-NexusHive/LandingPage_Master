@@ -1,4 +1,4 @@
-// Dropdown Menu Functionality
+// Dropdown Menu Functionality (Performance Optimized)
 // Handles click-to-open dropdowns that close on outside click or scroll
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -7,49 +7,49 @@ document.addEventListener('DOMContentLoaded', function() {
     let activeDropdown = null;
     let isDropdownOpen = false;
 
-    // Function to close all dropdowns
+    // Function to close all dropdowns (optimized)
     function closeAllDropdowns() {
-        dropdownItems.forEach(item => {
-            const subMenu = item.querySelector('.sub-menu');
-            if (subMenu) {
-                subMenu.style.transform = 'translateX(-50%) translateY(-101%)';
-                subMenu.style.visibility = 'hidden';
-                subMenu.style.opacity = '0';
-                item.classList.remove('dropdown-active');
-            }
+        requestAnimationFrame(() => {
+            dropdownItems.forEach(item => {
+                const subMenu = item.querySelector('.sub-menu');
+                if (subMenu) {
+                    // Use CSS classes instead of inline styles to prevent reflow
+                    item.classList.remove('dropdown-active');
+                }
+            });
+            activeDropdown = null;
+            isDropdownOpen = false;
         });
-        activeDropdown = null;
-        isDropdownOpen = false;
     }
 
-    // Function to open a specific dropdown
+    // Function to open a specific dropdown (optimized)
     function openDropdown(item) {
-        const subMenu = item.querySelector('.sub-menu');
-        if (subMenu) {
-            // Close any other open dropdown first
-            closeAllDropdowns();
-            
-            // Open this dropdown
-            subMenu.style.transform = 'translateX(-50%) translateY(0)';
-            subMenu.style.visibility = 'visible';
-            subMenu.style.opacity = '1';
-            item.classList.add('dropdown-active');
-            activeDropdown = item;
-            isDropdownOpen = true;
-        }
+        requestAnimationFrame(() => {
+            const subMenu = item.querySelector('.sub-menu');
+            if (subMenu) {
+                // Close any other open dropdown first
+                dropdownItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('dropdown-active');
+                    }
+                });
+                
+                // Open this dropdown using CSS class
+                item.classList.add('dropdown-active');
+                activeDropdown = item;
+                isDropdownOpen = true;
+            }
+        });
     }
 
     // Function to toggle dropdown
     function toggleDropdown(item) {
-        const subMenu = item.querySelector('.sub-menu');
-        if (subMenu) {
-            const isCurrentlyOpen = item.classList.contains('dropdown-active');
-            
-            if (isCurrentlyOpen) {
-                closeAllDropdowns();
-            } else {
-                openDropdown(item);
-            }
+        const isCurrentlyOpen = item.classList.contains('dropdown-active');
+        
+        if (isCurrentlyOpen) {
+            closeAllDropdowns();
+        } else {
+            openDropdown(item);
         }
     }
 
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Close dropdown when scrolling
+    // Close dropdown when scrolling (debounced)
     let scrollTimeout;
     document.addEventListener('scroll', function() {
         if (isDropdownOpen) {
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 closeAllDropdowns();
             }, 100); // Small delay to prevent immediate closing
         }
-    });
+    }, { passive: true });
 
     // Close dropdown on escape key
     document.addEventListener('keydown', function(e) {
@@ -90,10 +90,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Handle window resize
+    // Handle window resize (debounced)
+    let resizeTimeout;
     window.addEventListener('resize', function() {
-        if (isDropdownOpen) {
-            closeAllDropdowns();
-        }
-    });
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            if (isDropdownOpen) {
+                closeAllDropdowns();
+            }
+        }, 150);
+    }, { passive: true });
 });

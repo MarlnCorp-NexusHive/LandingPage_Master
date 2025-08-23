@@ -345,5 +345,19 @@
   "csr.flagship.techForAll.title": "التقنية للجميع",
   "csr.flagship.techForAll.text": "سد الفجوة الرقمية من خلال توفير الوصول للتقنية والتدريب على محو الأمية الرقمية وفرص التعليم في العلوم والتكنولوجيا والهندسة والرياضيات للمجتمعات المحرومة.",
   "csr.flagship.communityCare.title": "مبادرة رعاية المجتمع",
-  "csr.flagship.communityCare.text": "دعم المجتمعات المحلية من خلال حملات الطعام والمبادرات الصحية وبرامج الإغاثة الطارئة بالشراكة مع المنظمات المحلية."
+  "csr.flagship.communityCare.text": "دعم المجتمعات المحلية من خلال حملات الطعام والمبادرات الصحية وبرامج الإغاثة الطارئة بالشراكة مع المنظمات المحلية.",
+
+  "techPartners.title": "شركاؤنا التقنيون",
+  "techPartners.automationAnywhere.title": "أوتوميشن أنيوير",
+  "techPartners.automationAnywhere.desc": "حلول الأتمتة الروبوتية",
+  "techPartners.aws.title": "أمازون ويب سيرفيسز",
+  "techPartners.aws.desc": "البنية التحتية السحابية",
+  "techPartners.microsoft.title": "مايكروسوفت",
+  "techPartners.microsoft.desc": "الحلول المؤسسية",
+  "techPartners.google.title": "جوجل",
+  "techPartners.google.desc": "الذكاء الاصطناعي والتحليلات",
+  "techPartners.oracle.title": "أوراكل",
+  "techPartners.oracle.desc": "قواعد البيانات والحوسبة السحابية",
+  "techPartners.databricks.title": "داتابريكس",
+  "techPartners.databricks.desc": "منصة البيانات والذكاء الاصطناعي"
 } 
