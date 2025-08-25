@@ -1,0 +1,170 @@
+/* Language Toggle Styles */
+
+.menu-item-lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.language-toggle {
+    position: relative;
+    display: flex;
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 25px;
+    padding: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 100px;
+    height: 36px;
+    overflow: hidden;
+}
+
+.language-toggle:hover {
+    border-color: #9EE86F;
+    box-shadow: 0 2px 8px rgba(158, 232, 111, 0.2);
+}
+
+.language-toggle.switching {
+    transform: scale(1.05);
+}
+
+.lang-btn {
+    position: relative;
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-family: "Mariupol", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: #666;
+    transition: all 0.3s ease;
+    z-index: 2;
+    min-width: 40px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.lang-btn:hover {
+    color: #333;
+}
+
+.lang-btn.active {
+    color: #333;
+    font-weight: 700;
+}
+
+.lang-btn[data-lang="ar"] {
+    font-size: 11px;
+}
+
+.toggle-slider {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 40px;
+    height: 28px;
+    background: #9EE86F;
+    border-radius: 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme support */
+html[data-theme="dark"] .language-toggle {
+    background: #1A2130;
+    border-color: #2B3647;
+}
+
+html[data-theme="dark"] .lang-btn {
+    color: #aab6c8;
+}
+
+html[data-theme="dark"] .lang-btn:hover,
+html[data-theme="dark"] .lang-btn.active {
+    color: #EEF2F7;
+}
+
+html[data-theme="dark"] .toggle-slider {
+    background: #9EE86F;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .menu-item-lang {
+        margin-left: 10px;
+    }
+    
+    .language-toggle {
+        min-width: 90px;
+        height: 32px;
+    }
+    
+    .lang-btn {
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+    
+    .lang-btn[data-lang="ar"] {
+        font-size: 10px;
+    }
+    
+    .toggle-slider {
+        width: 36px;
+        height: 24px;
+    }
+}
+
+/* RTL support for Arabic */
+html[dir="rtl"] .language-toggle {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .toggle-slider {
+    left: auto;
+    right: 4px;
+}
+
+/* Animation for language switch */
+@keyframes langSwitch {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.language-toggle.switching {
+    animation: langSwitch 0.3s ease;
+}
+
+/* Focus styles for accessibility */
+.lang-btn:focus {
+    outline: 2px solid #9EE86F;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .language-toggle {
+        border-width: 3px;
+    }
+    
+    .toggle-slider {
+        border: 2px solid #000;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .language-toggle,
+    .toggle-slider,
+    .lang-btn {
+        transition: none;
+    }
+    
+    .language-toggle.switching {
+        animation: none;
+    }
+} 

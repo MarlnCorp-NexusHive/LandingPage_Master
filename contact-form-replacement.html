@@ -1,0 +1,141 @@
+<!-- Replace the existing WordPress contact form with this -->
+<div class="contact-form-static">
+    <h2 class="contact-us--form--title cf-title">
+        Kick Start Your Project Right Now
+    </h2>
+    
+    <form id="contactForm" class="contact-form" action="#" method="POST">
+        <div class="form-group">
+            <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                class="form-control" 
+                placeholder="Name*" 
+                required
+            >
+        </div>
+        
+        <div class="form-group">
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                class="form-control" 
+                placeholder="E-mail*" 
+                required
+            >
+        </div>
+        
+        <div class="form-group">
+            <textarea 
+                id="message" 
+                name="message" 
+                class="form-control" 
+                rows="10" 
+                placeholder="Tell us about your project" 
+                required
+            ></textarea>
+        </div>
+        
+        <div class="form-group">
+            <button type="submit" class="btn btn-standart btn-light btn-lt">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-drop-down-items">
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+        </div>
+    </form>
+    
+    <!-- Success Message (hidden by default) -->
+    <div id="successMessage" class="success-message" style="display: none;">
+        <div class="thank-you--wrapper thank-you-for-another-form--wrapper">
+            <div class="thank-you-for-another-form--icon text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="126" height="126" viewBox="0 0 126 126" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M42.6019 119.709C43.5802 119.86 44.569 119.978 45.5676 120.061C72.3651 122.3 96.0054 98.8873 98.3696 67.7677C100.734 36.6481 80.9266 9.606 54.1291 7.36742C47.8332 6.84149 41.7116 7.73144 35.9992 9.80458C44.5259 4.52554 54.5969 2.03974 65.4947 3.34022C71.3306 4.03666 77.5492 5.31428 80.7478 6.26097C105.419 13.563 119.618 37.6833 117.394 66.9592C115.437 92.7219 100.273 112.19 79.0234 118.917C72.9949 120.826 65.76 121.422 57.8018 121.839C52.3881 122.123 47.2991 121.352 42.6019 119.709Z" fill="#6aa84f"></path>
+                </svg>
+            </div>
+            <p class="h3 uppercase text-center thank-you-for-another-form--title">
+                Well done!
+            </p>
+            <p class="txt txt-xl text-center thank-you-for-another-form--text">
+                We will contact you in the next few hours or you can schedule an appointment now.
+            </p>
+            <div class="text-center thank-you-for-another-form--btn">
+                <a href="https://marlncorp.pipedrive.com/scheduler/Wr7eRMT1/meeting-with-the-team" 
+                   class="btn btn-standart btn-light" 
+                   title="Schedule a meeting" 
+                   target="_blank" 
+                   rel="nofollow">
+                    <span class="btn-text">Schedule a meeting</span>
+                    <span class="btn-drop-down-items">
+                        <span></span>
+                        <span></span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Contact Form Styling */
+.contact-form-static {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    background: #fff;
+    color: #0C081E;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #9EE86F;
+    box-shadow: 0 0 0 3px rgba(158, 232, 111, 0.1);
+}
+
+.form-control::placeholder {
+    color: #aab6c8;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.success-message {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(106, 168, 79, 0.1);
+    border-radius: 8px;
+    border: 1px solid #6aa84f;
+}
+
+/* Dark mode support */
+html[data-theme="dark"] .form-control {
+    background: #141923;
+    border-color: #2B3647;
+    color: #eef2f7;
+}
+
+html[data-theme="dark"] .form-control::placeholder {
+    color: #aab6c8;
+}
+
+html[data-theme="dark"] .form-control:focus {
+    border-color: #9EE86F;
+}
+</style>
