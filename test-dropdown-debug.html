@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dropdown Debug Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .debug-info { background: #f0f0f0; padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .services-dropdown, .company-dropdown { 
+            background: white; 
+            border: 1px solid #ccc; 
+            padding: 10px; 
+            margin: 10px 0;
+            display: block;
+        }
+        .services-dropdown li, .company-dropdown li {
+            list-style: none;
+            margin: 5px 0;
+        }
+        .services-dropdown a, .company-dropdown a {
+            text-decoration: none;
+            color: #333;
+        }
+        .language-toggle {
+            margin: 20px 0;
+        }
+        .lang-toggle-input {
+            display: none;
+        }
+        .lang-toggle-label {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007cba;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dropdown Menu Translation Debug Test</h1>
+    
+    <div class="language-toggle">
+        <input type="checkbox" id="lang-toggle" class="lang-toggle-input">
+        <label for="lang-toggle" class="lang-toggle-label">
+            <span class="lang-text lang-english">EN</span>
+            <span class="lang-text lang-arabic">عربي</span>
+            <span class="toggle-slider"></span>
+        </label>
+    </div>
+
+    <div class="debug-info" id="debug-info">
+        <h3>Debug Information:</h3>
+        <div id="debug-output">Loading...</div>
+    </div>
+
+    <!-- Simulated Services Dropdown -->
+    <div class="services-dropdown">
+        <h3>Services Dropdown:</h3>
+        <ul>
+            <li><a href="ai-powered-consulting.html">AI Powered Consulting</a></li>
+            <li><a href="engineering-services.html">Engineering Services</a></li>
+            <li><a href="data-analytics.html">Data Analytics</a></li>
+            <li><a href="https://a1siliconvalley.com/" target="_blank" rel="noopener noreferrer">Corporate Training</a></li>
+        </ul>
+    </div>
+
+    <!-- Simulated Company Dropdown -->
+    <div class="company-dropdown">
+        <h3>Company Dropdown:</h3>
+        <ul>
+            <li><a href="marln-company-profile.html">Marln Company Profile</a></li>
+            <li><a href="corporate-social-responsibility.html">Corporate Social Responsibility (CSR)</a></li>
+            <li><a href="technology-partners.html">Technology Partners</a></li>
+            <li><a href="industry.html">Industry</a></li>
+        </ul>
+    </div>
+
+    <script src="js/lang.js"></script>
+    <script>
+        // Debug function to check dropdown elements
+        function debugDropdowns() {
+            const debugOutput = document.getElementById('debug-output');
+            let debugInfo = '';
+
+            // Check if services dropdown exists
+            const servicesDropdown = document.querySelector('.services-dropdown');
+            debugInfo += `<p><strong>Services Dropdown Found:</strong> ${servicesDropdown ? 'YES' : 'NO'}</p>`;
+            
+            if (servicesDropdown) {
+                const servicesItems = servicesDropdown.querySelectorAll('li a');
+                debugInfo += `<p><strong>Services Items Found:</strong> ${servicesItems.length}</p>`;
+                debugInfo += `<p><strong>Services Items:</strong></p><ul>`;
+                servicesItems.forEach((item, index) => {
+                    debugInfo += `<li>${index + 1}: "${item.textContent}"</li>`;
+                });
+                debugInfo += `</ul>`;
+            }
+
+            // Check if company dropdown exists
+            const companyDropdown = document.querySelector('.company-dropdown');
+            debugInfo += `<p><strong>Company Dropdown Found:</strong> ${companyDropdown ? 'YES' : 'NO'}</p>`;
+            
+            if (companyDropdown) {
+                const companyItems = companyDropdown.querySelectorAll('li a');
+                debugInfo += `<p><strong>Company Items Found:</strong> ${companyItems.length}</p>`;
+                debugInfo += `<p><strong>Company Items:</strong></p><ul>`;
+                companyItems.forEach((item, index) => {
+                    debugInfo += `<li>${index + 1}: "${item.textContent}"</li>`;
+                });
+                debugInfo += `</ul>`;
+            }
+
+            // Check if setLanguage function exists
+            debugInfo += `<p><strong>setLanguage Function Available:</strong> ${typeof window.setLanguage === 'function' ? 'YES' : 'NO'}</p>`;
+
+            // Check current language
+            const currentLang = localStorage.getItem('site-lang') || 'en';
+            debugInfo += `<p><strong>Current Language:</strong> ${currentLang}</p>`;
+
+            debugOutput.innerHTML = debugInfo;
+        }
+
+        // Run debug on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(debugDropdowns, 1000);
+            
+            // Add language toggle listener
+            const langToggle = document.getElementById('lang-toggle');
+            if (langToggle) {
+                langToggle.addEventListener('change', function() {
+                    setTimeout(debugDropdowns, 500); // Re-run debug after language change
+                });
+            }
+        });
+
+        // Override updateDropdownMenus to add debugging
+        const originalUpdateDropdownMenus = window.updateDropdownMenus;
+        if (typeof originalUpdateDropdownMenus === 'function') {
+            window.updateDropdownMenus = function(tr) {
+                console.log('updateDropdownMenus called with translations:', tr);
+                
+                // Update Services dropdown items
+                const servicesDropdown = document.querySelector('.services-dropdown');
+                console.log('Services dropdown found:', servicesDropdown);
+                if (servicesDropdown) {
+                    const servicesItems = servicesDropdown.querySelectorAll('li a');
+                    console.log('Services items found:', servicesItems.length);
+                    if (servicesItems.length >= 4) {
+                        console.log('Applying translations to services items...');
+                        // Call the original function
+                        originalUpdateDropdownMenus(tr);
+                    }
+                }
+
+                // Update Company dropdown items
+                const companyDropdown = document.querySelector('.company-dropdown');
+                console.log('Company dropdown found:', companyDropdown);
+                if (companyDropdown) {
+                    const companyItems = companyDropdown.querySelectorAll('li a');
+                    console.log('Company items found:', companyItems.length);
+                    if (companyItems.length >= 4) {
+                        console.log('Applying translations to company items...');
+                        // Call the original function
+                        originalUpdateDropdownMenus(tr);
+                    }
+                }
+            };
+        }
+    </script>
+</body>
+</html>
