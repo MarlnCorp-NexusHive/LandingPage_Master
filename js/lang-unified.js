@@ -14,6 +14,67 @@
         console.warn('🌍 Language System:', message, error);
     }
     
+    // Hero image switching functions
+    function switchHeroImagesToArabic() {
+        try {
+            // Hide English hero images
+            const englishLight = document.querySelector('.hero-light');
+            const englishDark = document.querySelector('.hero-dark');
+            
+            if (englishLight) englishLight.style.display = 'none';
+            if (englishDark) englishDark.style.display = 'none';
+            
+            // Show Arabic hero images based on current theme
+            const arabicLight = document.querySelector('.hero-arabic-light');
+            const arabicDark = document.querySelector('.hero-arabic-dark');
+            const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+            
+            if (arabicLight && arabicDark) {
+                if (isDarkMode) {
+                    arabicLight.style.display = 'none';
+                    arabicDark.style.display = 'block';
+                } else {
+                    arabicLight.style.display = 'block';
+                    arabicDark.style.display = 'none';
+                }
+            }
+            
+            console.log('🖼️ Switched hero images to Arabic versions');
+        } catch (error) {
+            logError('Failed to switch hero images to Arabic', error);
+        }
+    }
+    
+    function switchHeroImagesToEnglish() {
+        try {
+            // Hide Arabic hero images
+            const arabicLight = document.querySelector('.hero-arabic-light');
+            const arabicDark = document.querySelector('.hero-arabic-dark');
+            
+            if (arabicLight) arabicLight.style.display = 'none';
+            if (arabicDark) arabicDark.style.display = 'none';
+            
+            // Show English hero images based on current theme
+            const englishLight = document.querySelector('.hero-light');
+            const englishDark = document.querySelector('.hero-dark');
+            const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+            
+            if (englishLight && englishDark) {
+                if (isDarkMode) {
+                    englishLight.style.display = 'none';
+                    englishDark.style.display = 'block';
+                } else {
+                    englishLight.style.display = 'block';
+                    englishDark.style.display = 'none';
+                }
+            }
+            
+            console.log('🖼️ Switched hero images to English versions');
+        } catch (error) {
+            logError('Failed to switch hero images to English', error);
+        }
+    }
+    
     // Comprehensive embedded translations for ALL pages
     const EMBEDDED = {
         ar: {
@@ -629,6 +690,9 @@
                if (lang === 'ar') {
                    // Applying Arabic translations
                    
+                   // Switch hero images to Arabic versions
+                   switchHeroImagesToArabic();
+                   
                    // Apply index page translations
                    if (document.querySelector('.services-hero-section-v_2')) {
                        applyIndexTranslations(translations);
@@ -689,6 +753,9 @@
                    applyContactAndFooterTranslations(translations);
                                } else if (lang === 'en') {
                     // Reverting to English
+                    
+                    // Switch hero images back to English versions
+                    switchHeroImagesToEnglish();
                     
                     // For reliable English reversion, refresh the page
                     // This ensures all content returns to original English state
@@ -1267,6 +1334,61 @@
         if (savedLang !== DEFAULT_LANG) {
             setLanguage(savedLang);
         }
+    });
+    
+    // Handle theme changes to ensure correct hero images are shown
+    function handleThemeChange() {
+        try {
+            const currentLang = getSavedLang();
+            const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+            
+            if (currentLang === 'ar') {
+                // Arabic mode - show appropriate Arabic image
+                const arabicLight = document.querySelector('.hero-arabic-light');
+                const arabicDark = document.querySelector('.hero-arabic-dark');
+                
+                if (arabicLight && arabicDark) {
+                    if (isDarkMode) {
+                        arabicLight.style.display = 'none';
+                        arabicDark.style.display = 'block';
+                    } else {
+                        arabicLight.style.display = 'block';
+                        arabicDark.style.display = 'none';
+                    }
+                }
+            } else {
+                // English mode - show appropriate English image
+                const englishLight = document.querySelector('.hero-light');
+                const englishDark = document.querySelector('.hero-dark');
+                
+                if (englishLight && englishDark) {
+                    if (isDarkMode) {
+                        englishLight.style.display = 'none';
+                        englishDark.style.display = 'block';
+                    } else {
+                        englishLight.style.display = 'block';
+                        englishDark.style.display = 'none';
+                    }
+                }
+            }
+        } catch (error) {
+            logError('Failed to handle theme change for hero images', error);
+        }
+    }
+    
+    // Listen for theme changes
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+                handleThemeChange();
+            }
+        });
+    });
+    
+    // Start observing theme changes
+    observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['data-theme']
     });
     
     // Additional protection: Initialize after a delay to avoid conflicts with custom scripts

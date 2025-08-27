@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Arabic Hero Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f0f0f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .image-item {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        canvas {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .download-btn {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 5px;
+        }
+        .download-btn:hover {
+            background: #45a049;
+        }
+        .instructions {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #2196F3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Arabic Hero Images Generator</h1>
+        
+        <div class="instructions">
+            <h3>Instructions:</h3>
+            <ol>
+                <li>Click the "Generate Images" button to create placeholder Arabic hero images</li>
+                <li>Right-click on each image and select "Save image as..."</li>
+                <li>Save the light mode image as "marln-hero-image-arabic.png"</li>
+                <li>Save the dark mode image as "marln-hero-image-arabic-dark.png"</li>
+                <li>Place both images in your "images" folder</li>
+                <li>Replace these placeholder images with your actual Arabic hero images</li>
+            </ol>
+        </div>
+
+        <button class="download-btn" onclick="generateImages()">Generate Arabic Hero Images</button>
+        
+        <div class="image-container" id="imageContainer">
+            <!-- Images will be generated here -->
+        </div>
+    </div>
+
+    <script>
+        function generateImages() {
+            const container = document.getElementById('imageContainer');
+            container.innerHTML = '';
+            
+            // Generate Light Mode Arabic Hero Image
+            const lightCanvas = document.createElement('canvas');
+            lightCanvas.width = 1920;
+            lightCanvas.height = 1080;
+            const lightCtx = lightCanvas.getContext('2d');
+            
+            // Light mode background gradient
+            const lightGradient = lightCtx.createLinearGradient(0, 0, 1920, 1080);
+            lightGradient.addColorStop(0, '#ffffff');
+            lightGradient.addColorStop(0.5, '#f8f9fa');
+            lightGradient.addColorStop(1, '#e9ecef');
+            
+            lightCtx.fillStyle = lightGradient;
+            lightCtx.fillRect(0, 0, 1920, 1080);
+            
+            // Add Arabic text overlay
+            lightCtx.fillStyle = '#2c3e50';
+            lightCtx.font = 'bold 72px Arial, sans-serif';
+            lightCtx.textAlign = 'center';
+            lightCtx.fillText('مرحباً بكم في Marln Corporation', 960, 400);
+            
+            lightCtx.fillStyle = '#34495e';
+            lightCtx.font = '36px Arial, sans-serif';
+            lightCtx.fillText('شريككم الموثوق في التحول الرقمي والابتكار', 960, 480);
+            
+            lightCtx.fillStyle = '#7f8c8d';
+            lightCtx.font = '24px Arial, sans-serif';
+            lightCtx.fillText('Light Mode - Arabic Version', 960, 600);
+            
+            // Add decorative elements
+            lightCtx.strokeStyle = '#3498db';
+            lightCtx.lineWidth = 3;
+            lightCtx.beginPath();
+            lightCtx.moveTo(200, 200);
+            lightCtx.lineTo(1720, 200);
+            lightCtx.stroke();
+            
+            lightCtx.beginPath();
+            lightCtx.moveTo(200, 880);
+            lightCtx.lineTo(1720, 880);
+            lightCtx.stroke();
+            
+            // Generate Dark Mode Arabic Hero Image
+            const darkCanvas = document.createElement('canvas');
+            darkCanvas.width = 1920;
+            darkCanvas.height = 1080;
+            const darkCtx = darkCanvas.getContext('2d');
+            
+            // Dark mode background gradient
+            const darkGradient = darkCtx.createLinearGradient(0, 0, 1920, 1080);
+            darkGradient.addColorStop(0, '#1a1a1a');
+            darkGradient.addColorStop(0.5, '#2d2d2d');
+            darkGradient.addColorStop(1, '#0e1116');
+            
+            darkCtx.fillStyle = darkGradient;
+            darkCtx.fillRect(0, 0, 1920, 1080);
+            
+            // Add Arabic text overlay for dark mode
+            darkCtx.fillStyle = '#ffffff';
+            darkCtx.font = 'bold 72px Arial, sans-serif';
+            darkCtx.textAlign = 'center';
+            darkCtx.fillText('مرحباً بكم في Marln Corporation', 960, 400);
+            
+            darkCtx.fillStyle = '#ecf0f1';
+            darkCtx.font = '36px Arial, sans-serif';
+            darkCtx.fillText('شريككم الموثوق في التحول الرقمي والابتكار', 960, 480);
+            
+            darkCtx.fillStyle = '#bdc3c7';
+            darkCtx.font = '24px Arial, sans-serif';
+            darkCtx.fillText('Dark Mode - Arabic Version', 960, 600);
+            
+            // Add decorative elements for dark mode
+            darkCtx.strokeStyle = '#3498db';
+            darkCtx.lineWidth = 3;
+            darkCtx.beginPath();
+            darkCtx.moveTo(200, 200);
+            darkCtx.lineTo(1720, 200);
+            darkCtx.stroke();
+            
+            darkCtx.beginPath();
+            darkCtx.moveTo(200, 880);
+            darkCtx.lineTo(1720, 880);
+            darkCtx.stroke();
+            
+            // Create image containers
+            const lightContainer = document.createElement('div');
+            lightContainer.className = 'image-item';
+            
+            const lightTitle = document.createElement('h3');
+            lightTitle.textContent = 'Arabic Hero Image - Light Mode';
+            lightTitle.style.color = '#333';
+            
+            const lightBtn = document.createElement('button');
+            lightBtn.className = 'download-btn';
+            lightBtn.textContent = 'Download Light Mode';
+            lightBtn.onclick = () => downloadCanvas(lightCanvas, 'marln-hero-image-arabic.png');
+            
+            lightContainer.appendChild(lightTitle);
+            lightContainer.appendChild(lightCanvas);
+            lightContainer.appendChild(lightBtn);
+            
+            const darkContainer = document.createElement('div');
+            darkContainer.className = 'image-item';
+            
+            const darkTitle = document.createElement('h3');
+            darkTitle.textContent = 'Arabic Hero Image - Dark Mode';
+            darkTitle.style.color = '#333';
+            
+            const darkBtn = document.createElement('button');
+            darkBtn.className = 'download-btn';
+            darkBtn.textContent = 'Download Dark Mode';
+            darkBtn.onclick = () => downloadCanvas(darkCanvas, 'marln-hero-image-arabic-dark.png');
+            
+            darkContainer.appendChild(darkTitle);
+            darkContainer.appendChild(darkCanvas);
+            darkContainer.appendChild(darkBtn);
+            
+            container.appendChild(lightContainer);
+            container.appendChild(darkContainer);
+        }
+        
+        function downloadCanvas(canvas, filename) {
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+        
+        // Auto-generate images on page load
+        window.onload = function() {
+            generateImages();
+        };
+    </script>
+</body>
+</html>
