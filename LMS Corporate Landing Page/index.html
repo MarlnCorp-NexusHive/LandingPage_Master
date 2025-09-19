@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARLN Corporate LMS - Your University. Simplified.</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/cropped-Favicon-1-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/cropped-Favicon-1-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/cropped-Favicon-1-180x180.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Iconify Icons -->
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="../index.html" class="nav-logo">
+                <img id="logo-img" src="images/marlncorplight.svg" alt="MarLn Corp" class="logo-img">
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#features" class="nav-link">Features</a></li>
+                    <li><a href="#faqs" class="nav-link">FAQs</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-controls">
+                <div class="nav-controls-group">
+                    <button class="language-toggle" id="language-toggle" aria-label="Switch to Arabic">
+                        <div class="language-flag">EN</div>
+                        <span class="language-text">English</span>
+                        <iconify-icon icon="tabler:language" class="language-icon"></iconify-icon>
+                    </button>
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode">
+                        <span class="theme-emoji">☀️</span>
+                    </button>
+                </div>
+                
+                <div class="nav-buttons">
+                    <button class="btn btn-primary btn-small" id="contact-btn">I'm Interested</button>
+                    <button class="btn btn-transparent btn-small nav-signin">Sign In</button>
+                    <button class="btn btn-dark btn-small">Sign Up</button>
+                </div>
+                
+                <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+                    <iconify-icon icon="tabler:menu-2" class="nav-toggle-icon"></iconify-icon>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    
+                    <h1 class="hero-title title-gradient">
+                        <div data-en="One LMS." data-ar="نظام إدارة تعلم واحد.">One LMS.</div>
+                        <div data-en="Every Workforce." data-ar="كل قوة عاملة.">Every Workforce.</div>
+                        <div data-en="Endless Growth." data-ar="نمو لا محدود.">Endless Growth.</div>
+                    </h1>
+                    
+                    <p class="hero-description" data-en="Equip your enterprise with an AI-powered LMS designed to centralize training, boost employee engagement, and drive continuous professional development." data-ar="جهز مؤسستك بنظام إدارة تعلم مدعوم بالذكاء الاصطناعي مصمم لمركزة التدريب وزيادة مشاركة الموظفين ودفع التطوير المهني المستمر.">Equip your enterprise with an AI-powered LMS designed to centralize training, boost employee engagement, and drive continuous professional development.</p>
+                    
+                    
+                    <div class="hero-buttons">
+                        <button class="btn btn-dark">Start Free Trial</button>
+                        <button class="btn btn-transparent btn-link" id="terms-btn">
+                            <span data-en="Terms of Service" data-ar="شروط الخدمة">Terms of Service</span>
+                            <span class="btn-emoji">→</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <img id="hero-img" src="images/tablet-mockup.png" alt="MarLn University LMS Dashboard - Modern, responsive dashboard built with React + Tailwind — giving you real-time analytics, smooth navigation, and a delightful user experience." class="hero-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Transform Your Corporate Learning Experience" data-ar="حول تجربة التعلم المؤسسي الخاصة بك">Transform Your Corporate Learning Experience</h2>
+                <p class="section-description" data-en="Discover a comprehensive suite of features designed for enterprise learning. From employee onboarding and compliance training to skill development and performance tracking, everything you need is in one powerful LMS platform." data-ar="اكتشف مجموعة شاملة من الميزات المصممة للتعلم المؤسسي. من توجيه الموظفين والتدريب على الامتثال إلى تطوير المهارات وتتبع الأداء، كل ما تحتاجه في منصة إدارة تعلم قوية واحدة.">Discover a comprehensive suite of features designed for enterprise learning. From employee onboarding and compliance training to skill development and performance tracking, everything you need is in one powerful LMS platform.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="feature-emoji">👥</span>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title" data-en="Role-Based Learning Paths" data-ar="مسارات التعلم القائمة على الأدوار">Role-Based Learning Paths</h3>
+                        <p class="feature-description" data-en="Personalized learning journeys tailored to each employee's role and career goals." data-ar="رحلات تعلم مخصصة مصممة لكل موظف حسب دوره وأهدافه المهنية.">Personalized learning journeys tailored to each employee's role and career goals.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="feature-emoji">🎓</span>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title" data-en="Smart Onboarding System" data-ar="نظام التوجيه الذكي">Smart Onboarding System</h3>
+                        <p class="feature-description" data-en="Streamline new employee orientation with automated workflows and progress tracking." data-ar="تبسيط توجيه الموظفين الجدد مع سير العمل الآلي وتتبع التقدم.">Streamline new employee orientation with automated workflows and progress tracking.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="feature-emoji">📊</span>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title" data-en="Learning Analytics" data-ar="تحليلات التعلم">Learning Analytics</h3>
+                        <p class="feature-description" data-en="Track learning progress, engagement metrics, and skill development insights." data-ar="تتبع تقدم التعلم ومقاييس المشاركة ورؤى تطوير المهارات.">Track learning progress, engagement metrics, and skill development insights.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="feature-emoji">👔</span>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title" data-en="Compliance Training" data-ar="التدريب على الامتثال">Compliance Training</h3>
+                        <p class="feature-description" data-en="Automated compliance tracking, certification management, and audit-ready reporting." data-ar="تتبع الامتثال الآلي وإدارة الشهادات والتقارير الجاهزة للتدقيق.">Automated compliance tracking, certification management, and audit-ready reporting.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="feature-emoji">📢</span>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title" data-en="Content Management" data-ar="إدارة المحتوى">Content Management</h3>
+                        <p class="feature-description" data-en="Create, organize, and deliver engaging learning content across multiple formats." data-ar="إنشاء وتنظيم وتقديم محتوى تعليمي جذاب عبر تنسيقات متعددة.">Create, organize, and deliver engaging learning content across multiple formats.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="feature-emoji">🔒</span>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title" data-en="Enterprise Security" data-ar="الأمان المؤسسي">Enterprise Security</h3>
+                        <p class="feature-description" data-en="Advanced security features with SSO integration and data protection compliance." data-ar="ميزات أمان متقدمة مع تكامل تسجيل الدخول الموحد وامتثال حماية البيانات.">Advanced security features with SSO integration and data protection compliance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Large Feature Section 1 -->
+    <section class="large-feature">
+        <div class="container">
+            <div class="large-feature-content">
+                <div class="large-feature-text">
+                    <h2 class="large-feature-title" data-en="AI-Powered Learning Experience" data-ar="تجربة التعلم المدعومة بالذكاء الاصطناعي">AI-Powered Learning Experience</h2>
+                    <p class="large-feature-description" data-en="Harness the power of artificial intelligence to revolutionize corporate training, personalize learning experiences, and maximize employee development outcomes. From intelligent content recommendations to automated skill assessments, AI transforms how your workforce learns and grows." data-ar="استفد من قوة الذكاء الاصطناعي لإحداث ثورة في التدريب المؤسسي وتخصيص تجارب التعلم وزيادة نتائج تطوير الموظفين. من التوصيات الذكية للمحتوى إلى تقييمات المهارات الآلية، يحول الذكاء الاصطناعي طريقة تعلم ونمو قوتك العاملة.">Harness the power of artificial intelligence to revolutionize corporate training, personalize learning experiences, and maximize employee development outcomes. From intelligent content recommendations to automated skill assessments, AI transforms how your workforce learns and grows.</p>
+                    
+                    <div class="feature-list">
+                        <div class="feature-list-item">
+                            <div class="feature-list-icon">
+                                <span class="feature-list-emoji">🎯</span>
+                            </div>
+                            <div class="feature-list-content">
+                                <h3 class="feature-list-title" data-en="Smart Learning Paths" data-ar="مسارات التعلم الذكية">Smart Learning Paths</h3>
+                                <p class="feature-list-description" data-en="AI automatically creates personalized learning journeys based on employee roles, skills gaps, and career goals." data-ar="ينشئ الذكاء الاصطناعي تلقائياً رحلات تعلم مخصصة بناءً على أدوار الموظفين وفجوات المهارات والأهداف المهنية.">AI automatically creates personalized learning journeys based on employee roles, skills gaps, and career goals.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-list-item">
+                            <div class="feature-list-icon">
+                                <span class="feature-list-emoji">📈</span>
+                            </div>
+                            <div class="feature-list-content">
+                                <h3 class="feature-list-title" data-en="Predictive Learning Analytics" data-ar="تحليلات التعلم التنبؤية">Predictive Learning Analytics</h3>
+                                <p class="feature-list-description" data-en="Forecast learning outcomes, identify at-risk learners, and optimize training effectiveness with data-driven insights." data-ar="التنبؤ بنتائج التعلم وتحديد المتعلمين المعرضين للخطر وتحسين فعالية التدريب مع الرؤى القائمة على البيانات.">Forecast learning outcomes, identify at-risk learners, and optimize training effectiveness with data-driven insights.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-list-item">
+                            <div class="feature-list-icon">
+                                <span class="feature-list-emoji">🎨</span>
+                            </div>
+                            <div class="feature-list-content">
+                                <h3 class="feature-list-title" data-en="Adaptive Content Delivery" data-ar="توصيل المحتوى التكيفي">Adaptive Content Delivery</h3>
+                                <p class="feature-list-description" data-en="AI dynamically adjusts content difficulty, format, and pace based on individual learning patterns and preferences." data-ar="يعدل الذكاء الاصطناعي ديناميكياً صعوبة المحتوى والتنسيق والسرعة بناءً على أنماط وتفضيلات التعلم الفردية.">AI dynamically adjusts content difficulty, format, and pace based on individual learning patterns and preferences.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="large-feature-image">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2084&q=80" alt="AI-Powered LMS Experience - Professional team in office meeting discussing AI-powered learning analytics and training insights" class="large-feature-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Large Feature Section 2 -->
+    <section class="large-feature large-feature-reverse">
+        <div class="container">
+            <div class="large-feature-content">
+                <div class="large-feature-text">
+                    <h2 class="large-feature-title" data-en="Comprehensive Learning Management" data-ar="إدارة التعلم الشاملة">Comprehensive Learning Management</h2>
+                    <p class="large-feature-description" data-en="A complete learning management solution with powerful content creation tools, advanced progress tracking, and seamless integration capabilities designed to meet your organization's unique training requirements." data-ar="حل إدارة التعلم كامل مع أدوات إنشاء المحتوى القوية وتتبع التقدم المتقدم وقدرات التكامل السلس المصممة لتلبية متطلبات التدريب الفريدة لمنظمتك.">A complete learning management solution with powerful content creation tools, advanced progress tracking, and seamless integration capabilities designed to meet your organization's unique training requirements.</p>
+                    
+                    <div class="feature-list">
+                        <div class="feature-list-item">
+                            <div class="feature-list-icon">
+                                <span class="feature-list-emoji">📊</span>
+                            </div>
+                            <div class="feature-list-content">
+                                <h3 class="feature-list-title" data-en="Progress & Performance Tracking" data-ar="تتبع التقدم والأداء">Progress & Performance Tracking</h3>
+                                <p class="feature-list-description" data-en="Monitor employee learning progress, skill development, and training completion rates with detailed analytics." data-ar="راقب تقدم تعلم الموظفين وتطوير المهارات ومعدلات إكمال التدريب مع التحليلات التفصيلية.">Monitor employee learning progress, skill development, and training completion rates with detailed analytics.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-list-item">
+                            <div class="feature-list-icon">
+                                <span class="feature-list-emoji">🔒</span>
+                            </div>
+                            <div class="feature-list-content">
+                                <h3 class="feature-list-title" data-en="Secure Learning Environment" data-ar="بيئة التعلم الآمنة">Secure Learning Environment</h3>
+                                <p class="feature-list-description" data-en="Enterprise-grade security with encrypted content delivery, secure user authentication, and compliance with data protection standards." data-ar="أمان على مستوى المؤسسات مع توصيل المحتوى المشفر ومصادقة المستخدم الآمنة والامتثال لمعايير حماية البيانات.">Enterprise-grade security with encrypted content delivery, secure user authentication, and compliance with data protection standards.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-list-item">
+                            <div class="feature-list-icon">
+                                <span class="feature-list-emoji">⚙️</span>
+                            </div>
+                            <div class="feature-list-content">
+                                <h3 class="feature-list-title" data-en="Flexible Learning Workflows" data-ar="سير عمل التعلم المرن">Flexible Learning Workflows</h3>
+                                <p class="feature-list-description" data-en="Customize learning paths, approval processes, and certification workflows to match your organization's unique training structure." data-ar="خصص مسارات التعلم وعمليات الموافقة وسير عمل الشهادات لتتماشى مع هيكل التدريب الفريد لمنظمتك.">Customize learning paths, approval processes, and certification workflows to match your organization's unique training structure.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="large-feature-image">
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Comprehensive LMS Management - Professional team in modern office engaged in collaborative learning and training session" class="large-feature-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faqs">
+        <div class="container">
+            <div class="faq-content">
+                <div class="faq-header">
+                    <h2 class="faq-title" data-en="Frequently Asked Questions" data-ar="الأسئلة الشائعة">Frequently Asked Questions</h2>
+                    <p class="faq-description" data-en="Here are some of our most frequently asked questions. If you have a question that isn't answered here, please feel free to contact us." data-ar="إليك بعض الأسئلة الأكثر شيوعاً لدينا. إذا كان لديك سؤال غير مجاب عليه هنا، فلا تتردد في الاتصال بنا.">Here are some of our most frequently asked questions. If you have a question that isn't answered here, please feel free to contact us.</p>
+                    <button class="btn btn-primary btn-link">
+                        <span data-en="Contact Support" data-ar="اتصل بالدعم">Contact Support</span>
+                        <iconify-icon icon="tabler:arrow-right" class="btn-icon"></iconify-icon>
+                    </button>
+                </div>
+                
+                <div class="faq-accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <span class="accordion-title" data-en="What is MARLN LMS Corporate and who is it for?" data-ar="ما هو نظام إدارة التعلم المؤسسي في مارلن ولمن هو مخصص؟">What is MARLN LMS Corporate and who is it for?</span>
+                            <iconify-icon icon="tabler:chevron-down" class="accordion-icon"></iconify-icon>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="accordion-text" data-en="MARLN LMS Corporate is an enterprise-grade learning management system designed for organizations to centralize employee training, compliance, onboarding, and professional development. It's built for HR leaders, managers, trainers, and employees across industries." data-ar="نظام إدارة التعلم المؤسسي في مارلن هو نظام إدارة تعلم على مستوى المؤسسات مصمم للمنظمات لمركزة تدريب الموظفين والامتثال والتوجيه والتطوير المهني. تم بناؤه لقادة الموارد البشرية والمديرين والمدربين والموظفين عبر الصناعات.">MARLN LMS Corporate is an enterprise-grade learning management system designed for organizations to centralize employee training, compliance, onboarding, and professional development. It's built for HR leaders, managers, trainers, and employees across industries.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <span class="accordion-title" data-en="How does MARLN LMS Corporate support compliance training?" data-ar="كيف يدعم نظام إدارة التعلم المؤسسي في مارلن تدريب الامتثال؟">How does MARLN LMS Corporate support compliance training?</span>
+                            <iconify-icon icon="tabler:chevron-down" class="accordion-icon"></iconify-icon>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="accordion-text" data-en="The platform includes automated compliance tracking, audit-ready reporting, and digital certification management. Role-specific dashboards ensure HR and executives can monitor regulatory compliance effortlessly." data-ar="تتضمن المنصة تتبع الامتثال الآلي والتقارير الجاهزة للتدقيق وإدارة الشهادات الرقمية. تضمن لوحات التحكم المخصصة للأدوار أن تتمكن الموارد البشرية والتنفيذيين من مراقبة الامتثال التنظيمي بسهولة.">The platform includes automated compliance tracking, audit-ready reporting, and digital certification management. Role-specific dashboards ensure HR and executives can monitor regulatory compliance effortlessly.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <span class="accordion-title" data-en="Can the LMS scale for large enterprises with global teams?" data-ar="هل يمكن لنظام إدارة التعلم التوسع للمؤسسات الكبيرة مع الفرق العالمية؟">Can the LMS scale for large enterprises with global teams?</span>
+                            <iconify-icon icon="tabler:chevron-down" class="accordion-icon"></iconify-icon>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="accordion-text" data-en="Yes. MARLN LMS Corporate is designed with a scalable architecture that supports large datasets, thousands of employees, multiple departments, and multi-language training delivery across regions." data-ar="نعم. تم تصميم نظام إدارة التعلم المؤسسي في مارلن بهيكل قابل للتوسع يدعم مجموعات البيانات الكبيرة وآلاف الموظفين وأقسام متعددة وتسليم التدريب متعدد اللغات عبر المناطق.">Yes. MARLN LMS Corporate is designed with a scalable architecture that supports large datasets, thousands of employees, multiple departments, and multi-language training delivery across regions.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <span class="accordion-title" data-en="What makes MARLN LMS Corporate different from other LMS platforms?" data-ar="ما الذي يميز نظام إدارة التعلم المؤسسي في مارلن عن منصات إدارة التعلم الأخرى؟">What makes MARLN LMS Corporate different from other LMS platforms?</span>
+                            <iconify-icon icon="tabler:chevron-down" class="accordion-icon"></iconify-icon>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="accordion-text" data-en="It combines enterprise learning management with AI-powered personalization, real-time analytics, gamification, and compliance features. Unlike traditional LMS platforms, it's built for cross-department collaboration and measurable business outcomes." data-ar="يجمع بين إدارة التعلم المؤسسي مع التخصيص المدعوم بالذكاء الاصطناعي والتحليلات في الوقت الفعلي والتلعيب وميزات الامتثال. على عكس منصات إدارة التعلم التقليدية، تم بناؤه للتعاون عبر الأقسام والنتائج التجارية القابلة للقياس.">It combines enterprise learning management with AI-powered personalization, real-time analytics, gamification, and compliance features. Unlike traditional LMS platforms, it's built for cross-department collaboration and measurable business outcomes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <span class="accordion-title" data-en="Does MARLN LMS Corporate integrate with existing enterprise systems?" data-ar="هل يتكامل نظام إدارة التعلم المؤسسي في مارلن مع أنظمة المؤسسات الموجودة؟">Does MARLN LMS Corporate integrate with existing enterprise systems?</span>
+                            <iconify-icon icon="tabler:chevron-down" class="accordion-icon"></iconify-icon>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="accordion-text" data-en="Yes. The platform is API-ready and can integrate with HR systems, ERPs, communication tools, and analytics platforms to ensure seamless connectivity across your enterprise ecosystem." data-ar="نعم. المنصة جاهزة للواجهات البرمجية ويمكنها التكامل مع أنظمة الموارد البشرية وأنظمة تخطيط موارد المؤسسة وأدوات الاتصال ومنصات التحليلات لضمان الاتصال السلس عبر نظام المؤسسة البيئي.">Yes. The platform is API-ready and can integrate with HR systems, ERPs, communication tools, and analytics platforms to ensure seamless connectivity across your enterprise ecosystem.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title" data-en="Social Links" data-ar="الروابط الاجتماعية">Social Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.linkedin.com/company/marln-corp/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a></li>
+                        <li><a href="https://www.instagram.com/marlncorp/" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram</a></li>
+                        <li><a href="mailto:contact@marlncorp.com" class="footer-link">Email</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title" data-en="Certifications" data-ar="الشهادات">Certifications</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.wbenc.org/" target="_blank" rel="noopener noreferrer" class="footer-link">Women Owned (WBENC)</a></li>
+                        <li><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/part-11-electronic-records-electronic-signatures-scope-and-application" target="_blank" rel="noopener noreferrer" class="footer-link">FDA 21 CFR Part 11</a></li>
+                        <li><a href="https://gdpr.eu/" target="_blank" rel="noopener noreferrer" class="footer-link">GDPR Compliance</a></li>
+                        <li><a href="https://www.iso.org/iso-9001-quality-management.html" target="_blank" rel="noopener noreferrer" class="footer-link">ISO 9001:2015</a></li>
+                        <li><a href="https://www.iso.org/iso-20000-1-information-technology-service-management.html" target="_blank" rel="noopener noreferrer" class="footer-link">ISO 20000-1:2018</a></li>
+                        <li><a href="https://www.iso.org/iso-27001-information-security.html" target="_blank" rel="noopener noreferrer" class="footer-link">ISO 27001:2022</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title" data-en="Offices" data-ar="المكاتب">Offices</h3>
+                    <ul class="footer-links">
+                        <li class="footer-office">
+                            <img src="images/USA-Cupertino.svg" alt="USA Flag" class="office-flag">
+                            <span>Cupertino, USA</span>
+                        </li>
+                        <li class="footer-office">
+                            <img src="images/SaudiArabia.svg" alt="Saudi Arabia Flag" class="office-flag">
+                            <span>Jeddah, Saudi Arabia</span>
+                        </li>
+                        <li class="footer-office">
+                            <img src="images/SaudiArabia.svg" alt="Saudi Arabia Flag" class="office-flag">
+                            <span>Riyadh, Saudi Arabia</span>
+                        </li>
+                        <li class="footer-office">
+                            <img src="images/India-Bengaluru.svg" alt="India Flag" class="office-flag">
+                            <span>Bengaluru, India</span>
+                        </li>
+                        <li class="footer-office">
+                            <img src="images/SouthAfrica-Capetown.svg" alt="South Africa Flag" class="office-flag">
+                            <span>Capetown, South Africa</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright" data-en="2025 MARLN Corporation. All rights reserved." data-ar="2025 شركة مارلن. جميع الحقوق محفوظة.">2025 MARLN Corporation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="modal" id="contact-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h2>
+                <button class="modal-close" id="contact-modal-close">
+                    <iconify-icon icon="tabler:x"></iconify-icon>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-text" data-en="Get in touch with our team to learn more about MARLN Corporate LMS." data-ar="تواصل مع فريقنا لمعرفة المزيد عن نظام إدارة التعلم المؤسسي في مارلن.">Get in touch with our team to learn more about MARLN Corporate LMS.</p>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="contact-name" class="form-label" data-en="Name" data-ar="الاسم">Name</label>
+                        <input type="text" id="contact-name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email" class="form-label" data-en="Email" data-ar="البريد الإلكتروني">Email</label>
+                        <input type="email" id="contact-email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message" class="form-label" data-en="Message" data-ar="الرسالة">Message</label>
+                        <textarea id="contact-message" class="form-textarea" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div class="modal" id="terms-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" data-en="Terms of Service" data-ar="شروط الخدمة">Terms of Service</h2>
+                <button class="modal-close" id="terms-modal-close">
+                    <iconify-icon icon="tabler:x"></iconify-icon>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="terms-content">
+                    <h3 data-en="1. Acceptance of Terms" data-ar="1. قبول الشروط">1. Acceptance of Terms</h3>
+                    <p data-en="By accessing and using MARLN Corporate LMS, you accept and agree to be bound by the terms and provision of this agreement." data-ar="من خلال الوصول إلى نظام إدارة التعلم المؤسسي في مارلن واستخدامه، فإنك تقبل وتوافق على الالتزام بشروط وأحكام هذه الاتفاقية.">By accessing and using MARLN Corporate LMS, you accept and agree to be bound by the terms and provision of this agreement.</p>
+                    
+                    <h3 data-en="2. Use License" data-ar="2. ترخيص الاستخدام">2. Use License</h3>
+                    <p data-en="Permission is granted to temporarily download one copy of MARLN Corporate LMS per device for personal, non-commercial transitory viewing only." data-ar="يُمنح الإذن لتحميل نسخة واحدة مؤقتة من نظام إدارة التعلم المؤسسي في مارلن لكل جهاز للعرض الشخصي وغير التجاري المؤقت فقط.">Permission is granted to temporarily download one copy of MARLN Corporate LMS per device for personal, non-commercial transitory viewing only.</p>
+                    
+                    <h3 data-en="3. Data Privacy and Security" data-ar="3. خصوصية البيانات والأمان">3. Data Privacy and Security</h3>
+                    <p data-en="MARLN Corporate LMS is designed with enterprise-grade security and privacy protection. All customer data is encrypted and stored securely in compliance with international data protection standards." data-ar="تم تصميم نظام إدارة التعلم المؤسسي في مارلن بأمان وحماية خصوصية على مستوى المؤسسات. جميع بيانات العملاء مشفرة ومخزنة بأمان وفقاً لمعايير حماية البيانات الدولية.">MARLN Corporate LMS is designed with enterprise-grade security and privacy protection. All customer data is encrypted and stored securely in compliance with international data protection standards.</p>
+                    
+                    <h3 data-en="4. Disclaimer" data-ar="4. إخلاء المسؤولية">4. Disclaimer</h3>
+                    <p data-en="The materials on MARLN Corporate LMS are provided on an 'as is' basis. MARLN Corporation makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties." data-ar="يتم توفير المواد الموجودة في نظام إدارة التعلم المؤسسي في مارلن على أساس 'كما هي'. لا تقدم شركة مارلن أي ضمانات، صريحة أو ضمنية، وتتنصل هنا من جميع الضمانات الأخرى.">The materials on MARLN Corporate LMS are provided on an 'as is' basis. MARLN Corporation makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+</html>

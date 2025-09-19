@@ -1,0 +1,81 @@
+# Marln Corporation Landing Page — Cursor Rules
+
+Purpose: Guardrails and references for safe, fast edits using Cursor. Follow these rules to avoid regressions.
+
+## Hard Rules (Must Follow)
+- Do not reformat unrelated code. Preserve existing indentation, spacing, and file structure.
+- Keep the project as static HTML/CSS/JS. Do not introduce React/Vite or new frameworks without approval.
+- Images must use .webp format for all references unless SVG/AVIF is explicitly required. If replacing a non-webp asset, add a .webp version and update all references.
+- Favicon links must point to `images/favicon/*` (as implemented in `index.html`). Do not reintroduce `cropped-Favicon-*` files.
+- Do not remove or bypass localization. Visible text must come from i18n keys, not hardcoded strings.
+- Maintain Arabic RTL support. All new UI must render correctly in both LTR and RTL.
+- Do not rename/move files without updating every reference across HTML/CSS/JS.
+
+## Localization & RTL
+- Source of truth: `localization/` system (engine, config, utils) with `i18n/en.json` and `i18n/ar.json` content files.
+- When adding/changing UI text:
+  1) Add keys to `i18n/en.json` and `i18n/ar.json` with matching structure.
+  2) Use `data-i18n` attributes in HTML to bind text.
+  3) Never hardcode user-facing text in HTML or JS.
+- RTL rules:
+  - Keep `.rtl` class toggling and `dir`/`lang` attributes managed by the engine.
+  - Prefer logical CSS properties (margin-inline, padding-inline, inset-inline) or guard with `.rtl` class.
+  - Validate layouts in both LTR and RTL after any visual change.
+
+## Assets & Performance
+- Images: prefer `.webp` (or `.svg` for vector, `.avif` where already used). Add `loading="lazy"` to below-the-fold `<img>`.
+- Fonts: keep WOFF2; do not block render. Preserve existing preloads.
+- JS/CSS: keep files small; avoid large libraries. No unnecessary animation that harms performance.
+- Do not add remote assets that may be blocked or slow in target regions without a local fallback.
+
+## Favicon & PWA
+- Keep the comprehensive favicon set from `images/favicon/` and `manifest.json` included as in `index.html`.
+- If editing other pages, align favicon links with `index.html` implementation.
+
+## SEO & Accessibility
+- Preserve meta tags (title, description, canonical, robots) and JSON-LD structured data.
+- Always provide meaningful `alt` text for images and labels for form controls.
+- Avoid duplicate IDs; keep headings hierarchical (h1→h2→h3).
+
+## Contact Forms
+- Current HTML uses CF7-like structure (`.wpcf7-form`, fields: `your-name`, `your-email`, `your-message`).
+- The custom handler is in `contact-form-handler.js`. If wiring to a backend:
+  - Keep field names compatible (`your-name`, `your-email`, `your-message`).
+  - Centralize submission logic in `contact-form-handler.js`.
+  - Use a simple provider (Formspree/EmailJS) or an API endpoint (AWS Lambda) and handle errors gracefully.
+
+## File-Specific Notes
+- `index.html`: Keep the favicon block and manifest links intact. Do not revert to non-existent assets.
+- `localization/`: Use `SUPPORTED_LANGUAGES` and settings files as the single source of truth for direction, locale, and currency.
+- `css/`: Add new rules with minimal overrides. Prefer component/section-scoped classes and avoid global resets.
+
+## Pre-Merge Checklist
+- Localization:
+  - All new strings have i18n keys in both `en.json` and `ar.json`.
+  - No console warnings for missing translations.
+- RTL/LTR:
+  - UI verified in both directions on desktop and mobile.
+- Assets:
+  - All images are `.webp` or `.svg/.avif` where intended; no 404s.
+  - Favicon loads in tab; no missing favicon assets.
+- Performance:
+  - Heavy images optimized; non-critical images lazy-loaded.
+- Accessibility/SEO:
+  - Images have `alt`; forms have labels; meta tags preserved.
+- Forms:
+  - If modified, submissions tested; errors handled; success path confirmed.
+
+## Commit/PR Guidance
+- Keep edits atomic and scoped. Avoid mixed concerns in a single change.
+- Describe what changed, why, and any i18n/RTL considerations.
+- If you add a dependency or asset, document it in `README.md`.
+
+## Quick References
+- i18n keys: `i18n/en.json`, `i18n/ar.json`
+- Localization engine: `localization/core/localization-engine.js`
+- Language config: `localization/config/supported-languages.js`, `localization/config/settings.js`
+- Forms: `contact-form-handler.js` (central handler)
+- Favicon: `images/favicon/*` + `manifest.json`
+- Images: `images/` (prefer `.webp`)
+
+By following these rules, future edits remain fast, safe, and consistent with Saudi-market requirements. 

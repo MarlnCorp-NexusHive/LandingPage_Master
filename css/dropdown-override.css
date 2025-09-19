@@ -1,0 +1,232 @@
+/* Dropdown Menu Override Styles */
+/* Disables hover-based dropdowns and adds click-based functionality */
+
+/* Disable hover-based dropdown behavior */
+.header--menu__list > li:hover > .sub-menu {
+    transform: translateX(-50%) translateY(-101%) !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Remove hover effects that show dropdowns */
+.header--menu__list > li:hover > a {
+    color: inherit !important;
+}
+
+.header--menu__list > li:hover > a span {
+    opacity: inherit !important;
+}
+
+/* Add styles for click-based dropdowns */
+.header--menu__list > li.dropdown-active > .sub-menu {
+    transform: translateX(-50%) translateY(0) !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+/* Ensure sub-menus are hidden by default */
+.header--menu__list > li > .sub-menu {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+/* Add visual feedback for active dropdown */
+.header--menu__list > li.dropdown-active > a {
+    color: #9EE86F !important;
+}
+
+.header--menu__list > li.dropdown-active > a span {
+    opacity: 1 !important;
+}
+
+/* Ensure dropdown links are clickable */
+.header--menu__list > li.menu-item-has-children > a {
+    cursor: pointer !important;
+}
+
+/* Add hover effect for dropdown trigger */
+.header--menu__list > li.menu-item-has-children > a:hover {
+    color: #9EE86F !important;
+}
+
+/* Remove underlines from dropdown trigger buttons */
+.header--menu__list > li.menu-item-has-children > a {
+    text-decoration: none !important;
+}
+
+/* Ensure no underlines on dropdown trigger buttons in any state */
+.header--menu__list > li.menu-item-has-children > a,
+.header--menu__list > li.menu-item-has-children > a:hover,
+.header--menu__list > li.menu-item-has-children > a:active,
+.header--menu__list > li.menu-item-has-children > a:focus,
+.header--menu__list > li.menu-item-has-children > a:visited {
+    text-decoration: none !important;
+}
+
+/* Target specific dropdown buttons with maximum specificity */
+#menu-item-666 > a,
+#menu-item-666 > a:hover,
+#menu-item-666 > a:active,
+#menu-item-666 > a:focus,
+#menu-item-666 > a:visited,
+#menu-item-company > a,
+#menu-item-company > a:hover,
+#menu-item-company > a:active,
+#menu-item-company > a:focus,
+#menu-item-company > a:visited {
+    text-decoration: none !important;
+}
+
+/* Override inline styles with maximum specificity */
+#header .header--menu__list > li.menu-item-has-children > a,
+#header .header--menu__list > li.menu-item-has-children > a:hover,
+#header .header--menu__list > li.menu-item-has-children > a:active,
+#header .header--menu__list > li.menu-item-has-children > a:focus,
+#header .header--menu__list > li.menu-item-has-children > a:visited {
+    text-decoration: none !important;
+}
+
+/* Target specific menu items with header context for maximum specificity */
+#header #menu-item-666 > a,
+#header #menu-item-666 > a:hover,
+#header #menu-item-666 > a:active,
+#header #menu-item-666 > a:focus,
+#header #menu-item-666 > a:visited,
+#header #menu-item-company > a,
+#header #menu-item-company > a:hover,
+#header #menu-item-company > a:active,
+#header #menu-item-company > a:focus,
+#header #menu-item-company > a:visited {
+    text-decoration: none !important;
+}
+
+/* Target dropdown trigger buttons without href attributes */
+.header--menu__list > li.menu-item-has-children > a:not([href]),
+.header--menu__list > li.menu-item-has-children > a:not([href]):hover,
+.header--menu__list > li.menu-item-has-children > a:not([href]):active,
+.header--menu__list > li.menu-item-has-children > a:not([href]):focus,
+.header--menu__list > li.menu-item-has-children > a:not([href]):visited {
+    text-decoration: none !important;
+}
+
+/* Target Services and Company dropdown buttons specifically */
+#menu-item-666 > a:not([href]),
+#menu-item-666 > a:not([href]):hover,
+#menu-item-666 > a:not([href]):active,
+#menu-item-666 > a:not([href]):focus,
+#menu-item-666 > a:not([href]):visited,
+#menu-item-company > a:not([href]),
+#menu-item-company > a:not([href]):hover,
+#menu-item-company > a:not([href]):active,
+#menu-item-company > a:not([href]):focus,
+#menu-item-company > a:not([href]):visited {
+    text-decoration: none !important;
+}
+
+/* Ensure dropdown content is properly positioned */
+.header--menu__list > li > .sub-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(-101%) !important;
+    z-index: 1000 !important;
+    background-color: #6aa84f !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    min-width: 200px !important;
+}
+
+/* Style dropdown menu items */
+.header--menu__list > li > .sub-menu > li > a {
+    color: #0C081E !important;
+    padding: 12px 20px !important;
+    display: block !important;
+    text-decoration: none !important;
+    transition: all 0.25s ease !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.header--menu__list > li > .sub-menu > li:last-child > a {
+    border-bottom: none !important;
+}
+
+.header--menu__list > li > .sub-menu > li > a:hover {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    color: #0C081E !important;
+}
+
+/* Dark theme support */
+html[data-theme="dark"] .header--menu__list > li > .sub-menu {
+    background-color: #1A2130 !important;
+    border: 1px solid #2B3647 !important;
+}
+
+html[data-theme="dark"] .header--menu__list > li > .sub-menu > li > a {
+    color: #EEF2F7 !important;
+    border-bottom: 1px solid #2B3647 !important;
+}
+
+html[data-theme="dark"] .header--menu__list > li > .sub-menu > li > a:hover {
+    background-color: #20283A !important;
+    color: #EEF2F7 !important;
+}
+
+/* Video Display Override Styles */
+/* Ensure video is visible and properly sized */
+.featured-projects-section--slider--item .preview video {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    position: relative !important;
+    z-index: 2 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    /* Force continuous playback */
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Ensure video container is properly sized */
+.featured-projects-section--slider--item .preview {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+/* Fallback image styling */
+.featured-projects-section--slider--item .preview video img {
+    display: none !important;
+}
+
+/* Ensure video plays on all devices */
+.featured-projects-section--slider--item .preview video[autoplay] {
+    will-change: auto !important;
+}
+
+/* Force continuous video playback - no hover required */
+.featured-projects-section--slider--item .preview video {
+    /* Remove any hover-based play controls */
+    pointer-events: auto !important;
+}
+
+/* Ensure video plays immediately when loaded */
+.featured-projects-section--slider--item .preview video[src*="marlnpalmscanner"] {
+    /* Specific targeting for the Marln Magicpalm Scanner video */
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 10 !important;
+}
+
+/* Override any potential hover states that might pause the video */
+.featured-projects-section--slider--item:hover .preview video,
+.featured-projects-section--slider--item .preview:hover video {
+    /* Ensure video continues playing on hover */
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARLN CRM Corporate</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/cropped-Favicon-1-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/cropped-Favicon-1-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/cropped-Favicon-1-180x180.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Iconify Icons -->
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="../index.html" class="nav-logo">
+                <img id="logo-img" src="images/marlncorplight.svg" alt="MarLn Corp" class="logo-img">
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#features" class="nav-link" data-en="Features" data-ar="الميزات">Features</a></li>
+                    <li><a href="#faqs" class="nav-link" data-en="FAQs" data-ar="الأسئلة الشائعة">FAQs</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-controls">
+                <div class="nav-controls-group">
+                    <button class="language-toggle" id="language-toggle" aria-label="Switch to Arabic">
+                        <div class="language-flag">EN</div>
+                        <span class="language-text">English</span>
+                        <iconify-icon icon="tabler:language" class="language-icon"></iconify-icon>
+                    </button>
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode">
+                        <span class="theme-emoji">☀️</span>
+                    </button>
+                </div>
+                
+                <div class="nav-buttons">
+                    <button class="btn btn-primary btn-small" id="contact-btn" data-en="I'm Interested" data-ar="أنا مهتم">I'm Interested</button>
+                    <button class="btn btn-transparent btn-small nav-signin" data-en="Sign In" data-ar="تسجيل الدخول">Sign In</button>
+                    <button class="btn btn-dark btn-small" data-en="Sign Up" data-ar="إنشاء حساب">Sign Up</button>
+                </div>
+                
+                <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+                    <iconify-icon icon="tabler:menu-2" class="nav-toggle-icon"></iconify-icon>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    
+                    <h1 class="hero-title title-gradient">
+                        <div data-en="One Corporate CRM<br>Every Department.<br>Unlimited Growth." data-ar="نظام إدارة علاقات العملاء المؤسسي الواحد<br>كل قسم.<br>نمو غير محدود.">One Corporate CRM<br>Every Department.<br>Unlimited Growth.</div>
+                    </h1>
+                    
+                    <p class="hero-description" data-en="Power your enterprise with a unified CRM that streamlines operations, strengthens customer relationships, and drives measurable results across sales, marketing, HR, compliance, and support." data-ar="قم بتشغيل مؤسستك بنظام إدارة علاقات العملاء الموحد الذي يبسط العمليات ويقوي علاقات العملاء ويحقق نتائج قابلة للقياس عبر المبيعات والتسويق والموارد البشرية والامتثال والدعم.">Power your enterprise with a unified CRM that streamlines operations, strengthens customer relationships, and drives measurable results across sales, marketing, HR, compliance, and support.</p>
+                    
+                    <div class="hero-buttons">
+                        <button class="btn btn-dark" data-en="Start Free Trial" data-ar="ابدأ التجربة المجانية">Start Free Trial</button>
+                        <button class="btn btn-transparent btn-link" id="terms-btn">
+                            <span data-en="Terms of Service" data-ar="شروط الخدمة">Terms of Service</span>
+                            <span class="btn-emoji">→</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <img id="hero-img" src="images/tablet-mockup.png" alt="MarLn University LMS Dashboard - Modern, responsive dashboard built with React + Tailwind — giving you real-time analytics, smooth navigation, and a delightful user experience." class="hero-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Unlock the Power of Connected CRM Management" data-ar="أطلق العنان لقوة إدارة علاقات العملاء المتكاملة">Unlock the Power of Connected CRM Management</h2>
+                <p class="section-description" data-en="Manage all your customer relationships in one place. From sales pipelines and marketing campaigns to customer support, team collaboration, and business analytics — everything you need is in a single CRM platform." data-ar="أدر جميع علاقات العملاء في مكان واحد. من خطوط أنابيب المبيعات وحملات التسويق إلى دعم العملاء والتعاون الجماعي والتحليلات التجارية—كل ما تحتاجه في منصة إدارة علاقات العملاء الواحدة.">Manage all your customer relationships in one place. From sales pipelines and marketing campaigns to customer support, team collaboration, and business analytics — everything you need is in a single CRM platform.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="feature-emoji">👥</span>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title" data-en="Role-Based Dashboards" data-ar="لوحات التحكم القائمة على الأدوار">Role-Based Dashboards</h3>
+                        <p class="feature-description" data-en="Customized views for sales reps, managers, executives, and support teams with relevant data and tools." data-ar="عروض مخصصة لمندوبي المبيعات والمديرين والتنفيذيين وفرق الدعم مع البيانات والأدوات ذات الصلة.">Customized views for sales reps, managers, executives, and support teams with relevant data and tools.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="feature-emoji">📊</span>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title" data-en="Smart Customer Data Management" data-ar="إدارة بيانات العملاء الذكية">Smart Customer Data Management</h3>
+                        <p class="feature-description" data-en="Centralize customer information, interactions, and communication history for complete visibility." data-ar="مركزة معلومات العملاء والتفاعلات وتاريخ التواصل لرؤية شاملة.">Centralize customer information, interactions, and communication history for complete visibility.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="feature-emoji">📈</span>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title" data-en="Advanced Sales Analytics" data-ar="التحليلات المتقدمة للمبيعات">Advanced Sales Analytics</h3>
+                        <p class="feature-description" data-en="Track sales performance, forecast revenue, and generate actionable insights to boost productivity." data-ar="تتبع أداء المبيعات والتنبؤ بالإيرادات وإنشاء رؤى قابلة للتنفيذ لتعزيز الإنتاجية.">Track sales performance, forecast revenue, and generate actionable insights to boost productivity.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="feature-emoji">🔧</span>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title" data-en="Workflow Automation" data-ar="أتمتة سير العمل">Workflow Automation</h3>
+                        <p class="feature-description" data-en="Automate repetitive tasks, follow-ups, and processes to focus on what matters most." data-ar="أتمتة المهام المتكررة والمتابعات والعمليات للتركيز على الأهم.">Automate repetitive tasks, follow-ups, and processes to focus on what matters most.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="feature-emoji">🤝</span>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title" data-en="Team Collaboration Hub" data-ar="مركز التعاون الجماعي">Team Collaboration Hub</h3>
+                        <p class="feature-description" data-en="Seamlessly collaborate across departments with shared tasks, notes, and real-time updates." data-ar="التعاون بسلاسة عبر الأقسام مع المهام المشتركة والملاحظات والتحديثات في الوقت الفعلي.">Seamlessly collaborate across departments with shared tasks, notes, and real-time updates.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="feature-emoji">📱</span>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title" data-en="Mobile CRM Access" data-ar="الوصول المحمول لإدارة علاقات العملاء">Mobile CRM Access</h3>
+                        <p class="feature-description" data-en="Access customer data, update deals, and manage tasks from anywhere with full mobile functionality." data-ar="الوصول إلى بيانات العملاء وتحديث الصفقات وإدارة المهام من أي مكان مع وظائف محمولة كاملة.">Access customer data, update deals, and manage tasks from anywhere with full mobile functionality.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Large Feature Section 1 -->
+    <section class="large-feature">
+        <div class="container">
+            <div class="large-feature-content">
+                <div class="large-feature-text">
+                    <h2 class="large-feature-title" data-en="AI-Powered CRM Experience" data-ar="تجربة إدارة علاقات العملاء المدعومة بالذكاء الاصطناعي">AI-Powered CRM Experience</h2>
+                    <p class="large-feature-description" data-en="Leverage advanced AI to simplify customer relationship management, enhance sales performance, and maximize revenue across your organization. From predictive analytics to automated follow-ups, everything works smarter with AI." data-ar="استفد من الذكاء الاصطناعي المتقدم لتبسيط إدارة علاقات العملاء وتحسين أداء المبيعات وزيادة الإيرادات عبر مؤسستك. من التحليلات التنبؤية إلى المتابعات الآلية، كل شيء يعمل بذكاء أكبر مع الذكاء الاصطناعي.">Leverage advanced AI to simplify customer relationship management, enhance sales performance, and maximize revenue across your organization. From predictive analytics to automated follow-ups, everything works smarter with AI.</p>
+                    
+                    <div class="feature-list">
+                        <div class="feature-list-item">
+                            <div class="feature-list-icon">
+                                <span class="feature-list-emoji">🎯</span>
+                            </div>
+                            <div class="feature-list-content">
+                                <h3 class="feature-list-title" data-en="Smart Lead Scoring" data-ar="تقييم العملاء المحتملين الذكي">Smart Lead Scoring</h3>
+                                <p class="feature-list-description" data-en="Automatically evaluate and prioritize leads based on behavior, engagement, and conversion probability." data-ar="تقييم وتحديد أولوية العملاء المحتملين تلقائياً بناءً على السلوك والمشاركة واحتمالية التحويل.">Automatically evaluate and prioritize leads based on behavior, engagement, and conversion probability.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-list-item">
+                            <div class="feature-list-icon">
+                                <span class="feature-list-emoji">📈</span>
+                            </div>
+                            <div class="feature-list-content">
+                                <h3 class="feature-list-title" data-en="Predictive Sales Analytics" data-ar="التحليلات التنبؤية للمبيعات">Predictive Sales Analytics</h3>
+                                <p class="feature-list-description" data-en="Forecast sales trends, identify opportunities, and optimize revenue with AI-driven insights." data-ar="التنبؤ باتجاهات المبيعات وتحديد الفرص وتحسين الإيرادات مع الرؤى المدعومة بالذكاء الاصطناعي.">Forecast sales trends, identify opportunities, and optimize revenue with AI-driven insights.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-list-item">
+                            <div class="feature-list-icon">
+                                <span class="feature-list-emoji">🎨</span>
+                            </div>
+                            <div class="feature-list-content">
+                                <h3 class="feature-list-title" data-en="Personalized Dashboards" data-ar="لوحات التحكم المخصصة">Personalized Dashboards</h3>
+                                <p class="feature-list-description" data-en="AI-tailored dashboards for sales reps, managers, and executives with role-specific insights." data-ar="لوحات تحكم مخصصة بالذكاء الاصطناعي لمندوبي المبيعات والمديرين والتنفيذيين مع رؤى محددة حسب الدور.">AI-tailored dashboards for sales reps, managers, and executives with role-specific insights.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="large-feature-image">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="AI-Powered CRM Experience - Business professionals collaborating around modern CRM dashboard with customer analytics and sales data" class="large-feature-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Large Feature Section 2 -->
+    <section class="large-feature large-feature-reverse">
+        <div class="container">
+            <div class="large-feature-content">
+                <div class="large-feature-text">
+                    <h2 class="large-feature-title" data-en="Comprehensive CRM Management" data-ar="إدارة شاملة لعلاقات العملاء">Comprehensive CRM Management</h2>
+                    <p class="large-feature-description" data-en="A complete CRM platform with powerful sales tools, secure customer data storage, and customizable workflows to fit your organization's sales and customer management needs." data-ar="منصة إدارة علاقات العملاء شاملة مع أدوات مبيعات قوية وتخزين آمن لبيانات العملاء وسير عمل قابل للتخصيص ليناسب احتياجات المبيعات وإدارة العملاء لمؤسستك.">A complete CRM platform with powerful sales tools, secure customer data storage, and customizable workflows to fit your organization's sales and customer management needs.</p>
+                    
+                    <div class="feature-list">
+                        <div class="feature-list-item">
+                            <div class="feature-list-icon">
+                                <span class="feature-list-emoji">📊</span>
+                            </div>
+                            <div class="feature-list-content">
+                                <h3 class="feature-list-title" data-en="Sales Pipeline Management" data-ar="إدارة خط أنابيب المبيعات">Sales Pipeline Management</h3>
+                                <p class="feature-list-description" data-en="Track deals, monitor progress, and forecast revenue with visual pipeline management tools." data-ar="تتبع الصفقات ومراقبة التقدم والتنبؤ بالإيرادات مع أدوات إدارة خط الأنابيب المرئية.">Track deals, monitor progress, and forecast revenue with visual pipeline management tools.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-list-item">
+                            <div class="feature-list-icon">
+                                <span class="feature-list-emoji">🔒</span>
+                            </div>
+                            <div class="feature-list-content">
+                                <h3 class="feature-list-title" data-en="Secure Customer Data Storage" data-ar="التخزين الآمن لبيانات العملاء">Secure Customer Data Storage</h3>
+                                <p class="feature-list-description" data-en="Safely store customer information, communication history, and business data in one centralized, compliant platform." data-ar="احفظ معلومات العملاء وتاريخ التواصل والبيانات التجارية بأمان في منصة مركزية ومتتمة واحدة.">Safely store customer information, communication history, and business data in one centralized, compliant platform.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-list-item">
+                            <div class="feature-list-icon">
+                                <span class="feature-list-emoji">⚙️</span>
+                            </div>
+                            <div class="feature-list-content">
+                                <h3 class="feature-list-title" data-en="Custom Sales Workflows" data-ar="سير عمل المبيعات المخصص">Custom Sales Workflows</h3>
+                                <p class="feature-list-description" data-en="Personalize sales processes to match your organization's unique sales methodology and business requirements." data-ar="خصص عمليات المبيعات لتتماشى مع منهجية المبيعات الفريدة لمؤسستك والمتطلبات التجارية.">Personalize sales processes to match your organization's unique sales methodology and business requirements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="large-feature-image">
+                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Comprehensive CRM Management - Professional team in corporate boardroom reviewing customer relationship data and business analytics" class="large-feature-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faqs">
+        <div class="container">
+            <div class="faq-content">
+                <div class="faq-header">
+                    <h2 class="faq-title" data-en="Frequently Asked Questions" data-ar="الأسئلة الشائعة">Frequently Asked Questions</h2>
+                    <p class="faq-description" data-en="Here are some of our most frequently asked questions. If you have a question that isn't answered here, please feel free to contact us." data-ar="إليك بعض الأسئلة الأكثر شيوعاً لدينا. إذا كان لديك سؤال غير مجاب عليه هنا، فلا تتردد في الاتصال بنا.">Here are some of our most frequently asked questions. If you have a question that isn't answered here, please feel free to contact us.</p>
+                    <button class="btn btn-primary btn-link">
+                        <span data-en="Contact Support" data-ar="اتصل بالدعم">Contact Support</span>
+                        <iconify-icon icon="tabler:arrow-right" class="btn-icon"></iconify-icon>
+                    </button>
+                </div>
+                
+                <div class="faq-accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <span class="accordion-title" data-en="What makes MARLN CRM Corporate different from other CRMs?" data-ar="ما الذي يجعل نظام MARLN لإدارة علاقات العملاء المؤسسي مختلفاً عن أنظمة إدارة علاقات العملاء الأخرى؟">What makes MARLN CRM Corporate different from other CRMs?</span>
+                            <iconify-icon icon="tabler:chevron-down" class="accordion-icon"></iconify-icon>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="accordion-text" data-en="MARLN CRM Corporate goes beyond traditional sales-focused CRMs by unifying sales, marketing, HR, compliance, and customer service into one enterprise-ready platform. It's designed to eliminate silos, streamline operations, and provide executives with a 360° view of the business." data-ar="يتجاوز نظام MARLN لإدارة علاقات العملاء المؤسسي أنظمة إدارة علاقات العملاء التقليدية المرتكزة على المبيعات من خلال توحيد المبيعات والتسويق والموارد البشرية والامتثال وخدمة العملاء في منصة واحدة جاهزة للمؤسسات. تم تصميمه لإزالة العوائق وتبسيط العمليات وتوفير رؤية 360 درجة للعمل للتنفيذيين.">MARLN CRM Corporate goes beyond traditional sales-focused CRMs by unifying sales, marketing, HR, compliance, and customer service into one enterprise-ready platform. It's designed to eliminate silos, streamline operations, and provide executives with a 360° view of the business.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <span class="accordion-title" data-en="Can MARLN CRM Corporate scale with a growing enterprise?" data-ar="هل يمكن لنظام MARLN لإدارة علاقات العملاء المؤسسي التوسع مع المؤسسة النامية؟">Can MARLN CRM Corporate scale with a growing enterprise?</span>
+                            <iconify-icon icon="tabler:chevron-down" class="accordion-icon"></iconify-icon>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="accordion-text" data-en="Yes. MARLN CRM Corporate is built on a modular, scalable architecture that supports large datasets, multiple departments, and complex workflows. As your organization grows, the CRM adapts to evolving business needs without disruption." data-ar="نعم. تم بناء نظام MARLN لإدارة علاقات العملاء المؤسسي على هيكل معياري وقابل للتوسع يدعم مجموعات البيانات الكبيرة والأقسام المتعددة وسير العمل المعقد. مع نمو مؤسستك، يتكيف نظام إدارة علاقات العملاء مع احتياجات العمل المتطورة دون انقطاع.">Yes. MARLN CRM Corporate is built on a modular, scalable architecture that supports large datasets, multiple departments, and complex workflows. As your organization grows, the CRM adapts to evolving business needs without disruption.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <span class="accordion-title" data-en="How secure is the platform for sensitive corporate data?" data-ar="ما مدى أمان المنصة للبيانات المؤسسية الحساسة؟">How secure is the platform for sensitive corporate data?</span>
+                            <iconify-icon icon="tabler:chevron-down" class="accordion-icon"></iconify-icon>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="accordion-text" data-en="Security is enterprise-grade, with role-based access control, audit trails, encrypted data storage, and compliance-ready features. MARLN CRM Corporate ensures your customer, employee, and financial data stays protected and compliant with global regulations." data-ar="الأمان على مستوى المؤسسات، مع التحكم في الوصول القائم على الأدوار ومسارات التدقيق والتخزين المشفر للبيانات والميزات الجاهزة للامتثال. يضمن نظام MARLN لإدارة علاقات العملاء المؤسسي حماية بيانات العملاء والموظفين والمالية والامتثال للوائح العالمية.">Security is enterprise-grade, with role-based access control, audit trails, encrypted data storage, and compliance-ready features. MARLN CRM Corporate ensures your customer, employee, and financial data stays protected and compliant with global regulations.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <span class="accordion-title" data-en="What departments benefit most from MARLN CRM Corporate?" data-ar="ما الأقسام التي تستفيد أكثر من نظام MARLN لإدارة علاقات العملاء المؤسسي؟">What departments benefit most from MARLN CRM Corporate?</span>
+                            <iconify-icon icon="tabler:chevron-down" class="accordion-icon"></iconify-icon>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="accordion-text" data-en="Every department benefits — sales teams can manage pipelines, marketing can automate campaigns, HR can oversee workforce management, compliance teams can track governance, and executives get real-time performance insights. It's truly cross-functional." data-ar="كل قسم يستفيد — يمكن لفرق المبيعات إدارة خطوط الأنابيب، والتسويق يمكنه أتمتة الحملات، والموارد البشرية يمكنها الإشراف على إدارة القوى العاملة، وفرق الامتثال يمكنها تتبع الحوكمة، والتنفيذيين يحصلون على رؤى الأداء في الوقت الفعلي. إنه متعدد الوظائف حقاً.">Every department benefits — sales teams can manage pipelines, marketing can automate campaigns, HR can oversee workforce management, compliance teams can track governance, and executives get real-time performance insights. It's truly cross-functional.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">
+                            <span class="accordion-title" data-en="Does MARLN CRM Corporate integrate with existing enterprise systems?" data-ar="هل يتكامل نظام MARLN لإدارة علاقات العملاء المؤسسي مع أنظمة المؤسسة الموجودة؟">Does MARLN CRM Corporate integrate with existing enterprise systems?</span>
+                            <iconify-icon icon="tabler:chevron-down" class="accordion-icon"></iconify-icon>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="accordion-text" data-en="Yes. The platform is designed with API-first architecture, enabling seamless integration with ERPs, HR systems, accounting tools, communication apps, and more — ensuring your enterprise runs on a connected ecosystem." data-ar="نعم. تم تصميم المنصة بهيكل API-first، مما يتيح التكامل السلس مع أنظمة ERP وأنظمة الموارد البشرية وأدوات المحاسبة وتطبيقات الاتصال والمزيد — مما يضمن تشغيل مؤسستك على نظام بيئي متصل.">Yes. The platform is designed with API-first architecture, enabling seamless integration with ERPs, HR systems, accounting tools, communication apps, and more — ensuring your enterprise runs on a connected ecosystem.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title" data-en="Social Links" data-ar="الروابط الاجتماعية">Social Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.linkedin.com/company/marln-corp/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a></li>
+                        <li><a href="https://www.instagram.com/marlncorp/" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram</a></li>
+                        <li><a href="mailto:contact@marlncorp.com" class="footer-link">Email</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title" data-en="Certifications" data-ar="الشهادات">Certifications</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.wbenc.org/" target="_blank" rel="noopener noreferrer" class="footer-link">Women Owned (WBENC)</a></li>
+                        <li><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/part-11-electronic-records-electronic-signatures-scope-and-application" target="_blank" rel="noopener noreferrer" class="footer-link">FDA 21 CFR Part 11</a></li>
+                        <li><a href="https://gdpr.eu/" target="_blank" rel="noopener noreferrer" class="footer-link">GDPR Compliance</a></li>
+                        <li><a href="https://www.iso.org/iso-9001-quality-management.html" target="_blank" rel="noopener noreferrer" class="footer-link">ISO 9001:2015</a></li>
+                        <li><a href="https://www.iso.org/iso-20000-1-information-technology-service-management.html" target="_blank" rel="noopener noreferrer" class="footer-link">ISO 20000-1:2018</a></li>
+                        <li><a href="https://www.iso.org/iso-27001-information-security.html" target="_blank" rel="noopener noreferrer" class="footer-link">ISO 27001:2022</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title" data-en="Offices" data-ar="المكاتب">Offices</h3>
+                    <ul class="footer-links">
+                        <li class="footer-office">
+                            <img src="images/USA-Cupertino.svg" alt="USA Flag" class="office-flag">
+                            <span>Cupertino, USA</span>
+                        </li>
+                        <li class="footer-office">
+                            <img src="images/SaudiArabia.svg" alt="Saudi Arabia Flag" class="office-flag">
+                            <span>Jeddah, Saudi Arabia</span>
+                        </li>
+                        <li class="footer-office">
+                            <img src="images/SaudiArabia.svg" alt="Saudi Arabia Flag" class="office-flag">
+                            <span>Riyadh, Saudi Arabia</span>
+                        </li>
+                        <li class="footer-office">
+                            <img src="images/India-Bengaluru.svg" alt="India Flag" class="office-flag">
+                            <span>Bengaluru, India</span>
+                        </li>
+                        <li class="footer-office">
+                            <img src="images/SouthAfrica-Capetown.svg" alt="South Africa Flag" class="office-flag">
+                            <span>Capetown, South Africa</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright" data-en="2025 MARLN Corporation. All rights reserved." data-ar="2025 شركة مارلن. جميع الحقوق محفوظة.">2025 MARLN Corporation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="modal" id="contact-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h2>
+                <button class="modal-close" id="contact-modal-close">
+                    <iconify-icon icon="tabler:x"></iconify-icon>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-text" data-en="Get in touch with our team to learn more about MARLN ESG." data-ar="تواصل مع فريقنا لمعرفة المزيد عن نظام MARLN ESG.">Get in touch with our team to learn more about MARLN ESG.</p>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="contact-name" class="form-label" data-en="Name" data-ar="الاسم">Name</label>
+                        <input type="text" id="contact-name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email" class="form-label" data-en="Email" data-ar="البريد الإلكتروني">Email</label>
+                        <input type="email" id="contact-email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message" class="form-label" data-en="Message" data-ar="الرسالة">Message</label>
+                        <textarea id="contact-message" class="form-textarea" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div class="modal" id="terms-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" data-en="Terms of Service" data-ar="شروط الخدمة">Terms of Service</h2>
+                <button class="modal-close" id="terms-modal-close">
+                    <iconify-icon icon="tabler:x"></iconify-icon>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="terms-content">
+                    <h3 data-en="1. Acceptance of Terms" data-ar="1. قبول الشروط">1. Acceptance of Terms</h3>
+                    <p data-en="By accessing and using MARLN CRM Corporate, you accept and agree to be bound by the terms and provision of this agreement." data-ar="من خلال الوصول إلى نظام MARLN CRM Corporate واستخدامه، فإنك تقبل وتوافق على الالتزام بشروط وأحكام هذه الاتفاقية.">By accessing and using MARLN CRM Corporate, you accept and agree to be bound by the terms and provision of this agreement.</p>
+                    
+                    <h3 data-en="2. Use License" data-ar="2. ترخيص الاستخدام">2. Use License</h3>
+                    <p data-en="Permission is granted to temporarily download one copy of MARLN CRM Corporate per device for personal, non-commercial transitory viewing only." data-ar="يُمنح الإذن لتحميل نسخة واحدة مؤقتة من نظام MARLN CRM Corporate لكل جهاز للعرض الشخصي وغير التجاري المؤقت فقط.">Permission is granted to temporarily download one copy of MARLN CRM Corporate per device for personal, non-commercial transitory viewing only.</p>
+                    
+                    <h3 data-en="3. CRM Data Privacy and Security" data-ar="3. خصوصية وأمان بيانات CRM">3. CRM Data Privacy and Security</h3>
+                    <p data-en="MARLN CRM Corporate is designed with enterprise-grade security and privacy protection for customer relationship management data. All CRM data is encrypted and stored securely in compliance with international data protection standards including GDPR, CCPA, and industry-specific regulations." data-ar="تم تصميم نظام MARLN CRM Corporate بأمان وحماية خصوصية على مستوى المؤسسات لبيانات إدارة علاقات العملاء. جميع بيانات CRM مشفرة ومخزنة بأمان وفقاً لمعايير حماية البيانات الدولية بما في ذلك GDPR وCCPA واللوائح الخاصة بالصناعة.">MARLN CRM Corporate is designed with enterprise-grade security and privacy protection for customer relationship management data. All CRM data is encrypted and stored securely in compliance with international data protection standards including GDPR, CCPA, and industry-specific regulations.</p>
+                    
+                    <h3 data-en="4. CRM Compliance and Reporting" data-ar="4. الامتثال والتقارير CRM">4. CRM Compliance and Reporting</h3>
+                    <p data-en="MARLN CRM Corporate assists with CRM reporting and compliance but does not guarantee regulatory compliance. Users are responsible for ensuring their CRM data and reports meet applicable regulatory requirements and standards." data-ar="يساعد نظام MARLN CRM Corporate في تقارير وامتثال CRM ولكنه لا يضمن الامتثال التنظيمي. المستخدمون مسؤولون عن ضمان أن بيانات وتقارير CRM الخاصة بهم تلبي المتطلبات والمعايير التنظيمية المعمول بها.">MARLN CRM Corporate assists with CRM reporting and compliance but does not guarantee regulatory compliance. Users are responsible for ensuring their CRM data and reports meet applicable regulatory requirements and standards.</p>
+                    
+                    <h3 data-en="5. Disclaimer" data-ar="5. إخلاء المسؤولية">5. Disclaimer</h3>
+                    <p data-en="The materials on MARLN CRM Corporate are provided on an 'as is' basis. MARLN Corporation makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties." data-ar="يتم توفير المواد الموجودة في نظام MARLN CRM Corporate على أساس 'كما هي'. لا تقدم شركة مارلن أي ضمانات، صريحة أو ضمنية، وتتنصل هنا من جميع الضمانات الأخرى.">The materials on MARLN CRM Corporate are provided on an 'as is' basis. MARLN Corporation makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+</html>

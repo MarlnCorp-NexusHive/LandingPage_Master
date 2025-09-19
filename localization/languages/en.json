@@ -1,0 +1,721 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About us",
+    "services": "Services",
+    "products": "Products",
+    "company": "Company",
+    "contact": "Contact us",
+    "insights": "Insights"
+  },
+  "dropdown": {
+    "services": {
+      "aiConsulting": "AI Powered Consulting",
+      "engineering": "Engineering Services",
+      "dataAnalytics": "Data Analytics",
+      "corporateTraining": "Corporate Training"
+    },
+    "products": {
+      "lmsUniversity": "LMS University",
+      "crmUniversity": "CRM University",
+      "esg": "ESG",
+      "lmsCorporate": "LMS Corporate",
+      "crmCorporate": "CRM Corporate"
+    },
+    "company": {
+      "profile": "Marln Company Profile",
+      "csr": "Corporate Social Responsibility (CSR)",
+      "partners": "Technology Partners",
+      "industry": "Industry"
+    }
+  },
+  "common": {
+    "contactUs": "Contact us",
+    "scheduleMeeting": "Schedule a meeting",
+    "speakToTeam": "Speak to our team",
+    "sendMessage": "Send message",
+    "namePlaceholder": "Name*",
+    "emailPlaceholder": "E-mail*",
+    "messagePlaceholder": "Tell about your project",
+    "ourProducts": "Our Smart Products",
+    "yourName": "Your name",
+    "yourEmail": "Your email",
+    "companyName": "Company name",
+    "tellUsAboutProject": "Tell us about your project"
+  },
+  "about": {
+    "story": {
+      "title": "OUR STORY",
+      "description": "The name \"Marln\" embodies a powerful narrative centered around the qualities that reflect the company's commitment to empowering women in technology and fostering a diverse, inclusive environment.",
+      "mentorship": {
+        "title": "Mentorship",
+        "description": "M stands for Mentorship, highlighting Marln's dedication to supporting and guiding women in their professional journeys."
+      },
+      "advocacy": {
+        "title": "Advocacy",
+        "description": "A represents Advocacy, as Marln actively champions the advancement of women in technology."
+      },
+      "resilience": {
+        "title": "Resilience",
+        "description": "R signifies Resilience, reflecting the strength and determination of women navigating the challenges of the tech landscape."
+      },
+      "leadership": {
+        "title": "Leadership",
+        "description": "L stands for Leadership, emphasizing the importance of female leadership within the organization and the tech sector."
+      },
+      "nurturing": {
+        "title": "Nurturing",
+        "description": "N embodies Nurturing, representing Marln's commitment to creating a supportive community for women in tech."
+      },
+      "conclusion": "Today, we serve clients across 10+ countries, with over 50 enterprise deployments and a team of 200+ experts. Our commitment to innovation, quality, and female empowerment has made us a trusted partner for businesses worldwide while advancing the cause of women in technology.",
+      "cta": "Click on any letter to discover its meaning and impact",
+      "close": "Close"
+    },
+    "mission": {
+      "title": "Mission",
+      "description1": "At Marln, our mission is to empower businesses with innovative, human-centered technology solutions that drive digital transformation and unlock growth.",
+      "description2": "Through our consultative, industry-focused approach, we help clients solve today's challenges while preparing for tomorrow's opportunities."
+    }
+  },
+  "industry": {
+    "hero": {
+      "title": "INDUSTRY SOLUTIONS"
+    },
+    "cards": {
+      "automotive": {
+        "title": "Automotive",
+        "description": "The automotive industry is constantly evolving, with the emergence of new technologies such as autonomous vehicles, electric vehicles, and advanced driver-assistance systems (ADAS)."
+      },
+      "banking": {
+        "title": "Banking",
+        "description": "Banking technology staffing solutions are a critical component of the banking industry. Banks need to have the right people in place to develop, implement, and maintain their technology systems."
+      },
+      "consumerGoods": {
+        "title": "Consumer Goods & Services",
+        "description": "Marln Corp can help CGS companies find and recruit qualified professionals with these in-demand skillsets. Staffing agencies can also provide temporary and contract staffing options."
+      },
+      "communications": {
+        "title": "Communications & Media",
+        "description": "Video Production and Editing: With the growing demand for video content across various platforms, video production and editing skills are becoming increasingly valuable."
+      },
+      "healthcare": {
+        "title": "Healthcare",
+        "description": "Electronic Health Records (EHR) and Health Information Technology (HIT): Proficiency in EHR systems and HIT tools is essential for managing patient records and ensuring compliance."
+      },
+      "hiTech": {
+        "title": "Hi-Tech",
+        "description": "High-tech companies rely heavily on skilled professionals with expertise in various technical domains to develop, implement, and maintain innovative products and services."
+      },
+      "lifeSciences": {
+        "title": "Life Sciences",
+        "description": "Life sciences companies rely on a diverse range of skilled professionals with expertise in various technical domains to make advancements in medicine and biotechnology."
+      },
+      "publicService": {
+        "title": "Public Service",
+        "description": "The public sector is increasingly reliant on technology to meet its objectives, and this demand for technical skills is only going to grow in the years to come."
+      },
+      "retail": {
+        "title": "Retail",
+        "description": "Retail businesses of all sizes rely on a diverse range of technical skills: Point-of-Sale (POS) Systems, Inventory Management, and Supply Chain Management."
+      },
+      "travel": {
+        "title": "Travel & Tourism",
+        "description": "The travel industry is constantly evolving, with the emergence of new technologies such as artificial intelligence (AI), machine learning (ML), and data analytics."
+      },
+      "government": {
+        "title": "Government",
+        "description": "We help government agencies migrate to the cloud to enable greater flexibility and scalability. Our team can help you choose the best cloud solution for your needs."
+      },
+      "utilities": {
+        "title": "Utilities",
+        "description": "We help utility companies migrate to the cloud to enable greater flexibility and scalability. Our team can help you choose the best cloud solution for your business."
+      },
+      "exploreButton": "Explore Solutions"
+    },
+    "contact": {
+      "title": "Kick Start Your Project Right Now",
+      "thankYouText": "We will contact you in the next few hours or you can schedule an appointment now.",
+      "scheduleButton": "Schedule a meeting"
+    }
+  },
+  "aiConsulting": {
+    "hero": {
+      "title": "Empowering Your Business with AI Powered Consulting Services"
+    },
+    "services": {
+      "strategicPlanning": {
+        "title": "Strategic Business Planning",
+        "description": "At Marln Corp, we believe that every successful venture starts with a solid plan. Our team of experts will work closely with you to develop a comprehensive business strategy tailored to your specific needs. We focus on market analysis, competitive positioning, and financial planning to ensure your business is set up for success. Let us help you navigate your path to growth and sustainability."
+      },
+      "operationalEfficiency": {
+        "title": "Operational Efficiency Improvement",
+        "description": "Improving operational efficiency is crucial for any business looking to enhance productivity and reduce costs. At Marln Corp, we assess your current processes and identify areas for improvement. Our consultants implement strategies that streamline operations, optimise resources, and ultimately boost your bottom line. Discover how we can transform your operations for greater efficiency and profitability."
+      },
+      "financialManagement": {
+        "title": "Financial Management Consulting",
+        "description": "Effective financial management is key to a thriving business. Marln Corp offers expert financial consulting services designed to help you better manage your finances, from budgeting and forecasting to cash flow management. Our experienced consultants will provide you with the tools and insights needed to make informed financial decisions that drive growth and sustainability."
+      },
+      "marketingStrategy": {
+        "title": "Marketing Strategy Development",
+        "description": "In today's competitive market, having a strong marketing strategy is essential. At Marln Corp, we specialize in developing tailored marketing strategies that resonate with your target audience. Our team conducts thorough market research and analysis to create campaigns that drive engagement and conversion. Let us help you elevate your brand and reach your business goals."
+      },
+      "hrSolutions": {
+        "title": "Human Resources Solutions",
+        "description": "Managing human resources effectively is vital for any organisation. Marln Corp provides comprehensive HR consulting services, including talent acquisition, employee development, and compliance management. Our approach focuses on creating a positive workplace culture and enhancing employee engagement to ensure your team is motivated and productive. Partner with us for effective HR solutions."
+      },
+      "technologyIntegration": {
+        "title": "Technology Integration Services",
+        "description": "In an increasingly digital world, integrating technology into your business is crucial for success. Marln Corp offers technology integration services that help you leverage the latest tools and software to improve efficiency and enhance customer experience. Our consultants will guide you through the process of selecting and implementing the right technology solutions for your business needs."
+      }
+    },
+    "compliance": {
+      "title": "Legal and Compliance",
+      "regulatoryAssessment": {
+        "title": "Regulatory Compliance Assessment",
+        "audits": "Compliance Audits:",
+        "auditsDesc": "Conduct thorough audits to assess current compliance with applicable laws, regulations, and industry standards.",
+        "gapAnalysis": "Gap Analysis:",
+        "gapAnalysisDesc": "Identify gaps in existing compliance frameworks and provide recommendations for remediation."
+      },
+      "policyDevelopment": {
+        "title": "Policy Development and Implementation",
+        "frameworkCreation": "Policy Framework Creation:",
+        "frameworkCreationDesc": "Develop comprehensive compliance policies and procedures tailored to the organization's specific needs and regulatory requirements.",
+        "implementationSupport": "Policy Implementation Support:",
+        "implementationSupportDesc": "Assist with the rollout and communication of new policies to ensure understanding and adherence across the organization."
+      },
+      "trainingAwareness": {
+        "title": "Training and Awareness Programs",
+        "complianceTraining": "Compliance Training:",
+        "complianceTrainingDesc": "Design and deliver training programs for employees on relevant regulations, compliance policies, and ethical standards.",
+        "awarenessCampaigns": "Awareness Campaigns:",
+        "awarenessCampaignsDesc": "Implement ongoing awareness initiatives to reinforce compliance culture within the organization."
+      },
+      "riskManagement": {
+        "title": "Risk Management and Mitigation",
+        "riskAssessment": "Risk Assessment:",
+        "riskAssessmentDesc": "Perform risk assessments to identify potential legal and compliance risks and develop mitigation strategies.",
+        "incidentResponse": "Incident Response Planning:",
+        "incidentResponseDesc": "Create incident response plans for potential compliance breaches, outlining steps for investigation, reporting, and remediation."
+      },
+      "contractManagement": {
+        "title": "Contract Management",
+        "contractReview": "Contract Review and Negotiation:",
+        "contractReviewDesc": "Provide services for reviewing, drafting, and negotiating contracts to ensure legal compliance and protect organizational interests.",
+        "contractSystems": "Contract Management Systems:",
+        "contractSystemsDesc": "Implement and manage systems for tracking and managing contractual obligations and compliance."
+      },
+      "dataProtection": {
+        "title": "Data Protection and Privacy Compliance",
+        "privacyAssessments": "Data Privacy Assessments:",
+        "privacyAssessmentsDesc": "Evaluate compliance with data protection laws (e.g., GDPR, CCPA) and provide guidance on data handling practices.",
+        "privacyPolicy": "Privacy Policy Development:",
+        "privacyPolicyDesc": "Create or update privacy policies to ensure transparency and compliance with applicable regulations."
+      },
+      "monitoringReporting": {
+        "title": "Monitoring and Reporting",
+        "monitoringPrograms": "Compliance Monitoring Programs:",
+        "monitoringProgramsDesc": "Establish monitoring systems to ensure ongoing compliance with regulatory requirements and internal policies.",
+        "reportingDocumentation": "Reporting and Documentation:",
+        "reportingDocumentationDesc": "Assist in preparing reports for regulatory bodies and maintaining comprehensive documentation of compliance activities."
+      },
+      "legalResearch": {
+        "title": "Legal Research and Advisory Services",
+        "research": "Legal Research:",
+        "researchDesc": "Conduct research on relevant laws, regulations, and case law to provide informed legal guidance.",
+        "advisoryServices": "Advisory Services:",
+        "advisoryServicesDesc": "Offer ongoing legal advice and support to ensure compliance with changing regulations and to address specific legal issues."
+      },
+      "thirdPartyRisk": {
+        "title": "Third-Party Risk Management",
+        "vendorAssessments": "Vendor Compliance Assessments:",
+        "vendorAssessmentsDesc": "Evaluate third-party vendors and partners for compliance with legal and regulatory standards.",
+        "dueDiligence": "Due Diligence Processes:",
+        "dueDiligenceDesc": "Implement due diligence processes to assess potential legal risks associated with third-party relationships."
+      }
+    }
+  },
+  "index": {
+    "hero": {
+      "title": "360° Vision. Maximum Impact.",
+      "subtitle": "Discover Nexushive CRM: The intelligent customer relationship management system that anticipates need."
+    },
+    "stats": {
+      "countries": { "title": "Countries Served", "num": "25+" },
+      "deployments": { "title": "Enterprise Deployments", "num": "50+" },
+      "certifications": { "title": "Certifications Earned", "num": "10+" },
+      "experts": { "title": "Experts", "num": "25+" }
+    },
+    "clients": {
+      "title": "Clients We Serve",
+      "startups": { "title": "Startups", "text": "Big ideas deserve bold execution. We collaborate with ambitious founders to transform initial concepts into strong, scalable brands — designed to cut through the noise and lead the future." },
+      "smvs": { "title": "Small & Medium Ventures", "text": "Companies in growth mode need more than momentum — they need sharp strategy and compelling identity to launch their next leap. We help small and medium ventures transform into market leaders." },
+      "corporates": { "title": "Corporates", "text": "For massive organizations dealing with complex markets, we craft high-impact brand narratives and design systems that reinforce authority, trust, and innovation." },
+      "government": { "title": "Government Sector", "text": "From digital transformation to citizen engagement, we collaborate with government entities to create clear, accessible, and future-ready communication solutions." },
+      "productsButton": "Our Products"
+    },
+    "services": {
+      "title": "Our Expertise",
+      "sectionTitle": "Our Expertise",
+      "item1": { "title": "Business Process Re-engineering", "text": "We analyze, redesign, and improve your customer-facing workflow to enhance efficiency, remove bottlenecks, and align processes with modern CRM strategy." },
+      "item2": { "title": "Product Customization", "text": "Every business is unique — and your CRM system should be too. We customize platforms to fit your needs precisely with scalable modules, flows, and interfaces that grow with your team and goals." },
+      "item3": { "title": "Deployment", "text": "From pilot to full launch, we ensure smooth CRM deployment. We manage environment setup, testing, user enablement, and change management to ensure minimal disruption and maximum adoption." },
+      "item4": { "title": "Customer Support", "text": "After launch, we stay with you. Our dedicated support team ensures quick problem resolution, continuous performance improvement, and platform longevity — so your team can focus on growth." }
+    },
+    "cta": {
+      "titleHtml": "Your vision. Our precision. <span class=\"green-text\">WE BUILD IT RIGHT FROM DAY ONE</span>",
+      "text": "Where strategy meets creativity — for smarter decisions, faster execution, and bolder results.",
+      "button": "Speak to our team"
+    },
+    "agile": {
+      "title": "Our Agile Methodology",
+      "step1": { "title": "Discovery & Research", "text": "Before we build, we listen. From stakeholder interviews to market analysis and user insights, we uncover real challenges — not just apparent ones — and turn assumptions into actionable data." },
+      "step2": { "title": "Design Board", "text": "Vision meets execution. We transform concepts into tangible solutions through rapid prototyping, stakeholder feedback, and iterative refinement." },
+      "step3": { "title": "Iterative Development & Testing Cycles", "text": "Rapid development cycles coupled with real-world testing to ensure every update delivers tangible progress." },
+      "step4": { "title": "Minimum Viable Product (MVP)", "text": "Speed with strategy. Launch a market-ready foundation in weeks. Validate demand, gather real user data, and refine with precision before major investment." },
+      "step5": { "title": "Production", "text": "We transform refined prototypes into robust, market-ready solutions — designed for scale, security, and seamless performance. Your product, fully realized." }
+    },
+    "products": {
+      "title": "Our Smart Products",
+      "viewAll": "View all products",
+      "button": "Learn more",
+      "sectionTitle": "Our Smart Products",
+      "magicpalm": {
+        "title": "Marln Magicpalm Scanner",
+        "description": "High-quality biometric palm vein device providing highly secure touchless authentication for access control, payments, and identity verification across various industries.",
+        "tags": ["Biometric", "Payments", "Scanner"],
+        "button": "Devices"
+      },
+      "crm": {
+        "title": "Customer Relationship Management System",
+        "description": "Comprehensive CRM solution that streamlines sales, marketing, and customer service operations to drive business growth.",
+        "tags": ["CRM", "Sales", "Customers"],
+        "button": "Learn more"
+      },
+      "lms": {
+        "title": "Learning Management Platform",
+        "description": "Advanced learning management system providing engaging educational experiences with comprehensive course management, tracking, and analytics capabilities.",
+        "tags": ["Learning Management", "Education", "Training"],
+        "button": "Learn more"
+      },
+      "egs": {
+        "title": "Enterprise Governance System",
+        "description": "Enterprise governance system providing comprehensive oversight, risk management, and compliance monitoring for large-scale corporate operations.",
+        "tags": ["Enterprise Governance", "Governance", "Corporate"],
+        "button": "Learn more"
+      },
+      "talkbright": {
+        "title": "Marln TalkBright",
+        "description": "Revolutionary AI-powered platform transforming IELTS exam preparation through intelligent feedback, real-time analysis, and personalized learning pathways for speaking, writing, reading, and listening skills.",
+        "tags": ["IELTS", "AI-Powered", "Education"],
+        "button": "Learn more"
+      }
+    },
+    "why": {
+      "title": "Why Choose Marln?",
+      "subtitle": "We believe that technical excellence should be accessible to everyone.",
+      "item1": { "title": "Proven Results", "text": "70+ brands launched. 12+ products deployed. Backed by results, trusted by startups, enterprises, and public institutions." },
+      "item2": { "title": "Individual Approach", "text": "No one-size-fits-all solutions. Every client gets a customized solution, aligned with their goals, size, and culture." },
+      "item3": { "title": "Advanced Technology", "text": "We use the latest technologies and tools to ensure your solutions are cutting-edge and future-ready." },
+      "item4": { "title": "Seamless Integration", "text": "Our solutions integrate easily with your existing tools and workflows." },
+      "item5": { "title": "Compliance", "text": "Compliance is built-in, not bolted on. From data handling to deployment, we ensure your systems meet regulatory and ethical standards." },
+      "item6": { "title": "AI-Features", "text": "AI that works where it matters. Whether it's smart CRMs, adaptive UX, or real-time insights we integrate AI for real business impact." }
+    },
+    "ai": {
+      "title": "AI that works where it matters",
+      "subtitle": "Whether it's intelligent CRMs, adaptive UX, or real-time insights — we integrate AI for real business impact.",
+      "features": {
+        "title": "AI Features",
+        "subtitle": "AI that works where it matters. Whether it's intelligent CRMs, adaptive UX, or real-time insights — we integrate AI for real business impact.",
+        "item1": { "title": "Predictive Analytics", "text": "See what happens next — before it happens. Our systems transform data into insight, helping you make informed, forward-looking decisions." },
+        "item2": { "title": "Adaptive AI", "text": "AI that adapts to your changing needs and evolves with your business." },
+        "item3": { "title": "Intelligent Automation", "text": "Automate repetitive and complex tasks to free your team to focus on creative work." }
+      }
+    },
+    "contact": {
+      "title": "Start Your Project Now",
+      "subtitle": "Well done!",
+      "description": "We will contact you in the next few hours or you can schedule a meeting now.",
+      "scheduleButton": "Schedule a meeting",
+      "form": {
+        "name": "Name*",
+        "email": "E-mail*",
+        "message": "Tell about your project",
+        "submit": "Send message"
+      },
+      "info": {
+        "title": "Send us an email",
+        "email": "contact@marlncorp.com",
+        "manager": {
+          "name": "Shadia Zaineddeen",
+          "position": "EXECUTIVE DIRECTOR"
+        }
+      }
+    },
+
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "questions": {
+        "q1": {
+          "question": "What services does Marln Corp offer?",
+          "answer": "We offer comprehensive solutions including branding, UI/UX design, product development, CRM systems, and digital transformation — customized for startups, enterprises, and government entities."
+        },
+        "q2": {
+          "question": "Do you only work on building new brands, or also on rebranding?",
+          "answer": "Both. We help create brands from scratch, but we're also specialists in strategic brand renewal for companies looking to evolve without losing their essence."
+        },
+        "q3": {
+          "question": "How does your process differ from other agencies?",
+          "answer": "At Marln Corp, every project starts with deep research and business alignment. We combine design thinking, agile methodology, and proven expertise to deliver solutions that aren't just creative — they're scalable and strategic."
+        },
+        "q4": {
+          "question": "What industries do you serve?",
+          "answer": "We work across multiple domains including fintech, edtech, e-commerce, public sector, SaaS, and lifestyle branding — adapting our process to fit each industry's needs."
+        },
+        "q5": {
+          "question": "Do you offer support and maintenance after launch?",
+          "answer": "Yes. Whether it's deploying CRM systems, managing brand assets, or ongoing design support — we offer long-term partnerships to keep your systems and brand running flawlessly."
+        },
+        "q6": {
+          "question": "What's your typical project timeline?",
+          "answer": "Project timelines vary based on scope. For example, brand identity projects typically take 3-5 weeks, while CRM implementation or product launches can take 6-12 weeks. We work with you to create realistic timelines."
+        },
+        "q7": {
+          "question": "How do we get started?",
+          "answer": "Simple — just reach out and our team will schedule a discovery call to understand your goals, challenges, and how we can deliver the right solution."
+        }
+      }
+    }
+  },
+  "engineering": {
+    "hero": {
+      "title": "Engineering Solutions and Services",
+      "description": "Comprehensive engineering services that transform your ideas into innovative, scalable, and robust technical solutions. From concept to deployment, we deliver excellence in every project."
+    },
+    "solutions": {
+      "title": "Our Solutions",
+      "appDevelopment": {
+        "title": "Tailored Application Development",
+        "description": "Crafting applications precisely for your business needs, our solutions distinguish your brand in the digital landscape, ensuring a lasting impact with tailored excellence."
+      },
+      "mobileDevelopment": {
+        "title": "Cross-Platform Mobile App Development",
+        "description": "Expand your reach with our cross-platform apps, designed for broader audience engagement. Deliver captivating experiences across devices and platforms for exponential growth."
+      }
+    },
+    "aiSolutions": {
+      "title": "Generative AI Data Solutions",
+      "dataPreparation": {
+        "title": "Data Preparation",
+        "description": "Turbocharge your AI/ML infrastructure by standardising your data pipeline on modern architectures such as DataBricks and Snowflake. Data prep/labeling and catalog maintenance are areas where we can help."
+      },
+      "aiStrategy": {
+        "title": "AI Strategy and Roadmap Development",
+        "description": "Crafting cutting-edge generative AI models requires high-quality data solutions. These encompass a spectrum of strategies, from curating diverse golden datasets to refining data through fine-tuning and optimizing for human preferences."
+      },
+      "modelDevelopment": {
+        "title": "AI/ML Model Development With Data Solutions for Generative AI",
+        "description": "Top-tier data solutions for pioneering generative AI models entail diverse golden datasets, refined data fine-tuning, human preference optimization, red teaming for safety, and thorough model evaluation."
+      },
+      "promptEngineering": {
+        "title": "Prompt Engineering",
+        "description": "Unlock the Full Potential of AI/ML with Marln's Expert Prompt Engineering Services. At Marln, we specialize in prompt engineering, a vital process that fine-tunes AI/ML models for precise and contextually relevant results. business goals."
+      },
+      "fineTuning": {
+        "title": "Fine tuning LLMs",
+        "description": "Unleash the Full Potential of AI/ML with Marln's Expert Fine-Tuning Services. At Marln, we specialize in fine-tuning a wide array of AI/ML models, spanning traditional machine learning models and cutting-edge Large Language Models (LLMs)."
+      },
+      "intelligentAssistants": {
+        "title": "Intelligent Assistants",
+        "description": "Embrace the Power of Cutting-Edge AI Models like OpenAI's GPT-3, BERT, and More with Marln's Intelligent Assistant Services."
+      }
+    },
+          "qualityEngineering": {
+        "title": "Quality Engineering",
+        "testAutomation": {
+          "title": "Test Automation",
+          "description": "We excel in Automation Testing, streamlining your software development cycle for increased efficiency and accelerated time-to-market."
+        },
+        "performanceTesting": {
+          "title": "Performance Testing",
+          "description": "Our Performance Testing experts ensure your applications run at peak performance, delivering a seamless experience to your users."
+        },
+        "securityTesting": {
+          "title": "Security Testing",
+          "description": "Safeguard your digital assets with our Security Testing services. We identify vulnerabilities and protect your applications from threats. Red-teaming and Pen-testing are some of the services we offer."
+        },
+        "globalizationTesting": {
+          "title": "Globalization Testing",
+          "description": "We specialize in Globalization Testing, ensuring your products are tailored for various markets, cultures, and languages to enhance your global presence."
+        },
+        "complianceTesting": {
+          "title": "Compliance and Regulatory Testing",
+          "description": "Rely on our Compliance and Regulatory Testing to ensure your software meets industry standards and regulations, helping you maintain compliance with ease."
+        },
+        "continuousTesting": {
+          "title": "Continuous Testing Integration",
+          "description": "Our expertise in Continuous Testing Integration keeps your development process agile and your software reliable, fostering rapid innovation."
+        },
+        "functionalityTesting": {
+          "title": "Functionality Testing",
+          "description": "Functionality Testing is our forte. We meticulously assess your software's features to ensure they meet user expectations."
+        },
+        "usabilityTesting": {
+          "title": "Usability and Accessibility Testing",
+          "description": "We focus on user experience with Usability and Accessibility Testing, ensuring your digital products are inclusive and easy to navigate. ADA Compliance Testing."
+        },
+        "apiTesting": {
+          "title": "API Testing",
+          "description": "Our API Testing specialists ensure smooth data exchange, improving interoperability and functionality across your applications."
+        }
+      },
+      "cloudTechnologies": {
+        "title": "Cloud Technologies",
+        "cloudMigration": {
+          "title": "Cloud Migration",
+          "description": "Migrate applications and data to cloud. At Marln, we specialize in delivering comprehensive cloud migration services, enabling businesses to seamlessly transition their applications and data to the cloud."
+        },
+        "cloudSecurity": {
+          "title": "Cloud Security and Governance",
+          "description": "Robust Cloud Security and Governance. At Marln, we take pride in our vast network of cloud security and governance experts who excel in aligning well-architected frameworks to safeguard your valuable data and assets in the cloud."
+        },
+        "multicloudNetworking": {
+          "title": "Multicloud Networking",
+          "description": "Multicloud Networking and Security services are built on a foundation of collaboration, seamlessly integrating the best of AWS, Azure, and emerging startups to elevate your cloud environment to new heights."
+        },
+        "devOps": {
+          "title": "Dev Ops and Operations",
+          "description": "Maximize Efficiency with Marln's DevOps and Cloud Automation Services. Our expert team implements robust CI/CD pipelines, leveraging cutting-edge tools like Terraform, AWS Control Tower, Azure Landing Zones, AWS CloudFormation (CFT), and Azure Resource Manager (ARM) templates to automate infrastructure provisioning and configuration."
+        }
+      },
+      "digitalEngineering": {
+        "title": "Digital Engineering",
+        "rpa": {
+          "title": "Robotic Process Automation (RPA) Solutions"
+        },
+        "uiux": {
+          "title": "UI/UX"
+        },
+        "fullStack": {
+          "title": "Full Stack & Dev Ops"
+        },
+        "cms": {
+          "title": "Content Management Software"
+        },
+        "softwareDevelopment": {
+          "title": "Software Development"
+        },
+        "mobility": {
+          "title": "Mobility"
+        }
+      },
+      "cybersecurity": {
+        "title": "Cybersecurity",
+        "identityManagement": {
+          "title": "Identity And Access Management",
+          "description": "Adopt architectural best practices for your SAML/SCIM definitions including adoption of Zero Trust security architectures"
+        },
+        "networkSecurity": {
+          "title": "Network Security",
+          "description": "Full lifecycle management of firewalls, policy domains and security appliances. Security implementation adhering to DMZ best practices including cloaking."
+        },
+        "advancedCybersec": {
+          "title": "Advanced Cybersec",
+          "description": "CASB/DLP/SWG implementation and maintenance for leading Zero trust solutions."
+        },
+        "securityAudit": {
+          "title": "Security Audit and Consulting",
+          "description": "Regular review of security and risk management architecture alongwith audit and logging controls to maintain good security hygiene"
+        }
+      },
+      "solutionsSection": {
+        "title": "Solutions",
+        "strategicPlanning": {
+          "title": "Strategic Business Planning",
+          "description": "At Marln Corp, we believe that every successful venture starts with a solid plan. Our team of experts will work closely with you to develop a comprehensive business strategy tailored to your specific needs. We focus on market analysis, competitive positioning, and financial planning to ensure your business is set up for success. Let us help you navigate your path to growth and sustainability."
+        },
+        "operationalEfficiency": {
+          "title": "Operational Efficiency Improvement",
+          "description": "Improving operational efficiency is crucial for any business looking to enhance productivity and reduce costs. At Marln Corp, we assess your current processes and identify areas for improvement. Our consultants implement strategies that streamline operations, optimise resources, and ultimately boost your bottom line. Discover how we can transform your operations for greater efficiency and profitability."
+        },
+        "technologyIntegration": {
+          "title": "Technology Integration Services",
+          "description": "In an increasingly digital world, integrating technology into your business is crucial for success. Marln Corp offers technology integration services that help you leverage the latest tools and software to improve efficiency and enhance customer experience. Our consultants will guide you through the process of selecting and implementing the right technology solutions for your business needs."
+        }
+      }
+  },
+  "dataAnalytics": {
+    "hero": {
+      "title": "Data Engineering Expertise for Every Business Requirement"
+    },
+    "services": {
+      "dataModeling": {
+        "title": "Data Modeling and Visualization",
+        "description": "Create predictive and prescriptive models tailored to business needs. Develop interactive dashboards and reporting tools for real-time insights. Build bespoke analytics applications that address specific client requirements."
+      },
+      "dataManagement": {
+        "title": "Data Management",
+        "description": "Establish policies for data quality, privacy, and security. Combine data from multiple sources into a unified format. Design and implement data warehouses for efficient storage and retrieval."
+      },
+      "dataStrategy": {
+        "title": "Data Strategy Development",
+        "description": "Evaluate existing data infrastructure and analytics maturity. Define business objectives and key performance indicators (KPIs). Develop a strategic roadmap for data analytics implementation."
+      },
+      "businessIntelligence": {
+        "title": "Business Intelligence",
+        "description": "Create visual representations of data to facilitate understanding. Use data visualization to narrate insights and drive decision-making. Set up and customize BI tools like Tableau, Power BI, or Qlik."
+      },
+      "advancedAnalytics": {
+        "title": "Advanced Analytics",
+        "description": "Implement machine learning algorithms for complex data analysis. Analyze text data for sentiment, trends, and insights. Leverage technologies like Hadoop and Spark for processing large datasets."
+      },
+      "performanceMeasurement": {
+        "title": "Performance Measurement",
+        "description": "Identify and track key performance indicators. Provide periodic reports to evaluate progress against goals. Continuously monitor analytics performance and adjust strategies as needed."
+      },
+      "regulatoryCompliance": {
+        "title": "Regulatory Compliance",
+        "description": "Understand industry-specific regulations for data handling, storage, and analysis. Create data governance policies, conduct regular audits, and ensure data encryption and anonymization techniques are in place."
+      },
+      "changeManagement": {
+        "title": "Change Management",
+        "description": "Conduct discovery sessions with stakeholders and analyze impact. Involve key stakeholders in the analytics process for buy-in. Foster a data-driven culture within the organization."
+      },
+      "ongoingSupport": {
+        "title": "Ongoing Support and Maintenance",
+        "description": "Regularly update analytics tools and models. Provide support for technical issues and data discrepancies. Continuously monitor analytics performance and adjust strategies as needed."
+      }
+    }
+  },
+  "footer": {
+    "social": "Social Links",
+    "socialLinks": {
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "email": "Email"
+    },
+    "certifications": "Certifications",
+    "officesTitle": "Offices",
+    "offices": {
+      "cupertino": "Cupertino, USA",
+      "jeddah": "Jeddah, Saudi Arabia",
+      "riyadh": "Riyadh, Saudi Arabia",
+      "bengaluru": "Bengaluru, India",
+      "capetown": "Capetown, South Africa"
+    }
+  },
+  "companyProfile": {
+    "hero": {
+      "title": "MARLN\nCORPORATION"
+    },
+    "sections": {
+      "profile": {
+        "title": "Company Profile",
+        "subtitle": "Marln Corp Consulting: Your Partner in Business Growth",
+        "welcome": "Welcome to Marln Corporation, a dynamic women-owned IT consulting company based in the vibrant San Francisco Bay Area. With a commitment to empowering businesses through innovative technology solutions, Marln Corporation blends industry expertise with a diverse perspective.",
+        "founded": "Founded by a team of experienced professionals, we specialize in delivering tailored IT services that drive efficiency, foster growth, and enhance operational excellence. Our mission is to bridge the gap between technology and business, providing clients with strategic insights and solutions that meet their unique challenges.",
+        "belief": "At Marln Corporation, we believe in the power of collaboration and inclusivity, and we are dedicated to helping organizations thrive in today's fast-paced digital landscape. Join us as we redefine the future of IT consulting, one solution at a time.",
+        "location": "Marln Corp is based in Cupertino (San Francisco Bay Area), California. We have partner offices in India, Singapore, Canada and Germany."
+      },
+      "about": {
+        "title": "Marln Corp",
+        "description": "The name \"Marln\" embodies a powerful narrative centered around the qualities that reflect the company's commitment to empowering women in technology and fostering a diverse, inclusive environment.",
+        "mentorship": "M stands for Mentorship, highlighting Marln's dedication to supporting and guiding women in their professional journeys. The company prioritizes mentorship programs that empower female talent, ensuring they have the resources and encouragement needed to thrive in the tech industry.",
+        "advocacy": "A represents Advocacy, as Marln actively champions the advancement of women in technology. By advocating for equitable opportunities and representation, Marln seeks to break down barriers and create a more inclusive workforce.",
+        "resilience": "R signifies Resilience, reflecting the strength and determination of women navigating the challenges of the tech landscape. Marln is committed to fostering an environment where resilience is celebrated, inspiring women to overcome obstacles and achieve their goals.",
+        "leadership": "L stands for Leadership, emphasizing the importance of female leadership within the organization and the tech sector as a whole. Marln cultivates a culture that not only promotes women into leadership roles but also empowers them to lead with confidence and vision.",
+        "nurturing": "N embodies Nurturing, representing Marln's commitment to creating a supportive community for women in tech. By nurturing talent and encouraging collaboration, Marln fosters an environment where women can flourish and drive innovation.",
+        "conclusion": "Together, these qualities encapsulate the spirit of Marln Corporation, guiding its mission to empower women through innovative IT consulting solutions while advocating for a more equitable and inclusive future in technology."
+      }
+    }
+  },
+  "csr": {
+    "title": "Corporate Social Responsibility",
+    "subtitle": "Learn about Marln's commitment to corporate social responsibility, including our initiatives for diversity, community support, and environmental sustainability.",
+    "initiatives": {
+      "title": "Our CSR Initiatives",
+      "subtitle": "Comprehensive programs designed to create positive impact across communities and environments.",
+      "diversity": {
+        "title": "Diversity Programs",
+        "text": "Comprehensive programs designed to promote diversity and inclusion in the technology sector."
+      },
+      "community": {
+        "title": "Community Support",
+        "text": "Active involvement in community initiatives and charitable programs that make a positive impact."
+      },
+      "environmental": {
+        "title": "Environmental Responsibility",
+        "text": "Commitment to sustainable practices and environmental responsibility in all our operations."
+      }
+    },
+    "commitment": {
+      "title": "Our Commitment to a Better Tomorrow",
+      "subtitle": "We believe businesses have a responsibility to create positive change in society and the environment.",
+      "focusAreas": {
+        "title": "Focus Areas",
+        "environment": {
+          "title": "Environment",
+          "text": "Committed to reducing our carbon footprint and promoting sustainable practices across all operations."
+        },
+        "community": {
+          "title": "Community",
+          "text": "Supporting local communities through volunteer programs, charitable donations, and community partnerships."
+        },
+        "education": {
+          "title": "Education",
+          "text": "Investing in educational initiatives and providing opportunities for skill development and learning."
+        },
+        "ethics": {
+          "title": "Ethics & Governance",
+          "text": "Maintaining the highest standards of ethical business practices and transparent governance."
+        }
+      }
+    },
+    "flagship": {
+      "title": "Flagship Initiatives",
+      "subtitle": "Our key programs that drive meaningful change and create lasting impact.",
+      "greenFuture": {
+        "title": "Green Future Project",
+        "text": "Our comprehensive environmental initiative focused on reducing carbon emissions, implementing renewable energy solutions, and promoting sustainable business practices."
+      },
+      "techForAll": {
+        "title": "Tech for All",
+        "text": "Bridging the digital divide by providing technology access, digital literacy training, and STEM education to underserved communities."
+      },
+      "communityCare": {
+        "title": "Community Care Drive",
+        "text": "Supporting local communities through food drives, healthcare initiatives, and emergency relief programs."
+      }
+    }
+  },
+  "partners": {
+    "hero": {
+      "title": "OUR TECHNOLOGY PARTNERS",
+      "subtitle": "Empowering Innovation Through Strategic Alliances"
+    },
+    "automationAnywhere": {
+      "name": "Automation Anywhere",
+      "description": "RPA Solutions"
+    },
+    "aws": {
+      "name": "AWS",
+      "description": "Cloud Infrastructure"
+    },
+    "microsoft": {
+      "name": "Microsoft",
+      "description": "Enterprise Solutions"
+    },
+    "google": {
+      "name": "Google",
+      "description": "AI & Analytics"
+    },
+    "oracle": {
+      "name": "Oracle",
+      "description": "Database & Cloud"
+    },
+    "databricks": {
+      "name": "Databricks",
+      "description": "Data & AI Platform"
+    }
+  }
+} 

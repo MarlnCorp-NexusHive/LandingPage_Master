@@ -1,0 +1,392 @@
+/**
+ * 🎨 Language Toggle Styles
+ * Modern, responsive design for the language toggle component
+ */
+
+/* ===== LANGUAGE TOGGLE CONTAINER ===== */
+.language-toggle {
+  position: relative;
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  user-select: none;
+  z-index: 1000;
+}
+
+/* ===== TOGGLE BUTTON ===== */
+.language-toggle .toggle-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 40px;
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.language-toggle .toggle-button:hover {
+  border-color: #4CAF50;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+  transform: translateY(-1px);
+}
+
+.language-toggle .toggle-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+}
+
+.language-toggle .toggle-button:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+/* ===== SLIDING BACKGROUND ===== */
+.language-toggle .slider-bg {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 56px;
+  height: 32px;
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  border-radius: 16px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+.language-toggle .slider-bg.slide-right {
+  transform: translateX(58px);
+}
+
+/* ===== LANGUAGE CONTAINER ===== */
+.language-toggle .lang-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+/* ===== LANGUAGE OPTIONS ===== */
+.language-toggle .lang-option {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6c757d;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+}
+
+.language-toggle .lang-option.active {
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.language-toggle .lang-option.inactive {
+  color: #6c757d;
+}
+
+.language-toggle .lang-option:hover {
+  color: #4CAF50;
+}
+
+/* ===== SIZE VARIATIONS ===== */
+.language-toggle.size-small .toggle-button {
+  width: 100px;
+  height: 32px;
+  border-radius: 16px;
+}
+
+.language-toggle.size-small .slider-bg {
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+}
+
+.language-toggle.size-small .slider-bg.slide-right {
+  transform: translateX(46px);
+}
+
+.language-toggle.size-small .lang-option {
+  font-size: 12px;
+}
+
+.language-toggle.size-large .toggle-button {
+  width: 140px;
+  height: 48px;
+  border-radius: 24px;
+}
+
+.language-toggle.size-large .slider-bg {
+  width: 68px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.language-toggle.size-large .slider-bg.slide-right {
+  transform: translateX(70px);
+}
+
+.language-toggle.size-large .lang-option {
+  font-size: 16px;
+}
+
+/* ===== STYLE VARIATIONS ===== */
+.language-toggle.style-classic .toggle-button {
+  background: #ffffff;
+  border-color: #dee2e6;
+}
+
+.language-toggle.style-classic .slider-bg {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+.language-toggle.style-modern .toggle-button {
+  background: #f8f9fa;
+  border-color: #e9ecef;
+}
+
+.language-toggle.style-modern .slider-bg {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+}
+
+.language-toggle.style-minimal .toggle-button {
+  background: transparent;
+  border-color: #dee2e6;
+  box-shadow: none;
+}
+
+.language-toggle.style-minimal .slider-bg {
+  background: #4CAF50;
+}
+
+/* ===== RTL SUPPORT ===== */
+.language-toggle.rtl .toggle-button {
+  direction: rtl;
+}
+
+.language-toggle.rtl .slider-bg {
+  right: 2px;
+  left: auto;
+}
+
+.language-toggle.rtl .slider-bg.slide-right {
+  transform: translateX(-58px);
+}
+
+.language-toggle.rtl.size-small .slider-bg.slide-right {
+  transform: translateX(-46px);
+}
+
+.language-toggle.rtl.size-large .slider-bg.slide-right {
+  transform: translateX(-70px);
+}
+
+/* ===== MOBILE OPTIMIZATION ===== */
+@media (max-width: 768px) {
+  .language-toggle .toggle-button {
+    width: 100px;
+    height: 36px;
+    border-radius: 18px;
+  }
+  
+  .language-toggle .slider-bg {
+    width: 48px;
+    height: 28px;
+    border-radius: 14px;
+  }
+  
+  .language-toggle .slider-bg.slide-right {
+    transform: translateX(50px);
+  }
+  
+  .language-toggle .lang-option {
+    font-size: 13px;
+  }
+  
+  .language-toggle.rtl .slider-bg.slide-right {
+    transform: translateX(-50px);
+  }
+}
+
+@media (max-width: 480px) {
+  .language-toggle .toggle-button {
+    width: 90px;
+    height: 32px;
+    border-radius: 16px;
+  }
+  
+  .language-toggle .slider-bg {
+    width: 42px;
+    height: 24px;
+    border-radius: 12px;
+  }
+  
+  .language-toggle .slider-bg.slide-right {
+    transform: translateX(46px);
+  }
+  
+  .language-toggle .lang-option {
+    font-size: 12px;
+  }
+  
+  .language-toggle.rtl .slider-bg.slide-right {
+    transform: translateX(-46px);
+  }
+}
+
+/* ===== ACCESSIBILITY ===== */
+.language-toggle .toggle-button[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.language-toggle .toggle-button[aria-disabled="true"]:hover {
+  border-color: #e9ecef;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: none;
+}
+
+/* ===== ANIMATION VARIATIONS ===== */
+.language-toggle.animation-fade .slider-bg {
+  transition: opacity 0.3s ease;
+}
+
+.language-toggle.animation-bounce .slider-bg {
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+  .language-toggle .toggle-button {
+    background: #2d3748;
+    border-color: #4a5568;
+  }
+  
+  .language-toggle .lang-option.inactive {
+    color: #a0aec0;
+  }
+  
+  .language-toggle .lang-option:hover {
+    color: #68d391;
+  }
+}
+
+/* ===== HIGH CONTRAST MODE ===== */
+@media (prefers-contrast: high) {
+  .language-toggle .toggle-button {
+    border-width: 3px;
+  }
+  
+  .language-toggle .slider-bg {
+    border: 2px solid #000000;
+  }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  .language-toggle .toggle-button,
+  .language-toggle .slider-bg,
+  .language-toggle .lang-option {
+    transition: none;
+  }
+  
+  .language-toggle .toggle-button:hover {
+    transform: none;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .language-toggle {
+    display: none;
+  }
+}
+
+/* ===== FOCUS VISIBLE (for keyboard navigation) ===== */
+.language-toggle .toggle-button:focus-visible {
+  outline: 2px solid #4CAF50;
+  outline-offset: 2px;
+}
+
+/* ===== LOADING STATE ===== */
+.language-toggle.loading .toggle-button {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.language-toggle.loading .slider-bg {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* ===== ERROR STATE ===== */
+.language-toggle.error .toggle-button {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.2);
+}
+
+.language-toggle.error .slider-bg {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+}
+
+/* ===== SUCCESS STATE ===== */
+.language-toggle.success .toggle-button {
+  border-color: #28a745;
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2);
+}
+
+.language-toggle.success .slider-bg {
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+}
+
+/* ===== HEADER LTR OVERRIDE ===== */
+/* Ensure header maintains LTR layout even in Arabic/RTL mode */
+[dir="rtl"] header,
+[dir="rtl"] header * {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+[dir="rtl"] header .header--menu__list {
+  flex-direction: row !important;
+}
+
+[dir="rtl"] header .sub-menu {
+  left: 0 !important;
+  right: auto !important;
+}
+
+[dir="rtl"] header .mobile-menu-nav {
+  direction: ltr !important;
+}
+
+[dir="rtl"] header .mobile-menu-list {
+  text-align: left !important;
+}
+
+[dir="rtl"] header .mobile-dropdown-menu {
+  left: 0 !important;
+  right: auto !important;
+}
+

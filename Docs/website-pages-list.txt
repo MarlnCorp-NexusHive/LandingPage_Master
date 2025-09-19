@@ -1,0 +1,42 @@
+MAIN WEBSITE PAGES
+==================
+index.html - Home/Landing page
+about-us.html - About Us page
+marln-company-profile.html - Company Profile page
+corporate-social-responsibility.html - CSR page
+
+SERVICES PAGES
+==============
+ai-powered-consulting.html - AI Consulting services
+data-analytics.html - Data Analytics services
+engineering-services.html - Engineering services
+
+BUSINESS PAGES
+==============
+technology-partners.html - Technology Partners
+industry.html - Industry solutions
+
+TEST/DEBUG PAGES
+================
+theme-test.html - Theme testing
+test-language.html - Language testing
+test-dropdown.html - Dropdown testing
+test-dropdown-debug.html - Dropdown debug
+debug-language.html - Language debug
+contact-form-replacement.html - Contact form test
+comprehensive-test-suite.html - Test suite
+
+SUPPORTING FILES
+================
+css/ - Stylesheets
+js/ - JavaScript files
+images/ - Image assets
+fonts/ - Font files
+i18n/ - Internationalization files
+Documentation files (README, various .md files)
+
+SUMMARY
+=======
+Core Business Pages: 9 main pages
+Test Pages: 7 debug/test pages
+Total HTML Pages: 16 
