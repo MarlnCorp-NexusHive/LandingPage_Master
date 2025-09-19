@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Arabic Hero Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .controls {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .btn:hover {
+            background: #45a049;
+        }
+        .btn.active {
+            background: #2196F3;
+        }
+        .hero-section {
+            position: relative;
+            height: 400px;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: none;
+        }
+        .hero-image.active {
+            display: block;
+        }
+        .status {
+            text-align: center;
+            padding: 10px;
+            background: #e7f3ff;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #2196F3;
+        }
+        .instructions {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #ffc107;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Arabic Hero Images Test</h1>
+        
+        <div class="instructions">
+            <h3>Test Instructions:</h3>
+            <ol>
+                <li>First, make sure you have the Arabic hero images in your "images" folder:
+                    <ul>
+                        <li>marln-hero-image-arabic.png (Arabic light mode)</li>
+                        <li>marln-hero-image-arabic-dark.png (Arabic dark mode)</li>
+                    </ul>
+                </li>
+                <li>Use the controls below to test language and theme switching</li>
+                <li>The hero image should change based on language (English/Arabic) and theme (Light/Dark)</li>
+                <li>Check the status display to see current settings</li>
+            </ol>
+        </div>
+        
+        <div class="status" id="status">
+            Current: English Language, Light Theme
+        </div>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label>Language:</label>
+                <button class="btn active" onclick="setLanguage('en')">English</button>
+                <button class="btn" onclick="setLanguage('ar')">Arabic</button>
+            </div>
+            
+            <div class="control-group">
+                <label>Theme:</label>
+                <button class="btn active" onclick="setTheme('light')">Light</button>
+                <button class="btn" onclick="setTheme('dark')">Dark</button>
+            </div>
+        </div>
+        
+        <div class="hero-section">
+            <!-- English Hero Images -->
+            <img src="images/marln-hero-image.png" class="hero-image hero-light" alt="English Light Mode">
+            <img src="images/marln-hero-image-dark.png" class="hero-image hero-dark" alt="English Dark Mode">
+            
+            <!-- Arabic Hero Images -->
+            <img src="images/marln-hero-image-arabic.png" class="hero-image hero-arabic-light" alt="Arabic Light Mode">
+            <img src="images/marln-hero-image-arabic-dark.png" class="hero-image hero-arabic-dark" alt="Arabic Dark Mode">
+        </div>
+        
+        <div class="status">
+            <strong>Expected Behavior:</strong><br>
+            • English + Light: Show English light image<br>
+            • English + Dark: Show English dark image<br>
+            • Arabic + Light: Show Arabic light image<br>
+            • Arabic + Dark: Show Arabic dark image
+        </div>
+    </div>
+
+    <script>
+        let currentLanguage = 'en';
+        let currentTheme = 'light';
+        
+        function setLanguage(lang) {
+            currentLanguage = lang;
+            
+            // Update button states
+            document.querySelectorAll('.control-group:first-child .btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            updateHeroImages();
+            updateStatus();
+        }
+        
+        function setTheme(theme) {
+            currentTheme = theme;
+            
+            // Update button states
+            document.querySelectorAll('.control-group:last-child .btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            updateHeroImages();
+            updateStatus();
+        }
+        
+        function updateHeroImages() {
+            // Hide all images first
+            document.querySelectorAll('.hero-image').forEach(img => {
+                img.classList.remove('active');
+            });
+            
+            // Show appropriate image based on language and theme
+            if (currentLanguage === 'ar') {
+                // Arabic mode
+                if (currentTheme === 'dark') {
+                    document.querySelector('.hero-arabic-dark').classList.add('active');
+                } else {
+                    document.querySelector('.hero-arabic-light').classList.add('active');
+                }
+            } else {
+                // English mode
+                if (currentTheme === 'dark') {
+                    document.querySelector('.hero-dark').classList.add('active');
+                } else {
+                    document.querySelector('.hero-light').classList.add('active');
+                }
+            }
+        }
+        
+        function updateStatus() {
+            const status = document.getElementById('status');
+            status.textContent = `Current: ${currentLanguage === 'ar' ? 'Arabic' : 'English'} Language, ${currentTheme === 'dark' ? 'Dark' : 'Light'} Theme`;
+        }
+        
+        // Initialize
+        updateHeroImages();
+        updateStatus();
+    </script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu Translation Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f5f5f5;
+        }
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #333;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .menu {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background: #f8f9fa;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .menu li {
+            position: relative;
+        }
+        .menu a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #333;
+            transition: background 0.3s;
+        }
+        .menu a:hover {
+            background: #e9ecef;
+        }
+        .sub-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #9EE86F;
+            min-width: 200px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            display: none;
+            z-index: 1000;
+        }
+        .menu li:hover .sub-menu {
+            display: block;
+        }
+        .sub-menu li {
+            display: block;
+        }
+        .sub-menu a {
+            padding: 12px 20px;
+            border-bottom: 1px solid #ddd;
+            color: #0C081E;
+        }
+        .sub-menu a:last-child {
+            border-bottom: none;
+        }
+        .sub-menu a:hover {
+            background: #8dd85e;
+        }
+        .language-toggle {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+        .lang-toggle-input {
+            display: none;
+        }
+        .lang-toggle-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .lang-toggle-button:hover {
+            background: #0056b3;
+        }
+        .lang-toggle-input:checked + .lang-toggle-button {
+            background: #28a745;
+        }
+        .status {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e9ecef;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+        .rtl {
+            direction: rtl;
+        }
+        .rtl .menu {
+            flex-direction: row-reverse;
+        }
+        .rtl .sub-menu {
+            left: auto;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <div class="header">
+            <h1>Dropdown Menu Translation Test</h1>
+            <p>Test the Arabic translation of dropdown menu items</p>
+        </div>
+
+        <div class="language-toggle">
+            <label class="theme-toggle">
+                <input type="checkbox" id="lang-toggle" class="lang-toggle-input">
+                <span class="lang-toggle-button">Toggle Language (EN/AR)</span>
+            </label>
+        </div>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="#">About us</a></li>
+                <li>
+                    <a href="#">Services</a>
+                    <ul class="sub-menu services-dropdown">
+                        <li><a href="#">AI Powered Consulting</a></li>
+                        <li><a href="#">Engineering Services</a></li>
+                        <li><a href="#">Data Analytics</a></li>
+                        <li><a href="#">Corporate Training</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Company</a>
+                    <ul class="sub-menu company-dropdown">
+                        <li><a href="#">Marln Company Profile</a></li>
+                        <li><a href="#">Corporate Social Responsibility (CSR)</a></li>
+                        <li><a href="#">Technology Partners</a></li>
+                        <li><a href="#">Industry</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+
+        <div class="status">
+            <h3>Status:</h3>
+            <p>Current Language: <span id="current-lang">English</span></p>
+            <p>Document Direction: <span id="current-dir">LTR</span></p>
+            <p>Services Dropdown Items: <span id="services-count">4</span></p>
+            <p>Company Dropdown Items: <span id="company-count">4</span></p>
+        </div>
+    </div>
+
+    <!-- Load the language system -->
+    <script src="js/lang.js"></script>
+    
+    <script>
+        // Enhanced language toggle for testing
+        document.addEventListener('DOMContentLoaded', function() {
+            const langToggle = document.getElementById('lang-toggle');
+            
+            if (langToggle) {
+                // Initialize toggle state
+                const currentLang = localStorage.getItem('site-lang') || 'en';
+                langToggle.checked = (currentLang === 'ar');
+                
+                // Add event listener with error handling
+                langToggle.addEventListener('change', function() {
+                    try {
+                        const newLang = this.checked ? 'ar' : 'en';
+                        
+                        // Use lang.js system if available, otherwise fallback
+                        if (window.setLanguage) {
+                            window.setLanguage(newLang);
+                        } else {
+                            // Fallback implementation
+                            document.documentElement.lang = newLang;
+                            document.documentElement.dir = newLang === 'ar' ? 'rtl' : 'ltr';
+                            document.documentElement.classList.toggle('rtl', newLang === 'ar');
+                            localStorage.setItem('site-lang', newLang);
+                        }
+                        
+                        // Update status display
+                        updateStatus();
+                    } catch (error) {
+                        console.error('Language toggle error:', error);
+                    }
+                });
+                
+                // Initial status update
+                updateStatus();
+            }
+        });
+        
+        function updateStatus() {
+            const lang = document.documentElement.lang || 'en';
+            const dir = document.documentElement.dir || 'ltr';
+            const servicesItems = document.querySelectorAll('.services-dropdown li a');
+            const companyItems = document.querySelectorAll('.company-dropdown li a');
+            
+            document.getElementById('current-lang').textContent = lang === 'ar' ? 'Arabic' : 'English';
+            document.getElementById('current-dir').textContent = dir.toUpperCase();
+            document.getElementById('services-count').textContent = servicesItems.length;
+            document.getElementById('company-count').textContent = companyItems.length;
+        }
+    </script>
+</body>
+</html>
