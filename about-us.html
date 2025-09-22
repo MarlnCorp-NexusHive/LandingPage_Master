@@ -1304,9 +1304,9 @@ html[data-theme="dark"] #header .header--menu__list>li>a,html[data-theme="dark"]
 html[data-theme="dark"] #header .header--menu__list>li>a::before{border-color:#2B3647}
 html[data-theme="dark"] #header .header--menu__list>li.menu-item-has-children>a::after{border-color:#2B3647}
 html[data-theme="dark"] #header a:focus{outline:none;box-shadow:0 0 0 3px #3A9CF4;border-radius:35px}
-html[data-theme="dark"] .services-dropdown,html[data-theme="dark"] .company-dropdown{background:#1A2130 !important;border:1px solid #2B3647}
-html[data-theme="dark"] .services-dropdown a,html[data-theme="dark"] .company-dropdown a{color:#EEF2F7 !important}
-html[data-theme="dark"] .services-dropdown a:hover,html[data-theme="dark"] .company-dropdown a:hover{background:#20283A}
+html[data-theme="dark"] .services-dropdown,html[data-theme="dark"] .company-dropdown,html[data-theme="dark"] .products-dropdown{background:#1A2130 !important;border:1px solid #2B3647}
+html[data-theme="dark"] .services-dropdown a,html[data-theme="dark"] .company-dropdown a,html[data-theme="dark"] .products-dropdown a{color:#EEF2F7 !important}
+html[data-theme="dark"] .services-dropdown a:hover,html[data-theme="dark"] .company-dropdown a:hover,html[data-theme="dark"] .products-dropdown a:hover{background:#20283A}
 /* Use same logo as light */
 html[data-theme="dark"] .logo-dark{display:inline !important}
 html[data-theme="dark"] .logo-light{display:none !important}
@@ -1479,10 +1479,31 @@ html[data-theme="dark"] .toggle-slider {
 #header .header--menu__list>li>a:hover,
 #header .header--menu__list>li>a:focus{color:inherit !important;background:transparent !important}
 #header .services-dropdown a:hover,
-#header .company-dropdown a:hover{background:transparent !important}
+#header .company-dropdown a:hover,
+#header .products-dropdown a:hover{background:transparent !important}
 /* Change dropdown background to match the green color used in "Our CRM Services" section */
 .header--menu__list > li > .sub-menu { 
     background-color: #9EE86F !important; 
+}
+
+/* Products dropdown styling */
+.products-dropdown {
+    background-color: #9EE86F !important;
+    border: 1px solid #7DD347;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 200px;
+}
+
+.products-dropdown a {
+    color: #0C081E !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.products-dropdown a:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: #0C081E !important;
 }
 
 /* Make company dropdown display items in a single row */
@@ -1543,7 +1564,8 @@ html[data-theme="dark"] .toggle-slider {
 #header .header--menu__list > li > a,
 #header .header--menu__list > li > .sub-menu > li > a,
 .company-dropdown a,
-.services-dropdown a {
+.services-dropdown a,
+.products-dropdown a {
     text-decoration: none !important;
 }
 
@@ -1559,6 +1581,7 @@ html[data-theme="dark"] .toggle-slider {
 .sub-menu li a,
 .services-dropdown a,
 .company-dropdown a,
+.products-dropdown a,
 .header--menu__list .sub-menu a,
 .header--menu__list .sub-menu li a {
     text-decoration: none !important;
@@ -1568,7 +1591,8 @@ html[data-theme="dark"] .toggle-slider {
 #header .sub-menu a,
 #header .sub-menu li a,
 #header .services-dropdown a,
-#header .company-dropdown a {
+#header .company-dropdown a,
+#header .products-dropdown a {
     text-decoration: none !important;
 }
 /* Make dropdown text black for better contrast */
@@ -1694,6 +1718,7 @@ body #header li {
 #header .header--menu__list > li > a,
 #header .services-dropdown a,
 #header .company-dropdown a,
+#header .products-dropdown a,
 #header .menu-item-contact a {
     font-family: "Presicav", "Roboto", "Helvetica Neue", sans-serif !important;
 }
@@ -1741,7 +1766,8 @@ body #header li {
 
 /* Dropdown menu items - remove green hover */
 #header .services-dropdown a:hover,
-#header .company-dropdown a:hover {
+#header .company-dropdown a:hover,
+#header .products-dropdown a:hover {
     background: transparent !important;
     color: inherit !important;
     border: none !important;
@@ -2253,6 +2279,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <li class="menu-item"><a href="https://a1siliconvalley.com/" target="_blank" rel="noopener noreferrer" data-i18n="dropdown.services.corporateTraining">Corporate Training</a></li>
                             </ul>
                         </li>
+                        <li id="menu-item-products" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-products">
+                            <a href="#" data-i18n="header.products">Products</a>
+                            <ul class="sub-menu products-dropdown">
+                                <li class="menu-item"><a href="LMS-Univeristy Vanilla Landing Page/index.html" data-i18n="dropdown.products.lmsUniversity">LMS University</a></li>
+                                <li class="menu-item"><a href="CRM University Landing Page/index.html" data-i18n="dropdown.products.crmUniversity">CRM University</a></li>
+                                <li class="menu-item"><a href="esg/index.html" data-i18n="dropdown.products.esg">ESG</a></li>
+                                <li class="menu-item"><a href="LMS Corporate Landing Page/index.html" data-i18n="dropdown.products.lmsCorporate">LMS Corporate</a></li>
+                                <li class="menu-item"><a href="CRM Corporate Landing Page/index.html" data-i18n="dropdown.products.crmCorporate">CRM Corporate</a></li>
+                            </ul>
+                        </li>
                         <li id="menu-item-company" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-company">
                             <a data-i18n="header.company">Company</a>
                             <ul class="sub-menu company-dropdown">
@@ -2335,6 +2371,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li><a href="engineering-services.html" data-i18n="dropdown.services.engineering">Engineering Services</a></li>
                         <li><a href="data-analytics.html" data-i18n="dropdown.services.dataAnalytics">Data Analytics</a></li>
                         <li><a href="https://a1siliconvalley.com/" target="_blank" rel="noopener noreferrer" data-i18n="dropdown.services.corporateTraining">Corporate Training</a></li>
+                    </ul>
+                </li>
+                <li class="mobile-menu-item mobile-dropdown">
+                    <button class="mobile-dropdown-toggle" data-dropdown="products">
+                        <span data-i18n="header.products">Products</span>
+                        <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                    <ul class="mobile-dropdown-menu" id="products-dropdown">
+                        <li><a href="LMS-Univeristy Vanilla Landing Page/index.html" data-i18n="dropdown.products.lmsUniversity">LMS University</a></li>
+                        <li><a href="CRM University Landing Page/index.html" data-i18n="dropdown.products.crmUniversity">CRM University</a></li>
+                        <li><a href="esg/index.html" data-i18n="dropdown.products.esg">ESG</a></li>
+                        <li><a href="LMS Corporate Landing Page/index.html" data-i18n="dropdown.products.lmsCorporate">LMS Corporate</a></li>
+                        <li><a href="CRM Corporate Landing Page/index.html" data-i18n="dropdown.products.crmCorporate">CRM Corporate</a></li>
                     </ul>
                 </li>
                 <li class="mobile-menu-item mobile-dropdown">
