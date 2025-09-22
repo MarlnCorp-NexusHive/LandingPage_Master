@@ -1,188 +1,498 @@
 /**
- * Language Toggle Component
- * A simple, clean language toggle for the Marln website
+ * Language Toggle JavaScript - SEO Optimized & Accessible
+ * Handles language switching functionality with proper ARIA support
  */
 
-class LanguageToggle {
-    constructor(container, localization) {
-        this.container = container;
-        this.localization = localization;
-        this.currentLanguage = 'en';
-        
-        this.init();
-    }
-
-    /**
-     * Initialize the language toggle
-     */
-    init() {
-        // Wait for localization to be ready
-        if (this.localization.isReady()) {
-            this.createToggle();
-        } else {
-            this.localization.addObserver(() => {
-                if (this.localization.isReady()) {
-                    this.createToggle();
-                }
-            });
+(function() {
+    'use strict';
+    
+    // Language configuration
+    const languages = {
+        en: {
+            code: 'en',
+            name: 'English',
+            direction: 'ltr',
+            locale: 'en-SA'
+        },
+        ar: {
+            code: 'ar',
+            name: 'العربية',
+            direction: 'rtl',
+            locale: 'ar-SA'
         }
-    }
-
+    };
+    
+    // DOM Elements
+    let langToggle;
+    let langDropdown;
+    let currentLangSpan;
+    let langLinks;
+    
+    // State
+    let currentLanguage = 'en';
+    let isDropdownOpen = false;
+    
+    // Initialize when DOM is ready
+    document.addEventListener('DOMContentLoaded', function() {
+        initializeLanguageToggle();
+        setupEventListeners();
+        loadSavedLanguage();
+    });
+    
     /**
-     * Create the language toggle HTML
+     * Initialize language toggle functionality
      */
-    createToggle() {
-        if (this.container.querySelector('.language-toggle')) {
-            return; // Already created
-        }
-
-        this.currentLanguage = this.localization.getCurrentLanguage();
+    function initializeLanguageToggle() {
+        langToggle = document.getElementById('lang-toggle');
+        langDropdown = document.querySelector('.lang-dropdown');
+        currentLangSpan = document.querySelector('.current-lang');
+        langLinks = document.querySelectorAll('.lang-dropdown a[data-lang]');
         
-        const toggleHTML = `
-            <div class="language-toggle">
-                <button class="lang-btn" data-lang="en" aria-label="Switch to English">
-                    <span class="lang-text">EN</span>
-                </button>
-                <button class="lang-btn" data-lang="ar" aria-label="Switch to Arabic">
-                    <span class="lang-text">عربي</span>
-                </button>
-                <div class="toggle-slider"></div>
-            </div>
-        `;
-
-        this.container.insertAdjacentHTML('beforeend', toggleHTML);
-        this.setupEventListeners();
-        this.updateToggleState();
+        if (!langToggle || !langDropdown || !currentLangSpan) {
+            console.warn('Language toggle elements not found');
+            return;
+        }
+        
+        // Set initial ARIA attributes
+        langToggle.setAttribute('aria-expanded', 'false');
+        langToggle.setAttribute('aria-haspopup', 'true');
+        langToggle.setAttribute('role', 'button');
+        
+        // Set initial dropdown state
+        langDropdown.style.display = 'none';
+        
+        // Setup keyboard navigation for dropdown
+        setupKeyboardNavigation();
     }
-
+    
     /**
      * Setup event listeners
      */
-    setupEventListeners() {
-        const toggle = this.container.querySelector('.language-toggle');
-        if (!toggle) return;
-
-        toggle.addEventListener('click', (e) => {
-            const langBtn = e.target.closest('.lang-btn');
-            if (langBtn) {
-                const newLang = langBtn.dataset.lang;
-                this.switchLanguage(newLang);
+    function setupEventListeners() {
+        // Toggle button click
+        if (langToggle) {
+            langToggle.addEventListener('click', handleToggleClick);
+        }
+        
+        // Language link clicks
+        if (langLinks) {
+            langLinks.forEach(link => {
+                link.addEventListener('click', handleLanguageClick);
+            });
+        }
+        
+        // Click outside to close
+        document.addEventListener('click', handleOutsideClick);
+        
+        // Escape key to close
+        document.addEventListener('keydown', handleKeyDown);
+        
+        // Window resize
+        window.addEventListener('resize', handleResize);
+    }
+    
+    /**
+     * Handle toggle button click
+     */
+    function handleToggleClick(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        if (isDropdownOpen) {
+            closeDropdown();
+        } else {
+            openDropdown();
+        }
+    }
+    
+    /**
+     * Handle language selection
+     */
+    function handleLanguageClick(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        const selectedLang = event.target.getAttribute('data-lang');
+        if (selectedLang && languages[selectedLang]) {
+            switchLanguage(selectedLang);
+            closeDropdown();
+        }
+    }
+    
+    /**
+     * Handle clicks outside dropdown
+     */
+    function handleOutsideClick(event) {
+        if (isDropdownOpen && !langToggle.contains(event.target)) {
+            closeDropdown();
+        }
+    }
+    
+    /**
+     * Handle keyboard navigation
+     */
+    function handleKeyDown(event) {
+        if (!isDropdownOpen) return;
+        
+        switch (event.key) {
+            case 'Escape':
+                event.preventDefault();
+                closeDropdown();
+                langToggle.focus();
+                break;
+                
+            case 'ArrowDown':
+                event.preventDefault();
+                focusNextLanguage();
+                break;
+                
+            case 'ArrowUp':
+                event.preventDefault();
+                focusPreviousLanguage();
+                break;
+                
+            case 'Enter':
+            case ' ':
+                event.preventDefault();
+                const focusedLink = document.activeElement;
+                if (focusedLink && focusedLink.getAttribute('data-lang')) {
+                    focusedLink.click();
+                }
+                break;
+        }
+    }
+    
+    /**
+     * Handle window resize
+     */
+    function handleResize() {
+        // Close dropdown on mobile if screen becomes too small
+        if (window.innerWidth < 480 && isDropdownOpen) {
+            closeDropdown();
+        }
+    }
+    
+    /**
+     * Open language dropdown
+     */
+    function openDropdown() {
+        isDropdownOpen = true;
+        langDropdown.style.display = 'block';
+        langToggle.setAttribute('aria-expanded', 'true');
+        
+        // Focus first language option
+        const firstLink = langDropdown.querySelector('a[data-lang]');
+        if (firstLink) {
+            firstLink.focus();
+        }
+        
+        // Announce to screen readers
+        announceToScreenReader('Language menu opened');
+    }
+    
+    /**
+     * Close language dropdown
+     */
+    function closeDropdown() {
+        isDropdownOpen = false;
+        langDropdown.style.display = 'none';
+        langToggle.setAttribute('aria-expanded', 'false');
+        
+        // Announce to screen readers
+        announceToScreenReader('Language menu closed');
+    }
+    
+    /**
+     * Focus next language option
+     */
+    function focusNextLanguage() {
+        const currentFocused = document.activeElement;
+        const currentIndex = Array.from(langLinks).indexOf(currentFocused);
+        const nextIndex = (currentIndex + 1) % langLinks.length;
+        langLinks[nextIndex].focus();
+    }
+    
+    /**
+     * Focus previous language option
+     */
+    function focusPreviousLanguage() {
+        const currentFocused = document.activeElement;
+        const currentIndex = Array.from(langLinks).indexOf(currentFocused);
+        const prevIndex = currentIndex === 0 ? langLinks.length - 1 : currentIndex - 1;
+        langLinks[prevIndex].focus();
+    }
+    
+    /**
+     * Switch to selected language
+     */
+    function switchLanguage(langCode) {
+        if (!languages[langCode]) {
+            console.error('Invalid language code:', langCode);
+            return;
+        }
+        
+        const lang = languages[langCode];
+        currentLanguage = langCode;
+        
+        // Update UI
+        updateLanguageUI(lang);
+        
+        // Update document attributes
+        updateDocumentLanguage(lang);
+        
+        // Save preference
+        saveLanguagePreference(langCode);
+        
+        // Update content (if translation system is available)
+        updateTranslatedContent(langCode);
+        
+        // Announce change
+        announceToScreenReader(`Language changed to ${lang.name}`);
+        
+        // Trigger custom event for other components
+        const event = new CustomEvent('languageChanged', {
+            detail: { language: langCode, langObject: lang }
+        });
+        document.dispatchEvent(event);
+    }
+    
+    /**
+     * Update language UI elements
+     */
+    function updateLanguageUI(lang) {
+        if (currentLangSpan) {
+            currentLangSpan.textContent = lang.code.toUpperCase();
+        }
+        
+        // Update active state in dropdown
+        langLinks.forEach(link => {
+            const linkLang = link.getAttribute('data-lang');
+            if (linkLang === lang.code) {
+                link.setAttribute('aria-current', 'true');
+                link.classList.add('active');
+            } else {
+                link.removeAttribute('aria-current');
+                link.classList.remove('active');
             }
         });
-
-        // Update toggle when language changes externally
-        this.localization.addObserver((language) => {
-            this.currentLanguage = language;
-            this.updateToggleState();
-        });
     }
-
+    
     /**
-     * Switch language
+     * Update document language attributes
      */
-    async switchLanguage(newLang) {
-        if (newLang === this.currentLanguage) return;
-
+    function updateDocumentLanguage(lang) {
+        document.documentElement.lang = lang.locale;
+        document.documentElement.dir = lang.direction;
+        
+        // Update body class for RTL/LTR styling
+        document.body.classList.remove('rtl', 'ltr');
+        document.body.classList.add(lang.direction);
+    }
+    
+    /**
+     * Save language preference
+     */
+    function saveLanguagePreference(langCode) {
         try {
-            const success = await this.localization.setLanguage(newLang);
-            if (success) {
-                this.currentLanguage = newLang;
-                this.updateToggleState();
-                
-                // Add animation effect
-                this.addSwitchAnimation();
+            localStorage.setItem('preferred-language', langCode);
+        } catch (error) {
+            console.warn('Could not save language preference:', error);
+        }
+    }
+    
+    /**
+     * Load saved language preference
+     */
+    function loadSavedLanguage() {
+        try {
+            const savedLang = localStorage.getItem('preferred-language');
+            if (savedLang && languages[savedLang]) {
+                switchLanguage(savedLang);
+            } else {
+                // Try to detect browser language
+                detectBrowserLanguage();
             }
         } catch (error) {
-            console.error('Failed to switch language:', error);
+            console.warn('Could not load language preference:', error);
+            detectBrowserLanguage();
         }
     }
-
+    
     /**
-     * Update toggle visual state
+     * Detect browser language preference
      */
-    updateToggleState() {
-        const toggle = this.container.querySelector('.language-toggle');
-        if (!toggle) return;
-
-        const slider = toggle.querySelector('.toggle-slider');
-        const enBtn = toggle.querySelector('[data-lang="en"]');
-        const arBtn = toggle.querySelector('[data-lang="ar"]');
-
-        if (this.currentLanguage === 'ar') {
-            slider.style.transform = 'translateX(100%)';
-            enBtn.classList.remove('active');
-            arBtn.classList.add('active');
+    function detectBrowserLanguage() {
+        const browserLang = navigator.language || navigator.userLanguage;
+        const langCode = browserLang.split('-')[0];
+        
+        if (languages[langCode]) {
+            switchLanguage(langCode);
         } else {
-            slider.style.transform = 'translateX(0)';
-            enBtn.classList.add('active');
-            arBtn.classList.remove('active');
+            // Default to English
+            switchLanguage('en');
         }
     }
-
+    
     /**
-     * Add switch animation
+     * Update translated content
      */
-    addSwitchAnimation() {
-        const toggle = this.container.querySelector('.language-toggle');
-        if (!toggle) return;
-
-        toggle.classList.add('switching');
-        setTimeout(() => {
-            toggle.classList.remove('switching');
-        }, 300);
+    function updateTranslatedContent(langCode) {
+        // This would integrate with your translation system
+        // For now, we'll handle basic RTL/LTR layout changes
+        
+        const elements = document.querySelectorAll('[data-translate]');
+        elements.forEach(element => {
+            const key = element.getAttribute('data-translate');
+            const translation = getTranslation(key, langCode);
+            if (translation) {
+                element.textContent = translation;
+            }
+        });
+        
+        // Update meta tags
+        updateMetaTags(langCode);
     }
-
+    
+    /**
+     * Get translation for a key
+     */
+    function getTranslation(key, langCode) {
+        // This would integrate with your translation system
+        // Placeholder implementation
+        const translations = {
+            'nav.home': {
+                en: 'Home',
+                ar: 'الرئيسية'
+            },
+            'nav.about': {
+                en: 'About Us',
+                ar: 'من نحن'
+            },
+            'nav.services': {
+                en: 'Services',
+                ar: 'الخدمات'
+            },
+            'nav.products': {
+                en: 'Products',
+                ar: 'المنتجات'
+            },
+            'nav.contact': {
+                en: 'Contact',
+                ar: 'اتصل بنا'
+            }
+        };
+        
+        return translations[key] ? translations[key][langCode] : null;
+    }
+    
+    /**
+     * Update meta tags for SEO
+     */
+    function updateMetaTags(langCode) {
+        const lang = languages[langCode];
+        
+        // Update page title if it has a data attribute
+        const titleElement = document.querySelector('title[data-translate]');
+        if (titleElement) {
+            const titleKey = titleElement.getAttribute('data-translate');
+            const translatedTitle = getTranslation(titleKey, langCode);
+            if (translatedTitle) {
+                titleElement.textContent = translatedTitle;
+            }
+        }
+        
+        // Update meta description if it has a data attribute
+        const metaDesc = document.querySelector('meta[name="description"][data-translate]');
+        if (metaDesc) {
+            const descKey = metaDesc.getAttribute('data-translate');
+            const translatedDesc = getTranslation(descKey, langCode);
+            if (translatedDesc) {
+                metaDesc.setAttribute('content', translatedDesc);
+            }
+        }
+    }
+    
+    /**
+     * Setup keyboard navigation
+     */
+    function setupKeyboardNavigation() {
+        if (!langLinks) return;
+        
+        langLinks.forEach((link, index) => {
+            link.setAttribute('tabindex', '-1');
+            link.setAttribute('role', 'menuitem');
+            
+            // Add keyboard event listeners
+            link.addEventListener('keydown', function(event) {
+                switch (event.key) {
+                    case 'ArrowDown':
+                        event.preventDefault();
+                        const nextIndex = (index + 1) % langLinks.length;
+                        langLinks[nextIndex].focus();
+                        break;
+                        
+                    case 'ArrowUp':
+                        event.preventDefault();
+                        const prevIndex = index === 0 ? langLinks.length - 1 : index - 1;
+                        langLinks[prevIndex].focus();
+                        break;
+                }
+            });
+        });
+    }
+    
+    /**
+     * Announce to screen readers
+     */
+    function announceToScreenReader(message) {
+        const liveRegion = document.getElementById('live-region');
+        if (liveRegion) {
+            liveRegion.textContent = message;
+        } else {
+            // Create temporary live region
+            const tempRegion = document.createElement('div');
+            tempRegion.setAttribute('aria-live', 'polite');
+            tempRegion.setAttribute('aria-atomic', 'true');
+            tempRegion.className = 'sr-only';
+            tempRegion.textContent = message;
+            document.body.appendChild(tempRegion);
+            
+            // Remove after announcement
+            setTimeout(() => {
+                tempRegion.remove();
+            }, 1000);
+        }
+    }
+    
     /**
      * Get current language
      */
-    getCurrentLanguage() {
-        return this.currentLanguage;
+    function getCurrentLanguage() {
+        return currentLanguage;
     }
-
+    
     /**
-     * Destroy the toggle
+     * Get available languages
      */
-    destroy() {
-        const toggle = this.container.querySelector('.language-toggle');
-        if (toggle) {
-            toggle.remove();
-        }
+    function getAvailableLanguages() {
+        return Object.keys(languages);
     }
-}
-
-// Auto-initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-    // Wait for localization to be available
-    const initToggle = () => {
-        if (window.marlnLocalization && window.marlnLocalization.isReady()) {
-            // Find header menu container
-            const headerMenu = document.querySelector('.header--menu__list');
-            if (headerMenu) {
-                // Create language toggle container
-                const toggleContainer = document.createElement('li');
-                toggleContainer.className = 'menu-item menu-item-lang';
-                
-                // Insert before the last item (usually theme toggle)
-                const lastItem = headerMenu.lastElementChild;
-                if (lastItem) {
-                    headerMenu.insertBefore(toggleContainer, lastItem);
-                } else {
-                    headerMenu.appendChild(toggleContainer);
-                }
-                
-                // Initialize language toggle
-                new LanguageToggle(toggleContainer, window.marlnLocalization);
-            }
-        } else {
-            // Retry after a short delay
-            setTimeout(initToggle, 100);
-        }
+    
+    /**
+     * Check if language is supported
+     */
+    function isLanguageSupported(langCode) {
+        return languages.hasOwnProperty(langCode);
+    }
+    
+    // Expose public API
+    window.LanguageToggle = {
+        switchLanguage,
+        getCurrentLanguage,
+        getAvailableLanguages,
+        isLanguageSupported,
+        openDropdown,
+        closeDropdown
     };
-
-    initToggle();
-});
-
-// Export for module systems
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = LanguageToggle;
-} 
+    
+})();
