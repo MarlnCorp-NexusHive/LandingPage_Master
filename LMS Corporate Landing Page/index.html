@@ -384,39 +384,10 @@
         </div>
     </footer>
 
-    <!-- Contact Modal -->
-    <div class="modal" id="contact-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h2>
-                <button class="modal-close" id="contact-modal-close">
-                    <iconify-icon icon="tabler:x"></iconify-icon>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p class="modal-text" data-en="Get in touch with our team to learn more about MARLN Corporate LMS." data-ar="تواصل مع فريقنا لمعرفة المزيد عن نظام إدارة التعلم المؤسسي في مارلن.">Get in touch with our team to learn more about MARLN Corporate LMS.</p>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="contact-name" class="form-label" data-en="Name" data-ar="الاسم">Name</label>
-                        <input type="text" id="contact-name" class="form-input" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contact-email" class="form-label" data-en="Email" data-ar="البريد الإلكتروني">Email</label>
-                        <input type="email" id="contact-email" class="form-input" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contact-message" class="form-label" data-en="Message" data-ar="الرسالة">Message</label>
-                        <textarea id="contact-message" class="form-textarea" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </div>
 
     <!-- Contact Popup Modal -->
-    <div class="modal" id="contact-popup-modal">
-        <div class="modal-content">
+    <div class="modal" id="contact-popup-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9999; justify-content: center; align-items: center;">
+        <div class="modal-content" style="background: white; padding: 20px; border-radius: 8px; max-width: 500px; width: 90%; position: relative;">
             <div class="modal-header">
                 <h2 class="modal-title" data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</h2>
                 <button class="modal-close" id="contact-popup-close">
@@ -429,14 +400,13 @@
                         <iconify-icon icon="tabler:mail" class="contact-icon"></iconify-icon>
                     </div>
                     <h3 class="contact-popup-title" data-en="Thank you for your interest!" data-ar="شكراً لاهتمامك!">Thank you for your interest!</h3>
-                    <p class="contact-popup-description" data-en="We'd love to hear from you. Please contact us directly at our email address for personalized assistance and to discuss how MARLN Corporate LMS can benefit your organization." data-ar="نود أن نسمع منك. يرجى الاتصال بنا مباشرة على عنوان بريدنا الإلكتروني للحصول على مساعدة مخصصة ومناقشة كيف يمكن لنظام إدارة التعلم المؤسسي في مارلن أن يفيد مؤسستك.">We'd love to hear from you. Please contact us directly at our email address for personalized assistance and to discuss how MARLN Corporate LMS can benefit your organization.</p>
+                    <p class="contact-popup-description" data-en="Please reach out to us at contact@marlncorp.com" data-ar="يرجى التواصل معنا على contact@marlncorp.com">Please reach out to us at contact@marlncorp.com</p>
                     <div class="contact-popup-email">
                         <a href="mailto:contact@marlncorp.com" class="email-link">
                             <iconify-icon icon="tabler:mail"></iconify-icon>
                             <span>contact@marlncorp.com</span>
                         </a>
                     </div>
-                    <p class="contact-popup-note" data-en="We typically respond within 24 hours during business days." data-ar="نحن نرد عادة خلال 24 ساعة في أيام العمل.">We typically respond within 24 hours during business days.</p>
                 </div>
             </div>
         </div>
@@ -472,5 +442,48 @@
 
     <!-- JavaScript -->
     <script src="js/app.js"></script>
+    <script>
+        // Contact popup functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, initializing contact popup...');
+            const contactBtn = document.getElementById('contact-btn');
+            const contactModal = document.getElementById('contact-popup-modal');
+            const contactClose = document.getElementById('contact-popup-close');
+            
+            console.log('Contact button:', contactBtn);
+            console.log('Contact modal:', contactModal);
+            console.log('Contact close:', contactClose);
+            
+            if (contactBtn && contactModal) {
+                contactBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log('Contact button clicked!');
+                    contactModal.style.display = 'flex';
+                    contactModal.style.visibility = 'visible';
+                    contactModal.style.opacity = '1';
+                    document.body.style.overflow = 'hidden';
+                });
+                
+                if (contactClose) {
+                    contactClose.addEventListener('click', function() {
+                        console.log('Close button clicked!');
+                        contactModal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    });
+                }
+                
+                // Close modal when clicking outside
+                contactModal.addEventListener('click', function(e) {
+                    if (e.target === contactModal) {
+                        console.log('Clicked outside modal');
+                        contactModal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            } else {
+                console.log('Missing elements - contactBtn:', !!contactBtn, 'contactModal:', !!contactModal);
+            }
+        });
+    </script>
 </body>
 </html>
