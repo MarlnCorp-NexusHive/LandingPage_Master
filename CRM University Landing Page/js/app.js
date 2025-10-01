@@ -1,3 +1,66 @@
+// Contact Popup Management
+class ContactPopup {
+    constructor() {
+        this.modal = document.getElementById('contact-popup-modal');
+        this.closeBtn = document.getElementById('contact-popup-close');
+        this.contactBtn = document.getElementById('contact-btn');
+        this.signInBtn = document.querySelector('.nav-signin');
+        
+        this.init();
+    }
+    
+    init() {
+        if (this.contactBtn) {
+            this.contactBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.showPopup();
+            });
+        }
+        
+        if (this.signInBtn) {
+            this.signInBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.showPopup();
+            });
+        }
+        
+        if (this.closeBtn) {
+            this.closeBtn.addEventListener('click', () => {
+                this.hidePopup();
+            });
+        }
+        
+        if (this.modal) {
+            this.modal.addEventListener('click', (e) => {
+                if (e.target === this.modal) {
+                    this.hidePopup();
+                }
+            });
+        }
+        
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && this.modal && this.modal.style.display === 'block') {
+                this.hidePopup();
+            }
+        });
+    }
+    
+    showPopup() {
+        if (this.modal) {
+            this.modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+    }
+    
+    hidePopup() {
+        if (this.modal) {
+            this.modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    }
+}
+
 // Language and Theme Management
 class AppState {
     constructor() {
@@ -367,6 +430,7 @@ class ScrollAnimations {
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize all components
     window.appState = new AppState();
+    window.contactPopup = new ContactPopup();
     window.navigation = new Navigation();
     window.accordion = new Accordion();
     window.modal = new Modal();

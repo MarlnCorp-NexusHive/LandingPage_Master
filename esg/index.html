@@ -50,8 +50,7 @@
                 
                 <div class="nav-buttons">
                     <button class="btn btn-primary btn-small" id="contact-btn" data-en="I'm Interested" data-ar="أنا مهتم">I'm Interested</button>
-                    <button class="btn btn-transparent btn-small nav-signin" data-en="Sign In" data-ar="تسجيل الدخول">Sign In</button>
-                    <button class="btn btn-dark btn-small" data-en="Sign Up" data-ar="إنشاء حساب">Sign Up</button>
+                    <button class="btn btn-primary btn-small nav-signin" data-en="Sign In" data-ar="تسجيل الدخول">Sign In</button>
                 </div>
                 
                 <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
@@ -409,6 +408,34 @@
                     </div>
                     <button type="submit" class="btn btn-primary" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
                 </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Popup Modal -->
+    <div class="modal" id="contact-popup-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</h2>
+                <button class="modal-close" id="contact-popup-close">
+                    <iconify-icon icon="tabler:x"></iconify-icon>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="contact-popup-content">
+                    <div class="contact-popup-icon">
+                        <iconify-icon icon="tabler:mail" class="contact-icon"></iconify-icon>
+                    </div>
+                    <h3 class="contact-popup-title" data-en="Thank you for your interest!" data-ar="شكراً لاهتمامك!">Thank you for your interest!</h3>
+                    <p class="contact-popup-description" data-en="We'd love to hear from you. Please contact us directly at our email address for personalized assistance and to discuss how MARLN ESG can benefit your organization's sustainability goals." data-ar="نود أن نسمع منك. يرجى الاتصال بنا مباشرة على عنوان بريدنا الإلكتروني للحصول على مساعدة مخصصة ومناقشة كيف يمكن لنظام MARLN ESG أن يفيد أهداف الاستدامة لمؤسستك.">We'd love to hear from you. Please contact us directly at our email address for personalized assistance and to discuss how MARLN ESG can benefit your organization's sustainability goals.</p>
+                    <div class="contact-popup-email">
+                        <a href="mailto:contact@marlncorp.com" class="email-link">
+                            <iconify-icon icon="tabler:mail"></iconify-icon>
+                            <span>contact@marlncorp.com</span>
+                        </a>
+                    </div>
+                    <p class="contact-popup-note" data-en="We typically respond within 24 hours during business days." data-ar="نحن نرد عادة خلال 24 ساعة في أيام العمل.">We typically respond within 24 hours during business days.</p>
+                </div>
             </div>
         </div>
     </div>
