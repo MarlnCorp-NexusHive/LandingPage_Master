@@ -1,5 +1,5 @@
 // Contact Form 7 Fix - Disable CORS errors
-// This script prevents Contact Form 7 from making requests to valmax.agency
+// This script prevents Contact Form 7 from making requests to external domains
 
 (function() {
     'use strict';
@@ -13,10 +13,10 @@
         };
     }
     
-    // Prevent any fetch requests to valmax.agency
+    // Prevent any fetch requests to external domains
     const originalFetch = window.fetch;
     window.fetch = function(url, options) {
-        if (typeof url === 'string' && url.includes('valmax.agency')) {
+        if (typeof url === 'string' && (url.includes('valmax.agency') || url.includes('external-domain'))) {
             return Promise.reject(new Error('Request blocked to prevent CORS errors'));
         }
         return originalFetch.apply(this, arguments);

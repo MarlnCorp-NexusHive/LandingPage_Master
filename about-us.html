@@ -1315,8 +1315,8 @@ html[data-theme="dark"] .contact-us{background:#1a2130;color:#eef2f7}
 html[data-theme="dark"] .contact-us input,html[data-theme="dark"] .contact-us textarea{background:#141923;border:1px solid #0E1116;color:#eef2f7}
 html[data-theme="dark"] .contact-us input::placeholder,html[data-theme="dark"] .contact-us textarea::placeholder{color:#aab6c8}
 /* Stats strip text only */
-html[data-theme="dark"] .rr-why-hire-valmax-section--statistic__block--title,
-html[data-theme="dark"] .rr-why-hire-valmax-section--statistic__block--num{color:#0E1116 !important}
+html[data-theme="dark"] .marln-why-choose-section--statistic__block--title,
+html[data-theme="dark"] .marln-why-choose-section--statistic__block--num{color:#0E1116 !important}
 /* Why-our-clients items (Startups, SMVs, Large Corporates, Government) */
 html[data-theme="dark"] .why-our-clients-item .cf-title,
 html[data-theme="dark"] .why-our-clients-item .why-our-clients-item-text p{color:#0E1116 !important}
@@ -1337,7 +1337,7 @@ html[data-theme="dark"] .contact-us--connect .heading{color:#0E1116 !important}
 html[data-theme="dark"] .featured-projects-section .section-header .heading{color:#0E1116 !important}
 /* Section headers: Our CRM Services, Why Opt For Marln? */
 html[data-theme="dark"] .ap-how-we-do-section .section-header .heading,
-html[data-theme="dark"] .rr-why-hire-valmax-section .section-header .heading{color:#0E1116 !important}
+html[data-theme="dark"] .marln-why-choose-section .section-header .heading{color:#0E1116 !important}
 /* Grid lines for Why-our-clients */
 html[data-theme="dark"] .why-our-clients-list>li{border-color:#0E1116 !important}
 html[data-theme="dark"] .why-our-clients-list{border-top:1px solid #0E1116}
@@ -3140,7 +3140,7 @@ html[data-theme="dark"] .mobile-dropdown.active .mobile-dropdown-toggle {
 
 // Animate statistics numbers
 function animateNumbers() {
-    const numberElements = document.querySelectorAll('.rr-why-hire-valmax-section--statistic__block--num');
+    const numberElements = document.querySelectorAll('.marln-why-choose-section--statistic__block--num');
     
     numberElements.forEach(element => {
         const finalText = element.textContent.trim();
@@ -3164,7 +3164,7 @@ function animateNumbers() {
 
 // Store original values for periodic animation
 const originalValues = [];
-const numberElements = document.querySelectorAll('.rr-why-hire-valmax-section--statistic__block--num');
+const numberElements = document.querySelectorAll('.marln-why-choose-section--statistic__block--num');
 numberElements.forEach(element => {
     originalValues.push(element.textContent.trim());
 });
