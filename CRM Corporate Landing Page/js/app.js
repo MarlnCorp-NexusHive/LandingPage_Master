@@ -4,7 +4,6 @@ class ContactPopup {
         this.modal = document.getElementById('contact-popup-modal');
         this.closeBtn = document.getElementById('contact-popup-close');
         this.contactBtn = document.getElementById('contact-btn');
-        this.signInBtn = document.querySelector('.nav-signin');
         
         this.init();
     }
@@ -17,12 +16,8 @@ class ContactPopup {
             });
         }
         
-        if (this.signInBtn) {
-            this.signInBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                this.showPopup();
-            });
-        }
+        // Sign In button now links directly to CRM Corporate platform
+        // Removed event listener to allow normal link behavior
         
         if (this.closeBtn) {
             this.closeBtn.addEventListener('click', () => {
