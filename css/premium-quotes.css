@@ -1,0 +1,236 @@
+/* Premium Quotes Section */
+.premium-quotes-section {
+    position: relative;
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Background Effects */
+.quotes-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.quotes-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 60%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+    animation: quotes-float 20s ease-in-out infinite;
+}
+
+.quotes-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(15, 23, 42, 0.8) 0%, 
+        rgba(30, 41, 59, 0.6) 50%, 
+        rgba(51, 65, 85, 0.8) 100%);
+}
+
+/* Content */
+.quotes-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* Slider */
+.quotes-slider {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.quotes-slides {
+    position: relative;
+    height: 100%;
+}
+
+.quote-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.8s ease-in-out;
+}
+
+.quote-slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.quote-slide.prev {
+    transform: translateX(-100%);
+}
+
+.quote-text {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #ffffff;
+    text-align: center;
+    max-width: 900px;
+    margin: 0;
+}
+
+.quote-highlight {
+    background: linear-gradient(135deg, #10b981, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.quote-accent {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Navigation */
+.quotes-navigation {
+    margin-top: 48px;
+}
+
+.quote-dots {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.quote-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.quote-dot:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.2);
+}
+
+.quote-dot.active {
+    background: linear-gradient(135deg, #10b981, #3b82f6);
+    transform: scale(1.3);
+}
+
+.quote-dot.active::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    border-radius: 50%;
+    animation: quotes-dot-pulse 2s ease-in-out infinite;
+}
+
+/* Dark Mode Support */
+html[data-theme="dark"] .premium-quotes-section {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2a2a2a 100%);
+}
+
+html[data-theme="dark"] .quotes-particles {
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 40% 60%, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
+}
+
+/* RTL Support */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .premium-quotes-section {
+        padding: 80px 0;
+    }
+    
+    .quotes-slider {
+        height: 300px;
+    }
+    
+    .quote-text {
+        font-size: 2.5rem;
+    }
+    
+    
+    .quotes-navigation {
+        margin-top: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .premium-quotes-section {
+        padding: 60px 0;
+    }
+    
+    .quotes-slider {
+        height: 250px;
+    }
+    
+    .quote-text {
+        font-size: 2rem;
+    }
+    
+    
+    .quotes-navigation {
+        margin-top: 24px;
+    }
+    
+    .quote-dots {
+        gap: 12px;
+    }
+    
+    .quote-dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* Animation Classes */
+@keyframes quotes-float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-20px) rotate(1deg); }
+    66% { transform: translateY(10px) rotate(-1deg); }
+}
+
+@keyframes quotes-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+@keyframes quotes-dot-pulse {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.1); }
+}

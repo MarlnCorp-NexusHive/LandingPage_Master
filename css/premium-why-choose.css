@@ -1,0 +1,295 @@
+/* Premium Why Choose Marln Section */
+.premium-why-choose-section {
+    position: relative;
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    overflow: hidden;
+}
+
+/* Background Effects */
+.why-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.why-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 60%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+    animation: why-float 20s ease-in-out infinite;
+}
+
+.why-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(15, 23, 42, 0.8) 0%, 
+        rgba(30, 41, 59, 0.6) 50%, 
+        rgba(51, 65, 85, 0.8) 100%);
+}
+
+/* Header */
+.why-header {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.why-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    padding: 12px 24px;
+    margin-bottom: 24px;
+    backdrop-filter: blur(20px);
+    transition: all 0.3s ease;
+}
+
+.why-badge:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.why-badge-icon {
+    width: 20px;
+    height: 20px;
+    color: #10b981;
+    animation: why-pulse 2s ease-in-out infinite;
+}
+
+.why-badge-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.why-title {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 24px;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.why-subtitle {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Grid */
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Cards */
+.why-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    transition: all 0.4s ease;
+    height: 100%;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.why-card-inner {
+    padding: 40px 32px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.why-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+}
+
+.why-card:hover .why-icon {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.4);
+    transform: scale(1.1);
+}
+
+.why-icon img {
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
+}
+
+.why-card:hover .why-icon img {
+    transform: scale(1.1);
+}
+
+.why-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.why-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+
+.why-description {
+    font-size: 1rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    flex: 1;
+}
+
+/* Dark Mode Support */
+html[data-theme="dark"] .premium-why-choose-section {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2a2a2a 100%);
+}
+
+html[data-theme="dark"] .why-particles {
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 40% 60%, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
+}
+
+/* RTL Support */
+html.rtl .why-badge {
+    direction: rtl;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .premium-why-choose-section {
+        padding: 80px 0;
+    }
+    
+    .why-header {
+        margin-bottom: 60px;
+    }
+    
+    .why-title {
+        font-size: 2.5rem;
+    }
+    
+    .why-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .why-card-inner {
+        padding: 32px 24px;
+    }
+    
+    .why-card-title {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .premium-why-choose-section {
+        padding: 60px 0;
+    }
+    
+    .why-header {
+        margin-bottom: 40px;
+    }
+    
+    .why-title {
+        font-size: 2rem;
+    }
+    
+    .why-card-inner {
+        padding: 24px 20px;
+    }
+    
+    .why-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+    
+    .why-icon img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .why-card-title {
+        font-size: 1.2rem;
+    }
+    
+    .why-description {
+        font-size: 0.95rem;
+    }
+}
+
+/* Animation Classes */
+@keyframes why-float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-20px) rotate(1deg); }
+    66% { transform: translateY(10px) rotate(-1deg); }
+}
+
+@keyframes why-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.05); }
+}

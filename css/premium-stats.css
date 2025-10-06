@@ -1,0 +1,426 @@
+/* ===== PREMIUM STATISTICS SECTION ===== */
+/* World-class statistics section with modern animations and premium design */
+
+.premium-stats-section {
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    color: #ffffff;
+}
+
+/* Background Effects */
+.stats-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.stats-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 60%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+    animation: particles-float 20s ease-in-out infinite;
+}
+
+.stats-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(16, 185, 129, 0.05) 0%,
+        rgba(59, 130, 246, 0.05) 50%,
+        rgba(139, 92, 246, 0.05) 100%
+    );
+}
+
+@keyframes particles-float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-20px) rotate(1deg); }
+    66% { transform: translateY(10px) rotate(-1deg); }
+}
+
+/* Header Section */
+.stats-header {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.stats-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 50px;
+    padding: 12px 24px;
+    margin-bottom: 24px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.stats-badge:hover {
+    background: rgba(16, 185, 129, 0.2);
+    border-color: rgba(16, 185, 129, 0.5);
+    transform: translateY(-2px);
+}
+
+.stats-badge-icon {
+    width: 20px;
+    height: 20px;
+    color: #10b981;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.stats-badge-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #10b981;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stats-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.stats-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #10b981, #3b82f6);
+    border-radius: 2px;
+}
+
+.stats-subtitle {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Stat Cards */
+.stat-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 40px 32px;
+    backdrop-filter: blur(20px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(16, 185, 129, 0.3);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(16, 185, 129, 0.2);
+}
+
+.stat-card:hover::before {
+    opacity: 1;
+}
+
+.stat-card-inner {
+    position: relative;
+    z-index: 2;
+}
+
+/* Stat Icons */
+.stat-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #10b981, #3b82f6);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+    border-radius: 16px;
+}
+
+.stat-icon svg {
+    width: 32px;
+    height: 32px;
+    color: #ffffff;
+    z-index: 2;
+    position: relative;
+}
+
+/* Stat Content */
+.stat-content {
+    margin-bottom: 24px;
+}
+
+.stat-number {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    margin-bottom: 16px;
+}
+
+.stat-counter {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1;
+    background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-suffix {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #10b981;
+}
+
+.stat-label {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.stat-description {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Progress Bars */
+.stat-progress {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.stat-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #10b981, #3b82f6);
+    border-radius: 2px;
+    width: 0%;
+    transition: width 2s ease-out;
+    position: relative;
+}
+
+.stat-progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: progress-shine 2s ease-in-out;
+}
+
+@keyframes progress-shine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+
+/* Dark Mode Support */
+html[data-theme="dark"] .premium-stats-section {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2a2a2a 100%);
+}
+
+html[data-theme="dark"] .stat-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .stats-cta {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* RTL Support */
+html.rtl .stats-badge {
+    direction: rtl;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .premium-stats-section {
+        padding: 80px 0;
+    }
+    
+    .stats-header {
+        margin-bottom: 60px;
+    }
+    
+    .stats-title {
+        font-size: 2.5rem;
+    }
+    
+    .stats-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-bottom: 60px;
+    }
+    
+    .stat-card {
+        padding: 32px 24px;
+    }
+    
+    .stat-counter {
+        font-size: 2.5rem;
+    }
+    
+    .stat-suffix {
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .premium-stats-section {
+        padding: 60px 0;
+    }
+    
+    .stats-header {
+        margin-bottom: 40px;
+    }
+    
+    .stats-title {
+        font-size: 2rem;
+    }
+    
+    .stat-card {
+        padding: 24px 20px;
+    }
+    
+    .stat-icon {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .stat-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .stat-counter {
+        font-size: 2rem;
+    }
+    
+    .stat-suffix {
+        font-size: 1.25rem;
+    }
+    
+    .stat-label {
+        font-size: 1.1rem;
+    }
+    
+}
+
+/* Animation Classes */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stat-card[data-aos="fade-up"] {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Intersection Observer Animation */
+.stat-card.animate-in {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Counter Animation */
+.stat-counter.animate {
+    animation: countUp 2s ease-out forwards;
+}
+
+@keyframes countUp {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
