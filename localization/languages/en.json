@@ -20,7 +20,9 @@
       "crmUniversity": "CRM University",
       "esg": "ESG",
       "lmsCorporate": "LMS Corporate",
-      "crmCorporate": "CRM Corporate"
+      "crmCorporate": "ERP",
+      "eProcure": "eProcure",
+      "rfpManagement": "RFP Management and Project Tracker"
     },
     "company": {
       "profile": "Marln Company Profile",
@@ -157,7 +159,7 @@
       },
       "marketingStrategy": {
         "title": "Marketing Strategy Development",
-        "description": "In today's competitive market, having a strong marketing strategy is essential. At Marln Corp, we specialize in developing tailored marketing strategies that resonate with your target audience. Our team conducts thorough market research and analysis to create campaigns that drive engagement and conversion. Let us help you elevate your brand and reach your business goals."
+        "description": "In today's competitive market, having a strong marketing strategy is essential. At Marln Corp, we specialize in developing tailored marketing strategies that resonate with your target audience. Our team conducts thorough market research and analysis to create campaigns that drive engagement and conversion. Let us help you build your AI Company and reach your business goals."
       },
       "hrSolutions": {
         "title": "Human Resources Solutions",

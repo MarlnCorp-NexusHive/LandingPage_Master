@@ -184,7 +184,7 @@
         title: "Clients We Serve",
         startups: { title: "Startups", text: "Big ideas deserve bold execution. We collaborate with ambitious founders to transform raw concepts into powerful, scalable brands — built to break through the noise and lead the future." },
         smvs: { title: "Small & Medium Ventures", text: "Growth-stage businesses need more than just momentum — they need sharp strategy and magnetic branding to unlock their next leap. We help SMVs evolve into market leaders." },
-        corporates: { title: "LARGE CORPORATES", text: "For enterprise giants navigating complex markets, we craft high-impact brand narratives and design systems that elevate authority, trust, and innovation." },
+        corporates: { title: "LARGE CORPORATES", text: "For enterprise giants navigating complex markets, we craft high-impact AI Company narratives and design systems that enhance authority, trust, and innovation." },
         government: { title: "GOVERNMENT", text: "From digital transformation to citizen engagement, we partner with public sector institutions to create clear, accessible, and future-forward communication solutions." }
       },
       services: {

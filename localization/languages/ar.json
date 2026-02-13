@@ -20,7 +20,9 @@
       "crmUniversity": "نظام إدارة علاقات العملاء الجامعي",
       "esg": "الحوكمة البيئية والاجتماعية",
       "lmsCorporate": "نظام إدارة التعلم المؤسسي",
-      "crmCorporate": "نظام إدارة علاقات العملاء المؤسسي"
+      "crmCorporate": "ERP",
+      "eProcure": "eProcure",
+      "rfpManagement": "RFP Management and Project Tracker"
     },
     "company": {
       "profile": "الملف التعريفي لشركة Marln",
