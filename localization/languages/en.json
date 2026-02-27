@@ -12,15 +12,39 @@
     "services": {
       "aiConsulting": "AI Powered Consulting",
       "engineering": "Engineering Services",
-      "dataAnalytics": "Data Analytics",
-      "corporateTraining": "Corporate Training"
+      "dataAnalytics": "Data Engineering",
+      "corporateTraining": "Corporate Training",
+      "cybersecurity": "CYBERSECURITY"
     },
     "products": {
-      "lmsUniversity": "LMS University",
-      "crmUniversity": "CRM University",
+      "category": {
+        "governments": "Governments",
+        "university": "University",
+        "corporate": "Corporate"
+      },
+      "governments": {
+        "biometric": "Biometric",
+        "contactlessPayment": "Contactless payment system",
+        "projectTracker": "Project Tracker"
+      },
+      "university": {
+        "sis": "SIS",
+        "lms": "LMS",
+        "crmUniversity": "CRM"
+      },
+      "corporate": {
+        "erp": "ERP",
+        "crm": "CRM",
+        "lms": "LMS",
+        "projectTracker": "Project Tracker",
+        "rfpManagement": "RFP Management",
+        "eProcure": "eProcure"
+      },
+      "lmsUniversity": "LMS",
+      "crmUniversity": "CRM",
       "esg": "ESG",
-      "lmsCorporate": "LMS Corporate",
-      "crmCorporate": "ERP",
+      "lmsCorporate": "LMS",
+      "crmCorporate": "CRM",
       "eProcure": "eProcure",
       "rfpManagement": "RFP Management and Project Tracker"
     },

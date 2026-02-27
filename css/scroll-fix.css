@@ -1,0 +1,21 @@
+/**
+ * Scroll fix: restore mouse-wheel scrolling.
+ * The main stylesheet sets #page { overflow: hidden } for a custom scrollbar
+ * that isn't used, which blocks scrolling. Allow content to flow so the
+ * document scrolls normally—no layout or height changes.
+ */
+#page {
+    overflow: visible !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+}
+
+/* Ensure document can scroll; override any overflow-hidden from scripts */
+html.scroll-fix-active,
+html.scroll-fix-active body {
+    overflow: auto !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    touch-action: auto !important;
+    overscroll-behavior: auto !important;
+}

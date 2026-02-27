@@ -146,8 +146,9 @@
         services: {
           aiConsulting: "AI Powered Consulting",
           engineering: "Engineering Services",
-          dataAnalytics: "Data Analytics",
-          corporateTraining: "Corporate Training"
+          dataAnalytics: "Data Engineering",
+          corporateTraining: "Corporate Training",
+          cybersecurity: "CYBERSECURITY"
         },
         company: {
           profile: "Marln Company Profile",

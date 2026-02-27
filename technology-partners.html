@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><link data-optimized="2" rel="stylesheet" href="css/f1225b8e5b82e8a69bb95d9a974ef054.css"><link rel="stylesheet" href="css/dropdown-override.css">
+<head><meta charset="UTF-8"><link data-optimized="2" rel="stylesheet" href="css/f1225b8e5b82e8a69bb95d9a974ef054.css"><link rel="stylesheet" href="css/dropdown-override.css"><link rel="stylesheet" href="css/scroll-fix.css">
 <!-- Google Fonts - Noto Sans Arabic -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1383,6 +1383,11 @@ html[dir="rtl"] .mission-section p {
     box-shadow: 0 15px 35px rgba(252, 182, 159, 0.3) !important;
 }
 
+.partner-card-7 {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%) !important;
+    box-shadow: 0 15px 35px rgba(67, 233, 123, 0.3) !important;
+}
+
 /* Enhanced Partner Card Styles */
 .partner-card-enhanced {
     position: relative;
@@ -1481,6 +1486,7 @@ html[dir="rtl"] .mission-section p {
 .partner-card-enhanced:nth-child(4) { animation-delay: 1.5s; }
 .partner-card-enhanced:nth-child(5) { animation-delay: 2s; }
 .partner-card-enhanced:nth-child(6) { animation-delay: 2.5s; }
+.partner-card-enhanced:nth-child(7) { animation-delay: 3s; }
 
 @keyframes float {
     0%, 100% { transform: translateY(0px); }
@@ -1997,7 +2003,8 @@ html[data-theme="dark"] .partner-card-2,
 html[data-theme="dark"] .partner-card-3,
 html[data-theme="dark"] .partner-card-4,
 html[data-theme="dark"] .partner-card-5,
-html[data-theme="dark"] .partner-card-6 {
+html[data-theme="dark"] .partner-card-6,
+html[data-theme="dark"] .partner-card-7 {
     background: var(--card-bg, #1A1D24) !important;
     border: 1px solid var(--card-border, #2A2D34) !important;
     box-shadow: 0 8px 32px var(--shadow-color, rgba(0, 0, 0, 0.5)) !important;
@@ -2008,7 +2015,8 @@ html[data-theme="dark"] .partner-card-2:hover,
 html[data-theme="dark"] .partner-card-3:hover,
 html[data-theme="dark"] .partner-card-4:hover,
 html[data-theme="dark"] .partner-card-5:hover,
-html[data-theme="dark"] .partner-card-6:hover {
+html[data-theme="dark"] .partner-card-6:hover,
+html[data-theme="dark"] .partner-card-7:hover {
     box-shadow: 0 12px 48px var(--shadow-color, rgba(0, 0, 0, 0.5)) !important;
     transform: translateY(-8px) !important;
 }
@@ -2019,7 +2027,8 @@ html[data-theme="dark"] .partner-card-2 h4,
 html[data-theme="dark"] .partner-card-3 h4,
 html[data-theme="dark"] .partner-card-4 h4,
 html[data-theme="dark"] .partner-card-5 h4,
-html[data-theme="dark"] .partner-card-6 h4 {
+html[data-theme="dark"] .partner-card-6 h4,
+html[data-theme="dark"] .partner-card-7 h4 {
     color: var(--text-primary, #FFFFFF) !important;
 }
 
@@ -2028,7 +2037,8 @@ html[data-theme="dark"] .partner-card-2 p,
 html[data-theme="dark"] .partner-card-3 p,
 html[data-theme="dark"] .partner-card-4 p,
 html[data-theme="dark"] .partner-card-5 p,
-html[data-theme="dark"] .partner-card-6 p {
+html[data-theme="dark"] .partner-card-6 p,
+html[data-theme="dark"] .partner-card-7 p {
     color: var(--text-secondary, #E0E0E0) !important;
 }
 
@@ -2111,20 +2121,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <ul class="sub-menu services-dropdown">
                                 <li class="menu-item"><a href="ai-powered-consulting.html" data-i18n="dropdown.services.aiConsulting">AI Powered Consulting</a></li>
                                 <li class="menu-item"><a href="engineering-services.html" data-i18n="dropdown.services.engineering">Engineering Services</a></li>
-                                <li class="menu-item"><a href="data-analytics.html" data-i18n="dropdown.services.dataAnalytics">Data Analytics</a></li>
+                                <li class="menu-item"><a href="data-analytics.html" data-i18n="dropdown.services.dataAnalytics">Data Engineering</a></li>
                                 <li class="menu-item"><a href="https://a1siliconvalley.com/" target="_blank" rel="noopener noreferrer" data-i18n="dropdown.services.corporateTraining">Corporate Training</a></li>
+                                <li class="menu-item"><a href="#" onclick="return false;" style="cursor: default; text-transform: none !important;" data-i18n="dropdown.services.cybersecurity">CYBERSECURITY</a></li>
                             </ul>
                         </li>
                         <li id="menu-item-products" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-products">
                             <a href="#" data-i18n="header.products">Products</a>
                             <ul class="sub-menu products-dropdown">
-                                <li class="menu-item"><a href="../LMS-Univeristy Vanilla Landing Page/index.html" data-i18n="dropdown.products.lmsUniversity">LMS University</a></li>
-                                <li class="menu-item"><a href="../CRM University Landing Page/index.html" data-i18n="dropdown.products.crmUniversity">CRM University</a></li>
-                                <li class="menu-item"><a href="../esg/index.html" data-i18n="dropdown.products.esg">ESG</a></li>
-                                <li class="menu-item"><a href="../LMS Corporate Landing Page/index.html" data-i18n="dropdown.products.lmsCorporate">LMS Corporate</a></li>
-                                <li class="menu-item"><a href="https://nexushive-erp.netlify.app/login" target="_blank" rel="noopener noreferrer" data-i18n="dropdown.products.crmCorporate">CRM Corporate</a></li>
-                                <li class="menu-item"><a href="#" onclick="return false;" style="cursor: default; text-transform: none !important;" data-i18n="dropdown.products.eProcure">eProcure</a></li>
-                                <li class="menu-item"><a href="#" onclick="return false;" style="cursor: default; text-transform: none !important;" data-i18n="dropdown.products.rfpManagement">RFP Management and Project Tracker</a></li>
+                                <li class="products-dropdown-cols">
+                                    <div class="products-col">
+                                        <div class="products-col-header" data-i18n="dropdown.products.category.governments">Governments</div>
+                                        <a href="#" onclick="return false;" style="cursor: default; text-transform: none !important;" data-i18n="dropdown.products.governments.biometric">Biometric</a>
+                                        <a href="#" onclick="return false;" style="cursor: default; text-transform: none !important;" data-i18n="dropdown.products.governments.contactlessPayment">Contactless payment system</a>
+                                        <a href="#" onclick="return false;" style="cursor: default; text-transform: none !important;" data-i18n="dropdown.products.governments.projectTracker">Project Tracker</a>
+                                    </div>
+                                    <div class="products-col">
+                                        <div class="products-col-header" data-i18n="dropdown.products.category.university">University</div>
+                                        <a href="#" onclick="return false;" style="cursor: default; text-transform: none !important;" data-i18n="dropdown.products.university.sis">SIS</a>
+                                        <a href="../LMS-Univeristy Vanilla Landing Page/index.html" data-i18n="dropdown.products.university.lms">LMS</a>
+                                        <a href="../CRM University Landing Page/index.html" data-i18n="dropdown.products.university.crmUniversity">CRM</a>
+                                    </div>
+                                    <div class="products-col">
+                                        <div class="products-col-header" data-i18n="dropdown.products.category.corporate">Corporate</div>
+                                        <a href="https://nexushive-erp.netlify.app/login" target="_blank" rel="noopener noreferrer" data-i18n="dropdown.products.corporate.erp">ERP</a>
+                                        <a href="#" onclick="return false;" style="cursor: default; text-transform: none !important;" data-i18n="dropdown.products.corporate.crm">CRM</a>
+                                        <a href="../LMS Corporate Landing Page/index.html" data-i18n="dropdown.products.corporate.lms">LMS</a>
+                                        <a href="#" onclick="return false;" style="cursor: default; text-transform: none !important;" data-i18n="dropdown.products.corporate.projectTracker">Project Tracker</a>
+                                        <a href="#" onclick="return false;" style="cursor: default; text-transform: none !important;" data-i18n="dropdown.products.corporate.rfpManagement">RFP Management</a>
+                                        <a href="#" onclick="return false;" style="cursor: default; text-transform: none !important;" data-i18n="dropdown.products.corporate.eProcure">eProcure</a>
+                                    </div>
+                                </li>
                             </ul>
                         </li>
                         <li id="menu-item-company" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-company">
@@ -2204,8 +2231,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <ul class="mobile-dropdown-menu" id="services-dropdown">
                         <li><a href="ai-powered-consulting.html" data-i18n="dropdown.services.aiConsulting">AI Powered Consulting</a></li>
                         <li><a href="engineering-services.html" data-i18n="dropdown.services.engineering">Engineering Services</a></li>
-                        <li><a href="data-analytics.html" data-i18n="dropdown.services.dataAnalytics">Data Analytics</a></li>
+                        <li><a href="data-analytics.html" data-i18n="dropdown.services.dataAnalytics">Data Engineering</a></li>
                         <li><a href="https://a1siliconvalley.com/" target="_blank" rel="noopener noreferrer" data-i18n="dropdown.services.corporateTraining">Corporate Training</a></li>
+                        <li><a href="#" onclick="return false;" style="cursor: default; text-transform: none !important;" data-i18n="dropdown.services.cybersecurity">CYBERSECURITY</a></li>
                     </ul>
                 </li>
                 <li class="mobile-menu-item mobile-dropdown">
@@ -2216,13 +2244,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </svg>
                     </button>
                     <ul class="mobile-dropdown-menu" id="products-dropdown">
-                        <li><a href="../LMS-Univeristy Vanilla Landing Page/index.html" data-i18n="dropdown.products.lmsUniversity">LMS University</a></li>
-                        <li><a href="../CRM University Landing Page/index.html" data-i18n="dropdown.products.crmUniversity">CRM University</a></li>
-                        <li><a href="../esg/index.html" data-i18n="dropdown.products.esg">ESG</a></li>
-                        <li><a href="../LMS Corporate Landing Page/index.html" data-i18n="dropdown.products.lmsCorporate">LMS Corporate</a></li>
-                        <li><a href="https://nexushive-erp.netlify.app/login" target="_blank" rel="noopener noreferrer" data-i18n="dropdown.products.crmCorporate">CRM Corporate</a></li>
-                        <li><a href="#" onclick="return false;" style="cursor: default; text-transform: none !important;" data-i18n="dropdown.products.eProcure">eProcure</a></li>
-                        <li><a href="#" onclick="return false;" style="cursor: default; text-transform: none !important;" data-i18n="dropdown.products.rfpManagement">RFP Management and Project Tracker</a></li>
+                        <li class="products-dropdown-cols">
+                            <div class="products-col">
+                                <div class="products-col-header" data-i18n="dropdown.products.category.governments">Governments</div>
+                                <a href="#" onclick="return false;" style="cursor: default; text-transform: none !important;" data-i18n="dropdown.products.governments.biometric">Biometric</a>
+                                <a href="#" onclick="return false;" style="cursor: default; text-transform: none !important;" data-i18n="dropdown.products.governments.contactlessPayment">Contactless payment system</a>
+                                <a href="#" onclick="return false;" style="cursor: default; text-transform: none !important;" data-i18n="dropdown.products.governments.projectTracker">Project Tracker</a>
+                            </div>
+                            <div class="products-col">
+                                <div class="products-col-header" data-i18n="dropdown.products.category.university">University</div>
+                                <a href="#" onclick="return false;" style="cursor: default; text-transform: none !important;" data-i18n="dropdown.products.university.sis">SIS</a>
+                                <a href="../LMS-Univeristy Vanilla Landing Page/index.html" data-i18n="dropdown.products.university.lms">LMS</a>
+                                <a href="../CRM University Landing Page/index.html" data-i18n="dropdown.products.university.crmUniversity">CRM</a>
+                            </div>
+                            <div class="products-col">
+                                <div class="products-col-header" data-i18n="dropdown.products.category.corporate">Corporate</div>
+                                <a href="https://nexushive-erp.netlify.app/login" target="_blank" rel="noopener noreferrer" data-i18n="dropdown.products.corporate.erp">ERP</a>
+                                <a href="#" onclick="return false;" style="cursor: default; text-transform: none !important;" data-i18n="dropdown.products.corporate.crm">CRM</a>
+                                <a href="../LMS Corporate Landing Page/index.html" data-i18n="dropdown.products.corporate.lms">LMS</a>
+                                <a href="#" onclick="return false;" style="cursor: default; text-transform: none !important;" data-i18n="dropdown.products.corporate.projectTracker">Project Tracker</a>
+                                <a href="#" onclick="return false;" style="cursor: default; text-transform: none !important;" data-i18n="dropdown.products.corporate.rfpManagement">RFP Management</a>
+                                <a href="#" onclick="return false;" style="cursor: default; text-transform: none !important;" data-i18n="dropdown.products.corporate.eProcure">eProcure</a>
+                            </div>
+                        </li>
                         </ul>
                 </li>
                 <li class="mobile-menu-item mobile-dropdown">
@@ -2277,10 +2321,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="partners-grid-container">
                         <div data-aos="zoom-in-up" data-aos-delay="100" class="partner-card-enhanced full-section-card partner-card-1">
                             <div class="card-glow"></div>
-                            <img src="images/automation-anywhere.svg" alt="Automation Anywhere">
+                            <img src="images/zscaler.png" alt="Zscaler">
                             <div class="card-overlay">
-                                <h4 class="partner-title" data-i18n="partners.automationAnywhere.name">Automation Anywhere</h4>
-                                <p class="partner-desc" data-i18n="partners.automationAnywhere.description">RPA Solutions</p>
+                                <h4 class="partner-title" data-i18n="partners.zscaler.name">Zscaler</h4>
+                                <p class="partner-desc" data-i18n="partners.zscaler.description">Cloud Security</p>
                             </div>
                         </div>
                         
@@ -2326,6 +2370,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="card-overlay">
                                 <h4 class="partner-title" data-i18n="partners.databricks.name">Databricks</h4>
                                 <p class="partner-desc" data-i18n="partners.databricks.description">Data & AI Platform</p>
+                            </div>
+                        </div>
+                        
+                        <div data-aos="zoom-in-up" data-aos-delay="700" class="partner-card-enhanced full-section-card partner-card-7">
+                            <div class="card-glow"></div>
+                            <img src="images/automation-anywhere.svg" alt="Automation Anywhere">
+                            <div class="card-overlay">
+                                <h4 class="partner-title" data-i18n="partners.automationAnywhere.name">Automation Anywhere</h4>
+                                <p class="partner-desc" data-i18n="partners.automationAnywhere.description">RPA Solutions</p>
                             </div>
                         </div>
                     </div>
@@ -2991,6 +3044,7 @@ if (statisticsSection) {
 })();
 </script>
 <script src="js/dropdown-menu.js"></script>
+<script src="js/scroll-fix.js"></script>
 
 <!-- Contact Form 7 CORS Fix -->
 <script src="js/contact-form-fix.js" async></script>

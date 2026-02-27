@@ -12,15 +12,39 @@
     "services": {
       "aiConsulting": "الاستشارات المدعومة بالذكاء الاصطناعي",
       "engineering": "خدمات الهندسة",
-      "dataAnalytics": "تحليل البيانات",
-      "corporateTraining": "التدريب المؤسسي"
+      "dataAnalytics": "هندسة البيانات",
+      "corporateTraining": "التدريب المؤسسي",
+      "cybersecurity": "الأمن السيبراني"
     },
     "products": {
-      "lmsUniversity": "نظام إدارة التعلم الجامعي",
-      "crmUniversity": "نظام إدارة علاقات العملاء الجامعي",
+      "category": {
+        "governments": "الحكومات",
+        "university": "الجامعات",
+        "corporate": "المؤسسات"
+      },
+      "governments": {
+        "biometric": "البيومترية",
+        "contactlessPayment": "نظام الدفع بدون تلامس",
+        "projectTracker": "متتبع المشاريع"
+      },
+      "university": {
+        "sis": "SIS",
+        "lms": "LMS",
+        "crmUniversity": "CRM"
+      },
+      "corporate": {
+        "erp": "ERP",
+        "crm": "CRM",
+        "lms": "LMS",
+        "projectTracker": "متتبع المشاريع",
+        "rfpManagement": "إدارة RFP",
+        "eProcure": "eProcure"
+      },
+      "lmsUniversity": "LMS",
+      "crmUniversity": "CRM",
       "esg": "الحوكمة البيئية والاجتماعية",
-      "lmsCorporate": "نظام إدارة التعلم المؤسسي",
-      "crmCorporate": "ERP",
+      "lmsCorporate": "LMS",
+      "crmCorporate": "CRM",
       "eProcure": "eProcure",
       "rfpManagement": "RFP Management and Project Tracker"
     },
